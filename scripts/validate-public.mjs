@@ -1,0 +1,25 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import vm from 'node:vm';
+import { fileURLToPath } from 'node:url';
+const root=path.dirname(path.dirname(fileURLToPath(import.meta.url)));
+const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
+const errors=[]; const check=(ok,msg)=>{if(!ok)errors.push(msg)};
+const forbidden=['STUDENT_MOCK_GRADES','STUDENT_GRADE_INPUTS','studentClass','studentNumber','studentLoadStatus'];
+for(const t of forbidden)check(!html.includes(t),'private token: '+t);
+check(html.includes('2027학년도 V10.6'),'version missing');
+check(html.includes('공개용 · 학생 성적 미포함'),'privacy badge missing');
+check(html.includes('id=\"sntK\"')&&html.includes('id=\"sntM\"'),'manual CSAT inputs missing');
+check(html.includes('id=\"pickList\"')&&html.includes('id=\"comparePickedBtn\"'),'shortlist UI missing');
+check(html.includes('const RAW = ['),'admissions data missing');
+const scripts=[...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/gi)].map(m=>m[1]);
+check(scripts.length>0,'inline script missing');
+scripts.forEach((code,i)=>{try{new vm.Script(code,{filename:'inline-'+(i+1)+'.js'})}catch(e){errors.push('JavaScript syntax: '+e.message)}});
+const allowed=new Set(['.git','.gitignore','README.md','index.html','scripts']);
+for(const e of fs.readdirSync(root))check(allowed.has(e),'unexpected file: '+e);
+for(const e of fs.readdirSync(path.join(root,'scripts')))check(e==='validate-public.mjs','unexpected script: '+e);
+if(errors.length){console.error(errors.map(e=>'[FAIL] '+e).join('\n'));process.exit(1)}
+console.log('[PASS] V10.6 label and core UI');
+console.log('[PASS] student mock-exam data, selectors, and loader removed');
+console.log('[PASS] inline JavaScript syntax');
+console.log('[PASS] public repository file allowlist');
