@@ -1,0 +1,12 @@
+{
+  "version": "V10.6",
+  "generatedFrom": "index.html",
+  "admissions": {
+    "count": 5863,
+    "sha256": "e0b6babf032def5400a3bf9d193c4891b691ad1be9a60af90ec347d3cbba71a0"
+  },
+  "suneungMinimum": {
+    "count": 3576,
+    "sha256": "832b367b9445fa5cae20ea42e49bc7dda5ffdfbeeafe7555d6125892b97992d3"
+  }
+}

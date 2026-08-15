@@ -1,2 +1,8 @@
 .DS_Store
 Thumbs.db
+build/
+tmp/
+sources/local/
+*.xlsx
+*.xls
+*.pdf

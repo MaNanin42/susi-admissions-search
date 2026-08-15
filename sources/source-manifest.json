@@ -1,0 +1,27 @@
+{
+  "recordedAt": "2026-08-16",
+  "policy": "Reference official source files in the adjacent local archive. Do not commit source binaries to this public repository.",
+  "sources": [
+    {
+      "role": "admissions-data",
+      "file": "(경기도교육청)_2027수시NAVI(수시나비)교사용_260813.xlsx",
+      "relativeLocator": "../../04-Student Record/진로진학자료집/(경기도교육청)_2027수시NAVI(수시나비)교사용_260813.xlsx",
+      "bytes": 28304335,
+      "sha256": "F9D92C44F8988692457586F1E4DACC90E8502DE838B147313925BB5B6C33035D",
+      "workbook": {
+        "sheetCount": 30,
+        "dataSheetRows": 6374,
+        "dataSheetColumns": 61,
+        "importantSheets": ["data", "수능최저", "교과반영", "전형일정", "모집단위별", "전형별"]
+      }
+    },
+    {
+      "role": "guidebook",
+      "file": "[경기도교육청]_2027수시NAVI(수시나비)가이드북_260713.pdf",
+      "relativeLocator": "../../04-Student Record/진로진학자료집/[경기도교육청]_2027수시NAVI(수시나비)가이드북_260713.pdf",
+      "bytes": 8604483,
+      "sha256": "F4D1302ECCA2498963C9D683B7615EB866AECC67B87FDB44F71359258D947309",
+      "pages": 40
+    }
+  ]
+}

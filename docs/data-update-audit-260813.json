@@ -1,0 +1,849 @@
+{
+  "baseline": {
+    "version": "V10.6",
+    "rows": 5863,
+    "uniqueUniversityMajorKeys": 5800
+  },
+  "workbook": {
+    "file": "(경기도교육청)_2027수시NAVI(수시나비)교사용_260813.xlsx",
+    "sha256": "F9D92C44F8988692457586F1E4DACC90E8502DE838B147313925BB5B6C33035D",
+    "sheetCount": 30,
+    "dataRowsExcludingHeader": 6373,
+    "unique2027UniversityMajorKeys": 5934
+  },
+  "guidebook": {
+    "file": "[경기도교육청]_2027수시NAVI(수시나비)가이드북_260713.pdf",
+    "sha256": "F4D1302ECCA2498963C9D683B7615EB866AECC67B87FDB44F71359258D947309",
+    "pages": 40
+  },
+  "comparison": {
+    "baselineKeysStillPresent": 5800,
+    "baselineKeysMissingFromWorkbook": 0,
+    "workbookKeysNotInBaseline": 134,
+    "exactBaselineRowsPresent": 5807,
+    "baselineRowsChangedCorrectedOrUnmatched": 56,
+    "unmatchedRowsWithDonggukOfficialCorrection": 51,
+    "newKeys": [
+      {
+        "university": "가천대",
+        "major": "인공지능시스템학과"
+      },
+      {
+        "university": "강서대",
+        "major": "자유전공학부"
+      },
+      {
+        "university": "건양대",
+        "major": "데이터의학과"
+      },
+      {
+        "university": "경운대",
+        "major": "스마트식품학부"
+      },
+      {
+        "university": "경운대",
+        "major": "항공산업자율전공"
+      },
+      {
+        "university": "경희대",
+        "major": "연극・뮤지컬 연출"
+      },
+      {
+        "university": "고신대",
+        "major": "바이오과학수사학과"
+      },
+      {
+        "university": "고신대",
+        "major": "음악컨텐츠학과"
+      },
+      {
+        "university": "광주대",
+        "major": "공과대학"
+      },
+      {
+        "university": "광주대",
+        "major": "교육상담학과"
+      },
+      {
+        "university": "광주대",
+        "major": "문화산업대학(문화)"
+      },
+      {
+        "university": "광주대",
+        "major": "문화산업대학(예체능)"
+      },
+      {
+        "university": "광주대",
+        "major": "보건복지대학"
+      },
+      {
+        "university": "광주대",
+        "major": "인문사회과학대학"
+      },
+      {
+        "university": "광주대",
+        "major": "태권도학과"
+      },
+      {
+        "university": "국립군산대",
+        "major": "상담심리학과"
+      },
+      {
+        "university": "국립금오공대",
+        "major": "AX융합학과"
+      },
+      {
+        "university": "국립금오공대",
+        "major": "반도체소부장전공"
+      },
+      {
+        "university": "국립부경대",
+        "major": "AI융합시스템공학과"
+      },
+      {
+        "university": "국립부경대",
+        "major": "AXIC자유전공학부"
+      },
+      {
+        "university": "국립부경대",
+        "major": "AX지속가능융합학과"
+      },
+      {
+        "university": "국립창원대",
+        "major": "GAST자율전공학부"
+      },
+      {
+        "university": "국립창원대",
+        "major": "기계항공자율전공학부"
+      },
+      {
+        "university": "국립창원대",
+        "major": "인공지능디펜스공학과"
+      },
+      {
+        "university": "국립창원대",
+        "major": "인공지능파이낸스학과"
+      },
+      {
+        "university": "국립창원대",
+        "major": "자연과학계열자율전공학부"
+      },
+      {
+        "university": "국민대",
+        "major": "KMU International Business school"
+      },
+      {
+        "university": "국민대",
+        "major": "제약공학과"
+      },
+      {
+        "university": "극동대",
+        "major": "군사학과"
+      },
+      {
+        "university": "나사렛대",
+        "major": "공공인재학과"
+      },
+      {
+        "university": "단국대",
+        "major": "AI건축융합학과"
+      },
+      {
+        "university": "단국대",
+        "major": "공학계열광역"
+      },
+      {
+        "university": "단국대",
+        "major": "산업경영학과(야)"
+      },
+      {
+        "university": "단국대",
+        "major": "퇴계혁신칼리지"
+      },
+      {
+        "university": "대구경북과학기술원",
+        "major": "AI대학"
+      },
+      {
+        "university": "대전대",
+        "major": "디지털헬스케어학과"
+      },
+      {
+        "university": "동명대",
+        "major": "해양IT공학과"
+      },
+      {
+        "university": "동아대",
+        "major": "자유전공학부(에너지테크)"
+      },
+      {
+        "university": "동아대",
+        "major": "자유전공학부(전계열)"
+      },
+      {
+        "university": "동아대",
+        "major": "자유전공학부(휴먼케어)"
+      },
+      {
+        "university": "동의대",
+        "major": "공과대학자유전공학부"
+      },
+      {
+        "university": "동의대",
+        "major": "상경대학자유전공학부"
+      },
+      {
+        "university": "동의대",
+        "major": "인문과학대학자유전공학부"
+      },
+      {
+        "university": "배재대",
+        "major": "건축학과(5년제)"
+      },
+      {
+        "university": "배재대",
+        "major": "소프트웨어공학부(인공지능)"
+      },
+      {
+        "university": "배재대",
+        "major": "피지컬AI공학부(AI융합전자)"
+      },
+      {
+        "university": "부산대",
+        "major": "스마트가전공학과"
+      },
+      {
+        "university": "부산대",
+        "major": "약학부"
+      },
+      {
+        "university": "부산대",
+        "major": "치의예과"
+      },
+      {
+        "university": "삼육대",
+        "major": "미래융합자유전공학부"
+      },
+      {
+        "university": "삼육대",
+        "major": "창의융합자유전공학부"
+      },
+      {
+        "university": "서경대",
+        "major": "아트앤테크놀로지학과"
+      },
+      {
+        "university": "서울과기대",
+        "major": "ST자유전공학부_인문"
+      },
+      {
+        "university": "서울과기대",
+        "major": "ST자유전공학부_자연"
+      },
+      {
+        "university": "서울과기대",
+        "major": "양자융합물리학과"
+      },
+      {
+        "university": "서울여대",
+        "major": "AI융합학부 인공지능전공"
+      },
+      {
+        "university": "서울장신대",
+        "major": "자율전공학부"
+      },
+      {
+        "university": "서원대",
+        "major": "AI로봇학과"
+      },
+      {
+        "university": "성결대",
+        "major": "스마트관광항공학부(항공경영학)"
+      },
+      {
+        "university": "성결대",
+        "major": "화장품공학과"
+      },
+      {
+        "university": "성균관대",
+        "major": "연출"
+      },
+      {
+        "university": "성균관대",
+        "major": "인공지능학과"
+      },
+      {
+        "university": "세명대",
+        "major": "공연예술학과"
+      },
+      {
+        "university": "세명대",
+        "major": "시각・영상디자인학과"
+      },
+      {
+        "university": "세명대",
+        "major": "아트&산업디자인학과"
+      },
+      {
+        "university": "세명대",
+        "major": "영화웹툰애니메이션학과"
+      },
+      {
+        "university": "세명대",
+        "major": "패션디자인학과"
+      },
+      {
+        "university": "송원대",
+        "major": "모빌리티자율전공학과"
+      },
+      {
+        "university": "송원대",
+        "major": "스포츠AI자율전공학과"
+      },
+      {
+        "university": "수원대",
+        "major": "소방재난공학과"
+      },
+      {
+        "university": "숙명여대",
+        "major": "자유전공학부"
+      },
+      {
+        "university": "숙명여대",
+        "major": "첨단공학부"
+      },
+      {
+        "university": "순천향대",
+        "major": "디지털애니메이션학과"
+      },
+      {
+        "university": "순천향대",
+        "major": "스포츠응용산업학과"
+      },
+      {
+        "university": "순천향대",
+        "major": "자율전공학과"
+      },
+      {
+        "university": "신경주대",
+        "major": "말산업학과"
+      },
+      {
+        "university": "신경주대",
+        "major": "미래라이프학부"
+      },
+      {
+        "university": "신경주대",
+        "major": "사회복지학과"
+      },
+      {
+        "university": "신경주대",
+        "major": "전통문화예술학과"
+      },
+      {
+        "university": "신라대",
+        "major": "AI로봇학과"
+      },
+      {
+        "university": "신라대",
+        "major": "자율전공학부"
+      },
+      {
+        "university": "신한대",
+        "major": "K-CULTURE대학(자율전공)"
+      },
+      {
+        "university": "신한대",
+        "major": "미디어영상학과"
+      },
+      {
+        "university": "신한대",
+        "major": "바둑콘텐츠학과"
+      },
+      {
+        "university": "연세대",
+        "major": "첨단약과학과"
+      },
+      {
+        "university": "연세대(미래)",
+        "major": "기후에너지시스템공학부"
+      },
+      {
+        "university": "연세대(미래)",
+        "major": "반도체공학물리학과"
+      },
+      {
+        "university": "연세대(미래)",
+        "major": "의공학부"
+      },
+      {
+        "university": "영남대",
+        "major": "AI융합전공"
+      },
+      {
+        "university": "영남대",
+        "major": "음악학부"
+      },
+      {
+        "university": "영남신학대",
+        "major": "자율전공학부"
+      },
+      {
+        "university": "영산대",
+        "major": "AI공학과"
+      },
+      {
+        "university": "영산대",
+        "major": "상담심리학과"
+      },
+      {
+        "university": "영산대",
+        "major": "스마트건설교통공학과"
+      },
+      {
+        "university": "용인대",
+        "major": "AI시스템반도체학과"
+      },
+      {
+        "university": "우석대",
+        "major": "약학과"
+      },
+      {
+        "university": "우송대",
+        "major": "글로벌제과제빵학과"
+      },
+      {
+        "university": "울산과학기술원",
+        "major": "GRIT인재융합학부"
+      },
+      {
+        "university": "울산대",
+        "major": "예술학부(음악)"
+      },
+      {
+        "university": "유원대",
+        "major": "국방인재개발학과"
+      },
+      {
+        "university": "유원대",
+        "major": "스포츠학부"
+      },
+      {
+        "university": "유원대",
+        "major": "와인사이언스학과"
+      },
+      {
+        "university": "유원대",
+        "major": "유아교육과"
+      },
+      {
+        "university": "이화여대",
+        "major": "디자인학부"
+      },
+      {
+        "university": "이화여대",
+        "major": "체육과학부"
+      },
+      {
+        "university": "전남대",
+        "major": "에너지공학계열"
+      },
+      {
+        "university": "전주대",
+        "major": "기계자동차공학과"
+      },
+      {
+        "university": "전주대",
+        "major": "축구학과"
+      },
+      {
+        "university": "조선대",
+        "major": "서양화전공"
+      },
+      {
+        "university": "조선대",
+        "major": "한국화전공"
+      },
+      {
+        "university": "중앙대",
+        "major": "공연영상창작학부(공간연출전공)"
+      },
+      {
+        "university": "중원대",
+        "major": "AI드라마제작학과"
+      },
+      {
+        "university": "중원대",
+        "major": "항공운항학과"
+      },
+      {
+        "university": "창신대",
+        "major": "AI로봇산업학과"
+      },
+      {
+        "university": "창신대",
+        "major": "AI융합경영학과"
+      },
+      {
+        "university": "창신대",
+        "major": "방산AI융합학과"
+      },
+      {
+        "university": "청운대",
+        "major": "AI융합학과"
+      },
+      {
+        "university": "초당대",
+        "major": "뷰티디자인학부"
+      },
+      {
+        "university": "초당대",
+        "major": "사회복지・제약보건학부"
+      },
+      {
+        "university": "칼빈대",
+        "major": "자유전공학부"
+      },
+      {
+        "university": "평택대",
+        "major": "동아시아융합자율전공학부"
+      },
+      {
+        "university": "평택대",
+        "major": "연극영화과(영화영상)"
+      },
+      {
+        "university": "한경국립대",
+        "major": "AI융합대학"
+      },
+      {
+        "university": "한경국립대",
+        "major": "생명자원과학대학"
+      },
+      {
+        "university": "한경국립대",
+        "major": "인문사회과학대학"
+      },
+      {
+        "university": "한국침례신학대",
+        "major": "기독교문화학과"
+      },
+      {
+        "university": "한남대",
+        "major": "AI로봇융합공학과"
+      },
+      {
+        "university": "한림대",
+        "major": "글로컬MICE학과"
+      },
+      {
+        "university": "한림대",
+        "major": "의생명과학대학 자율전공"
+      },
+      {
+        "university": "한서대",
+        "major": "레저해양스포츠학과"
+      },
+      {
+        "university": "한성대",
+        "major": "AI기계로봇공학과"
+      },
+      {
+        "university": "한양대",
+        "major": "건축학부(5년제)"
+      },
+      {
+        "university": "호서대",
+        "major": "산업디자인학과"
+      },
+      {
+        "university": "호서대",
+        "major": "인공지능학과"
+      }
+    ],
+    "removedKeys": [],
+    "unmatchedBaselineRows": [
+      {
+        "university": "동국대",
+        "major": "생명과학과",
+        "officialCorrection": true
+      },
+      {
+        "university": "동국대",
+        "major": "약학과",
+        "officialCorrection": true
+      },
+      {
+        "university": "동국대",
+        "major": "의생명공학과",
+        "officialCorrection": true
+      },
+      {
+        "university": "동국대",
+        "major": "경찰행정학부",
+        "officialCorrection": true
+      },
+      {
+        "university": "동국대",
+        "major": "광고홍보학과",
+        "officialCorrection": true
+      },
+      {
+        "university": "동국대",
+        "major": "국어교육과",
+        "officialCorrection": true
+      },
+      {
+        "university": "동국대",
+        "major": "국어국문・문예창작학부",
+        "officialCorrection": true
+      },
+      {
+        "university": "동국대",
+        "major": "법학과",
+        "officialCorrection": true
+      },
+      {
+        "university": "동국대",
+        "major": "사회언론정보학부 미디어커뮤니케이션학전공",
+        "officialCorrection": true
+      },
+      {
+        "university": "동국대",
+        "major": "에너지신소재공학과",
+        "officialCorrection": true
+      },
+      {
+        "university": "동국대",
+        "major": "열린전공학부(인문)",
+        "officialCorrection": true
+      },
+      {
+        "university": "동국대",
+        "major": "영어영문학부",
+        "officialCorrection": true
+      },
+      {
+        "university": "동국대",
+        "major": "의료인공지능공학과",
+        "officialCorrection": true
+      },
+      {
+        "university": "동국대",
+        "major": "전자전기공학부",
+        "officialCorrection": true
+      },
+      {
+        "university": "동국대",
+        "major": "정치행정학부 정치외교학 전공",
+        "officialCorrection": true
+      },
+      {
+        "university": "동국대",
+        "major": "컴퓨터・AI학부",
+        "officialCorrection": true
+      },
+      {
+        "university": "동국대",
+        "major": "화공생물공학과",
+        "officialCorrection": true
+      },
+      {
+        "university": "동국대",
+        "major": "경제학과",
+        "officialCorrection": true
+      },
+      {
+        "university": "동국대",
+        "major": "교육학과",
+        "officialCorrection": true
+      },
+      {
+        "university": "동국대",
+        "major": "국제통상학과",
+        "officialCorrection": true
+      },
+      {
+        "university": "동국대",
+        "major": "사회언론정보학부 사회학전공",
+        "officialCorrection": true
+      },
+      {
+        "university": "동국대",
+        "major": "시스템반도체학부",
+        "officialCorrection": true
+      },
+      {
+        "university": "동국대",
+        "major": "열린전공학부(자연)",
+        "officialCorrection": true
+      },
+      {
+        "university": "동국대",
+        "major": "화학과",
+        "officialCorrection": true
+      },
+      {
+        "university": "동국대",
+        "major": "융합환경과학과",
+        "officialCorrection": true
+      },
+      {
+        "university": "동국대",
+        "major": "건축공학부",
+        "officialCorrection": true
+      },
+      {
+        "university": "동국대",
+        "major": "기계로봇에너지공학과",
+        "officialCorrection": true
+      },
+      {
+        "university": "동국대",
+        "major": "수학교육과",
+        "officialCorrection": true
+      },
+      {
+        "university": "동국대",
+        "major": "정보통신공학과",
+        "officialCorrection": true
+      },
+      {
+        "university": "동국대",
+        "major": "정치행정학부 행정학전공",
+        "officialCorrection": true
+      },
+      {
+        "university": "동국대",
+        "major": "지리교육과",
+        "officialCorrection": true
+      },
+      {
+        "university": "동국대",
+        "major": "통계학과",
+        "officialCorrection": true
+      },
+      {
+        "university": "동국대",
+        "major": "수학과",
+        "officialCorrection": true
+      },
+      {
+        "university": "동국대",
+        "major": "식품바이오융합공학과",
+        "officialCorrection": true
+      },
+      {
+        "university": "동국대",
+        "major": "경영대학",
+        "officialCorrection": true
+      },
+      {
+        "university": "동국대",
+        "major": "물리학과",
+        "officialCorrection": true
+      },
+      {
+        "university": "동국대",
+        "major": "역사교육과",
+        "officialCorrection": true
+      },
+      {
+        "university": "동국대",
+        "major": "중어중문학과",
+        "officialCorrection": true
+      },
+      {
+        "university": "동국대",
+        "major": "지능형네트워크융합학과",
+        "officialCorrection": true
+      },
+      {
+        "university": "동국대",
+        "major": "건설환경공학과",
+        "officialCorrection": true
+      },
+      {
+        "university": "동국대",
+        "major": "사학과",
+        "officialCorrection": true
+      },
+      {
+        "university": "동국대",
+        "major": "산업시스템공학과",
+        "officialCorrection": true
+      },
+      {
+        "university": "동국대",
+        "major": "가정교육과",
+        "officialCorrection": true
+      },
+      {
+        "university": "동국대",
+        "major": "식품산업관리학과",
+        "officialCorrection": true
+      },
+      {
+        "university": "인천가톨릭대",
+        "major": "간호학과",
+        "officialCorrection": false
+      },
+      {
+        "university": "동국대",
+        "major": "철학과",
+        "officialCorrection": true
+      },
+      {
+        "university": "경인교대",
+        "major": "초등교육과",
+        "officialCorrection": false
+      },
+      {
+        "university": "동국대",
+        "major": "사회복지학과",
+        "officialCorrection": true
+      },
+      {
+        "university": "동국대",
+        "major": "불교학부",
+        "officialCorrection": true
+      },
+      {
+        "university": "동국대",
+        "major": "정치행정학부 북한학 전공",
+        "officialCorrection": true
+      },
+      {
+        "university": "동국대",
+        "major": "영화영상학과",
+        "officialCorrection": true
+      },
+      {
+        "university": "인천가톨릭대",
+        "major": "자유전공",
+        "officialCorrection": false
+      },
+      {
+        "university": "동국대",
+        "major": "일본학과",
+        "officialCorrection": true
+      },
+      {
+        "university": "인천가톨릭대",
+        "major": "문화콘텐츠학과",
+        "officialCorrection": false
+      },
+      {
+        "university": "인천가톨릭대",
+        "major": "신학과",
+        "officialCorrection": false
+      },
+      {
+        "university": "동국대",
+        "major": "문화유산학과",
+        "officialCorrection": true
+      }
+    ]
+  },
+  "decision": "Do not replace the deployed baseline until the lost mapping and correction rules are reconstructed and validated."
+}

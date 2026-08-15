@@ -1,0 +1,2067 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>수시 입결 검색기 | 2027학년도 V10.6 공개용</title>
+<link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ── 라이트 글래스 테마 변수 ── */
+:root {
+  --bg:          #eef3f8;
+  --bg2:         rgba(255,255,255,0.72);
+  --bg3:         rgba(247,250,253,0.74);
+  --panel:       rgba(255,255,255,0.78);
+  --panel2:      rgba(232,239,247,0.82);
+  --glass:       rgba(255,255,255,0.62);
+  --glass-strong:rgba(255,255,255,0.84);
+  --border:      rgba(28,43,65,0.08);
+  --border2:     rgba(28,43,65,0.13);
+  --border3:     rgba(28,43,65,0.22);
+  --shadow:      0 14px 36px rgba(30, 41, 59, 0.10);
+  --shadow-soft: 0 7px 18px rgba(30, 41, 59, 0.08);
+  --text:        #172033;
+  --text2:       #4e5c72;
+  --text3:       #8a96a8;
+  --accent:      #2563eb;
+  --accent-bg:   rgba(37,99,235,0.09);
+  --accent-ring: rgba(37,99,235,0.22);
+  --accent2:     #078669;
+  --accent2-bg:  rgba(7,134,105,0.09);
+  --accent2-ring:rgba(7,134,105,0.22);
+  --c-red:       #dc2626;
+  --c-red-bg:    rgba(220,38,38,0.07);
+  --c-amber:     #c76a10;
+  --c-amber-bg:  rgba(199,106,16,0.09);
+  --c-amber-ring:rgba(199,106,16,0.20);
+  --c-green:     #16803d;
+  --c-green-bg:  rgba(22,128,61,0.08);
+  --score-safe-glow: none;
+  --score-near-glow: none;
+  --score-hard-glow: none;
+  --score-safe: #15803d;
+  --score-near: #92400e;
+  --score-hard: #991b1b;
+  --score-score:#6d28d9;
+  --score-score-bg:rgba(109,40,217,0.07);
+  --score-score-ring:rgba(109,40,217,0.18);
+  --thumb-shadow: 0 0 0 3px rgba(255,255,255,0.9), 0 1px 4px rgba(30,41,59,0.16);
+  --row-hover:   rgba(37,99,235,0.035);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { color-scheme: light; }
+body {
+  background:
+    linear-gradient(135deg, rgba(37,99,235,0.08), transparent 34%),
+    linear-gradient(225deg, rgba(7,134,105,0.08), transparent 38%),
+    var(--bg);
+  color: var(--text);
+  font-family: 'Pretendard', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+  font-size: 13px; line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+/* ── 헤더 ── */
+.header {
+  height: 52px;
+  background: var(--glass-strong);
+  border-bottom: 1px solid var(--border2);
+  display: flex; align-items: center;
+  padding: 0 18px; gap: 12px;
+  position: sticky; top: 0; z-index: 300;
+  backdrop-filter: blur(18px) saturate(145%);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.72), var(--shadow-soft);
+}
+.logo-mark {
+  width: 26px; height: 26px; flex-shrink: 0;
+  background: linear-gradient(135deg, #2563eb 0%, #078669 100%);
+  border-radius: 7px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px; font-weight: 700; color: #fff;
+}
+.header-title { font-size: 14px; font-weight: 600; letter-spacing: -.01em; }
+.header-sep { width: 1px; height: 16px; background: var(--border2); }
+.header-badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; font-weight: 600;
+  color: var(--accent);
+  background: var(--accent-bg);
+  border: 1px solid var(--accent-ring);
+  padding: 2px 8px; border-radius: 5px;
+  letter-spacing: .03em;
+}
+.header-right { margin-left: auto; display: flex; align-items: center; gap: 10px; }
+.header-sub { font-size: 11px; color: var(--text3); font-family: 'JetBrains Mono', monospace; }
+.criteria-strip {
+  position: fixed; top: 52px; left: 276px; right: 0; z-index: 5;
+  display: flex; align-items: center; gap: 6px; flex-wrap: wrap;
+  padding: 8px 14px;
+  background: var(--glass);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(16px) saturate(140%);
+}
+.criteria-pill {
+  font-size: 10px; font-weight: 600; color: var(--text2);
+  background: var(--bg3); border: 1px solid var(--border2);
+  padding: 3px 8px; border-radius: 5px;
+  font-family: 'JetBrains Mono', monospace;
+}
+.criteria-pill.warn { color: var(--c-amber); background: var(--c-amber-bg); border-color: var(--c-amber-ring); }
+.change-notice {
+  font-size: 10px; font-family: 'JetBrains Mono', monospace;
+  color: var(--c-amber); background: var(--c-amber-bg);
+  border: 1px solid var(--c-amber-ring);
+  padding: 2px 8px; border-radius: 5px;
+}
+/* ── 레이아웃 ── */
+.main { display: grid; grid-template-columns: 276px 1fr; height: calc(100vh - 52px); }
+
+/* ── 사이드바 ── */
+.sidebar {
+  background: var(--glass);
+  border-right: 1px solid var(--border);
+  display: flex; flex-direction: column; overflow: hidden;
+  backdrop-filter: blur(18px) saturate(135%);
+  box-shadow: var(--shadow-soft);
+}
+.sidebar-scroll {
+  flex: 1; overflow-y: auto;
+  padding: 16px 14px;
+  display: flex; flex-direction: column; gap: 20px;
+  scrollbar-width: thin; scrollbar-color: var(--border2) transparent;
+}
+.sidebar-footer {
+  padding: 12px 14px; border-top: 1px solid var(--border);
+  background: var(--glass-strong);
+  display: flex; flex-direction: column; gap: 7px; flex-shrink: 0;
+  backdrop-filter: blur(16px);
+}
+.filter-section { display: flex; flex-direction: column; gap: 9px; }
+.filter-label {
+  font-size: 10px; font-weight: 600; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--text3);
+}
+
+/* ── 내신 입력 ── */
+.grade-wrap {
+  background: var(--glass-strong); border: 1px solid var(--border2);
+  border-radius: 10px; padding: 12px;
+  display: flex; flex-direction: column; gap: 12px;
+  backdrop-filter: blur(14px) saturate(130%);
+  box-shadow: var(--shadow-soft);
+}
+.grade-row { display: flex; align-items: center; gap: 10px; }
+.grade-row label { font-size: 12px; color: var(--text2); width: 56px; flex-shrink: 0; }
+.grade-input {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 20px; font-weight: 600; color: var(--accent);
+  background: rgba(255,255,255,0.72); border: 1px solid var(--border2);
+  border-radius: 8px; width: 80px; padding: 6px 10px;
+  outline: none; text-align: center;
+  transition: border-color .15s, box-shadow .15s;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.82);
+}
+.grade-input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-bg); }
+.grade-status { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--text3); }
+.range-row { display: flex; flex-direction: column; gap: 6px; }
+.range-header { display: flex; justify-content: space-between; }
+.range-label { font-size: 12px; color: var(--text2); }
+.range-val { font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; color: var(--accent); }
+.range-slider {
+  -webkit-appearance: none; appearance: none;
+  width: 100%; height: 3px; background: var(--panel2);
+  border-radius: 2px; outline: none; cursor: pointer;
+}
+.range-slider::-webkit-slider-thumb {
+  -webkit-appearance: none; width: 14px; height: 14px;
+  border-radius: 50%; background: var(--accent); cursor: pointer;
+  box-shadow: var(--thumb-shadow); transition: box-shadow .15s;
+}
+.range-desc { font-size: 10px; font-family: 'JetBrains Mono', monospace; color: var(--text3); }
+
+/* ── 칩 ── */
+.chip-group { display: flex; flex-wrap: wrap; gap: 5px; }
+.chip {
+  padding: 4px 10px; border: 1px solid var(--border2);
+  border-radius: 6px; background: rgba(255,255,255,0.46);
+  color: var(--text2); font-size: 12px; cursor: pointer;
+  transition: all .12s;
+}
+.chip:hover { border-color: var(--border3); color: var(--text); background: var(--panel); }
+.chip.active {
+  background: var(--accent); border-color: var(--accent);
+  color: #fff; font-weight: 600;
+  box-shadow: 0 6px 14px rgba(37,99,235,0.16);
+}
+
+/* ── 텍스트 입력 ── */
+.search-input {
+  background: rgba(255,255,255,0.72); border: 1px solid var(--border2);
+  border-radius: 8px; color: var(--text);
+  font-size: 12px; padding: 8px 11px;
+  width: 100%; outline: none;
+  transition: border-color .15s, box-shadow .15s;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.82);
+}
+.search-input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-bg); }
+.search-input::placeholder { color: var(--text3); }
+
+/* ── 체크박스 ── */
+.check-group { display: flex; flex-direction: column; gap: 7px; }
+.check-item { display: flex; align-items: center; gap: 8px; cursor: pointer; }
+.check-item input[type="checkbox"] { accent-color: var(--accent); width: 14px; height: 14px; cursor: pointer; }
+.check-item span { font-size: 12px; color: var(--text2); }
+.select-input {
+  background: rgba(255,255,255,0.72); border: 1px solid var(--border2);
+  border-radius: 8px; color: var(--text);
+  font-size: 12px; padding: 8px 10px; width: 100%;
+  outline: none; box-shadow: inset 0 1px 0 rgba(255,255,255,0.82);
+}
+.student-select-row { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; }
+.student-select-row .select-input:disabled { color: var(--text3); background: rgba(241,245,249,0.78); cursor: not-allowed; }
+.student-status {
+  min-height: 34px; padding: 7px 9px; border-radius: 8px;
+  border: 1px solid var(--border); background: rgba(255,255,255,0.52);
+  font-size: 11px; line-height: 1.5; color: var(--text3);
+}
+.student-status.is-success { color: var(--score-safe); background: var(--c-green-bg); border-color: rgba(74,222,128,0.24); }
+.student-status.is-warning { color: var(--c-amber); background: var(--c-amber-bg); border-color: var(--c-amber-ring); }
+.student-status.is-empty { color: var(--text3); background: rgba(241,245,249,0.78); }
+
+/* ── 수능 등급 그리드 ── */
+.snt-grid {
+  background: var(--glass-strong); border: 1px solid var(--border2);
+  border-radius: 10px; overflow: hidden;
+  backdrop-filter: blur(14px) saturate(130%);
+  box-shadow: var(--shadow-soft);
+}
+.snt-row { display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid var(--border); }
+.snt-row:last-child { border-bottom: none; }
+.snt-cell { display: flex; align-items: center; padding: 7px 10px; gap: 8px; border-right: 1px solid var(--border); }
+.snt-cell:last-child { border-right: none; }
+.snt-cell-label { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--text3); width: 30px; flex-shrink: 0; }
+.snt-cell-input {
+  font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 600;
+  color: var(--accent2); background: rgba(255,255,255,0.42);
+  border: none; border-bottom: 1px solid var(--border2);
+  width: 34px; outline: none; text-align: center; border-radius: 4px 4px 0 0;
+  transition: border-color .15s;
+}
+.snt-cell-input:focus { border-bottom-color: var(--accent2); }
+.snt-desc { font-size: 10px; color: var(--text3); font-family: 'JetBrains Mono', monospace; margin-top: 5px; }
+.snt-filter-help {
+  font-size: 11px; line-height: 1.5; color: var(--text3);
+  background: rgba(255,255,255,0.52); border: 1px solid var(--border);
+  border-radius: 8px; padding: 7px 9px;
+}
+
+/* ── 버튼 ── */
+.btn-search {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8); border: none; border-radius: 8px;
+  color: #fff; font-weight: 600; font-size: 13px;
+  padding: 10px; width: 100%; cursor: pointer;
+  transition: opacity .15s, transform .15s, box-shadow .15s;
+  box-shadow: 0 10px 18px rgba(37,99,235,0.18);
+}
+.btn-search:hover { opacity: .9; transform: translateY(-1px); }
+.btn-reset {
+  background: rgba(255,255,255,0.52); border: 1px solid var(--border2);
+  border-radius: 8px; color: var(--text2); font-size: 12px;
+  padding: 8px; width: 100%; cursor: pointer;
+  transition: border-color .15s, color .15s;
+}
+.btn-reset:hover { border-color: var(--border3); color: var(--text); }
+
+/* ── 결과 영역 ── */
+.result-area { display: flex; flex-direction: column; overflow: hidden; padding-top: 39px; }
+.result-header {
+  height: 44px; padding: 0 18px; border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; gap: 12px;
+  background: var(--glass-strong); flex-shrink: 0;
+  backdrop-filter: blur(14px) saturate(135%);
+}
+.result-count { font-family: 'JetBrains Mono', monospace; font-size: 14px; color: var(--text2); }
+.result-count-n { font-size: 19px; font-weight: 700; color: var(--text); margin-right: 2px; }
+.filter-summary {
+  display: flex; flex-wrap: wrap; gap: 5px; min-width: 0;
+}
+.summary-chip {
+  font-size: 10px; font-weight: 600; color: var(--text2);
+  background: rgba(255,255,255,0.66); border: 1px solid var(--border2);
+  padding: 2px 7px; border-radius: 5px;
+  font-family: 'JetBrains Mono', monospace; white-space: nowrap;
+}
+.summary-chip.warn { color: var(--c-amber); background: var(--c-amber-bg); border-color: var(--c-amber-ring); }
+.result-insight { border-bottom:1px solid var(--border); background:rgba(248,250,252,.82); padding:8px 18px; display:grid; grid-template-columns:1.15fr 1fr 1fr 1.25fr; gap:8px; flex-shrink:0; }
+.insight-card { border:1px solid var(--border2); border-radius:8px; background:rgba(255,255,255,.72); padding:7px 9px; min-width:0; }
+.insight-card.warn { border-color:var(--c-amber-ring); background:rgba(255,251,235,.72); }
+.insight-card.action { border-color:var(--accent-ring); background:rgba(239,246,255,.76); }
+.insight-label { font-size:11px; color:var(--text3); font-weight:700; margin-bottom:3px; }
+.insight-value { font-size:13px; color:var(--text); font-weight:800; line-height:1.35; }
+.insight-note { display:block; margin-top:2px; font-size:11px; color:var(--text3); font-weight:500; }
+.insight-action { display:inline-block; margin-top:3px; color:var(--accent); font-weight:800; }
+.option-help { margin-top:5px; color:var(--text3); font-size:11px; line-height:1.45; }
+.pager { display:flex; align-items:center; justify-content:center; gap:10px; padding:14px 18px 18px; border-top:1px solid var(--border); background:rgba(248,250,252,.72); }
+.pager button { border:1px solid var(--border2); background:#fff; color:var(--text); border-radius:8px; padding:8px 14px; font-weight:700; cursor:pointer; }
+.pager span { color:var(--text3); font-size:12px; }
+.grade-tag {
+  font-family: 'JetBrains Mono', monospace; font-size: 13px;
+  color: var(--accent); background: var(--accent-bg);
+  border: 1px solid var(--accent-ring);
+  padding: 3px 10px; border-radius: 5px;
+}
+.legend { display: flex; gap: 14px; align-items: center; margin-left: auto; }
+.legend-item { display: flex; align-items: center; gap: 5px; font-size: 13px; color: var(--text3); }
+.legend-dot { width: 7px; height: 7px; border-radius: 50%; }
+.ld-safe { background: var(--score-safe); }
+.ld-near { background: var(--score-near); }
+.ld-hard { background: var(--score-hard); }
+
+/* ── 탭 ── */
+.tabs {
+  display: flex; border-bottom: 1px solid var(--border);
+  background: var(--glass-strong); padding: 0 18px;
+  flex-shrink: 0;
+  backdrop-filter: blur(14px) saturate(135%);
+}
+.tab {
+  padding: 10px 16px; font-size: 14px; font-weight: 500;
+  color: var(--text3); cursor: pointer;
+  border-bottom: 2px solid transparent; margin-bottom: -1px;
+  transition: color .12s, border-color .12s;
+}
+.tab:hover { color: var(--text2); }
+.tab.active { color: var(--text); border-bottom-color: var(--accent); }
+
+/* ── 테이블 ── */
+.table-wrap { overflow: auto; flex: 1; background: rgba(255,255,255,0.30); }
+table { width: 100%; min-width: 980px; table-layout: fixed; border-collapse: collapse; font-size: 14px; }
+col.col-region { width: 76px; }
+col.col-univ { width: 152px; }
+col.col-gyeol { width: 72px; }
+col.col-dept { width: 22%; }
+col.col-k, col.col-j { width: 24%; }
+thead { position: sticky; top: 0; z-index: 10; }
+th {
+  padding: 10px 14px; text-align: left;
+  font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
+  color: var(--text3); border-bottom: 1px solid var(--border2);
+  background: rgba(255,255,255,0.84); white-space: nowrap; user-select: none; cursor: pointer;
+  transition: color .12s;
+  backdrop-filter: blur(14px) saturate(135%);
+}
+th:hover { color: var(--text); }
+th.sort-asc  .si::after { content: ' ↑'; font-size: 9px; color: var(--accent); }
+th.sort-desc .si::after { content: ' ↓'; font-size: 9px; color: var(--accent); }
+th:not(.sort-asc):not(.sort-desc) .si::after { content: ''; }
+td { padding: 10px 14px; border-bottom: 1px solid var(--border); vertical-align: top; transition: background .08s; background: rgba(255,255,255,0.42); }
+tbody tr:nth-child(even) td { background: rgba(247,250,253,0.58); }
+tr:hover td { background: var(--row-hover); }
+
+/* ── 셀 텍스트 ── */
+.t-univ { font-weight: 600; font-size: 16px; color: var(--text); overflow-wrap: anywhere; }
+.t-dept { font-size: 14px; color: var(--text2); overflow-wrap: anywhere; }
+.region-tag {
+  display: inline-block; font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; font-weight: 600; letter-spacing: .05em;
+  color: var(--text2); background: rgba(255,255,255,0.68);
+  border: 1px solid var(--border2);
+  padding: 2px 7px; border-radius: 4px;
+}
+.gyeol-인문   { font-size: 13px; font-weight: 500; color: #1d4ed8; }
+.gyeol-자연   { font-size: 13px; font-weight: 500; color: #047857; }
+.gyeol-예체능 { font-size: 13px; font-weight: 500; color: #7e22ce; }
+.gyeol-공통   { font-size: 13px; color: var(--text3); }
+
+/* ── 뱃지 ── */
+.badge-change {
+  font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600;
+  color: var(--c-amber); background: var(--c-amber-bg);
+  border: 1px solid var(--c-amber-ring);
+  padding: 1px 6px; border-radius: 4px; margin-left: 6px;
+}
+.badge-score {
+  font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600;
+  color: var(--score-score); background: var(--score-score-bg);
+  border: 1px solid var(--score-score-ring);
+  padding: 1px 6px; border-radius: 4px; margin-left: 6px;
+}
+.badge-check {
+  font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600;
+  color: var(--c-amber); background: var(--c-amber-bg);
+  border: 1px solid var(--c-amber-ring);
+  padding: 1px 6px; border-radius: 4px; margin-left: 6px;
+}
+
+/* ── 전형 카드 ── */
+.jtype-cell { display: flex; flex-direction: column; gap: 5px; width: 100%; min-width: 0; }
+.jtype-item {
+  display: grid; grid-template-columns: minmax(86px, .9fr) minmax(0, 1.1fr);
+  grid-template-areas: "head head" "score snt";
+  background: var(--glass-strong); border: 1px solid var(--border2);
+  border-radius: 8px; overflow: hidden; position: relative;
+  transition: border-color .12s, box-shadow .12s, transform .12s;
+  backdrop-filter: blur(12px) saturate(130%);
+  box-shadow: 0 3px 10px rgba(30,41,59,0.06);
+}
+.jtype-item:hover { border-color: var(--border3); box-shadow: var(--shadow-soft); transform: translateY(-1px); }
+.jtype-item.교과 { border-top: 2px solid var(--accent); }
+.jtype-item.종합 { border-top: 2px solid var(--accent2); }
+.jtype-item.snt-check { border-color: var(--c-amber); }
+.jtype-item.snt-fail { position: relative; }
+.jtype-item.snt-fail .jtype-head,
+.jtype-item.snt-fail .jtype-body,
+.jtype-item.snt-fail .sn-block { opacity: .22; }
+.jtype-item.snt-fail::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: rgba(255,255,255,0.76);
+  border-radius: 8px;
+  border: 2px solid rgba(220,38,38,0.42);
+  z-index: 1;
+}
+.jtype-item.snt-fail::before {
+  content: '✕';
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'JetBrains Mono', monospace; font-weight: 900;
+  font-size: 62px; line-height: 1;
+  color: #dc2626;
+  text-shadow: 0 2px 8px rgba(220,38,38,0.18);
+  z-index: 2;
+  letter-spacing: 0;
+}
+.jtype-head {
+  grid-area: head;
+  display: flex; align-items: center; gap: 6px;
+  padding: 6px 9px 5px; border-bottom: 1px solid var(--border);
+  min-width: 0;
+}
+.jtype-type-tag {
+  font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 700;
+  letter-spacing: .08em; text-transform: uppercase; padding: 1px 6px; border-radius: 3px;
+}
+.교과 .jtype-type-tag { background: var(--accent-bg);  color: var(--accent); }
+.종합 .jtype-type-tag { background: var(--accent2-bg); color: var(--accent2); }
+.jtype-name {
+  flex: 1; min-width: 0;
+  font-size: 13px; font-weight: 500; color: var(--text);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.jtype-body { grid-area: score; padding: 7px 9px 8px; display: flex; flex-direction: column; align-items: flex-start; gap: 5px; min-width: 0; }
+.score-row { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; }
+.score-label {
+  font-family: 'JetBrains Mono', monospace; font-size: 9px; font-weight: 700;
+  letter-spacing: .06em; text-transform: uppercase;
+  display: inline-block; padding: 1px 5px; border-radius: 3px; margin-right: 5px;
+  vertical-align: middle;
+}
+.score-label-50 {
+  color: #fff; background: var(--accent); border: 1px solid var(--accent);
+}
+.score-label-70 {
+  color: #fff; background: var(--score-score); border: 1px solid var(--score-score);
+  opacity: .85;
+}
+.score-num {
+  font-family: 'JetBrains Mono', monospace; font-size: 19px; font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  display: inline-block; min-width: 54px; padding: 2px 8px; border-radius: 5px;
+}
+.score-num.g-safe { color: var(--score-safe); background: var(--c-green-bg); text-shadow: var(--score-safe-glow); }
+.score-num.g-near { color: var(--score-near); background: var(--c-amber-bg); text-shadow: var(--score-near-glow); }
+.score-num.g-hard { color: var(--score-hard); background: var(--c-red-bg);   text-shadow: var(--score-hard-glow); }
+.score-num.g-none  { color: var(--text); background: transparent; }
+.score-num.g-score { color: var(--score-score); background: var(--score-score-bg); font-size: 16px; }
+.score-num-70 {
+  font-family: 'JetBrains Mono', monospace; font-size: 19px; font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  display: inline-block; min-width: 54px; padding: 2px 8px; border-radius: 5px;
+}
+.score-num-70.g-safe  { color: var(--score-safe); background: var(--c-green-bg); text-shadow: var(--score-safe-glow); }
+.score-num-70.g-near  { color: var(--score-near); background: var(--c-amber-bg); text-shadow: var(--score-near-glow); }
+.score-num-70.g-hard  { color: var(--score-hard); background: var(--c-red-bg);   text-shadow: var(--score-hard-glow); }
+.score-num-70.g-none  { color: var(--text2); background: transparent; }
+.score-num-70.g-score { color: var(--score-score); background: var(--score-score-bg); }
+.score-empty { font-size: 12px; font-family: 'JetBrains Mono', monospace; color: var(--text3); padding: 3px 0; }
+.score-empty strong { color: var(--c-amber); font-weight: 700; }
+.score-help { display: block; margin-top: 2px; color: var(--text3); font-size: 10px; line-height: 1.5; }
+.sn-status {
+  font-size: 10px; font-weight: 700; letter-spacing: .04em;
+  font-family: 'JetBrains Mono', monospace;
+  padding: 2px 6px; border-radius: 4px; display: inline-block;
+  margin-bottom: 5px;
+}
+.sn-status-ok { color: var(--score-safe); background: var(--c-green-bg); border: 1px solid rgba(74,222,128,0.22); }
+.sn-status-fail { color: var(--c-red); background: var(--c-red-bg); border: 1px solid rgba(248,113,113,0.24); }
+.sn-status-check { color: var(--c-amber); background: var(--c-amber-bg); border: 1px solid var(--c-amber-ring); }
+.sn-status-missing { color: var(--c-amber); background: var(--c-amber-bg); border: 1px dashed var(--c-amber-ring); }
+.sn-status-none { color: var(--text3); background: rgba(255,255,255,0.58); border: 1px solid var(--border2); }
+.sn-reliability {
+  display: block; margin-bottom: 4px;
+  font-size: 10px; color: var(--text3); font-family: 'JetBrains Mono', monospace;
+}
+
+/* ── 수능최저 ── */
+.sn-block { grid-area: snt; min-width: 0; padding: 6px 9px 7px; border-top: none; border-left: 1px solid var(--border); background: rgba(247,250,253,0.72); }
+.sn-header {
+  font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 700;
+  letter-spacing: .1em; text-transform: uppercase; color: var(--text3); margin-bottom: 3px;
+}
+.sn-grade-text { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 1px; }
+.sn-area-text  { font-size: 12px; color: var(--text2); }
+.sn-note-text  {
+  font-size: 12px; color: var(--text3); margin-top: 3px;
+  padding-left: 6px; border-left: 2px solid var(--border2); line-height: 1.6;
+}
+
+/* ── 비교 탭 ── */
+.compare-wrap { padding: 16px; overflow-y: auto; flex: 1; }
+.compare-section {
+  background: var(--glass-strong); border: 1px solid var(--border2);
+  border-radius: 10px; overflow: hidden; margin-bottom: 14px;
+  backdrop-filter: blur(14px) saturate(130%);
+  box-shadow: var(--shadow-soft);
+}
+.compare-section-head {
+  padding: 10px 14px; border-bottom: 1px solid var(--border);
+  background: rgba(255,255,255,0.72);
+  display: flex; align-items: center; gap: 10px;
+}
+.compare-section-title { font-size: 14px; font-weight: 600; color: var(--text); }
+.compare-section-sub { font-size: 13px; color: var(--text3); font-family: 'JetBrains Mono', monospace; }
+.cmp-table { width: 100%; border-collapse: collapse; }
+.cmp-table th {
+  padding: 7px 12px; font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600;
+  letter-spacing: .08em; text-transform: uppercase; color: var(--text3);
+  border-bottom: 1px solid var(--border); background: var(--bg2); text-align: left;
+}
+.cmp-table td { padding: 8px 12px; border-bottom: 1px solid var(--border); font-size: 14px; }
+.cmp-table tr:last-child td { border-bottom: none; }
+.cmp-table tr:hover td { background: var(--row-hover); }
+.vs-label {
+  font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700;
+  padding: 2px 7px; border-radius: 4px; letter-spacing: .04em;
+}
+.vs-교과 { background: var(--accent-bg);  color: var(--accent); }
+.vs-종합 { background: var(--accent2-bg); color: var(--accent2); }
+.vs-same { background: var(--border); color: var(--text3); }
+
+/* ── 빈 상태 ── */
+.empty-state {
+  display: flex; flex-direction: column; align-items: center;
+  justify-content: center; height: 100%; gap: 12px;
+  padding: 60px 40px; text-align: center;
+}
+.empty-icon  { font-size: 36px; opacity: .25; }
+.empty-title { font-size: 18px; font-weight: 600; color: var(--text2); }
+.empty-desc  { font-size: 14px; color: var(--text3); line-height: 1.9; }
+.empty-hint  {
+  font-size: 13px; font-family: 'JetBrains Mono', monospace; color: var(--accent);
+  background: rgba(255,255,255,0.68); border: 1px solid var(--accent-ring);
+  border-radius: 8px; padding: 10px 14px; margin-top: 4px; line-height: 1.9;
+  backdrop-filter: blur(12px);
+}
+
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: var(--border3); }
+
+/* ── V10.6 상담 운영 패널 ── */
+.criteria-strip { min-width: 1024px; }
+.result-area { min-width: 920px; }
+.jtype-item.snt-manual { border-color: var(--c-amber); background: rgba(255,251,235,0.70); }
+.jtype-item.snt-manual::before {
+  content: '확인'; position: absolute; top: 6px; right: 7px;
+  font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 800;
+  color: var(--c-amber); background: rgba(255,255,255,0.78);
+  border: 1px solid var(--c-amber-ring); border-radius: 4px; padding: 1px 5px;
+}
+.jtype-item.snt-ok { border-color: rgba(22,128,61,0.24); }
+.sn-risk-text {
+  margin-top: 5px; padding: 5px 6px; border-radius: 6px;
+  background: rgba(255,255,255,0.72); border: 1px solid var(--c-amber-ring);
+  color: var(--c-amber); font-size: 11px; line-height: 1.45;
+}
+.sn-status-check, .sn-status-missing { font-weight: 800; }
+.pick-btn {
+  grid-column: 1 / -1; margin: 0 8px 8px; border: 1px solid var(--border2);
+  background: rgba(255,255,255,0.76); color: var(--text2); border-radius: 7px;
+  padding: 5px 8px; font-size: 11px; font-weight: 700; cursor: pointer;
+  transition: border-color .12s, color .12s, background .12s;
+}
+.pick-btn:hover { border-color: var(--accent-ring); color: var(--accent); background: #fff; }
+.pick-btn.is-picked { color: #fff; background: var(--accent); border-color: var(--accent); }
+.counsel-board {
+  border-bottom: 1px solid var(--border); background: rgba(255,255,255,0.76);
+  padding: 9px 18px; display: grid; grid-template-columns: 190px 1fr auto; gap: 10px;
+  align-items: start; flex-shrink: 0; backdrop-filter: blur(14px) saturate(135%);
+}
+.counsel-title { font-size: 13px; font-weight: 800; color: var(--text); }
+.counsel-sub { margin-top: 2px; font-size: 11px; color: var(--text3); line-height: 1.45; }
+.counsel-list { display: flex; flex-wrap: wrap; gap: 6px; min-height: 31px; align-items: center; }
+.counsel-empty { color: var(--text3); font-size: 12px; padding: 6px 0; }
+.counsel-chip {
+  display: inline-flex; align-items: center; gap: 6px; max-width: 360px;
+  border: 1px solid var(--border2); border-radius: 999px; background: rgba(248,250,252,0.92);
+  padding: 5px 8px 5px 10px; font-size: 12px; color: var(--text2);
+}
+.counsel-chip strong { color: var(--text); font-weight: 800; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.counsel-chip small { color: var(--text3); font-family: 'JetBrains Mono', monospace; }
+.counsel-remove { border: none; background: transparent; color: var(--text3); cursor: pointer; font-weight: 900; }
+.counsel-actions { display: flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
+.counsel-actions button {
+  border: 1px solid var(--border2); background: #fff; color: var(--text2); border-radius: 8px;
+  padding: 7px 10px; font-size: 12px; font-weight: 800; cursor: pointer;
+}
+.counsel-actions button.primary { color: #fff; background: var(--accent); border-color: var(--accent); }
+.counsel-actions button:disabled { opacity: .45; cursor: not-allowed; }
+.selected-compare-note { padding: 8px 12px; color: var(--text3); font-size: 12px; border-bottom: 1px solid var(--border); background: rgba(248,250,252,.78); }
+.metric-help { display:block; margin-top:4px; color:var(--text3); font-size:10px; line-height:1.45; }
+.score-quality-warning { display:block; margin-top:2px; padding:4px 6px; border:1px solid var(--c-amber-ring); border-radius:5px; background:rgba(255,251,235,.88); color:var(--c-amber); font-size:10px; font-weight:800; line-height:1.4; }
+.score-source-official { display:block; margin-top:3px; padding:4px 6px; border:1px solid var(--accent-ring); border-radius:5px; background:rgba(239,246,255,.82); color:var(--accent); font-size:10px; font-weight:800; line-height:1.4; }
+.compare-metric-note { margin:10px 0; padding:9px 12px; border:1px solid var(--c-amber-ring); border-radius:8px; background:rgba(255,251,235,.78); color:var(--text2); font-size:12px; line-height:1.5; }
+.print-sheet { font-family: 'Pretendard', 'Noto Sans KR', sans-serif; color: #172033; padding: 24px; }
+.print-sheet h1 { font-size: 20px; margin-bottom: 6px; }
+.print-sheet .meta { font-size: 12px; color: #64748b; margin-bottom: 16px; }
+.print-sheet table { width: 100%; border-collapse: collapse; font-size: 12px; }
+.print-sheet th, .print-sheet td { border: 1px solid #cbd5e1; padding: 7px 8px; text-align: left; vertical-align: top; }
+.print-sheet th { background: #f1f5f9; }
+@media print {
+  body > :not(.print-only) { display: none !important; }
+  .print-only { display: block !important; }
+}
+
+@media (max-width: 860px) {
+  .main { grid-template-columns: 1fr; height: auto; min-height: calc(100vh - 52px); }
+  .sidebar { border-right: none; border-bottom: 1px solid var(--border); }
+  .criteria-strip { position: static; margin-left: 0; }
+  .result-area { padding-top: 0; min-height: 60vh; }
+  .header-sub { display: none; }
+  .result-header { height: auto; min-height: 44px; flex-wrap: wrap; padding: 8px 12px; }
+  .result-insight { grid-template-columns: 1fr 1fr; padding: 8px 12px; }
+  .legend { width: 100%; margin-left: 0; }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="logo-mark">시</div>
+  <span class="header-title">수시 입결 검색기</span>
+  <div class="header-sep"></div>
+  <span class="header-badge">2027학년도 V10.6</span>
+  <span class="header-badge">공개용 · 학생 성적 미포함</span>
+  <div class="header-right">
+    <span class="header-sub">경기도교육청 수시나비 · 교과·종합 · 5,863 모집단위 · 상담후보함·판정안전장치</span>
+    <span class="change-notice" id="headerChangeCount" style="display:none"></span>
+  </div>
+</div>
+
+<div class="criteria-strip">
+  <span class="criteria-pill">2027 모집단위</span>
+  <span class="criteria-pill">2026 공개 입결 · 대학별 산출</span>
+  <span class="criteria-pill">교과·종합 50%/70%</span>
+  <span class="criteria-pill warn">수능최저 자동판정은 요강 확인과 분리 표시</span>
+</div>
+
+<div class="main">
+  <div class="sidebar">
+    <div class="sidebar-scroll">
+
+      <div class="filter-section">
+        <div class="filter-label">학생 내신 등급</div>
+        <div class="grade-wrap">
+          <div class="grade-row">
+            <label>학생 내신 기준</label>
+            <input type="number" class="grade-input" id="gradeInput" min="1" max="9" step="0.01" placeholder="2.50">
+            <span class="grade-status" id="gradeDisplay">미입력</span>
+          </div>
+          <div class="range-row">
+            <div class="range-header">
+              <span class="range-label">범위 (±)</span>
+              <span class="range-val" id="rangeVal">±0.30</span>
+            </div>
+            <input type="range" class="range-slider" id="rangeSlider" min="0.1" max="1.5" step="0.05" value="0.3">
+            <div class="range-desc">대표 수치 기준 &nbsp;<span id="rangeDesc">—</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="filter-section">
+        <div class="filter-label">계열</div>
+        <div class="chip-group" id="gyeolGroup">
+          <div class="chip active" data-val="">전체</div>
+          <div class="chip" data-val="인문">인문</div>
+          <div class="chip" data-val="자연">자연</div>
+          <div class="chip" data-val="예체능">예체능</div>
+          <div class="chip" data-val="공통">공통</div>
+        </div>
+      </div>
+
+      <div class="filter-section">
+        <div class="filter-label">권역</div>
+        <div class="chip-group" id="regionGroup">
+          <div class="chip active" data-val="">전체</div>
+          <div class="chip" data-val="서울">서울</div>
+          <div class="chip" data-val="경인권">경인권</div>
+          <div class="chip" data-val="충청권">충청권</div>
+          <div class="chip" data-val="경상권">경상권</div>
+          <div class="chip" data-val="전라권">전라권</div>
+          <div class="chip" data-val="강원권">강원권</div>
+          <div class="chip" data-val="제주권">제주권</div>
+        </div>
+      </div>
+
+      <div class="filter-section">
+        <div class="filter-label">전형 유형</div>
+        <div class="check-group">
+          <label class="check-item"><input type="checkbox" id="chkKwagwa" checked><span>교과전형</span></label>
+          <label class="check-item"><input type="checkbox" id="chkJonghap" checked><span>종합전형</span></label>
+          <label class="check-item"><input type="checkbox" id="chkScoreType"><span>점수형 포함 <span style="color:var(--text3)">· 등급 비교 제외</span></span></label>
+          <select class="select-input" id="scoreDataFilter" aria-label="입결 공개 여부 필터">
+            <option value="">입결 공개/미공개 전체</option>
+            <option value="known">입결 공개 전형만</option>
+            <option value="missing">입결 미공개 전형만</option>
+          </select>
+          <div class="option-help" id="scoreTypeHelp"></div>
+        </div>
+      </div>
+
+      <div class="filter-section">
+        <div class="filter-label">대학 / 모집단위 검색</div>
+        <input type="text" class="search-input" id="univSearch" placeholder="대학명  (예: 고려대)">
+        <input type="text" class="search-input" id="deptSearch" placeholder="모집단위  (예: 간호, 컴퓨터)">
+      </div>
+
+      <div class="filter-section">
+        <div class="filter-label">수능 등급<span style="font-weight:400;color:var(--text3)"> &nbsp;·&nbsp; 자동 참고 판정</span></div>
+        <div class="snt-grid">
+          <div class="snt-row">
+            <div class="snt-cell"><span class="snt-cell-label">국어</span><input type="number" class="snt-cell-input" id="sntK" min="1" max="9" placeholder="—"></div>
+            <div class="snt-cell"><span class="snt-cell-label">수학</span><input type="number" class="snt-cell-input" id="sntM" min="1" max="9" placeholder="—"></div>
+          </div>
+          <div class="snt-row">
+            <div class="snt-cell"><span class="snt-cell-label">영어</span><input type="number" class="snt-cell-input" id="sntE" min="1" max="9" placeholder="—"></div>
+            <div class="snt-cell"><span class="snt-cell-label">탐구①</span><input type="number" class="snt-cell-input" id="sntS1" min="1" max="9" placeholder="—"></div>
+          </div>
+          <div class="snt-row">
+            <div class="snt-cell">
+              <span class="snt-cell-label">탐구②</span>
+              <input type="number" class="snt-cell-input" id="sntS2" min="1" max="9" placeholder="—">
+            </div>
+            <div class="snt-cell">
+              <span class="snt-cell-label">한국사</span>
+              <input type="number" class="snt-cell-input" id="sntH" min="1" max="9" placeholder="—">
+            </div>
+          </div>
+        </div>
+        <div class="snt-desc">수능최저는 참고 표시입니다. 확인 필요 항목은 모집요강을 확인하세요.</div>
+        <label class="check-item"><input type="checkbox" id="chkHideFail"><span>미충족 전형 숨기기</span></label>
+        <select class="select-input" id="sntStatusFilter" aria-label="수능최저 판정 필터">
+          <option value="">전체 보기</option>
+          <option value="ok">자동 판정 가능만</option>
+          <option value="check">모집요강 확인만</option>
+          <option value="none">최저자료 없음만</option>
+          <option value="missing">전형명 확인만</option>
+          <option value="fail">자동 미충족만</option>
+        </select>
+        <div class="snt-filter-help" id="sntFilterHelp">전체 전형을 표시합니다. 자동 표시는 참고용입니다.</div>
+        <div class="snt-status-guide" aria-label="수능최저 상태 설명">
+          <div><strong>자동 판정 가능</strong><span>현재 입력 등급과 자료 구조가 단순해 참고 판정이 가능합니다.</span></div>
+          <div><strong>모집요강 확인</strong><span>필수 과목, 탐구 평균, 비고 조건이 있어 원문 확인이 필요합니다.</span></div>
+          <div><strong>최저자료 없음</strong><span>해당 모집단위의 수능최저 자료를 연결하지 못했습니다.</span></div>
+          <div><strong>전형명 확인</strong><span>모집단위 자료는 있으나 전형명이 정확히 맞지 않습니다.</span></div>
+        </div>
+      </div>
+
+    </div>
+    <div class="sidebar-footer">
+      <button class="btn-search" id="searchBtn">🔍 &nbsp;검색</button>
+      <button class="btn-reset" id="resetBtn">초기화</button>
+    </div>
+  </div>
+
+  <div class="result-area">
+    <div class="result-header">
+      <div class="result-count"><span class="result-count-n" id="resultCount">—</span> 개</div>
+      <span class="grade-tag" id="gradeTag" style="display:none"></span>
+      <div class="filter-summary" id="filterSummary" aria-live="polite"></div>
+      <div class="legend" id="legend" style="display:none">
+        <div class="legend-item"><div class="legend-dot ld-safe"></div>학생 수치 우위</div>
+        <div class="legend-item"><div class="legend-dot ld-near"></div>수치 근접</div>
+        <div class="legend-item"><div class="legend-dot ld-hard"></div>학생 수치 열위</div>
+      </div>
+    </div>
+    <div class="result-insight" id="resultInsight" aria-live="polite"></div>
+    <div class="counsel-board" id="counselBoard">
+      <div>
+        <div class="counsel-title">상담 후보함 <span id="pickCount">0</span>개</div>
+        <div class="counsel-sub">결과 카드에서 후보를 담으면 선택 비교와 인쇄용 상담지를 만들 수 있습니다.</div>
+      </div>
+      <div class="counsel-list" id="pickList"><span class="counsel-empty">아직 담은 전형이 없습니다.</span></div>
+      <div class="counsel-actions">
+        <button type="button" id="comparePickedBtn" disabled>선택 비교</button>
+        <button type="button" id="printPickedBtn" disabled>상담지 인쇄</button>
+        <button type="button" id="clearPickedBtn" disabled>비우기</button>
+      </div>
+    </div>
+    <div class="tabs">
+      <div class="tab active" id="tab-list" data-tab="list">목록</div>
+      <div class="tab" id="tab-compare" data-tab="compare">교과 vs 종합 비교</div>
+      <div class="tab" id="tab-picked" data-tab="picked">상담 후보 비교</div>
+    </div>
+    <div class="table-wrap">
+      <div id="view-list">
+        <div class="empty-state">
+          <div class="empty-icon">🔍</div>
+          <div class="empty-title">3단계로 상담 후보를 좁혀보세요</div>
+          <div class="empty-desc">1. 학생 반·번호를 선택해 수능 등급을 불러옵니다.<br>2. 내신 등급과 검색 범위를 확인합니다.<br>3. 검색 후 최저확인·미공개·모집요강 확인 배지를 함께 봅니다.</div>
+        </div>
+      </div>
+      <div id="view-compare" style="display:none">
+        <div class="empty-state"><div class="empty-icon">⚖️</div><div class="empty-title">검색 후 비교 탭을 확인하세요</div></div>
+      </div>
+      <div id="view-picked" style="display:none">
+        <div class="empty-state"><div class="empty-icon">★</div><div class="empty-title">상담 후보를 담으면 이곳에서 비교합니다</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const RAW = __RAW_DATA__;
+
+const SN  = __SNT_DATA__;
+
+
+
+// ── 상태 ──
+let currentResults = [];
+let currentTab     = 'list';
+let sortState      = { col: null, dir: null };
+let visibleLimit   = 100;
+let pickedItems    = [];
+let renderPickPayloads = [];
+
+// ── DOM 참조 캐시 ──
+const $ = sel => document.querySelector(sel);
+const $$ = sel => [...document.querySelectorAll(sel)];
+const byId = id => document.getElementById(id);
+const val = id => byId(id).value;
+const trimVal = id => val(id).trim();
+const checked = id => byId(id).checked;
+const setChecked = (id, value) => { byId(id).checked = value; };
+const setHTML = (el, htmlText) => { el.innerHTML = htmlText; };
+const classToken = value => String(value || 'none').replace(/[^\w\u3131-\uD79D-]/g, '-');
+
+const DOM = {
+  grade: byId('gradeInput'),
+  slider: byId('rangeSlider'),
+  rangeVal: byId('rangeVal'),
+  rangeDesc: byId('rangeDesc'),
+  gradeDisplay: byId('gradeDisplay'),
+  gradeTag: byId('gradeTag'),
+  legend: byId('legend'),
+  resultCount: byId('resultCount'),
+  changeCount: byId('headerChangeCount'),
+  viewList: byId('view-list'),
+  viewCompare: byId('view-compare'),
+  viewPicked: byId('view-picked'),
+  filterSummary: byId('filterSummary'),
+  resultInsight: byId('resultInsight'),
+  sntFilterHelp: byId('sntFilterHelp'),
+  searchBtn: byId('searchBtn'),
+  resetBtn: byId('resetBtn'),
+  pickCount: byId('pickCount'),
+  pickList: byId('pickList'),
+  comparePickedBtn: byId('comparePickedBtn'),
+  printPickedBtn: byId('printPickedBtn'),
+  clearPickedBtn: byId('clearPickedBtn')
+};
+const SNT_INPUT_IDS = ['sntK', 'sntM', 'sntE', 'sntS1', 'sntS2', 'sntH'];
+const PAGE_SIZE = 100;
+const HAS_SCORE_TYPE_ROWS = RAW.some(row => row.su);
+const SORT_LABELS = { region: '권역', univ: '대학명', gyeol: '계열', dept: '모집단위', k50: '교과 50%', j50: '종합 50%' };
+const SNT_STATE_LABELS = { ok: '자동 확정', fail: '자동 미충족', check: '요강확인 필요', none: '최저자료 없음', missing: '전형명확인 필요' };
+const SNT_FILTER_LABELS = { ok: '자동 판정 가능만', check: '모집요강 확인만', none: '최저자료 없음만', missing: '전형명 확인만', fail: '자동 미충족만' };
+const SNT_FILTER_HELP = {
+  '': '전체 전형을 표시합니다. 자동 확정과 요강 확인 필요 항목을 분리해서 봅니다.',
+  ok: '입력 등급과 자료 구조가 단순해 자동 참고 판정이 가능한 전형만 봅니다.',
+  check: '필수 과목·탐구 평균·비고 조건 때문에 모집요강 확인이 필요한 전형만 봅니다.',
+  none: '해당 모집단위의 수능최저 자료를 연결하지 못한 전형만 봅니다.',
+  missing: '모집단위 자료는 있으나 전형명이 맞지 않아 원문 확인이 필요한 전형만 봅니다.',
+  fail: '입력 등급 기준으로 자동 미충족 처리된 전형만 봅니다.'
+};
+const SCORE_DATA_FILTER_LABELS = { known: '입결 공개만', missing: '입결 미공개만' };
+
+// ── 유틸 ──
+function esc(s) {
+  return String(s)
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+function parseGrade() { return parseFloat(DOM.grade.value); }
+function parseRange() { return parseFloat(DOM.slider.value); }
+
+function clearSntGradeInputs() {
+  SNT_INPUT_IDS.forEach(id => { byId(id).value = ''; });
+}
+
+// ── 슬라이더 / 등급 ──
+function updateRangeDesc() {
+  const g = parseGrade(), r = parseRange();
+  DOM.rangeDesc.textContent = isNaN(g) ? '—'
+    : Math.max(1, g - r).toFixed(2) + ' ~ ' + Math.min(9, g + r).toFixed(2);
+}
+DOM.slider.addEventListener('input', () => {
+  DOM.rangeVal.textContent = '±' + parseRange().toFixed(2);
+  updateRangeDesc();
+  if (currentResults.length) rerender();
+});
+DOM.grade.addEventListener('input', () => {
+  const g = parseGrade();
+  DOM.gradeDisplay.textContent = isNaN(g) ? '미입력' : g.toFixed(2) + '등급';
+  updateRangeDesc();
+  if (currentResults.length) rerender();
+});
+
+// ── 칩 ──
+$$('#gyeolGroup .chip, #regionGroup .chip').forEach(chip => {
+  chip.addEventListener('click', function () {
+    const group   = this.closest('.chip-group');
+    const allChip = group.querySelector('.chip[data-val=""]');
+    if (this.dataset.val === '') {
+      group.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+      this.classList.add('active');
+    } else {
+      allChip.classList.remove('active');
+      this.classList.toggle('active');
+      const anyOn = [...group.querySelectorAll('.chip')]
+        .some(c => c.dataset.val !== '' && c.classList.contains('active'));
+      if (!anyOn) allChip.classList.add('active');
+    }
+  });
+});
+
+// ── 즉시 반영 이벤트 ──
+SNT_INPUT_IDS.forEach(id => {
+  byId(id).addEventListener('input', () => { if (currentResults.length) rerender(); });
+});
+byId('chkHideFail').addEventListener('change', () => { if (currentResults.length) rerender(); });
+byId('sntStatusFilter').addEventListener('change', () => {
+  updateSntFilterHelp();
+  if (currentResults.length) rerender();
+});
+byId('chkScoreType').addEventListener('change', () => { if (currentResults.length) doSearch(); });
+byId('scoreDataFilter').addEventListener('change', () => { if (currentResults.length) doSearch(); });
+DOM.searchBtn.addEventListener('click', doSearch);
+DOM.resetBtn.addEventListener('click', doReset);
+$$('.tab[data-tab]').forEach(tab => {
+  tab.addEventListener('click', () => switchTab(tab.dataset.tab));
+});
+
+// ── 탭 전환 ──
+function switchTab(tab) {
+  currentTab = tab;
+  ['list', 'compare', 'picked'].forEach(t => {
+    byId('view-' + t).style.display = t === tab ? 'block' : 'none';
+    byId('tab-' + t).classList.toggle('active', t === tab);
+  });
+  if (tab === 'compare' && currentResults.length) renderCompare();
+  if (tab === 'picked') renderPickedCompare();
+}
+
+// ── 전형 목록 구성 ──
+const ENTRANCE_SLOTS = [
+  { type: '교과', nameKey: 'k1n', score50Key: 'k1a', score70Key: 'k1b' },
+  { type: '교과', nameKey: 'k2n', score50Key: 'k2a', score70Key: 'k2b' },
+  { type: '교과', nameKey: 'k3n', score50Key: 'k3a', score70Key: 'k3b' },
+  { type: '종합', nameKey: 'j1n', score50Key: 'j1a', score70Key: 'j1b' },
+  { type: '종합', nameKey: 'j2n', score50Key: 'j2a', score70Key: 'j2b' }
+];
+
+function selectedEntranceTypes(showK, showJ) {
+  const types = new Set();
+  if (showK) types.add('교과');
+  if (showJ) types.add('종합');
+  return types;
+}
+
+function buildJtypes(d, showK, showJ) {
+  const selectedTypes = selectedEntranceTypes(showK, showJ);
+  return ENTRANCE_SLOTS
+    .filter(slot => selectedTypes.has(slot.type) && d[slot.nameKey])
+    .map(slot => {
+      const prefix = slot.nameKey.slice(0, -1);
+      return {
+        type: slot.type,
+        name: d[slot.nameKey],
+        s50: d[slot.score50Key] || '',
+        s70: d[slot.score70Key] || '',
+        metricKind: d[prefix + 'metric'] || '',
+        applicantAverage: d[prefix + 'appAvg'] || '',
+        navi50: d[prefix + 'navi50'] || '',
+        navi70: d[prefix + 'navi70'] || ''
+      };
+    });
+}
+
+function splitJtypesByType(jtypes) {
+  return {
+    k: jtypes.filter(t => t.type === '교과'),
+    j: jtypes.filter(t => t.type === '종합')
+  };
+}
+
+function scoreValuesByType(row, type, scoreKey = 's50') {
+  return row.jtypes
+    .filter(t => t.type === type && t[scoreKey] !== '' && !t.metricKind)
+    .map(t => parseFloat(t[scoreKey]))
+    .filter(v => !isNaN(v));
+}
+
+function activeChipValues(groupId) {
+  if ($('#' + groupId + ' .chip[data-val=""].active')) return [];
+  return $$('#' + groupId + ' .chip.active').map(c => c.dataset.val);
+}
+
+function getSearchOptions() {
+  const grade = parseGrade();
+  const range = parseRange();
+  return {
+    grade,
+    cutLo: isNaN(grade) ? -Infinity : grade - range,
+    cutHi: isNaN(grade) ? Infinity : grade + range,
+    gyeolVals: activeChipValues('gyeolGroup'),
+    regionVals: activeChipValues('regionGroup'),
+    showK: checked('chkKwagwa'),
+    showJ: checked('chkJonghap'),
+    showScoreType: checked('chkScoreType'),
+    scoreDataFilter: val('scoreDataFilter'),
+    univQ: trimVal('univSearch'),
+    deptQ: trimVal('deptSearch')
+  };
+}
+
+function rowMatchesSearch(row, opt) {
+  if (row.su && !opt.showScoreType) return false;
+  if (opt.gyeolVals.length && !opt.gyeolVals.includes(row.c)) return false;
+  if (opt.regionVals.length && !opt.regionVals.includes(row.r)) return false;
+  if (opt.univQ && !row.u.includes(opt.univQ)) return false;
+  if (opt.deptQ && !(row.m || '').includes(opt.deptQ)) return false;
+  return true;
+}
+
+function entranceInGradeRange(t, row, opt) {
+  if (isNaN(opt.grade) || row.su) return true;
+  const s = parseFloat(t.s50);
+  return isNaN(s) || (s >= opt.cutLo && s <= opt.cutHi);
+}
+
+function hasAdmissionScore(t) {
+  return t.s50 !== '' || t.s70 !== '';
+}
+
+function entranceMatchesScoreDataFilter(t, filter) {
+  if (!filter) return true;
+  const hasScore = hasAdmissionScore(t);
+  return filter === 'known' ? hasScore : !hasScore;
+}
+
+function setupScoreTypeAvailability() {
+  const scoreType = byId('chkScoreType');
+  const scoreFilter = byId('scoreDataFilter');
+  const help = byId('scoreTypeHelp');
+  if (!HAS_SCORE_TYPE_ROWS) {
+    scoreType.checked = false;
+    scoreType.disabled = true;
+    scoreType.title = '현재 원본에는 점수형 전형 행이 없습니다.';
+    help.textContent = '현재 원본 데이터에는 점수형 전형 행이 없어 이 옵션은 자동 비활성화됩니다.';
+  } else {
+    help.textContent = '점수형 전형은 등급 색상 비교에서 제외됩니다.';
+  }
+  scoreFilter.title = '입결 공개 여부는 전형별 50%/70% 값 존재 여부 기준입니다.';
+}
+
+function resetVisibleLimit() {
+  visibleLimit = PAGE_SIZE;
+}
+
+function doSearch() {
+  const opt = getSearchOptions();
+
+  const results = [];
+  for (const d of RAW) {
+    if (!rowMatchesSearch(d, opt)) continue;
+
+    const jtypes = buildJtypes(d, opt.showK, opt.showJ);
+    if (!jtypes.length) continue;
+
+    const filtered = jtypes.filter(t =>
+      entranceInGradeRange(t, d, opt) &&
+      entranceMatchesScoreDataFilter(t, opt.scoreDataFilter)
+    );
+    if (!filtered.length) continue;
+
+    results.push({
+      r: d.r, u: d.u, c: d.c, m: d.m || '',
+      tc: d.tc, mc: d.mc, su: !!d.su,
+      jtypes: filtered
+    });
+  }
+
+  currentResults = results;
+  sortState      = { col: null, dir: null };
+  resetVisibleLimit();
+
+  const cc = results.filter(r => r.tc || r.mc).length;
+  if (cc > 0) { DOM.changeCount.textContent = '변경 ' + cc + '건'; DOM.changeCount.style.display = 'inline-block'; }
+  else DOM.changeCount.style.display = 'none';
+
+  rerender();
+}
+
+// ── 재렌더 ──
+function rerender() {
+  const g = parseGrade();
+  if (!isNaN(g)) {
+    DOM.gradeTag.style.display = 'inline-block';
+    DOM.gradeTag.textContent   = g.toFixed(2) + '등급  ±' + parseRange().toFixed(2);
+    DOM.legend.style.display   = 'flex';
+  } else {
+    DOM.gradeTag.style.display = 'none';
+    DOM.legend.style.display   = 'none';
+  }
+  if (currentTab === 'list')    renderList();
+  if (currentTab === 'compare') renderCompare();
+  if (currentTab === 'picked')  renderPickedCompare();
+}
+
+// ── 등급 색상 판정 ──
+function gradeColor(v, isSc, margin) {
+  if (isSc) return 'g-score';
+  const g = parseGrade();
+  if (isNaN(g) || v === '') return 'g-none';
+  const s = parseFloat(v);
+  if (isNaN(s)) return 'g-none';
+  const diff = s - g;
+  if (diff >=  margin) return 'g-safe';
+  if (diff >= -margin) return 'g-near';
+  return 'g-hard';
+}
+const scoreClass   = (v, isSc) => gradeColor(v, isSc, 0.1);
+const score70Class = (v, isSc) => gradeColor(v, isSc, 0.2);
+function formatScore(v, isScore) {
+  if (v === '' || v == null) return '';
+  const n = parseFloat(v);
+  if (!isFinite(n)) return esc(v);
+  const rounded = Math.round(n * 100) / 100;
+  const text = rounded.toFixed(2).replace(/\.?0+$/, '');
+  return esc(text + (isScore ? 'p' : ''));
+}
+
+// ── 수능 등급 읽기 ──
+function getSntGrades() {
+  const v = id => {
+    const n = parseFloat(val(id));
+    return (isFinite(n) && n >= 1) ? n : null;
+  };
+  return { K: v('sntK'), M: v('sntM'), E: v('sntE'), S1: v('sntS1'), S2: v('sntS2'), H: v('sntH') };
+}
+
+function hasSntInput(g) {
+  return !!(g.K || g.M || g.E || g.S1 || g.S2 || g.H);
+}
+
+// ── 수능최저 조회 ──
+let SN_INDEX = null;
+let SN_DEPT_INDEX = null;
+const SN_GENERIC_NAMES = new Set(['일반', '교과', '일반학생', '일반교과', '교과일반', '추천형', '일반형', '면접형', '서류형', '면접', '서류']);
+function normSNToken(v) {
+  return String(v || '')
+    .normalize('NFKC')
+    .replace(/\s+/g, '')
+    .replace(/[ㆍ·•･]/g, '')
+    .replace(/[()［］\[\]{}]/g, '')
+    .replace(/Ⅰ/g, 'I').replace(/Ⅱ/g, 'II').replace(/Ⅲ/g, 'III')
+    .replace(/전형$/g, '')
+    .replace(/선발$/g, '')
+    .toUpperCase();
+}
+function normSNName(v) {
+  return normSNToken(v).replace(/DO드림/g, 'DODREAM');
+}
+function normSNKey(univ, jname, dept) {
+  return [normSNToken(univ), normSNName(jname), normSNToken(dept)].join('|');
+}
+function normSNDeptKey(univ, dept) {
+  return [normSNToken(univ), normSNToken(dept)].join('|');
+}
+function cloneSN(sn, matchState, matchedName) {
+  return sn ? { ...sn, _matchState: matchState, _matchedName: matchedName || '' } : null;
+}
+function buildSNIndex() {
+  if (SN_INDEX && SN_DEPT_INDEX) return { byKey: SN_INDEX, byDept: SN_DEPT_INDEX };
+  SN_INDEX = {};
+  SN_DEPT_INDEX = {};
+  for (const key of Object.keys(SN)) {
+    const parts = key.split('|');
+    const univ = parts[0], jname = parts[1], dept = parts.slice(2).join('|');
+    const nkey = normSNKey(univ, jname, dept);
+    const dkey = normSNDeptKey(univ, dept);
+    if (!SN_INDEX[nkey]) SN_INDEX[nkey] = { sn: SN[key], name: jname };
+    (SN_DEPT_INDEX[dkey] ||= []).push({ name: jname, nname: normSNName(jname), sn: SN[key] });
+  }
+  return { byKey: SN_INDEX, byDept: SN_DEPT_INDEX };
+}
+function hasDistinctInterviewDocumentMarker(a, b) {
+  const ia = /면접/.test(a), ib = /면접/.test(b);
+  const da = /서류/.test(a), db = /서류/.test(b);
+  return ia !== ib || da !== db;
+}
+function hasDistinctRomanMarker(a, b) {
+  const romanA = a.match(/(?:종합|우수자|학생부)?(I{1,3})(?:[^A-Z]|$)/);
+  const romanB = b.match(/(?:종합|우수자|학생부)?(I{1,3})(?:[^A-Z]|$)/);
+  return romanA && romanB && romanA[1] !== romanB[1];
+}
+function namesLikelySame(a, b) {
+  if (!a || !b) return false;
+  if (a === b) return true;
+  if (SN_GENERIC_NAMES.has(a) || SN_GENERIC_NAMES.has(b)) return false;
+  if (hasDistinctInterviewDocumentMarker(a, b) || hasDistinctRomanMarker(a, b) || (/특별/.test(a) !== /특별/.test(b))) return false;
+  const shortA = a.replace(/인재$/g, '');
+  const shortB = b.replace(/인재$/g, '');
+  if (shortA === shortB && shortA.length >= 4) return true;
+  if (shortA.length >= 5 && shortB.length >= 5 && (shortA.includes(shortB) || shortB.includes(shortA))) return true;
+  return false;
+}
+function getSNInfo(univ, jname, dept) {
+  const exact = SN[univ + '|' + jname + '|' + dept];
+  if (exact) return { sn: cloneSN(exact, 'exact', jname), state: 'exact', candidates: 0 };
+  const index = buildSNIndex();
+  const nkey = normSNKey(univ, jname, dept);
+  if (index.byKey[nkey]) return { sn: cloneSN(index.byKey[nkey].sn, 'normalized', index.byKey[nkey].name), state: 'normalized', candidates: 1 };
+  const candidates = index.byDept[normSNDeptKey(univ, dept)] || [];
+  const wanted = normSNName(jname);
+  const fuzzy = candidates.find(item => namesLikelySame(wanted, item.nname));
+  if (fuzzy) return { sn: cloneSN(fuzzy.sn, 'alias', fuzzy.name), state: 'alias', candidates: candidates.length };
+  if (candidates.length) return { sn: null, state: 'missing', candidates: candidates.length };
+  return { sn: null, state: 'none', candidates: 0 };
+}
+function getSN(univ, jname, dept) {
+  return getSNInfo(univ, jname, dept).sn;
+}
+
+// ── 수능최저 충족 판정 ──
+function checkSntStatus(sn, g, meta = null) {
+  if (meta && meta.state === 'missing') {
+    return { ok: true, decided: false, state: 'missing', label: '최저 확인 필요', caution: true };
+  }
+  if (!sn || !sn.grade || !sn.area) {
+    return { ok: true, decided: false, state: 'none', label: '최저 정보 없음', caution: true };
+  }
+  if (!hasSntInput(g)) {
+    return { ok: true, decided: false, state: 'check', label: '최저 입력 대기', caution: true };
+  }
+
+  const area = sn.area.replace(/\s/g, '');
+  const gstr = sn.grade.replace(/[\r\n]+/g, ' ').trim();
+  const note = (sn.note || '').replace(/\s/g, '');
+  const basis = area + ' ' + gstr + ' ' + note;
+
+  const needK = area.includes('국');
+  const needM = area.includes('수');
+  const needE = area.includes('영');
+  const needT = area.includes('과탐') || area.includes('과(') || area.includes('탐(') || area.includes('탐구') || area.includes('탐1') || area.includes('탐2');
+  const tCnt  = (() => {
+    const m = area.match(/[과탐]\((\d+)\)/);
+    if (m) return parseInt(m[1]);
+    return area.includes('탐1') && area.includes('탐2') ? 2 : 1;
+  })();
+
+  const av = [];
+  if (needK && g.K) av.push({ key: 'K', v: g.K });
+  if (needM && g.M) av.push({ key: 'M', v: g.M });
+  if (needE && g.E) av.push({ key: 'E', v: g.E });
+  if (needT) {
+    const usesTwoScience = tCnt >= 2 || /2과목|탐구2|과탐2/.test(basis);
+    const scienceAverage = usesTwoScience && (/평균|과\(2\)|탐\(2\)|탐1,?탐2|탐구\(2\)/.test(basis));
+    if (usesTwoScience) {
+      if (!g.S1 || !g.S2) return { ok: true, decided: false, state: 'check', label: '탐구 입력 부족', caution: true };
+      let tVal = scienceAverage ? (g.S1 + g.S2) / 2 : Math.min(g.S1, g.S2);
+      if (scienceAverage && /절사|소수점이하절사|소수점절사/.test(basis)) tVal = Math.floor(tVal);
+      av.push({ key: 'T', v: tVal, raw: [g.S1, g.S2], avg: scienceAverage });
+    } else {
+      const scores = [g.S1, g.S2].filter(Boolean);
+      if (!scores.length) return { ok: true, decided: false, state: 'check', label: '탐구 입력 부족', caution: true };
+      av.push({ key: 'T', v: Math.min(...scores), raw: scores, avg: false });
+    }
+  }
+
+  const need = (needK ? 1 : 0) + (needM ? 1 : 0) + (needE ? 1 : 0) + (needT ? 1 : 0);
+  if (av.length < need) {
+    return { ok: true, decided: false, state: 'check', label: '등급 입력 부족', caution: true };
+  }
+
+  const sorted = [...av].sort((a, b) => a.v - b.v);
+  const forceMath = note.includes('수포함') || note.includes('수학필수') || note.includes('수학포함') || note.includes('수(미/기)필수');
+  const forceKorOrMath = note.includes('국/수포함');
+  const mustCheck = /평균|절사|모두|필수|제2외|한문|직탐|탐구영역/.test(basis) || sn._matchState === 'alias' || sn._matchState === 'normalized';
+  if (forceMath && !g.M) return { ok: true, decided: false, state: 'check', label: '수학 확인 필요', caution: true };
+
+  const englishCap = (() => {
+    const m = basis.match(/(?:영|영어)(\d)등?급?/);
+    return m ? parseInt(m[1]) : null;
+  })();
+  if (englishCap && g.E && g.E > englishCap) {
+    return { ok: false, decided: true, state: 'fail', label: '영어 기준 미충족', caution: false };
+  }
+
+  const historyCap = (() => {
+    const m = basis.match(/(?:한|한국사)(\d)등?급?/);
+    return m ? parseInt(m[1]) : null;
+  })();
+  if (historyCap) {
+    if (!g.H) return { ok: true, decided: false, state: 'check', label: '한국사 확인 필요', caution: true };
+    if (g.H > historyCap) return { ok: false, decided: true, state: 'fail', label: '한국사 기준 미충족', caution: false };
+  }
+
+  const selectBest = (cnt, eachLimit) => {
+    let picked = sorted.slice(0, cnt);
+    if (forceMath && g.M) {
+      const math = av.find(x => x.key === 'M');
+      const others = av.filter(x => x.key !== 'M').sort((a, b) => a.v - b.v).slice(0, cnt - 1);
+      picked = [math, ...others].filter(Boolean);
+    }
+    if (forceKorOrMath && g.K && g.M && !picked.some(x => x.key === 'K' || x.key === 'M')) {
+      const required = [av.find(x => x.key === 'K'), av.find(x => x.key === 'M')].filter(Boolean).sort((a, b) => a.v - b.v)[0];
+      const others = av.filter(x => x !== required).sort((a, b) => a.v - b.v).slice(0, cnt - 1);
+      picked = [required, ...others];
+    }
+    if (picked.length < cnt) return null;
+    if (eachLimit) return picked.every(x => x.v <= eachLimit);
+    return picked.reduce((a, b) => a + b.v, 0);
+  };
+
+  const scienceAllPass = lim => {
+    const t = av.find(x => x.key === 'T');
+    if (!t || !t.raw || t.raw.length < 2 || !/모두/.test(basis)) return true;
+    return t.raw.every(v => v <= lim);
+  };
+
+  const sumM = gstr.match(/(\d+)개\s*합\s*(\d+)등급/);
+  if (sumM) {
+    const cnt = parseInt(sumM[1]), lim = parseInt(sumM[2]);
+    const sum = selectBest(cnt, null);
+    if (sum === null) return { ok: true, decided: false, state: 'check', label: '등급 입력 부족', caution: true };
+    return { ok: sum <= lim, decided: sum > lim || !mustCheck, state: sum <= lim ? (mustCheck ? 'check' : 'ok') : 'fail', label: sum <= lim ? (mustCheck ? '조건부 충족·비고확인' : '자동판정 충족') : '자동판정 미충족', caution: sum <= lim && mustCheck };
+  }
+
+  const eachM = gstr.match(/(\d+)개\s*(\d+)등급/);
+  if (eachM) {
+    const cnt = parseInt(eachM[1]), lim = parseInt(eachM[2]);
+    const pass = selectBest(cnt, lim) && scienceAllPass(lim);
+    if (pass === null) return { ok: true, decided: false, state: 'check', label: '등급 입력 부족', caution: true };
+    return { ok: pass, decided: !pass || !mustCheck, state: pass ? (mustCheck ? 'check' : 'ok') : 'fail', label: pass ? (mustCheck ? '조건부 충족·비고확인' : '자동판정 충족') : '자동판정 미충족', caution: pass && mustCheck };
+  }
+
+  const sumAlt = gstr.match(/등급\s*합\s*(\d+)\s*이내/);
+  if (sumAlt) {
+    const lim = parseInt(sumAlt[1]);
+    const sum = selectBest(av.length, null);
+    if (sum === null) return { ok: true, decided: false, state: 'check', label: '등급 입력 부족', caution: true };
+    return { ok: sum <= lim, decided: sum > lim || !mustCheck, state: sum <= lim ? (mustCheck ? 'check' : 'ok') : 'fail', label: sum <= lim ? (mustCheck ? '조건부 충족·비고확인' : '자동판정 충족') : '자동판정 미충족', caution: sum <= lim && mustCheck };
+  }
+
+  return { ok: true, decided: false, state: 'check', label: '판정식 확인 필요', caution: true };
+}
+function checkSnt(sn, g) { return checkSntStatus(sn, g).ok; }
+
+function friendlySntLabel(snt) {
+  return SNT_STATE_LABELS[snt.state] || snt.label || '모집요강 확인';
+}
+
+function sntReliabilityText(snt, sn = null) {
+  if (snt.state === 'ok') return '자동 확정 참고';
+  if (snt.state === 'fail') return '자동 미충족 참고';
+  if (snt.state === 'missing') return '전형명 대조 필요';
+  if (snt.state === 'none') return '연결 자료 없음';
+  if (sn && sn._matchState === 'normalized') return '정규화 연결 · 원문 확인';
+  if (sn && sn._matchState === 'alias') return '유사 연결 · 원문 확인';
+  return '모집요강 원문 확인';
+}
+function sntRiskText(snt, sn = null) {
+  if (snt.state === 'ok') return '';
+  if (snt.state === 'fail') return '입력 등급 기준 자동 미충족입니다. 최종 판단 전 모집요강의 반영 과목을 확인하세요.';
+  if (snt.state === 'missing') return '같은 모집단위의 최저 자료는 있으나 전형명이 맞지 않습니다. 원문 전형명을 대조하세요.';
+  if (snt.state === 'none') return '연결된 수능최저 자료가 없습니다. 최저 없음으로 단정하지 말고 모집요강을 확인하세요.';
+  if (snt.label && snt.label.includes('입력')) return '입력 등급이 부족해 자동 판정을 보류했습니다.';
+  if (sn && (sn._matchState === 'normalized' || sn._matchState === 'alias')) return '전형명이 자동 보정으로 연결되었습니다. 원본 모집요강 확인이 필요합니다.';
+  return '필수 과목, 탐구 평균, 비고 조건 중 하나가 있어 자동 확정으로 보지 않습니다.';
+}
+function sntCardClass(snt) {
+  if (snt.state === 'fail') return 'snt-fail';
+  if (snt.state === 'ok' && snt.decided) return 'snt-ok';
+  return 'snt-manual';
+}
+function admissionScoreLabels(t) {
+  return t.metricKind === 'donggukOfficial' ? ['\uB4F1\uB85D\uD3C9\uADE0', '\uB4F1\uB85D\uCD5C\uC800'] : ['50%', '70%'];
+}
+function admissionMetricHelp(t) {
+  if (t.metricKind === 'donggukOfficial') return '\uB3D9\uAD6D\uB300 2026 \uACF5\uC2DD PDF \u00B7 \uC804 \uAD50\uACFC\uBAA9 \uD3C9\uADE0\uB4F1\uAE09 \u00B7 \uC9C0\uC6D0\uC790 \uD3C9\uADE0 ' + formatScore(t.applicantAverage, false);
+  if (t.type === '\uAD50\uACFC') return '\uB300\uD559\uBCC4 \uD658\uC0B0\u00B7\uACF5\uAC1C \uB4F1\uAE09 \u00B7 \uD559\uC0DD \uD3C9\uADE0\uB4F1\uAE09\uACFC \uC9C1\uC811 \uBE44\uAD50 \uC8FC\uC758';
+  return '\uB300\uD559 \uACF5\uAC1C \uAE30\uC900 \u00B7 \uC0B0\uCD9C \uACFC\uBAA9\uACFC \uBC29\uC2DD\uC774 \uB300\uD559\uBCC4\uB85C \uB2E4\uB984';
+}
+function admissionSourceNotice(t) {
+  if (t.metricKind !== 'donggukOfficial') return '';
+  return '\uACF5\uC2DD PDF \uBC18\uC601 \u00B7 \uAE30\uC874 \uC218\uC2DCNAVI 50%/70% ' + (t.navi50 || '\uBBF8\uACF5\uAC1C') + ' / ' + (t.navi70 || '\uBBF8\uACF5\uAC1C') + ' \uBCF4\uC874';
+}
+function admissionScoreWarning(t) {
+  if (t.metricKind === 'donggukOfficial') return '';
+  const s50 = parseFloat(t.s50);
+  const s70 = parseFloat(t.s70);
+  if (!isFinite(s50) || !isFinite(s70)) return '';
+  if (s50 > s70) return '50%\u00B770% \uC21C\uC11C \uC5ED\uC804 \u00B7 \uC6D0\uBCF8 \uD655\uC778 \uD544\uC694';
+  if (s50 === 1 || Math.abs(s70 - s50) >= 0.5) return '\uAC12 \uD3B8\uCC28 \uD07C \u00B7 \uB300\uD559 \uACF5\uC2DD \uACB0\uACFC \uBCD1\uD589 \uD655\uC778';
+  return '';
+}
+const PICK_STORAGE_KEY = 'susi-v10.6-picked-items';
+function loadPickedItems() {
+  try {
+    const saved = JSON.parse(sessionStorage.getItem(PICK_STORAGE_KEY) || '[]');
+    return Array.isArray(saved) ? saved.filter(item => item && item.id && item.univ && item.dept) : [];
+  } catch (error) {
+    return [];
+  }
+}
+function persistPickedItems() {
+  try { sessionStorage.setItem(PICK_STORAGE_KEY, JSON.stringify(pickedItems)); } catch (error) {}
+}
+function pickIdFor(univ, dept, type, name) {
+  return [univ, dept, type, name].join('|');
+}
+function isPicked(id) {
+  return pickedItems.some(item => item.id === id);
+}
+function buildPickPayload(region, category, univ, dept, t, snt) {
+  return {
+    id: pickIdFor(univ, dept, t.type, t.name),
+    region, category, univ, dept,
+    type: t.type, name: t.name,
+    s50: t.s50 || '', s70: t.s70 || '',
+    sntState: snt.state, sntLabel: friendlySntLabel(snt), sntRisk: sntRiskText(snt),
+    scoreText: t.metricKind === 'donggukOfficial'
+      ? '\uB4F1\uB85D\uD3C9\uADE0 ' + (t.s50 || '\uBBF8\uACF5\uAC1C') + ' / \uB4F1\uB85D\uCD5C\uC800 ' + (t.s70 || '\uBBF8\uACF5\uAC1C')
+      : '50% ' + (t.s50 || '\uBBF8\uACF5\uAC1C') + ' / 70% ' + (t.s70 || '\uBBF8\uACF5\uAC1C')
+  };
+}
+function togglePick(payload) {
+  const idx = pickedItems.findIndex(item => item.id === payload.id);
+  if (idx >= 0) pickedItems.splice(idx, 1);
+  else pickedItems.push(payload);
+  persistPickedItems();
+  renderPickBoard();
+  rerender();
+}
+function removePick(id) {
+  pickedItems = pickedItems.filter(item => item.id !== id);
+  persistPickedItems();
+  renderPickBoard();
+  rerender();
+}
+function bindPickButtons() {
+  $$('.pick-btn').forEach(btn => {
+    const pickIndex = Number(btn.dataset.pickIndex);
+    const payload = Number.isInteger(pickIndex) ? renderPickPayloads[pickIndex] : null;
+    if (!payload) {
+      btn.title = '\uD6C4\uBCF4 \uC815\uBCF4\uB97C \uC0C8\uB85C \uC77D\uAE30 \uC704\uD574 \uAC80\uC0C9\uC744 \uB2E4\uC2DC \uC2E4\uD589\uD574 \uC8FC\uC138\uC694.';
+      return;
+    }
+    btn.addEventListener('click', () => togglePick(payload));
+  });
+}
+function renderPickBoard() {
+  DOM.pickCount.textContent = pickedItems.length.toLocaleString();
+  DOM.comparePickedBtn.disabled = pickedItems.length < 2;
+  DOM.printPickedBtn.disabled = pickedItems.length === 0;
+  DOM.clearPickedBtn.disabled = pickedItems.length === 0;
+  if (!pickedItems.length) {
+    setHTML(DOM.pickList, '<span class="counsel-empty">아직 담은 전형이 없습니다.</span>');
+    return;
+  }
+  setHTML(DOM.pickList, pickedItems.map(item =>
+    '<span class="counsel-chip"><strong>' + esc(item.univ + ' ' + item.dept) + '</strong><small>' + esc(item.type + '·' + item.name) + '</small><button class="counsel-remove" type="button" aria-label="' + esc(item.univ + ' ' + item.dept + ' \uD6C4\uBCF4 \uC0AD\uC81C') + ' data-remove-pick="' + esc(item.id) + '">×</button></span>'
+  ).join(''));
+  $$('[data-remove-pick]').forEach(btn => btn.addEventListener('click', () => removePick(btn.dataset.removePick)));
+}
+function selectedCompareSection() {
+  if (!pickedItems.length) return '';
+  const rows = pickedItems.map(item => '<tr><td>' + esc(item.region || '-') + '</td><td><strong>' + esc(item.univ) + '</strong><br><span style="color:var(--text3)">' + esc(item.dept) + '</span></td><td>' + esc(item.type) + '</td><td>' + esc(item.name) + '</td><td>' + esc(item.scoreText) + '</td><td><span class="sn-status sn-status-' + esc(item.sntState) + '">' + esc(item.sntLabel) + '</span><br><span style="font-size:11px;color:var(--text3)">' + esc(item.sntRisk) + '</span></td></tr>').join('');
+  return '<div class="compare-section"><div class="compare-section-head"><span style="font-size:16px">★</span><span class="compare-section-title">상담 후보 선택 비교</span><span class="compare-section-sub">직접 담은 전형 · ' + pickedItems.length.toLocaleString() + '개</span></div><div class="selected-compare-note">후보함에 담은 전형만 모아 본 표입니다. 자동 비교보다 실제 상담 후보 검토에 우선 사용하세요.</div><table class="cmp-table"><thead><tr><th>권역</th><th>대학·모집단위</th><th>유형</th><th>전형명</th><th>입결 지표</th><th>수능최저</th></tr></thead><tbody>' + rows + '</tbody></table></div>';
+}
+function printPicked() {
+  if (!pickedItems.length) return;
+  const rows = pickedItems.map((item, i) => '<tr><td>' + (i + 1) + '</td><td>' + esc(item.univ) + '<br>' + esc(item.dept) + '</td><td>' + esc(item.type) + '<br>' + esc(item.name) + '</td><td>' + esc(item.scoreText) + '</td><td>' + esc(item.sntLabel) + '<br>' + esc(item.sntRisk) + '</td></tr>').join('');
+  const previous = document.getElementById('printSheet');
+  if (previous) previous.remove();
+  const sheet = document.createElement('section');
+  sheet.id = 'printSheet';
+  sheet.className = 'print-sheet print-only';
+  sheet.innerHTML = '<h1>\uC218\uC2DC \uC785\uACB0 \uC0C1\uB2F4 \uD6C4\uBCF4\uC9C0</h1><div class="meta">V10.6 \u00B7 \uC0DD\uC131 \uC2DC\uAC01 ' + esc(new Date().toLocaleString('ko-KR')) + ' \u00B7 \uC218\uB2A5\uCD5C\uC800 \uC790\uB3D9 \uD45C\uC2DC\uB294 \uC0C1\uB2F4 \uCC38\uACE0\uC6A9</div><table><thead><tr><th>No</th><th>\uB300\uD559\u00B7\uBAA8\uC9D1\uB2E8\uC704</th><th>\uC804\uD615</th><th>\uC785\uACB0 \uC9C0\uD45C</th><th>\uC218\uB2A5\uCD5C\uC800 \uD655\uC778</th></tr></thead><tbody>' + rows + '</tbody></table><h2 style="font-size:15px;margin-top:18px">\uC0C1\uB2F4 \uBA54\uBAA8</h2><table><tr><td style="height:72px"></td></tr></table>';
+  document.body.appendChild(sheet);
+  window.print();
+  setTimeout(() => sheet.remove(), 500);
+}
+// ── 카드 렌더 ──
+function renderCard(t, univ, dept, grades, isScore, region = '', category = '') {
+  const snInfo = getSNInfo(univ, t.name, dept);
+  const sn    = snInfo.sn;
+  const snt   = checkSntStatus(sn, grades, snInfo);
+  const sntOk = snt.ok;
+  const has50 = t.s50 !== '';
+  const has70 = t.s70 !== '';
+  const cardClass = sntCardClass(snt);
+  const pickPayload = buildPickPayload(region, category, univ, dept, t, snt);
+  const picked = isPicked(pickPayload.id);
+  const pickIndex = renderPickPayloads.push(pickPayload) - 1;
+  const riskText = sntRiskText(snt, sn);
+
+  let scoreHtml = '';
+  if (!has50 && !has70) {
+    scoreHtml = '<div class="score-empty"><strong>입결 미공개</strong><span class="score-help">50%/70% 기준값 없음</span></div>';
+  } else {
+    scoreHtml = '<div class="score-row">';
+    const scoreLabels = admissionScoreLabels(t);
+    if (has50) scoreHtml += `<span class="score-label score-label-50">${esc(scoreLabels[0])}</span><span class="score-num ${scoreClass(t.s50, isScore)}">${formatScore(t.s50, isScore)}</span>`;
+    if (has70) scoreHtml += `<span class="score-label score-label-70">${esc(scoreLabels[1])}</span><span class="score-num-70 ${score70Class(t.s70, isScore)}">${formatScore(t.s70, isScore)}</span>`;
+    scoreHtml += '</div>';
+    if (isScore) scoreHtml += '<span class="score-help">점수형 자료 · 내신 등급 색상 비교 제외</span>';
+    else {
+      scoreHtml += '<span class="score-help metric-help">' + esc(admissionMetricHelp(t, univ)) + '</span>';
+      const sourceNotice = admissionSourceNotice(t);
+      if (sourceNotice) scoreHtml += '<span class="score-source-official">' + esc(sourceNotice) + '</span>';
+      const scoreWarning = admissionScoreWarning(t, univ);
+      if (scoreWarning) scoreHtml += '<span class="score-quality-warning">' + esc(scoreWarning) + '</span>';
+    }
+  }
+
+  // note: 줄바꿈 처리 후 esc 적용 (순서 수정)
+  let snHtml = '';
+  if (sn) {
+    const noteRaw  = sn.note ? sn.note.replace(/[\r\n]+/g, '\n') : '';
+    const noteLines = noteRaw ? noteRaw.split('\n').map(esc).join('<br>') : '';
+    const longNote = noteRaw.length > 70 || /\n/.test(noteRaw);
+    const noteHtml  = noteLines ? (longNote
+      ? `<details class="sn-note-details"><summary>비고 보기</summary><div class="sn-note-text">${noteLines}</div></details>`
+      : `<div class="sn-note-text">${noteLines}</div>`) : '';
+    const matchHtml = sn._matchState && sn._matchState !== 'exact' && sn._matchedName ? `<div class="sn-note-text">연결 전형명: ${esc(sn._matchedName)}</div>` : '';
+    snHtml = `<div class="sn-block">
+      <span class="sn-status sn-status-${snt.state}">${esc(friendlySntLabel(snt))}</span>
+      <span class="sn-reliability">${esc(sntReliabilityText(snt, sn))}</span>
+      <div class="sn-header">수능최저</div>
+      <div class="sn-grade-text">${esc(sn.grade)}</div>
+      <div class="sn-area-text">${esc(sn.area)}</div>
+      ${noteHtml}
+      ${riskText ? `<div class="sn-risk-text">${esc(riskText)}</div>` : ''}
+    </div>`;
+  } else {
+    snHtml = `<div class="sn-block">
+      <span class="sn-status sn-status-${snt.state}">${esc(snt.label)}</span>
+      <span class="sn-reliability">${esc(sntReliabilityText(snt, sn))}</span>
+      ${riskText ? `<div class="sn-risk-text">${esc(riskText)}</div>` : ''}
+    </div>`;
+  }
+
+  return `<div class="jtype-item ${t.type} ${cardClass}">
+    <div class="jtype-head">
+      <span class="jtype-type-tag">${t.type}</span>
+      <span class="jtype-name" title="${esc(t.name)}">${esc(t.name)}</span>
+    </div>
+    <div class="jtype-body">${scoreHtml}</div>
+    ${snHtml}
+    <button class="pick-btn ${picked ? 'is-picked' : ''}" type="button" data-pick-index="${pickIndex}">${picked ? '후보함에서 빼기' : '상담 후보 담기'}</button>
+  </div>`;
+}
+
+// ── 컬럼 렌더 ──
+function renderCol(list, univ, dept, grades, isScore) {
+  if (!list.length) return '<span style="color:var(--text3);font-size:11px;font-family:JetBrains Mono,monospace">—</span>';
+  return '<div class="jtype-cell">' + list.map(t => renderCard(t, univ, dept, grades, !!isScore, arguments[5] || '', arguments[6] || '')).join('') + '</div>';
+}
+
+// ── 정렬 ──
+function handleSort(col) {
+  if (sortState.col === col) {
+    sortState.dir = sortState.dir === 'asc' ? 'desc' : (sortState.dir === 'desc' ? null : 'asc');
+    if (!sortState.dir) sortState.col = null;
+  } else {
+    sortState.col = col;
+    sortState.dir = 'asc';
+  }
+  renderList();
+}
+function thClass(col) {
+  if (sortState.col !== col) return '';
+  return sortState.dir === 'asc' ? 'sort-asc' : 'sort-desc';
+}
+function getMin50(row, type) {
+  if (row.su) return Infinity;
+  const vals = row.jtypes
+    .filter(t => !type || t.type === type)
+    .map(t => parseFloat(t.s50))
+    .filter(v => !isNaN(v));
+  return vals.length ? Math.min(...vals) : Infinity;
+}
+function sortedResults() {
+  if (!sortState.col || !sortState.dir) return [...currentResults];
+  const { col, dir } = sortState;
+  const m = dir === 'asc' ? 1 : -1;
+  return [...currentResults].sort((a, b) => {
+    if (col === 'region') return m * a.r.localeCompare(b.r);
+    if (col === 'univ')   return m * a.u.localeCompare(b.u);
+    if (col === 'gyeol')  return m * a.c.localeCompare(b.c);
+    if (col === 'dept')   return m * a.m.localeCompare(b.m);
+    if (col === 'k50' || col === 'j50') {
+      const type = col === 'k50' ? '교과' : '종합';
+      const va = getMin50(a, type), vb = getMin50(b, type);
+      if (va === Infinity && vb === Infinity) return 0;
+      if (va === Infinity) return 1;
+      if (vb === Infinity) return -1;
+      return m * (va - vb);
+    }
+    return 0;
+  });
+}
+
+// ── 빈 결과 힌트 ──
+function getSelectedEntranceTypeLabel() {
+  const types = [];
+  if (checked('chkKwagwa')) types.push('교과');
+  if (checked('chkJonghap')) types.push('종합');
+  return types.length ? types.join('+') : '없음';
+}
+
+function getActiveFilterItems({ includeScoreType = false, includeSort = false, includeResultCount = null } = {}) {
+  const items = [];
+  const g = parseGrade();
+  if (!isNaN(g)) items.push({ text: '내신 ' + g.toFixed(2) + '±' + parseRange().toFixed(2) });
+  items.push({ text: '계열 ' + selectedChipLabels('gyeolGroup') });
+  items.push({ text: '권역 ' + selectedChipLabels('regionGroup') });
+  items.push({ text: '전형 ' + getSelectedEntranceTypeLabel() });
+
+  if (includeScoreType) {
+    const scoreOn = checked('chkScoreType');
+    items.push({ text: scoreOn ? '점수제 포함' : '점수제 제외', warn: scoreOn });
+  }
+
+  const scoreData = val('scoreDataFilter');
+  if (scoreData) items.push({ text: SCORE_DATA_FILTER_LABELS[scoreData], warn: scoreData === 'missing' });
+
+  const sntVal = getSntStatusFilter();
+  if (sntVal) items.push({ text: SNT_FILTER_LABELS[sntVal], warn: sntVal !== 'ok' });
+  if (checked('chkHideFail')) items.push({ text: '미충족 숨김' });
+
+  const u = trimVal('univSearch');
+  const d = trimVal('deptSearch');
+  if (u) items.push({ text: '대학 "' + u + '"' });
+  if (d) items.push({ text: '모집 "' + d + '"' });
+
+  if (includeSort) {
+    const s = sortLabel();
+    if (s) items.push({ text: '정렬 ' + s });
+  }
+  if (includeResultCount !== null) items.push({ text: '결과 ' + includeResultCount.toLocaleString() + '건' });
+  return items;
+}
+
+function buildActiveFilterDetails() {
+  const items = getActiveFilterItems();
+  return '<div class="empty-filter-detail"><div class="empty-filter-title">현재 적용 조건</div><div class="empty-filter-list">' +
+    items.map(item => '<span>' + esc(item.text) + '</span>').join('') + '</div></div>';
+}
+
+function buildEmptyHint() {
+  const hints = [];
+  if (!isNaN(parseGrade())) hints.push('내신 등급 범위를 확대해 보세요 (슬라이더 ↑)');
+  const u = trimVal('univSearch');
+  const d = trimVal('deptSearch');
+  if (u) hints.push('대학명 검색어 확인: "' + u + '"');
+  if (d) hints.push('모집단위 검색어 확인: "' + d + '"');
+  if (!$('#gyeolGroup .chip[data-val=""].active'))  hints.push('계열 필터를 "전체"로');
+  if (!$('#regionGroup .chip[data-val=""].active')) hints.push('권역 필터를 "전체"로');
+  if (!checked('chkKwagwa') && !checked('chkJonghap'))
+    hints.push('전형 유형을 하나 이상 선택하세요');
+  const scoreFilter = val('scoreDataFilter');
+  if (scoreFilter === 'known') hints.push('입결 미공개 전형도 포함해 보세요');
+  if (scoreFilter === 'missing') hints.push('입결 공개 전형까지 전체로 보세요');
+  if (!checked('chkScoreType')) hints.push('필요하면 점수형 포함을 켜 보세요');
+  if (checked('chkHideFail')) hints.push('미충족 전형 숨기기를 해제해 보세요');
+  if (getSntStatusFilter()) hints.push('수능최저 판정 필터를 "전체 보기"로 바꿔 보세요');
+  return hints.length ? '<div class="empty-hint">' + hints.join('<br>') + '</div>' : '';
+}
+
+function getSntStatusFilter() {
+  return val('sntStatusFilter');
+}
+
+function updateSntFilterHelp() {
+  const key = getSntStatusFilter();
+  DOM.sntFilterHelp.textContent = SNT_FILTER_HELP[key] || SNT_FILTER_HELP[''];
+}
+
+function getSntStatusForEntrance(row, entrance, grades) {
+  const snInfo = getSNInfo(row.u, entrance.name, row.m);
+  return checkSntStatus(snInfo.sn, grades, snInfo);
+}
+
+function rowHasSntCaution(row, grades) {
+  return row.jtypes.some(t => getSntStatusForEntrance(row, t, grades).caution);
+}
+
+function filterJtypesBySnt(row, grades, hideFail, wantedState) {
+  return row.jtypes.filter(t => {
+    const status = getSntStatusForEntrance(row, t, grades);
+    if (hideFail && !status.ok) return false;
+    if (wantedState && status.state !== wantedState) return false;
+    return true;
+  });
+}
+
+function summarizeRows(rows, grades) {
+  const summary = { rows: rows.length, entrances: 0, snt: { ok: 0, fail: 0, check: 0, none: 0, missing: 0 }, scoreKnown: 0, scoreMissing: 0 };
+  for (const row of rows) {
+    for (const t of row.jtypes) {
+      summary.entrances += 1;
+      const status = getSntStatusForEntrance(row, t, grades);
+      summary.snt[status.state] = (summary.snt[status.state] || 0) + 1;
+      if (hasAdmissionScore(t)) summary.scoreKnown += 1;
+      else summary.scoreMissing += 1;
+    }
+  }
+  return summary;
+}
+
+
+function renderResultInsight(rows, grades) {
+  const s = summarizeRows(rows, grades);
+  if (!rows.length) {
+    setHTML(DOM.resultInsight, '<div class="insight-card action"><div class="insight-label">상담 시작</div><div class="insight-value">학생·내신·검색어를 먼저 설정하세요<span class="insight-note">상단 요약은 검색 후 상담 판단용으로 바뀝니다.</span></div></div>');
+    return;
+  }
+  const autoOk = s.snt.ok || 0;
+  const autoFail = s.snt.fail || 0;
+  const manual = (s.snt.check || 0) + (s.snt.missing || 0);
+  const noData = s.snt.none || 0;
+  const picked = pickedItems.length;
+  const riskParts = [];
+  if (manual) riskParts.push(manual.toLocaleString() + '개 요강확인');
+  if (noData) riskParts.push(noData.toLocaleString() + '개 최저자료 없음');
+  if (autoFail) riskParts.push(autoFail.toLocaleString() + '개 자동 미충족');
+  const riskText = riskParts.length ? riskParts.join(' · ') : '큰 위험 신호 없음';
+  const action = picked ? '후보함에서 선택 비교·인쇄 진행' : '눈에 띄는 전형을 후보함에 담기';
+  const cards = [
+    { label: '\uC0C1\uB2F4 \uD6C4\uBCF4', value: picked.toLocaleString() + '\uAC1C \uB2F4\uC74C', note: picked ? '\uC120\uD0DD \uBE44\uAD50\u00B7\uC778\uC1C4\uB85C \uC774\uC5B4\uC11C \uAC80\uD1A0' : '\uACB0\uACFC \uCE74\uB4DC\uC5D0\uC11C \uC0C1\uB2F4 \uD6C4\uBCF4\uB97C \uB2F4\uC73C\uC138\uC694' },
+    { label: '\uC218\uB2A5\uCD5C\uC800 \uC790\uB3D9 \uD655\uC778', value: autoOk.toLocaleString() + '\uAC1C', note: '\uADF8\uB798\uB3C4 \uCD5C\uC885 \uC0C1\uB2F4 \uC804 \uBAA8\uC9D1\uC694\uAC15 \uD655\uC778 \uAD8C\uC7A5' },
+    { label: '주의해서 볼 항목', value: riskText, note: '이 항목은 학생에게 단정적으로 말하지 않기', warn: true },
+    { label: '다음 행동', value: action, note: picked.toLocaleString() + '개 담김 · 필요 시 조건을 더 좁히기', action: true }
+  ];
+  setHTML(DOM.resultInsight, cards.map(item =>
+    '<div class="insight-card' + (item.warn ? ' warn' : '') + (item.action ? ' action' : '') + '"><div class="insight-label">' + esc(item.label) + '</div><div class="insight-value">' + esc(item.value) + '<span class="insight-note">' + esc(item.note) + '</span>' + (item.action ? '<span class="insight-action">상담 후보함 활용</span>' : '') + '</div></div>'
+  ).join(''));
+}
+
+
+function bindLoadMore(totalRows) {
+  const btn = $('#loadMoreBtn');
+  if (!btn) return;
+  btn.addEventListener('click', () => {
+    visibleLimit = Math.min(visibleLimit + PAGE_SIZE, totalRows);
+    renderList();
+  });
+}
+
+function formatMaybeScore(value) {
+  return Number.isFinite(value) ? value.toFixed(2).replace(/\.00$/, '') : '—';
+}
+
+function sntBriefForRow(row, grades) {
+  const states = new Set(row.jtypes.map(t => getSntStatusForEntrance(row, t, grades).state));
+  if (states.has('fail')) return '자동 미충족 포함';
+  if (states.has('check')) return '모집요강 확인';
+  if (states.has('missing')) return '전형명 확인';
+  if (states.has('none')) return '최저자료 없음';
+  return '자동 판정 가능';
+}
+
+function getVisibleRows(grades) {
+  const hideFail = checked('chkHideFail');
+  const sntFilter = getSntStatusFilter();
+  let rows = sortedResults();
+  if (hideFail || sntFilter) {
+    rows = rows
+      .map(row => ({ ...row, jtypes: filterJtypesBySnt(row, grades, hideFail, sntFilter) }))
+      .filter(row => row.jtypes.length);
+  }
+  return rows;
+}
+
+function selectedChipLabels(groupId) {
+  const active = $$('#' + groupId + ' .chip.active').map(c => c.textContent.trim());
+  return (!active.length || active.includes('전체')) ? '전체' : active.join(',');
+}
+
+function sortLabel() {
+  if (!sortState.col || !sortState.dir) return '';
+  if (sortState.col === 'k50' || sortState.col === 'j50') {
+    return (SORT_LABELS[sortState.col] || sortState.col) + (sortState.dir === 'asc' ? ' 낮은 컷 우선' : ' 높은 컷 우선');
+  }
+  return (SORT_LABELS[sortState.col] || sortState.col) + (sortState.dir === 'asc' ? ' 가나다순' : ' 역순');
+}
+
+function renderFilterSummary(resultCount) {
+  const chips = getActiveFilterItems({
+    includeScoreType: true,
+    includeSort: true,
+    includeResultCount: resultCount
+  });
+
+  setHTML(DOM.filterSummary, chips.map(item =>
+    '<span class="summary-chip' + (item.warn ? ' warn' : '') + '">' + esc(item.text) + '</span>'
+  ).join(''));
+}
+
+function bindSortHeaders() {
+  $$('th[data-sort]').forEach(th => {
+    th.addEventListener('click', () => handleSort(th.dataset.sort));
+    th.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        handleSort(th.dataset.sort);
+      }
+    });
+  });
+}
+
+// ── 목록 렌더 ──
+function renderList() {
+  renderPickPayloads = [];
+  const grades   = getSntGrades();
+  const sorted = getVisibleRows(grades);
+  DOM.resultCount.textContent = sorted.length.toLocaleString();
+  renderFilterSummary(sorted.length);
+  renderResultInsight(sorted, grades);
+
+  if (!sorted.length) {
+    setHTML(DOM.viewList,
+      '<div class="empty-state"><div class="empty-icon">🔍</div>' +
+      '<div class="empty-title">검색 결과 없음</div>' +
+      '<div class="empty-desc">현재 조건과 맞는 전형이 없습니다. 아래 항목부터 완화해 보세요.</div>' +
+      buildEmptyHint() + '</div>');
+    return;
+  }
+
+  const mkTh = (col, label) =>
+    `<th class="${thClass(col)}" data-sort="${col}" tabindex="0"><span class="si">${label}</span></th>`;
+
+  let html = `<table><colgroup>
+    <col class="col-region"><col class="col-univ"><col class="col-gyeol"><col class="col-dept"><col class="col-k"><col class="col-j">
+  </colgroup><thead><tr>
+    ${mkTh('region', '권역')}
+    ${mkTh('univ',   '대학명')}
+    ${mkTh('gyeol',  '계열')}
+    ${mkTh('dept',   '모집단위')}
+    ${mkTh('k50',    '교과전형 <small style="font-weight:400;letter-spacing:0;text-transform:none;color:var(--text3)">(대표 수치 낮은순)</small>')}
+    ${mkTh('j50',    '종합전형 <small style="font-weight:400;letter-spacing:0;text-transform:none;color:var(--text3)">(대표 수치 낮은순)</small>')}
+  </tr></thead><tbody>`;
+
+  const visibleRows = sorted.slice(0, visibleLimit);
+  for (const row of visibleRows) {
+    const grouped = splitJtypesByType(row.jtypes);
+    const kList = grouped.k;
+    const jList = grouped.j;
+    let badges = '';
+    if (row.tc && row.tc !== '유지') badges += `<span class="badge-change">${esc(row.tc)}</span>`;
+    if (row.mc && row.mc !== '유지') badges += `<span class="badge-change">${esc(row.mc)}</span>`;
+    if (row.su) badges += '<span class="badge-score">점수형</span>';
+    if (rowHasSntCaution(row, grades)) badges += '<span class="badge-check">최저확인</span>';
+
+    html += `<tr>
+      <td><span class="region-tag">${esc(row.r)}</span></td>
+      <td class="t-univ">${esc(row.u)}</td>
+      <td><span class="gyeol-${classToken(row.c)}">${esc(row.c)}</span></td>
+      <td class="t-dept">${esc(row.m)}${badges}</td>
+      <td>${renderCol(kList, row.u, row.m, grades, row.su, row.r, row.c)}</td>
+      <td>${renderCol(jList, row.u, row.m, grades, row.su, row.r, row.c)}</td>
+    </tr>`;
+  }
+  html += '</tbody></table>';
+  if (sorted.length > visibleRows.length) {
+    html += '<div class="pager"><button id="loadMoreBtn" type="button">결과 더 보기</button><span>' +
+      visibleRows.length.toLocaleString() + ' / ' + sorted.length.toLocaleString() + '개 표시 중</span></div>';
+  }
+  setHTML(DOM.viewList, html);
+  bindSortHeaders();
+  bindLoadMore(sorted.length);
+  bindPickButtons();
+}
+
+// ── 비교 탭 렌더 ──
+function renderPickedCompare() {
+  const grades = getSntGrades();
+  const rows = currentResults.length ? getVisibleRows(grades) : [];
+  DOM.resultCount.textContent = pickedItems.length.toLocaleString();
+  renderFilterSummary(rows.length);
+  renderResultInsight(rows, grades);
+  if (!pickedItems.length) {
+    setHTML(DOM.viewPicked, '<div class="empty-state"><div class="empty-icon">★</div><div class="empty-title">상담 후보가 아직 없습니다</div><div class="empty-desc">목록의 결과 카드에서 상담 후보 담기를 누르면 이 탭에서 직접 고른 전형만 비교합니다.</div></div>');
+    return;
+  }
+  setHTML(DOM.viewPicked, '<div class="compare-wrap">' + selectedCompareSection() + '</div>');
+}
+
+function renderCompare() {
+  const grades = getSntGrades();
+  const rows = getVisibleRows(grades);
+  DOM.resultCount.textContent = rows.length.toLocaleString();
+  renderFilterSummary(rows.length);
+  renderResultInsight(rows, grades);
+
+  const comp = rows.filter(r =>
+    !r.su &&
+    scoreValuesByType(r, '교과').length &&
+    scoreValuesByType(r, '종합').length
+  );
+  if (!comp.length) {
+    setHTML(DOM.viewCompare,
+      '<div class="empty-state"><div class="empty-icon">⚖️</div>' +
+      '<div class="empty-title">비교 가능한 항목 없음</div>' +
+      '<div class="empty-desc">교과·종합 모두 입결이 있는 모집단위가 없습니다. 입결 미공개/최저 필터가 비교 대상을 줄였을 수 있습니다.</div>' +
+      buildActiveFilterDetails() + '</div>');
+    return;
+  }
+
+  const kAdv = [], jAdv = [], same = [];
+  for (const r of comp) {
+    const kArr = scoreValuesByType(r, '교과');
+    const jArr = scoreValuesByType(r, '종합');
+    const k70Arr = scoreValuesByType(r, '교과', 's70');
+    const j70Arr = scoreValuesByType(r, '종합', 's70');
+    if (!kArr.length || !jArr.length) continue;
+    const kMin = Math.min(...kArr), jMin = Math.min(...jArr), diff = kMin - jMin;
+    const k70 = k70Arr.length ? Math.min(...k70Arr) : NaN;
+    const j70 = j70Arr.length ? Math.min(...j70Arr) : NaN;
+    const sntBrief = sntBriefForRow(r, grades);
+    if      (diff >  0.1) kAdv.push({ r, kMin, jMin, k70, j70, diff, sntBrief });
+    else if (diff < -0.1) jAdv.push({ r, kMin, jMin, k70, j70, diff, sntBrief });
+    else                  same.push({ r, kMin, jMin, k70, j70, diff, sntBrief });
+  }
+  kAdv.sort((a, b) => b.diff - a.diff);
+  jAdv.sort((a, b) => a.diff - b.diff);
+
+  function vsRow(item) {
+    const kCls   = scoreClass(item.kMin.toString(), false);
+    const jCls   = scoreClass(item.jMin.toString(), false);
+    const advCls = item.diff >  0.1 ? '교과' : item.diff < -0.1 ? '종합' : 'same';
+    const adv    = item.diff >  0.1 ? '종합 수치 낮음' : item.diff < -0.1 ? '교과 수치 낮음' : '수치 유사';
+    const dc     = item.diff >  0   ? 'var(--accent)' : item.diff < 0 ? 'var(--accent2)' : 'var(--text3)';
+    return `<tr>
+      <td><span class="region-tag">${esc(item.r.r)}</span></td>
+      <td>
+        <span class="t-univ" style="font-size:14px">${esc(item.r.u)}</span><br>
+        <span style="font-size:11px;color:var(--text3)">${esc(item.r.m)}</span>
+      </td>
+      <td><span class="score-num ${kCls}" style="font-size:17px">${item.kMin.toFixed(2)}</span></td>
+      <td><span class="score-num ${jCls}" style="font-size:17px">${item.jMin.toFixed(2)}</span></td>
+      <td style="font-size:12px;color:var(--text3)">${formatMaybeScore(item.k70)} / ${formatMaybeScore(item.j70)}</td>
+      <td style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:${dc};font-variant-numeric:tabular-nums">
+        ${item.diff > 0 ? '+' : ''}${item.diff.toFixed(2)}
+      </td>
+      <td><span class="vs-label vs-${advCls}">${adv}</span><br><span style="font-size:11px;color:var(--text3)">${esc(item.sntBrief)}</span></td>
+    </tr>`;
+  }
+
+  const vsHead = `<table class="cmp-table"><thead><tr>
+    <th>권역</th><th>대학·모집단위</th>
+    <th style="color:var(--accent)">교과 50%</th>
+    <th style="color:var(--accent2)">종합 50%</th>
+    <th>70% 교과/종합</th><th>수치 차이</th><th>수치 비교·최저</th>
+  </tr></thead><tbody>`;
+
+  const section = (icon, label, sub, items) =>
+    `<div class="compare-section">
+      <div class="compare-section-head">
+        <span style="font-size:16px">${icon}</span>
+        <span class="compare-section-title">${label}</span>
+        <span class="compare-section-sub">${sub} · ${items.length}개</span>
+      </div>
+      ${vsHead}${items.map(vsRow).join('')}</tbody></table>
+    </div>`;
+
+  let html = '';
+  if (kAdv.length) html += section('📘', '종합 공개 수치가 낮음', '유불리 판정 아님', kAdv);
+  if (jAdv.length) html += section('📗', '교과 공개 수치가 낮음', '유불리 판정 아님', jAdv);
+  if (same.length) html += section('⚖️', '공개 수치 유사', '차이 0.1 이내', same);
+  const excludedMetricCount = rows.reduce((sum, row) => sum + row.jtypes.filter(t => t.metricKind).length, 0);
+  const excludedMetricText = excludedMetricCount ? ' 지표가 달라 자동 비교에서 제외된 전형 ' + excludedMetricCount.toLocaleString() + '개.' : '';
+  const metricNote = '<div class="compare-metric-note"><strong>수치 비교 주의</strong> 교과·종합은 산출 과목과 방식이 다를 수 있어, 유불리 판정이 아닌 공개 수치 차이만 표시합니다.' + excludedMetricText + '</div>';
+  setHTML(DOM.viewCompare, '<div class="compare-wrap">' + metricNote + html + '</div>');
+}
+
+// ── 초기화 ──
+function doReset() {
+  DOM.grade.value = ''; DOM.gradeDisplay.textContent = '미입력';
+  DOM.slider.value = 0.3; DOM.rangeVal.textContent = '±0.30'; DOM.rangeDesc.textContent = '—';
+  byId('univSearch').value = '';
+  byId('deptSearch').value = '';
+  $$('#gyeolGroup .chip').forEach((c, i) => c.classList.toggle('active', i === 0));
+  $$('#regionGroup .chip').forEach((c, i) => c.classList.toggle('active', i === 0));
+  setChecked('chkKwagwa', true);
+  setChecked('chkJonghap', true);
+  setChecked('chkScoreType', false);
+  setChecked('chkHideFail', false);
+  byId('scoreDataFilter').value = '';
+  byId('sntStatusFilter').value = '';
+  updateSntFilterHelp();
+  clearSntGradeInputs();
+  DOM.changeCount.style.display = 'none';
+  DOM.gradeTag.style.display = 'none';
+  DOM.legend.style.display = 'none';
+  setHTML(DOM.filterSummary, '');
+  setHTML(DOM.resultInsight, '');
+  pickedItems = [];
+  persistPickedItems();
+  renderPickBoard();
+  DOM.resultCount.textContent = '—';
+  resetVisibleLimit();
+  currentResults = [];
+  sortState      = { col: null, dir: null };
+  // switchTab으로 상태 일관성 보장
+  switchTab('list');
+  const emptyHtml = icon =>
+    `<div class="empty-state"><div class="empty-icon">${icon}</div>` +
+    `<div class="empty-title">검색 조건을 설정하고 검색하세요</div></div>`;
+  setHTML(DOM.viewList, emptyHtml('🔍'));
+  setHTML(DOM.viewCompare, emptyHtml('⚖️'));
+  setHTML(DOM.viewPicked, emptyHtml('?'));
+}
+
+// ── Enter 키 검색 ──
+setupScoreTypeAvailability();
+resetVisibleLimit();
+pickedItems = loadPickedItems();
+renderPickBoard();
+DOM.clearPickedBtn.addEventListener('click', () => { pickedItems = []; persistPickedItems(); renderPickBoard(); rerender(); });
+DOM.comparePickedBtn.addEventListener('click', () => { if (pickedItems.length >= 2) switchTab('picked'); });
+DOM.printPickedBtn.addEventListener('click', printPicked);
+
+$$('input').forEach(inp => {
+  inp.addEventListener('keydown', e => { if (e.key === 'Enter') doSearch(); });
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "name": "susi-admissions-search",
+  "private": true,
+  "version": "10.6.0",
+  "scripts": {
+    "build:check": "node scripts/build.mjs --check",
+    "validate": "node scripts/validate-public.mjs"
+  }
+}
