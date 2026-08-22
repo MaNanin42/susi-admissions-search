@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>수시 입결 검색기 | 2027학년도 V10.6 공개용</title>
+<title>수시 입결 검색기 | 2027학년도 V10.7 공개용</title>
 <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 /* ── 라이트 글래스 테마 변수 ── */
@@ -69,7 +69,7 @@ body {
   background: var(--glass-strong);
   border-bottom: 1px solid var(--border2);
   display: flex; align-items: center;
-  padding: 0 18px; gap: 12px;
+  padding: 0 14px; gap: 10px;
   position: sticky; top: 0; z-index: 300;
   backdrop-filter: blur(18px) saturate(145%);
   box-shadow: 0 1px 0 rgba(255,255,255,0.72), var(--shadow-soft);
@@ -81,34 +81,26 @@ body {
   display: flex; align-items: center; justify-content: center;
   font-size: 12px; font-weight: 700; color: #fff;
 }
-.header-title { font-size: 14px; font-weight: 600; letter-spacing: -.01em; }
-.header-sep { width: 1px; height: 16px; background: var(--border2); }
-.header-badge {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 10px; font-weight: 600;
-  color: var(--accent);
-  background: var(--accent-bg);
-  border: 1px solid var(--accent-ring);
-  padding: 2px 8px; border-radius: 5px;
-  letter-spacing: .03em;
+.workspace-tabs {
+  display: flex; align-self: stretch; align-items: stretch; gap: 2px;
+}
+.workspace-tab {
+  min-width: 124px; padding: 0 16px;
+  border: 0; border-bottom: 3px solid transparent;
+  background: transparent; color: var(--text3);
+  font: inherit; font-size: 13px; font-weight: 600;
+  cursor: pointer; transition: color .15s ease, background .15s ease, border-color .15s ease;
+}
+.workspace-tab:hover { color: var(--text); background: rgba(37,99,235,.05); }
+.workspace-tab.active {
+  color: var(--accent); border-bottom-color: var(--accent); background: rgba(37,99,235,.07);
+}
+.workspace-tab:focus-visible { outline: 2px solid var(--accent); outline-offset: -3px; }
+.header-version {
+  font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 600;
+  color: var(--text3); white-space: nowrap;
 }
 .header-right { margin-left: auto; display: flex; align-items: center; gap: 10px; }
-.header-sub { font-size: 11px; color: var(--text3); font-family: 'JetBrains Mono', monospace; }
-.criteria-strip {
-  position: fixed; top: 52px; left: 276px; right: 0; z-index: 5;
-  display: flex; align-items: center; gap: 6px; flex-wrap: wrap;
-  padding: 8px 14px;
-  background: var(--glass);
-  border-bottom: 1px solid var(--border);
-  backdrop-filter: blur(16px) saturate(140%);
-}
-.criteria-pill {
-  font-size: 10px; font-weight: 600; color: var(--text2);
-  background: var(--bg3); border: 1px solid var(--border2);
-  padding: 3px 8px; border-radius: 5px;
-  font-family: 'JetBrains Mono', monospace;
-}
-.criteria-pill.warn { color: var(--c-amber); background: var(--c-amber-bg); border-color: var(--c-amber-ring); }
 .change-notice {
   font-size: 10px; font-family: 'JetBrains Mono', monospace;
   color: var(--c-amber); background: var(--c-amber-bg);
@@ -116,7 +108,82 @@ body {
   padding: 2px 8px; border-radius: 5px;
 }
 /* ── 레이아웃 ── */
+.workspace-panel[hidden] { display: none; }
 .main { display: grid; grid-template-columns: 276px 1fr; height: calc(100vh - 52px); }
+.admissions-office-panel {
+  height: calc(100vh - 52px); overflow: hidden;
+  display: flex; flex-direction: column;
+}
+.admissions-office-head {
+  min-height: 76px; padding: 14px 22px;
+  display: flex; align-items: center; gap: 18px;
+  border-bottom: 1px solid var(--border); background: var(--glass-strong);
+  flex-shrink: 0;
+}
+.admissions-office-heading { font-size: 18px; font-weight: 700; letter-spacing: -.02em; }
+.admissions-office-desc { margin-top: 3px; color: var(--text3); font-size: 12px; }
+.admissions-office-total {
+  margin-left: auto; min-width: 92px; text-align: right;
+  color: var(--text3); font-size: 11px;
+}
+.admissions-link-status { display: block; margin-top: 2px; color: var(--accent2); font-weight: 600; }
+.admissions-office-total strong {
+  margin-right: 3px; color: var(--accent); font-family: 'JetBrains Mono', monospace;
+  font-size: 18px; font-weight: 700;
+}
+.admissions-region-filters {
+  min-height: 48px; padding: 8px 22px;
+  display: flex; align-items: center; gap: 6px; flex-wrap: wrap;
+  border-bottom: 1px solid var(--border); background: rgba(255,255,255,.48);
+  flex-shrink: 0;
+}
+.admissions-region-button {
+  min-height: 30px; padding: 4px 10px;
+  border: 1px solid var(--border2); border-radius: 6px;
+  background: rgba(255,255,255,.76); color: var(--text2);
+  font: inherit; font-size: 11px; font-weight: 600; cursor: pointer;
+}
+.admissions-region-button:hover { border-color: var(--accent-ring); color: var(--accent); }
+.admissions-region-button.active {
+  border-color: var(--accent); background: var(--accent); color: #fff;
+}
+.admissions-region-button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.admissions-region-button .count { margin-left: 4px; opacity: .72; font-family: 'JetBrains Mono', monospace; }
+.admissions-directory {
+  flex: 1; overflow-y: auto; padding: 18px 22px 28px;
+  scrollbar-width: thin; scrollbar-color: var(--border2) transparent;
+}
+.university-region-section + .university-region-section { margin-top: 24px; }
+.university-region-head {
+  margin-bottom: 9px; padding-bottom: 7px;
+  display: flex; align-items: baseline; gap: 7px;
+  border-bottom: 1px solid var(--border);
+}
+.university-region-title { font-size: 14px; font-weight: 700; color: var(--text); }
+.university-region-count { color: var(--text3); font-family: 'JetBrains Mono', monospace; font-size: 10px; }
+.university-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 7px;
+}
+.university-entry {
+  min-height: 38px; padding: 8px 10px;
+  display: flex; align-items: center; justify-content: space-between; gap: 8px;
+  border: 1px solid var(--border); border-radius: 7px;
+  background: rgba(255,255,255,.68); color: var(--text2);
+  font-size: 12px; font-weight: 600; line-height: 1.35;
+}
+.university-name { min-width: 0; display: inline-flex; align-items: baseline; flex-wrap: wrap; }
+.university-campus { margin-left: 1px; color: var(--accent); font-size: 11px; white-space: nowrap; }
+.university-link { text-decoration: none; cursor: pointer; }
+.university-link:hover {
+  border-color: var(--accent-ring); background: var(--accent-bg); color: var(--accent);
+}
+.university-link:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.university-link-label {
+  flex-shrink: 0; color: var(--accent); font-size: 9px; font-weight: 700; white-space: nowrap;
+}
+.admissions-directory-empty {
+  margin: 54px auto; color: var(--text3); text-align: center; font-size: 13px;
+}
 
 /* ── 사이드바 ── */
 .sidebar {
@@ -275,7 +342,7 @@ body {
 .btn-reset:hover { border-color: var(--border3); color: var(--text); }
 
 /* ── 결과 영역 ── */
-.result-area { display: flex; flex-direction: column; overflow: hidden; padding-top: 39px; }
+.result-area { display: flex; flex-direction: column; overflow: hidden; }
 .result-header {
   height: 44px; padding: 0 18px; border-bottom: 1px solid var(--border);
   display: flex; align-items: center; gap: 12px;
@@ -570,8 +637,7 @@ tr:hover td { background: var(--row-hover); }
 ::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 2px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--border3); }
 
-/* ── V10.6 상담 운영 패널 ── */
-.criteria-strip { min-width: 1024px; }
+/* ── V10.7 상담 운영 패널 ── */
 .result-area { min-width: 920px; }
 .jtype-item.snt-manual { border-color: var(--c-amber); background: rgba(255,251,235,0.70); }
 .jtype-item.snt-manual::before {
@@ -638,12 +704,20 @@ tr:hover td { background: var(--row-hover); }
 @media (max-width: 860px) {
   .main { grid-template-columns: 1fr; height: auto; min-height: calc(100vh - 52px); }
   .sidebar { border-right: none; border-bottom: 1px solid var(--border); }
-  .criteria-strip { position: static; margin-left: 0; }
-  .result-area { padding-top: 0; min-height: 60vh; }
-  .header-sub { display: none; }
+  .result-area { min-height: 60vh; }
   .result-header { height: auto; min-height: 44px; flex-wrap: wrap; padding: 8px 12px; }
   .result-insight { grid-template-columns: 1fr 1fr; padding: 8px 12px; }
   .legend { width: 100%; margin-left: 0; }
+}
+@media (max-width: 560px) {
+  .header { padding: 0 8px; gap: 6px; }
+  .workspace-tab { min-width: 0; padding: 0 10px; font-size: 12px; }
+  .header-version { display: none; }
+  .admissions-office-head { min-height: 68px; padding: 10px 14px; }
+  .admissions-office-desc { display: none; }
+  .admissions-region-filters { padding: 8px 14px; }
+  .admissions-directory { padding: 14px; }
+  .university-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
 }
 </style>
 </head>
@@ -651,23 +725,17 @@ tr:hover td { background: var(--row-hover); }
 
 <div class="header">
   <div class="logo-mark">시</div>
-  <span class="header-title">수시 입결 검색기</span>
-  <div class="header-sep"></div>
-  <span class="header-badge">2027학년도 V10.6</span>
-  <span class="header-badge">공개용 · 학생 성적 미포함</span>
+  <div class="workspace-tabs" role="tablist" aria-label="서비스 전환">
+    <button type="button" class="workspace-tab active" id="workspace-tab-search" data-workspace="search" role="tab" aria-selected="true" aria-controls="workspace-search">수시 입결 검색</button>
+    <button type="button" class="workspace-tab" id="workspace-tab-admissions" data-workspace="admissions" role="tab" aria-selected="false" aria-controls="workspace-admissions" tabindex="-1">입학처 모아보기</button>
+  </div>
   <div class="header-right">
-    <span class="header-sub">경기도교육청 수시나비 · 교과·종합 · 5,863 모집단위 · 상담후보함·판정안전장치</span>
+    <span class="header-version">2027학년도 V10.7</span>
     <span class="change-notice" id="headerChangeCount" style="display:none"></span>
   </div>
 </div>
 
-<div class="criteria-strip">
-  <span class="criteria-pill">2027 모집단위</span>
-  <span class="criteria-pill">2026 공개 입결 · 대학별 산출</span>
-  <span class="criteria-pill">교과·종합 50%/70%</span>
-  <span class="criteria-pill warn">수능최저 자동판정은 요강 확인과 분리 표시</span>
-</div>
-
+<section class="workspace-panel" id="workspace-search" role="tabpanel" aria-labelledby="workspace-tab-search">
 <div class="main">
   <div class="sidebar">
     <div class="sidebar-scroll">
@@ -831,11 +899,29 @@ tr:hover td { background: var(--row-hover); }
     </div>
   </div>
 </div>
+</section>
+
+<section class="workspace-panel admissions-office-panel" id="workspace-admissions" role="tabpanel" aria-labelledby="workspace-tab-admissions" hidden>
+  <div class="admissions-office-head">
+    <div>
+      <div class="admissions-office-heading">입학처 모아보기</div>
+      <div class="admissions-office-desc">V10.6 기준 입결 데이터에 포함된 대학을 권역별로 정리했습니다. 검증된 2027학년도 수시 모집요강을 새 창으로 연결하며, 공공기관 대체 원문은 출처를 구분 표시합니다.</div>
+    </div>
+    <div class="admissions-office-total">
+      <strong id="admissionsUniversityTotal">—</strong>개 대학·캠퍼스
+      <span class="admissions-link-status" id="admissionsLinkStatus">검증 링크 —개 확인</span>
+    </div>
+  </div>
+  <div class="admissions-region-filters" id="admissionsRegionFilters" role="group" aria-label="입학처 권역 필터"></div>
+  <div class="admissions-directory" id="admissionsDirectory" aria-live="polite"></div>
+</section>
 
 <script>
 const RAW = __RAW_DATA__;
 
 const SN  = __SNT_DATA__;
+
+const ADMISSIONS_OFFICE_LINKS = __ADMISSIONS_OFFICE_LINKS__;
 
 
 
@@ -846,6 +932,98 @@ let sortState      = { col: null, dir: null };
 let visibleLimit   = 100;
 let pickedItems    = [];
 let renderPickPayloads = [];
+let admissionsDirectoryReady = false;
+
+const ADMISSIONS_REGION_ALIASES = { '수도권': '경인권', '호남권': '전라권' };
+const ADMISSIONS_REGION_ORDER = ['서울', '경인권', '강원권', '충청권', '전라권', '경상권', '제주권'];
+const UNIVERSITY_CAMPUS_LABELS = {
+  '강원권|강원대': '강원대(춘천)',
+  '경상권|가야대': '가야대(김해)',
+  '경상권|경남대': '경남대(창원)',
+  '경상권|경북대': '경북대(대구)',
+  '경상권|경상국립대': '경상국립대(진주·통영)',
+  '경상권|경성대': '경성대(부산)',
+  '경상권|경운대': '경운대(구미)',
+  '경상권|경일대': '경일대(경산)',
+  '경상권|계명대': '계명대(대구)',
+  '경상권|고신대': '고신대(부산)',
+  '경상권|국립경국대': '국립경국대(안동)',
+  '경상권|국립금오공대': '국립금오공대(구미)',
+  '경상권|국립부경대': '국립부경대(부산)',
+  '경상권|국립창원대': '국립창원대(창원)',
+  '경상권|국립한국해양대': '국립한국해양대(부산)',
+  '경상권|대구가톨릭대': '대구가톨릭대(경산)',
+  '경상권|대구경북과학기술원': '대구경북과학기술원(DGIST)',
+  '경상권|대구대': '대구대(경산)',
+  '경상권|대구예술대': '대구예술대(칠곡)',
+  '경상권|대구한의대': '대구한의대(경산)',
+  '경상권|대신대': '대신대(경산)',
+  '경상권|동명대': '동명대(부산)',
+  '경상권|동서대': '동서대(부산)',
+  '경상권|동아대': '동아대(부산)',
+  '경상권|동의대': '동의대(부산)',
+  '경상권|부산대': '부산대(부산·밀양)',
+  '경상권|부산장신대': '부산장신대(김해)',
+  '경상권|영남대': '영남대(경산)',
+  '경상권|영남신학대': '영남신학대(경산)',
+  '경상권|영산대': '영산대(부산·양산)',
+  '경상권|울산과학기술원': '울산과학기술원(UNIST)',
+  '경상권|위덕대': '위덕대(경주)',
+  '경상권|인제대': '인제대(김해)',
+  '경상권|창신대': '창신대(창원)',
+  '경상권|포항공대': '포항공대(POSTECH)',
+  '경상권|한동대': '한동대(포항)',
+  '경상권|해군사관': '해군사관학교',
+  '충청권|건양대': '건양대(논산·대전)',
+  '충청권|공군사관': '공군사관학교',
+  '충청권|국군간호사관': '국군간호사관학교',
+  '충청권|국립공주대': '국립공주대(공주·천안·예산)',
+  '충청권|대전가톨릭대': '대전가톨릭대(세종)',
+  '서울|건국대': '건국대(서울)',
+  '서울|고려대': '고려대(서울)',
+  '경인권|단국대': '단국대(죽전)',
+  '서울|상명대': '상명대(서울)',
+  '서울|중앙대': '중앙대(서울)',
+  '서울|한양대': '한양대(서울)',
+  '서울|홍익대': '홍익대(서울)',
+  '경인권|가톨릭대': '가톨릭대(성심)',
+  '서울|가톨릭대': '가톨릭대(성의)',
+  '경인권|경기대': '경기대(수원)',
+  '서울|경기대': '경기대(서울)',
+  '강원권|경동대': '경동대(메디컬)',
+  '경인권|경동대': '경동대(메트로폴)',
+  '경인권|경희대': '경희대(국제)',
+  '서울|경희대': '경희대(서울)',
+  '경인권|국립한국교통대': '국립한국교통대(의왕)',
+  '충청권|국립한국교통대': '국립한국교통대(충주·증평)',
+  '경인권|동국대': '동국대(바이오메디)',
+  '서울|동국대': '동국대(서울)',
+  '경상권|동양대': '동양대(영주)',
+  '경인권|동양대': '동양대(동두천)',
+  '경인권|명지대': '명지대(자연)',
+  '서울|명지대': '명지대(인문)',
+  '경인권|성균관대': '성균관대(자연과학)',
+  '서울|성균관대': '성균관대(인문사회과학)',
+  '전라권|세한대': '세한대(영암)',
+  '충청권|세한대': '세한대(당진)',
+  '경인권|연세대': '연세대(국제)',
+  '서울|연세대': '연세대(신촌)',
+  '전라권|우석대': '우석대(전주)',
+  '충청권|우석대': '우석대(진천)',
+  '경인권|을지대': '을지대(성남·의정부)',
+  '충청권|을지대': '을지대(대전)',
+  '경인권|중부대': '중부대(고양)',
+  '충청권|중부대': '중부대(충청국제)',
+  '경인권|청운대': '청운대(인천)',
+  '충청권|청운대': '청운대(홍성)',
+  '충청권|유원대': '유원대(영동·아산)',
+  '충청권|한국과학기술원': '한국과학기술원(KAIST)',
+  '충청권|한국기술교대': '한국기술교육대(KOREATECH)',
+  '충청권|한서대': '한서대(서산·태안)',
+  '충청권|호서대': '호서대(아산·천안)',
+  '경인권|한국외대': '한국외대(글로벌)',
+  '서울|한국외대': '한국외대(서울)'
+};
 
 // ── DOM 참조 캐시 ──
 const $ = sel => document.querySelector(sel);
@@ -960,6 +1138,114 @@ byId('chkScoreType').addEventListener('change', () => { if (currentResults.lengt
 byId('scoreDataFilter').addEventListener('change', () => { if (currentResults.length) doSearch(); });
 DOM.searchBtn.addEventListener('click', doSearch);
 DOM.resetBtn.addEventListener('click', doReset);
+
+// ── 상위 작업 탭 ──
+function buildAdmissionsDirectory() {
+  const entries = new Map();
+  RAW.forEach(row => {
+    const region = ADMISSIONS_REGION_ALIASES[row.r] || row.r;
+    const sourceName = row.u;
+    const key = region + '|' + sourceName;
+    if (!entries.has(key)) {
+      entries.set(key, {
+        key,
+        region,
+        sourceName,
+        displayName: UNIVERSITY_CAMPUS_LABELS[key] || sourceName
+      });
+    }
+  });
+  return [...entries.values()].sort((a, b) => {
+    const regionDiff = ADMISSIONS_REGION_ORDER.indexOf(a.region) - ADMISSIONS_REGION_ORDER.indexOf(b.region);
+    return regionDiff || a.displayName.localeCompare(b.displayName, 'ko-KR');
+  });
+}
+
+const ADMISSIONS_DIRECTORY = buildAdmissionsDirectory();
+
+function formatUniversityDisplayName(name) {
+  const match = name.match(/^(.*?)(\([^()]+\))$/);
+  return match
+    ? '<span>' + esc(match[1]) + '</span><span class="university-campus">' + esc(match[2]) + '</span>'
+    : '<span>' + esc(name) + '</span>';
+}
+
+function renderAdmissionsDirectory(region = 'all') {
+  const regions = region === 'all' ? ADMISSIONS_REGION_ORDER : [region];
+  const sections = regions.map(regionName => {
+    const universities = ADMISSIONS_DIRECTORY.filter(item => item.region === regionName);
+    if (!universities.length) return '';
+    return '<section class="university-region-section" aria-labelledby="region-' + esc(regionName) + '">' +
+      '<div class="university-region-head"><h2 class="university-region-title" id="region-' + esc(regionName) + '">' + esc(regionName) + '</h2>' +
+      '<span class="university-region-count">' + universities.length.toLocaleString() + '개</span></div>' +
+      '<div class="university-grid">' + universities.map(item => {
+        const link = ADMISSIONS_OFFICE_LINKS.links[item.key];
+        const nameHtml = '<span class="university-name">' + formatUniversityDisplayName(item.displayName) + '</span>';
+        if (!link) return '<div class="university-entry" data-university="' + esc(item.sourceName) + '">' + nameHtml + '</div>';
+        const linkLabel = link.linkLabel || '모집요강 ↗';
+        return '<a class="university-entry university-link" data-university="' + esc(item.sourceName) + '" href="' + esc(link.url) + '" target="_blank" rel="noopener noreferrer" aria-label="' + esc(item.displayName + ' ' + link.target + ' 새 창 열기') + '">' +
+          nameHtml + '<span class="university-link-label">' + esc(linkLabel) + '</span></a>';
+      }).join('') + '</div></section>';
+  }).join('');
+  setHTML(byId('admissionsDirectory'), sections || '<div class="admissions-directory-empty">표시할 대학이 없습니다.</div>');
+}
+
+function setupAdmissionsDirectory() {
+  if (admissionsDirectoryReady) return;
+  byId('admissionsUniversityTotal').textContent = ADMISSIONS_DIRECTORY.length.toLocaleString();
+  byId('admissionsLinkStatus').textContent = '검증 링크 ' + Object.keys(ADMISSIONS_OFFICE_LINKS.links).length.toLocaleString() + '개 확인';
+  const regionButtons = [
+    { value: 'all', label: '전체', count: ADMISSIONS_DIRECTORY.length },
+    ...ADMISSIONS_REGION_ORDER.map(region => ({
+      value: region,
+      label: region,
+      count: ADMISSIONS_DIRECTORY.filter(item => item.region === region).length
+    }))
+  ];
+  setHTML(byId('admissionsRegionFilters'), regionButtons.map((item, index) =>
+    '<button type="button" class="admissions-region-button' + (index === 0 ? ' active' : '') + '" data-admissions-region="' + esc(item.value) + '" aria-pressed="' + (index === 0 ? 'true' : 'false') + '">' +
+    esc(item.label) + '<span class="count">' + item.count.toLocaleString() + '</span></button>'
+  ).join(''));
+  $$('.admissions-region-button[data-admissions-region]').forEach(button => {
+    button.addEventListener('click', () => {
+      $$('.admissions-region-button[data-admissions-region]').forEach(item => {
+        const active = item === button;
+        item.classList.toggle('active', active);
+        item.setAttribute('aria-pressed', String(active));
+      });
+      renderAdmissionsDirectory(button.dataset.admissionsRegion);
+      byId('admissionsDirectory').scrollTop = 0;
+    });
+  });
+  renderAdmissionsDirectory();
+  admissionsDirectoryReady = true;
+}
+
+function switchWorkspace(workspace) {
+  const target = workspace === 'admissions' ? 'admissions' : 'search';
+  $$('.workspace-tab[data-workspace]').forEach(tab => {
+    const active = tab.dataset.workspace === target;
+    tab.classList.toggle('active', active);
+    tab.setAttribute('aria-selected', String(active));
+    tab.tabIndex = active ? 0 : -1;
+  });
+  byId('workspace-search').hidden = target !== 'search';
+  byId('workspace-admissions').hidden = target !== 'admissions';
+  if (target === 'admissions') setupAdmissionsDirectory();
+}
+
+$$('.workspace-tab[data-workspace]').forEach((tab, index, tabs) => {
+  tab.addEventListener('click', () => switchWorkspace(tab.dataset.workspace));
+  tab.addEventListener('keydown', event => {
+    if (!['ArrowLeft', 'ArrowRight'].includes(event.key)) return;
+    event.preventDefault();
+    const direction = event.key === 'ArrowRight' ? 1 : -1;
+    const nextTab = tabs[(index + direction + tabs.length) % tabs.length];
+    switchWorkspace(nextTab.dataset.workspace);
+    nextTab.focus();
+  });
+});
+
 $$('.tab[data-tab]').forEach(tab => {
   tab.addEventListener('click', () => switchTab(tab.dataset.tab));
 });
@@ -1511,7 +1797,7 @@ function printPicked() {
   const sheet = document.createElement('section');
   sheet.id = 'printSheet';
   sheet.className = 'print-sheet print-only';
-  sheet.innerHTML = '<h1>\uC218\uC2DC \uC785\uACB0 \uC0C1\uB2F4 \uD6C4\uBCF4\uC9C0</h1><div class="meta">V10.6 \u00B7 \uC0DD\uC131 \uC2DC\uAC01 ' + esc(new Date().toLocaleString('ko-KR')) + ' \u00B7 \uC218\uB2A5\uCD5C\uC800 \uC790\uB3D9 \uD45C\uC2DC\uB294 \uC0C1\uB2F4 \uCC38\uACE0\uC6A9</div><table><thead><tr><th>No</th><th>\uB300\uD559\u00B7\uBAA8\uC9D1\uB2E8\uC704</th><th>\uC804\uD615</th><th>\uC785\uACB0 \uC9C0\uD45C</th><th>\uC218\uB2A5\uCD5C\uC800 \uD655\uC778</th></tr></thead><tbody>' + rows + '</tbody></table><h2 style="font-size:15px;margin-top:18px">\uC0C1\uB2F4 \uBA54\uBAA8</h2><table><tr><td style="height:72px"></td></tr></table>';
+  sheet.innerHTML = '<h1>\uC218\uC2DC \uC785\uACB0 \uC0C1\uB2F4 \uD6C4\uBCF4\uC9C0</h1><div class="meta">V10.7 \u00B7 \uC0DD\uC131 \uC2DC\uAC01 ' + esc(new Date().toLocaleString('ko-KR')) + ' \u00B7 \uC218\uB2A5\uCD5C\uC800 \uC790\uB3D9 \uD45C\uC2DC\uB294 \uC0C1\uB2F4 \uCC38\uACE0\uC6A9</div><table><thead><tr><th>No</th><th>\uB300\uD559\u00B7\uBAA8\uC9D1\uB2E8\uC704</th><th>\uC804\uD615</th><th>\uC785\uACB0 \uC9C0\uD45C</th><th>\uC218\uB2A5\uCD5C\uC800 \uD655\uC778</th></tr></thead><tbody>' + rows + '</tbody></table><h2 style="font-size:15px;margin-top:18px">\uC0C1\uB2F4 \uBA54\uBAA8</h2><table><tr><td style="height:72px"></td></tr></table>';
   document.body.appendChild(sheet);
   window.print();
   setTimeout(() => sheet.remove(), 500);
