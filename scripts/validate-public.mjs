@@ -16,8 +16,8 @@ const forbidden = [
 ];
 for (const token of forbidden) check(!html.includes(token), `private token: ${token}`);
 
-check(html.includes('2027학년도 V10.7'), 'version missing');
-check(html.includes('<title>수시 입결 검색기 | 2027학년도 V10.7 공개용</title>'), 'public-only title missing');
+check(html.includes('2027학년도 V10.7.1'), 'version missing');
+check(html.includes('<title>수시 입결 검색기 | 2027학년도 V10.7.1 공개용</title>'), 'public-only title missing');
 check(html.includes('id="workspace-tab-search"') && html.includes('id="workspace-tab-admissions"'), 'top workspace tabs missing');
 check(html.includes('id="workspace-search"') && html.includes('id="workspace-admissions"'), 'top workspace panels missing');
 check(html.includes('function switchWorkspace(workspace)'), 'top workspace switching logic missing');
@@ -163,7 +163,7 @@ if (errors.length) {
   console.error(errors.map(error => `[FAIL] ${error}`).join('\n'));
   process.exit(1);
 }
-console.log('[PASS] V10.7 label, top workspace tabs, core UI, and inline JavaScript');
+console.log('[PASS] V10.7.1 label, top workspace tabs, core UI, and inline JavaScript');
 console.log('[PASS] student mock-exam data and loader remain excluded');
 console.log('[PASS] baseline counts, 223 university-campus directory entries, and SHA-256 fingerprints');
 console.log(`[PASS] all ${seoulDirectoryPairs.size} Seoul and all ${gyeonginDirectoryPairs.size} Gyeongin university-campus entries have verified rolling-admissions guideline links`);

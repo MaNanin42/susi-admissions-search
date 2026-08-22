@@ -3,32 +3,34 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>수시 입결 검색기 | 2027학년도 V10.7 공개용</title>
+<title>수시 입결 검색기 | 2027학년도 V10.7.1 공개용</title>
 <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-/* ── 라이트 글래스 테마 변수 ── */
+/* ── Professional Calm 테마 변수 ── */
 :root {
-  --bg:          #eef3f8;
-  --bg2:         rgba(255,255,255,0.72);
-  --bg3:         rgba(247,250,253,0.74);
-  --panel:       rgba(255,255,255,0.78);
-  --panel2:      rgba(232,239,247,0.82);
-  --glass:       rgba(255,255,255,0.62);
-  --glass-strong:rgba(255,255,255,0.84);
-  --border:      rgba(28,43,65,0.08);
-  --border2:     rgba(28,43,65,0.13);
-  --border3:     rgba(28,43,65,0.22);
-  --shadow:      0 14px 36px rgba(30, 41, 59, 0.10);
-  --shadow-soft: 0 7px 18px rgba(30, 41, 59, 0.08);
-  --text:        #172033;
-  --text2:       #4e5c72;
-  --text3:       #8a96a8;
-  --accent:      #2563eb;
-  --accent-bg:   rgba(37,99,235,0.09);
-  --accent-ring: rgba(37,99,235,0.22);
-  --accent2:     #078669;
-  --accent2-bg:  rgba(7,134,105,0.09);
-  --accent2-ring:rgba(7,134,105,0.22);
+  --bg:          #e9eef5;
+  --bg2:         #ffffff;
+  --bg3:         #f8fafc;
+  --panel:       #ffffff;
+  --panel2:      #edf2f7;
+  --glass:       #eef3f8;
+  --glass-strong:#ffffff;
+  --border:      #d9e1ea;
+  --border2:     #c5d0dd;
+  --border3:     #94a3b8;
+  --shadow:      0 14px 36px rgba(15, 39, 71, 0.10);
+  --shadow-soft: 0 5px 14px rgba(15, 39, 71, 0.08);
+  --text:        #162033;
+  --text2:       #43516a;
+  --text3:       #64748b;
+  --navy:        #0f2747;
+  --navy-soft:   #173a67;
+  --accent:      #1d4ed8;
+  --accent-bg:   #eaf1ff;
+  --accent-ring: #93b4f5;
+  --accent2:     #047857;
+  --accent2-bg:  #e6f6f1;
+  --accent2-ring:#85c9b7;
   --c-red:       #dc2626;
   --c-red-bg:    rgba(220,38,38,0.07);
   --c-amber:     #c76a10;
@@ -46,16 +48,13 @@
   --score-score-bg:rgba(109,40,217,0.07);
   --score-score-ring:rgba(109,40,217,0.18);
   --thumb-shadow: 0 0 0 3px rgba(255,255,255,0.9), 0 1px 4px rgba(30,41,59,0.16);
-  --row-hover:   rgba(37,99,235,0.035);
+  --row-hover:   #edf4ff;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { color-scheme: light; }
 body {
-  background:
-    linear-gradient(135deg, rgba(37,99,235,0.08), transparent 34%),
-    linear-gradient(225deg, rgba(7,134,105,0.08), transparent 38%),
-    var(--bg);
+  background: var(--bg);
   color: var(--text);
   font-family: 'Pretendard', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
   font-size: 13px; line-height: 1.5;
@@ -66,17 +65,16 @@ body {
 /* ── 헤더 ── */
 .header {
   height: 52px;
-  background: var(--glass-strong);
-  border-bottom: 1px solid var(--border2);
+  background: var(--navy);
+  border-bottom: 1px solid #081a31;
   display: flex; align-items: center;
   padding: 0 14px; gap: 10px;
   position: sticky; top: 0; z-index: 300;
-  backdrop-filter: blur(18px) saturate(145%);
-  box-shadow: 0 1px 0 rgba(255,255,255,0.72), var(--shadow-soft);
+  box-shadow: 0 3px 12px rgba(15,39,71,.20);
 }
 .logo-mark {
   width: 26px; height: 26px; flex-shrink: 0;
-  background: linear-gradient(135deg, #2563eb 0%, #078669 100%);
+  background: linear-gradient(135deg, #3b82f6 0%, #0d9488 100%);
   border-radius: 7px;
   display: flex; align-items: center; justify-content: center;
   font-size: 12px; font-weight: 700; color: #fff;
@@ -87,18 +85,20 @@ body {
 .workspace-tab {
   min-width: 124px; padding: 0 16px;
   border: 0; border-bottom: 3px solid transparent;
-  background: transparent; color: var(--text3);
+  background: transparent; color: #cbd5e1;
   font: inherit; font-size: 13px; font-weight: 600;
   cursor: pointer; transition: color .15s ease, background .15s ease, border-color .15s ease;
 }
-.workspace-tab:hover { color: var(--text); background: rgba(37,99,235,.05); }
+.workspace-tab:hover { color: #fff; background: rgba(255,255,255,.07); }
 .workspace-tab.active {
-  color: var(--accent); border-bottom-color: var(--accent); background: rgba(37,99,235,.07);
+  color: #fff; background: rgba(255,255,255,.10);
 }
-.workspace-tab:focus-visible { outline: 2px solid var(--accent); outline-offset: -3px; }
+.workspace-tab[data-workspace="search"].active { border-bottom-color: #60a5fa; }
+.workspace-tab[data-workspace="admissions"].active { border-bottom-color: #2dd4bf; }
+.workspace-tab:focus-visible { outline: 2px solid #93c5fd; outline-offset: -3px; }
 .header-version {
   font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 600;
-  color: var(--text3); white-space: nowrap;
+  color: #cbd5e1; white-space: nowrap;
 }
 .header-right { margin-left: auto; display: flex; align-items: center; gap: 10px; }
 .change-notice {
@@ -115,51 +115,66 @@ body {
   display: flex; flex-direction: column;
 }
 .admissions-office-head {
-  min-height: 76px; padding: 14px 22px;
+  min-height: 62px; padding: 10px 22px;
   display: flex; align-items: center; gap: 18px;
-  border-bottom: 1px solid var(--border); background: var(--glass-strong);
+  border-bottom: 1px solid var(--border2); background: var(--panel);
   flex-shrink: 0;
 }
 .admissions-office-heading { font-size: 18px; font-weight: 700; letter-spacing: -.02em; }
-.admissions-office-desc { margin-top: 3px; color: var(--text3); font-size: 12px; }
 .admissions-office-total {
   margin-left: auto; min-width: 92px; text-align: right;
   color: var(--text3); font-size: 11px;
 }
 .admissions-link-status { display: block; margin-top: 2px; color: var(--accent2); font-weight: 600; }
 .admissions-office-total strong {
-  margin-right: 3px; color: var(--accent); font-family: 'JetBrains Mono', monospace;
+  margin-right: 3px; color: var(--accent2); font-family: 'JetBrains Mono', monospace;
   font-size: 18px; font-weight: 700;
 }
 .admissions-region-filters {
   min-height: 48px; padding: 8px 22px;
   display: flex; align-items: center; gap: 6px; flex-wrap: wrap;
-  border-bottom: 1px solid var(--border); background: rgba(255,255,255,.48);
+  border-bottom: 1px solid var(--border2); background: #f1f5f9;
   flex-shrink: 0;
 }
 .admissions-region-button {
   min-height: 30px; padding: 4px 10px;
   border: 1px solid var(--border2); border-radius: 6px;
-  background: rgba(255,255,255,.76); color: var(--text2);
+  background: #fff; color: var(--text2);
   font: inherit; font-size: 11px; font-weight: 600; cursor: pointer;
 }
-.admissions-region-button:hover { border-color: var(--accent-ring); color: var(--accent); }
+.admissions-region-button:hover { border-color: var(--accent2-ring); color: var(--accent2); }
 .admissions-region-button.active {
-  border-color: var(--accent); background: var(--accent); color: #fff;
+  border-color: var(--accent2); background: var(--accent2); color: #fff;
 }
-.admissions-region-button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.admissions-region-button:focus-visible { outline: 2px solid var(--accent2); outline-offset: 2px; }
 .admissions-region-button .count { margin-left: 4px; opacity: .72; font-family: 'JetBrains Mono', monospace; }
 .admissions-directory {
   flex: 1; overflow-y: auto; padding: 18px 22px 28px;
+  background: #f8fafc;
   scrollbar-width: thin; scrollbar-color: var(--border2) transparent;
 }
-.university-region-section + .university-region-section { margin-top: 24px; }
+.university-region-section {
+  --region-bg: #f4f7fb;
+  --region-border: #d7e0ea;
+  --region-accent: var(--text2);
+  padding: 12px;
+  border: 1px solid var(--region-border); border-radius: 10px;
+  background: var(--region-bg);
+}
+.university-region-section[data-region="서울"] { --region-bg: #eef5ff; --region-border: #bfd4f4; --region-accent: #2457a6; }
+.university-region-section[data-region="경인권"] { --region-bg: #f3f1ff; --region-border: #d3cdf3; --region-accent: #5b4ea3; }
+.university-region-section[data-region="강원권"] { --region-bg: #edf8f5; --region-border: #bfe1d7; --region-accent: #16705c; }
+.university-region-section[data-region="충청권"] { --region-bg: #fff8e9; --region-border: #efd5a5; --region-accent: #9a5b0a; }
+.university-region-section[data-region="전라권"] { --region-bg: #fff2f4; --region-border: #efc8ce; --region-accent: #a34555; }
+.university-region-section[data-region="경상권"] { --region-bg: #f1f8ec; --region-border: #c9dfb9; --region-accent: #4f772d; }
+.university-region-section[data-region="제주권"] { --region-bg: #edf9fb; --region-border: #b9dfe5; --region-accent: #1e7180; }
+.university-region-section + .university-region-section { margin-top: 18px; }
 .university-region-head {
   margin-bottom: 9px; padding-bottom: 7px;
   display: flex; align-items: baseline; gap: 7px;
   border-bottom: 1px solid var(--border);
 }
-.university-region-title { font-size: 14px; font-weight: 700; color: var(--text); }
+.university-region-title { font-size: 14px; font-weight: 700; color: var(--region-accent); }
 .university-region-count { color: var(--text3); font-family: 'JetBrains Mono', monospace; font-size: 10px; }
 .university-grid {
   display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 7px;
@@ -167,19 +182,19 @@ body {
 .university-entry {
   min-height: 38px; padding: 8px 10px;
   display: flex; align-items: center; justify-content: space-between; gap: 8px;
-  border: 1px solid var(--border); border-radius: 7px;
-  background: rgba(255,255,255,.68); color: var(--text2);
+  border: 1px solid var(--border2); border-radius: 7px;
+  background: #fff; color: var(--text2);
   font-size: 12px; font-weight: 600; line-height: 1.35;
 }
 .university-name { min-width: 0; display: inline-flex; align-items: baseline; flex-wrap: wrap; }
-.university-campus { margin-left: 1px; color: var(--accent); font-size: 11px; white-space: nowrap; }
+.university-campus { margin-left: 1px; color: var(--accent2); font-size: 11px; white-space: nowrap; }
 .university-link { text-decoration: none; cursor: pointer; }
 .university-link:hover {
-  border-color: var(--accent-ring); background: var(--accent-bg); color: var(--accent);
+  border-color: var(--accent2-ring); background: var(--accent2-bg); color: var(--accent2);
 }
-.university-link:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.university-link:focus-visible { outline: 2px solid var(--accent2); outline-offset: 2px; }
 .university-link-label {
-  flex-shrink: 0; color: var(--accent); font-size: 9px; font-weight: 700; white-space: nowrap;
+  flex-shrink: 0; color: var(--accent2); font-size: 9px; font-weight: 700; white-space: nowrap;
 }
 .admissions-directory-empty {
   margin: 54px auto; color: var(--text3); text-align: center; font-size: 13px;
@@ -188,10 +203,9 @@ body {
 /* ── 사이드바 ── */
 .sidebar {
   background: var(--glass);
-  border-right: 1px solid var(--border);
+  border-right: 1px solid var(--border2);
   display: flex; flex-direction: column; overflow: hidden;
-  backdrop-filter: blur(18px) saturate(135%);
-  box-shadow: var(--shadow-soft);
+  box-shadow: 2px 0 10px rgba(15,39,71,.06);
 }
 .sidebar-scroll {
   flex: 1; overflow-y: auto;
@@ -200,10 +214,9 @@ body {
   scrollbar-width: thin; scrollbar-color: var(--border2) transparent;
 }
 .sidebar-footer {
-  padding: 12px 14px; border-top: 1px solid var(--border);
+  padding: 12px 14px; border-top: 1px solid var(--border2);
   background: var(--glass-strong);
   display: flex; flex-direction: column; gap: 7px; flex-shrink: 0;
-  backdrop-filter: blur(16px);
 }
 .filter-section { display: flex; flex-direction: column; gap: 9px; }
 .filter-label {
@@ -216,7 +229,6 @@ body {
   background: var(--glass-strong); border: 1px solid var(--border2);
   border-radius: 10px; padding: 12px;
   display: flex; flex-direction: column; gap: 12px;
-  backdrop-filter: blur(14px) saturate(130%);
   box-shadow: var(--shadow-soft);
 }
 .grade-row { display: flex; align-items: center; gap: 10px; }
@@ -326,7 +338,7 @@ body {
 
 /* ── 버튼 ── */
 .btn-search {
-  background: linear-gradient(135deg, #2563eb, #1d4ed8); border: none; border-radius: 8px;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8); border: 1px solid #1e40af; border-radius: 8px;
   color: #fff; font-weight: 600; font-size: 13px;
   padding: 10px; width: 100%; cursor: pointer;
   transition: opacity .15s, transform .15s, box-shadow .15s;
@@ -344,10 +356,9 @@ body {
 /* ── 결과 영역 ── */
 .result-area { display: flex; flex-direction: column; overflow: hidden; }
 .result-header {
-  height: 44px; padding: 0 18px; border-bottom: 1px solid var(--border);
+  height: 44px; padding: 0 18px; border-bottom: 1px solid var(--border2);
   display: flex; align-items: center; gap: 12px;
   background: var(--glass-strong); flex-shrink: 0;
-  backdrop-filter: blur(14px) saturate(135%);
 }
 .result-count { font-family: 'JetBrains Mono', monospace; font-size: 14px; color: var(--text2); }
 .result-count-n { font-size: 19px; font-weight: 700; color: var(--text); margin-right: 2px; }
@@ -361,8 +372,8 @@ body {
   font-family: 'JetBrains Mono', monospace; white-space: nowrap;
 }
 .summary-chip.warn { color: var(--c-amber); background: var(--c-amber-bg); border-color: var(--c-amber-ring); }
-.result-insight { border-bottom:1px solid var(--border); background:rgba(248,250,252,.82); padding:8px 18px; display:grid; grid-template-columns:1.15fr 1fr 1fr 1.25fr; gap:8px; flex-shrink:0; }
-.insight-card { border:1px solid var(--border2); border-radius:8px; background:rgba(255,255,255,.72); padding:7px 9px; min-width:0; }
+.result-insight { border-bottom:1px solid var(--border2); background:#f1f5f9; padding:8px 18px; display:grid; grid-template-columns:1.15fr 1fr 1fr 1.25fr; gap:8px; flex-shrink:0; }
+.insight-card { border:1px solid var(--border2); border-radius:8px; background:#fff; padding:7px 9px; min-width:0; }
 .insight-card.warn { border-color:var(--c-amber-ring); background:rgba(255,251,235,.72); }
 .insight-card.action { border-color:var(--accent-ring); background:rgba(239,246,255,.76); }
 .insight-label { font-size:11px; color:var(--text3); font-weight:700; margin-bottom:3px; }
@@ -388,10 +399,9 @@ body {
 
 /* ── 탭 ── */
 .tabs {
-  display: flex; border-bottom: 1px solid var(--border);
+  display: flex; border-bottom: 1px solid var(--border2);
   background: var(--glass-strong); padding: 0 18px;
   flex-shrink: 0;
-  backdrop-filter: blur(14px) saturate(135%);
 }
 .tab {
   padding: 10px 16px; font-size: 14px; font-weight: 500;
@@ -403,7 +413,7 @@ body {
 .tab.active { color: var(--text); border-bottom-color: var(--accent); }
 
 /* ── 테이블 ── */
-.table-wrap { overflow: auto; flex: 1; background: rgba(255,255,255,0.30); }
+.table-wrap { overflow: auto; flex: 1; background: #fff; }
 table { width: 100%; min-width: 980px; table-layout: fixed; border-collapse: collapse; font-size: 14px; }
 col.col-region { width: 76px; }
 col.col-univ { width: 152px; }
@@ -415,16 +425,15 @@ th {
   padding: 10px 14px; text-align: left;
   font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
   color: var(--text3); border-bottom: 1px solid var(--border2);
-  background: rgba(255,255,255,0.84); white-space: nowrap; user-select: none; cursor: pointer;
+  background: #edf2f7; white-space: nowrap; user-select: none; cursor: pointer;
   transition: color .12s;
-  backdrop-filter: blur(14px) saturate(135%);
 }
 th:hover { color: var(--text); }
 th.sort-asc  .si::after { content: ' ↑'; font-size: 9px; color: var(--accent); }
 th.sort-desc .si::after { content: ' ↓'; font-size: 9px; color: var(--accent); }
 th:not(.sort-asc):not(.sort-desc) .si::after { content: ''; }
-td { padding: 10px 14px; border-bottom: 1px solid var(--border); vertical-align: top; transition: background .08s; background: rgba(255,255,255,0.42); }
-tbody tr:nth-child(even) td { background: rgba(247,250,253,0.58); }
+td { padding: 10px 14px; border-bottom: 1px solid var(--border); vertical-align: top; transition: background .08s; background: #fff; }
+tbody tr:nth-child(even) td { background: #f8fafc; }
 tr:hover td { background: var(--row-hover); }
 
 /* ── 셀 텍스트 ── */
@@ -470,7 +479,6 @@ tr:hover td { background: var(--row-hover); }
   background: var(--glass-strong); border: 1px solid var(--border2);
   border-radius: 8px; overflow: hidden; position: relative;
   transition: border-color .12s, box-shadow .12s, transform .12s;
-  backdrop-filter: blur(12px) saturate(130%);
   box-shadow: 0 3px 10px rgba(30,41,59,0.06);
 }
 .jtype-item:hover { border-color: var(--border3); box-shadow: var(--shadow-soft); transform: translateY(-1px); }
@@ -572,7 +580,7 @@ tr:hover td { background: var(--row-hover); }
 }
 
 /* ── 수능최저 ── */
-.sn-block { grid-area: snt; min-width: 0; padding: 6px 9px 7px; border-top: none; border-left: 1px solid var(--border); background: rgba(247,250,253,0.72); }
+.sn-block { grid-area: snt; min-width: 0; padding: 6px 9px 7px; border-top: none; border-left: 1px solid var(--border); background: #f1f5f9; }
 .sn-header {
   font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 700;
   letter-spacing: .1em; text-transform: uppercase; color: var(--text3); margin-bottom: 3px;
@@ -637,7 +645,7 @@ tr:hover td { background: var(--row-hover); }
 ::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 2px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--border3); }
 
-/* ── V10.7 상담 운영 패널 ── */
+/* ── V10.7.1 상담 운영 패널 ── */
 .result-area { min-width: 920px; }
 .jtype-item.snt-manual { border-color: var(--c-amber); background: rgba(255,251,235,0.70); }
 .jtype-item.snt-manual::before {
@@ -702,9 +710,11 @@ tr:hover td { background: var(--row-hover); }
 }
 
 @media (max-width: 860px) {
-  .main { grid-template-columns: 1fr; height: auto; min-height: calc(100vh - 52px); }
-  .sidebar { border-right: none; border-bottom: 1px solid var(--border); }
-  .result-area { min-height: 60vh; }
+  .main { width: 100%; min-width: 0; grid-template-columns: minmax(0, 1fr); height: auto; min-height: calc(100vh - 52px); overflow: hidden; }
+  .sidebar { width: 100%; min-width: 0; border-right: none; border-bottom: 1px solid var(--border); }
+  .sidebar-scroll { min-width: 0; }
+  .result-area { width: 100%; min-width: 0; min-height: 60vh; }
+  .table-wrap { width: 100%; min-width: 0; }
   .result-header { height: auto; min-height: 44px; flex-wrap: wrap; padding: 8px 12px; }
   .result-insight { grid-template-columns: 1fr 1fr; padding: 8px 12px; }
   .legend { width: 100%; margin-left: 0; }
@@ -713,8 +723,7 @@ tr:hover td { background: var(--row-hover); }
   .header { padding: 0 8px; gap: 6px; }
   .workspace-tab { min-width: 0; padding: 0 10px; font-size: 12px; }
   .header-version { display: none; }
-  .admissions-office-head { min-height: 68px; padding: 10px 14px; }
-  .admissions-office-desc { display: none; }
+  .admissions-office-head { min-height: 58px; padding: 8px 14px; }
   .admissions-region-filters { padding: 8px 14px; }
   .admissions-directory { padding: 14px; }
   .university-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
@@ -730,7 +739,7 @@ tr:hover td { background: var(--row-hover); }
     <button type="button" class="workspace-tab" id="workspace-tab-admissions" data-workspace="admissions" role="tab" aria-selected="false" aria-controls="workspace-admissions" tabindex="-1">입학처 모아보기</button>
   </div>
   <div class="header-right">
-    <span class="header-version">2027학년도 V10.7</span>
+    <span class="header-version">2027학년도 V10.7.1</span>
     <span class="change-notice" id="headerChangeCount" style="display:none"></span>
   </div>
 </div>
@@ -905,7 +914,6 @@ tr:hover td { background: var(--row-hover); }
   <div class="admissions-office-head">
     <div>
       <div class="admissions-office-heading">입학처 모아보기</div>
-      <div class="admissions-office-desc">V10.6 기준 입결 데이터에 포함된 대학을 권역별로 정리했습니다. 검증된 2027학년도 수시 모집요강을 새 창으로 연결하며, 공공기관 대체 원문은 출처를 구분 표시합니다.</div>
     </div>
     <div class="admissions-office-total">
       <strong id="admissionsUniversityTotal">—</strong>개 대학·캠퍼스
@@ -1175,7 +1183,7 @@ function renderAdmissionsDirectory(region = 'all') {
   const sections = regions.map(regionName => {
     const universities = ADMISSIONS_DIRECTORY.filter(item => item.region === regionName);
     if (!universities.length) return '';
-    return '<section class="university-region-section" aria-labelledby="region-' + esc(regionName) + '">' +
+    return '<section class="university-region-section" data-region="' + esc(regionName) + '" aria-labelledby="region-' + esc(regionName) + '">' +
       '<div class="university-region-head"><h2 class="university-region-title" id="region-' + esc(regionName) + '">' + esc(regionName) + '</h2>' +
       '<span class="university-region-count">' + universities.length.toLocaleString() + '개</span></div>' +
       '<div class="university-grid">' + universities.map(item => {
@@ -1797,7 +1805,7 @@ function printPicked() {
   const sheet = document.createElement('section');
   sheet.id = 'printSheet';
   sheet.className = 'print-sheet print-only';
-  sheet.innerHTML = '<h1>\uC218\uC2DC \uC785\uACB0 \uC0C1\uB2F4 \uD6C4\uBCF4\uC9C0</h1><div class="meta">V10.7 \u00B7 \uC0DD\uC131 \uC2DC\uAC01 ' + esc(new Date().toLocaleString('ko-KR')) + ' \u00B7 \uC218\uB2A5\uCD5C\uC800 \uC790\uB3D9 \uD45C\uC2DC\uB294 \uC0C1\uB2F4 \uCC38\uACE0\uC6A9</div><table><thead><tr><th>No</th><th>\uB300\uD559\u00B7\uBAA8\uC9D1\uB2E8\uC704</th><th>\uC804\uD615</th><th>\uC785\uACB0 \uC9C0\uD45C</th><th>\uC218\uB2A5\uCD5C\uC800 \uD655\uC778</th></tr></thead><tbody>' + rows + '</tbody></table><h2 style="font-size:15px;margin-top:18px">\uC0C1\uB2F4 \uBA54\uBAA8</h2><table><tr><td style="height:72px"></td></tr></table>';
+  sheet.innerHTML = '<h1>\uC218\uC2DC \uC785\uACB0 \uC0C1\uB2F4 \uD6C4\uBCF4\uC9C0</h1><div class="meta">V10.7.1 \u00B7 \uC0DD\uC131 \uC2DC\uAC01 ' + esc(new Date().toLocaleString('ko-KR')) + ' \u00B7 \uC218\uB2A5\uCD5C\uC800 \uC790\uB3D9 \uD45C\uC2DC\uB294 \uC0C1\uB2F4 \uCC38\uACE0\uC6A9</div><table><thead><tr><th>No</th><th>\uB300\uD559\u00B7\uBAA8\uC9D1\uB2E8\uC704</th><th>\uC804\uD615</th><th>\uC785\uACB0 \uC9C0\uD45C</th><th>\uC218\uB2A5\uCD5C\uC800 \uD655\uC778</th></tr></thead><tbody>' + rows + '</tbody></table><h2 style="font-size:15px;margin-top:18px">\uC0C1\uB2F4 \uBA54\uBAA8</h2><table><tr><td style="height:72px"></td></tr></table>';
   document.body.appendChild(sheet);
   window.print();
   setTimeout(() => sheet.remove(), 500);
