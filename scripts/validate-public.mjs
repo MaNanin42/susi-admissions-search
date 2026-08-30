@@ -16,14 +16,25 @@ const forbidden = [
 ];
 for (const token of forbidden) check(!html.includes(token), `private token: ${token}`);
 
-check(html.includes('2027학년도 V10.7.1'), 'version missing');
-check(html.includes('<title>수시 입결 검색기 | 2027학년도 V10.7.1 공개용</title>'), 'public-only title missing');
-check(html.includes('id="workspace-tab-search"') && html.includes('id="workspace-tab-admissions"'), 'top workspace tabs missing');
-check(html.includes('id="workspace-search"') && html.includes('id="workspace-admissions"'), 'top workspace panels missing');
+check(html.includes('2027학년도 V10.7.2'), 'version missing');
+check(html.includes('<title>수시 입결 검색기 | 2027학년도 V10.7.2 공개용</title>'), 'public-only title missing');
+check(html.includes('id="workspace-tab-search"') && html.includes('id="workspace-tab-admissions"') && html.includes('id="workspace-tab-contracts"'), 'top workspace tabs missing');
+check(html.includes('id="workspace-search"') && html.includes('id="workspace-admissions"') && html.includes('id="workspace-contracts"'), 'top workspace panels missing');
 check(html.includes('function switchWorkspace(workspace)'), 'top workspace switching logic missing');
 check(html.includes('id="admissionsRegionFilters"') && html.includes('id="admissionsDirectory"'), 'admissions directory UI missing');
 check(html.includes('const UNIVERSITY_CAMPUS_LABELS'), 'campus display mapping missing');
 check(html.includes('const ADMISSIONS_OFFICE_LINKS'), 'verified admissions-office links missing');
+check(html.includes('const PROGRAM_TAGS'), 'verified program tags missing');
+check(html.includes('const CONTRACT_PROGRAM_DETAILS'), 'contract program details missing');
+check(html.includes('id="programTypeFilter"') && html.includes('id="programTypeHelp"'), 'program type filter missing');
+check(html.includes('data-contract-id="${esc(detail.id)}"'), 'contract badge navigation missing');
+check(html.includes('id="contractProgramSearch"') && html.includes('id="contractTypeFilter"'), 'contract directory filters missing');
+check(html.includes('function openContractProgram(id)'), 'contract detail navigation logic missing');
+check(html.includes("byId('contractProgramSearch').value = ''") && html.includes("byId('contractTypeFilter').value = ''"), 'contract badge navigation must clear hidden directory filters');
+check(html.includes('function renderContractAdmissionResults(program)') && html.includes('class="contract-admission-table"'), 'contract admission-result renderer missing');
+check(html.includes('id="contractGradeInput"') && html.includes('id="contractRangeInput"') && html.includes('id="contractMatchCount"'), 'contract grade-range controls missing');
+check(html.includes('function contractProgramMatchesGrade(program)') && html.includes('grade-match'), 'contract grade-range highlight logic missing');
+check(html.includes('function renderContractWebSources(program)') && html.includes('contract-web-source'), 'contract official-web source renderer missing');
 check(!html.includes('class="criteria-strip"'), 'removed criteria strip returned');
 check(!html.includes('공개용 · 학생 성적 미포함'), 'removed public privacy badge returned');
 check(html.includes('id="sntK"') && html.includes('id="sntM"'), 'manual CSAT inputs missing');
@@ -39,11 +50,124 @@ scripts.forEach((code, index) => {
 const admissionsText = fs.readFileSync(path.join(root, 'data', 'baseline', 'admissions.json'), 'utf8').trim();
 const minimumText = fs.readFileSync(path.join(root, 'data', 'baseline', 'suneung-minimum.json'), 'utf8').trim();
 const admissionsOfficeLinksText = fs.readFileSync(path.join(root, 'data', 'admissions-office-links.json'), 'utf8').trim();
+const programTagsText = fs.readFileSync(path.join(root, 'data', 'program-tags.json'), 'utf8').trim();
+const contractProgramDetailsText = fs.readFileSync(path.join(root, 'data', 'contract-program-details.json'), 'utf8').trim();
 const manifest = JSON.parse(fs.readFileSync(path.join(root, 'data', 'baseline', 'manifest.json'), 'utf8'));
 const admissions = JSON.parse(admissionsText);
 const minimums = JSON.parse(minimumText);
 const admissionsOfficeLinks = JSON.parse(admissionsOfficeLinksText);
+const programTags = JSON.parse(programTagsText);
+const contractProgramDetails = JSON.parse(contractProgramDetailsText);
 check(admissions.length === 5863, `admissions count: ${admissions.length}`);
+const baselineUniversityMajorKeys = new Set(admissions.map(row => `${row.u}\u241f${row.m}`));
+check(baselineUniversityMajorKeys.size === 5800, `university-major key count: ${baselineUniversityMajorKeys.size}`);
+check(programTags.schemaVersion === 1, 'program tag schema version');
+check(programTags.sourceYear === 2027, 'program tag source year');
+check(programTags.links.length === 252, `program tag link count: ${programTags.links.length}`);
+check(programTags.sources.contract.linkedRows === 35 && programTags.sources.contract.linkedKeys === 35, 'contract linked row/key count');
+check(programTags.sources.contract.reviewRows === 42, 'contract review row count');
+check(programTags.sources.advanced.linkedRows === 220 && programTags.sources.advanced.linkedKeys === 217, 'advanced linked row/key count');
+check(programTags.sources.advanced.reviewRows === 96, 'advanced review row count');
+const programLinkKeys = new Set();
+const programTypeKeys = { contract: new Set(), advanced: new Set() };
+for (const item of programTags.links) {
+  const key = `${item.u}\u241f${item.m}`;
+  check(!programLinkKeys.has(key), `duplicate program tag link: ${item.u}|${item.m}`);
+  programLinkKeys.add(key);
+  check(baselineUniversityMajorKeys.has(key), `program tag key not in baseline: ${item.u}|${item.m}`);
+  check(Array.isArray(item.tags) && item.tags.length > 0, `program tags missing: ${item.u}|${item.m}`);
+  for (const tag of item.tags) {
+    check(Object.hasOwn(programTypeKeys, tag.type), `unknown program tag type: ${tag.type}`);
+    if (Object.hasOwn(programTypeKeys, tag.type)) programTypeKeys[tag.type].add(key);
+    check(Array.isArray(tag.pages) && tag.pages.length > 0, `program source pages missing: ${item.u}|${item.m}`);
+    check(tag.pages.every(page => Number.isInteger(page) && page > 0 && page <= programTags.sources[tag.type].pages), `program source page range: ${item.u}|${item.m}`);
+    check(new Set(tag.pages).size === tag.pages.length, `duplicate program source page: ${item.u}|${item.m}`);
+  }
+}
+check(programTypeKeys.contract.size === 35, `contract program key count: ${programTypeKeys.contract.size}`);
+check(programTypeKeys.advanced.size === 217, `advanced program key count: ${programTypeKeys.advanced.size}`);
+check(contractProgramDetails.schemaVersion === 1, 'contract detail schema version');
+check(contractProgramDetails.sourceYear === 2027, 'contract detail source year');
+check(contractProgramDetails.source.publisher === '한국대학교육협의회', 'contract detail publisher');
+check(contractProgramDetails.source.pages === 15, 'contract detail source page count');
+check(contractProgramDetails.programs.length === 35, `contract detail count: ${contractProgramDetails.programs.length}`);
+const contractDetailIds = new Set();
+const contractDetailKeys = new Set();
+let contractWebSourcePrograms = 0;
+let contractWebSourceLinks = 0;
+const uniqueContractWebSourceUrls = new Set();
+for (const item of contractProgramDetails.programs) {
+  const key = `${item.u}\u241f${item.m}`;
+  check(typeof item.id === 'string' && /^contract-\d{3}$/.test(item.id), `contract detail id format: ${item.id}`);
+  check(!contractDetailIds.has(item.id), `duplicate contract detail id: ${item.id}`);
+  contractDetailIds.add(item.id);
+  check(!contractDetailKeys.has(key), `duplicate contract detail key: ${item.u}|${item.m}`);
+  contractDetailKeys.add(key);
+  check(programTypeKeys.contract.has(key), `contract detail key not tagged: ${item.u}|${item.m}`);
+  check(typeof item.category === 'string' && item.category.length > 0, `contract detail category missing: ${item.u}|${item.m}`);
+  for (const field of ['partners', 'support', 'selection', 'obligations', 'cautions']) {
+    check(Array.isArray(item[field]), `contract detail ${field} must be an array: ${item.u}|${item.m}`);
+    check(Array.isArray(item[field]) && item[field].every(value => typeof value === 'string' && value.length > 0), `contract detail ${field} value: ${item.u}|${item.m}`);
+  }
+  check(Array.isArray(item.sourcePages) && item.sourcePages.length > 0, `contract detail source page missing: ${item.u}|${item.m}`);
+  check(item.sourcePages.every(page => Number.isInteger(page) && page > 0 && page <= 15), `contract detail source page range: ${item.u}|${item.m}`);
+  if (item.webSources !== undefined) {
+    check(Array.isArray(item.webSources) && item.webSources.length > 0, `contract web sources must be a non-empty array: ${item.u}|${item.m}`);
+    contractWebSourcePrograms += 1;
+    for (const source of item.webSources) {
+      check(typeof source.title === 'string' && source.title.length > 0, `contract web source title: ${item.u}|${item.m}`);
+      check(/^https:\/\//.test(source.url), `contract web source must use HTTPS: ${item.u}|${item.m}`);
+      check(/^\d{4}-\d{2}-\d{2}$/.test(source.verifiedAt), `contract web source verification date: ${item.u}|${item.m}`);
+      contractWebSourceLinks += 1;
+      uniqueContractWebSourceUrls.add(source.url);
+    }
+  }
+}
+check(contractDetailKeys.size === programTypeKeys.contract.size, 'contract detail/tag key count mismatch');
+for (const key of programTypeKeys.contract) check(contractDetailKeys.has(key), `tagged contract key missing detail: ${key}`);
+check(contractWebSourcePrograms === 12, `contract programs with official web enrichment: ${contractWebSourcePrograms}`);
+check(contractWebSourceLinks === 17, `contract official web source link count: ${contractWebSourceLinks}`);
+check(uniqueContractWebSourceUrls.size === 4, `unique contract official web source URL count: ${uniqueContractWebSourceUrls.size}`);
+const contractAdmissionSlots = [
+  ['교과', 'k1'], ['교과', 'k2'], ['교과', 'k3'], ['종합', 'j1'], ['종합', 'j2']
+];
+let contractProgramsWithPublishedScores = 0;
+let contractDisplayedEntranceRows = 0;
+let contractPublishedEntranceRows = 0;
+for (const item of contractProgramDetails.programs) {
+  const sourceRows = admissions.filter(row => row.u === item.u && row.m === item.m);
+  const exactEntries = new Map();
+  for (const row of sourceRows) {
+    for (const [type, prefix] of contractAdmissionSlots) {
+      if (!row[`${prefix}n`]) continue;
+      const entry = { type, name: row[`${prefix}n`], s50: row[`${prefix}a`] || '', s70: row[`${prefix}b`] || '' };
+      exactEntries.set([entry.type, entry.name, entry.s50, entry.s70].join('\u241f'), entry);
+    }
+  }
+  const entries = [...exactEntries.values()];
+  const namesWithPublishedScore = new Set(entries
+    .filter(entry => entry.s50 || entry.s70)
+    .map(entry => `${entry.type}\u241f${entry.name}`));
+  const displayed = entries.filter(entry => entry.s50 || entry.s70 || !namesWithPublishedScore.has(`${entry.type}\u241f${entry.name}`));
+  const published = displayed.filter(entry => entry.s50 || entry.s70).length;
+  if (published) contractProgramsWithPublishedScores += 1;
+  contractDisplayedEntranceRows += displayed.length;
+  contractPublishedEntranceRows += published;
+}
+check(contractProgramsWithPublishedScores === 23, `contract programs with published admissions scores: ${contractProgramsWithPublishedScores}`);
+check(contractDisplayedEntranceRows === 53, `contract displayed entrance row count: ${contractDisplayedEntranceRows}`);
+check(contractPublishedEntranceRows === 35, `contract published entrance row count: ${contractPublishedEntranceRows}`);
+const contractGradeMatchCount = (grade, range) => contractProgramDetails.programs.filter(item => {
+  const sourceRows = admissions.filter(row => row.u === item.u && row.m === item.m && !row.su);
+  return sourceRows.some(row => contractAdmissionSlots.some(([, prefix]) =>
+    [`${prefix}a`, `${prefix}b`].some(field => {
+      const score = parseFloat(row[field]);
+      return Number.isFinite(score) && score >= grade - range && score <= grade + range;
+    })
+  ));
+}).length;
+check(contractGradeMatchCount(2.5, 0.3) === 4, `contract grade match sample 2.50 ±0.30: ${contractGradeMatchCount(2.5, 0.3)}`);
+check(contractGradeMatchCount(4.5, 0.3) === 9, `contract grade match sample 4.50 ±0.30: ${contractGradeMatchCount(4.5, 0.3)}`);
 const directoryRegionAliases = { '수도권': '경인권', '호남권': '전라권' };
 const universityDirectoryPairs = new Set(admissions.map(row => `${directoryRegionAliases[row.r] || row.r}|${row.u}`));
 check(universityDirectoryPairs.size === 223, `university-campus directory count: ${universityDirectoryPairs.size}`);
@@ -121,18 +245,30 @@ check(sha256(minimumText) === manifest.suneungMinimum.sha256, 'CSAT minimum hash
 let generated = fs.readFileSync(path.join(root, 'src', 'index.template.html'), 'utf8').replace(/\r\n/g, '\n');
 generated = generated.replace('__RAW_DATA__', admissionsText).replace('__SNT_DATA__', minimumText);
 generated = generated.replace('__ADMISSIONS_OFFICE_LINKS__', admissionsOfficeLinksText);
-check(!generated.includes('__RAW_DATA__') && !generated.includes('__SNT_DATA__') && !generated.includes('__ADMISSIONS_OFFICE_LINKS__'), 'build placeholder remains');
+generated = generated.replace('__PROGRAM_TAGS__', programTagsText);
+generated = generated.replace('__CONTRACT_PROGRAM_DETAILS__', contractProgramDetailsText);
+check(!generated.includes('__RAW_DATA__') && !generated.includes('__SNT_DATA__') && !generated.includes('__ADMISSIONS_OFFICE_LINKS__') && !generated.includes('__PROGRAM_TAGS__') && !generated.includes('__CONTRACT_PROGRAM_DETAILS__'), 'build placeholder remains');
 check(generated === html, 'generated HTML differs from index.html');
 
 const sourceManifest = JSON.parse(fs.readFileSync(path.join(root, 'sources', 'source-manifest.json'), 'utf8'));
 const audit = JSON.parse(fs.readFileSync(path.join(root, 'docs', 'data-update-audit-260813.json'), 'utf8'));
-check(sourceManifest.sources.length === 2, 'official source manifest count');
+const programAudit = JSON.parse(fs.readFileSync(path.join(root, 'docs', 'program-tags-audit-270830.json'), 'utf8'));
+check(sourceManifest.sources.length === 4, 'official source manifest count');
+const sourcesByRole = Object.fromEntries(sourceManifest.sources.map(source => [source.role, source]));
+check(sourcesByRole['contract-program-directory']?.pages === 15, 'contract source manifest pages');
+check(sourcesByRole['contract-program-directory']?.sha256 === '918E0090B796FB5317E5B422F57E990452C2904A1B2EE117D139F3A55330A6F1', 'contract source manifest hash');
+check(sourcesByRole['advanced-program-directory']?.pages === 62, 'advanced source manifest pages');
+check(sourcesByRole['advanced-program-directory']?.sha256 === '09B127CF881847582D32652CC8742CFDCE70FCF3E7ACE3A40F422CB92AB279AB', 'advanced source manifest hash');
 check(audit.comparison.baselineKeysMissingFromWorkbook === 0, 'baseline key missing from 260813 workbook');
 check(audit.comparison.workbookKeysNotInBaseline === 134, '260813 new key count changed');
 check(audit.comparison.exactBaselineRowsPresent === 5807, 'exact baseline row count changed');
 check(audit.comparison.baselineRowsChangedCorrectedOrUnmatched === 56, 'changed/corrected row count changed');
 check(audit.comparison.unmatchedRowsWithDonggukOfficialCorrection === 51, 'Dongguk correction count changed');
 check(!JSON.stringify(audit).includes('D:\\\\'), 'audit report contains an absolute Windows path');
+check(programAudit.publicLinkCount === 252, 'program audit public link count');
+check(programAudit.sources.contract.futureNewKeyExact.length === 1, 'contract future exact key count');
+check(programAudit.sources.advanced.futureNewKeyExact.length === 9, 'advanced future exact key count');
+check(!JSON.stringify(programAudit).includes('D:\\\\'), 'program audit contains an absolute Windows path');
 
 const ignoredLocalDirectories = new Set(['.git', '.venv']);
 
@@ -156,14 +292,14 @@ for (const entry of fs.readdirSync(root)) {
   check(allowedRoot.has(entry), `unexpected public path: ${entry}`);
 }
 for (const file of fs.readdirSync(path.join(root, 'scripts'))) {
-  check(['audit-source.py', 'build.mjs', 'extract-baseline.mjs', 'validate-public.mjs'].includes(file), `unexpected script: ${file}`);
+  check(['audit-source.py', 'build.mjs', 'extract-baseline.mjs', 'generate-program-tags.py', 'validate-public.mjs'].includes(file), `unexpected script: ${file}`);
 }
 
 if (errors.length) {
   console.error(errors.map(error => `[FAIL] ${error}`).join('\n'));
   process.exit(1);
 }
-console.log('[PASS] V10.7.1 label, top workspace tabs, core UI, and inline JavaScript');
+console.log('[PASS] V10.7.2 label, top workspace tabs, core UI, and inline JavaScript');
 console.log('[PASS] student mock-exam data and loader remain excluded');
 console.log('[PASS] baseline counts, 223 university-campus directory entries, and SHA-256 fingerprints');
 console.log(`[PASS] all ${seoulDirectoryPairs.size} Seoul and all ${gyeonginDirectoryPairs.size} Gyeongin university-campus entries have verified rolling-admissions guideline links`);
@@ -174,5 +310,10 @@ console.log(`[PASS] all ${jeollaDirectoryPairs.size} Jeolla university-campus en
 console.log(`[PASS] all ${gyeongsangDirectoryPairs.size} Gyeongsang university-campus entries have verified rolling-admissions guideline links`);
 console.log('[PASS] fallback source labels identify the public admissions portal and education-office copy');
 console.log('[PASS] template build reproduces index.html');
-console.log('[PASS] 260813 source audit and public source-binary boundary');
+console.log('[PASS] 252 verified contract/advanced program keys, filters, badges, and source pages');
+console.log('[PASS] 35 contract-program detail records and badge-to-detail navigation structure');
+console.log('[PASS] contract detail admissions results: 23 programs, 35 published rows, 18 unpublished rows');
+console.log('[PASS] synchronized contract grade-range controls and light-red match-card rules');
+console.log('[PASS] official-web enrichment: 12 programs, 17 source links, 4 unique official URLs');
+console.log('[PASS] 260813 and program-tag source audits plus public source-binary boundary');
 console.log('[PASS] recovery project file allowlist');

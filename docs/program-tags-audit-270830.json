@@ -1,0 +1,197 @@
+{
+  "recordedAt": "2026-08-30",
+  "baseline": {
+    "admissionsRows": 5863,
+    "universityMajorKeys": 5800
+  },
+  "mappingPolicy": {
+    "rule": "대학 후보 안에서 공백·문장부호만 정규화한 모집단위명이 유일하게 정확 일치할 때만 공개 태그로 연결",
+    "universityAliases": {
+      "포항공과대": "포항공대",
+      "한국기술교육대": "한국기술교대",
+      "국립금오공과대": "국립금오공대",
+      "서울과학기술대": "서울과기대",
+      "한국외국어대": "한국외대",
+      "한밭대": "국립한밭대"
+    },
+    "excluded": "단과대학명 포함, 복수 학과 병기, 군·성별 분리, 개편 전후 명칭, 현재 기준선에 없는 키"
+  },
+  "sources": {
+    "contract": {
+      "label": "계약학과",
+      "title": "2027학년도 계약학과 현황",
+      "publisher": "한국대학교육협의회",
+      "pages": 15,
+      "sourceRows": 77,
+      "sourceUniversities": 42,
+      "linkedRows": 35,
+      "linkedKeys": 35,
+      "reviewRows": 42,
+      "futureNewKeyExact": [
+        {
+          "u": "부산대",
+          "m": "스마트가전공학과"
+        }
+      ],
+      "reviewReasonCounts": {
+        "future-new-key": 1,
+        "name-or-key-review": 41
+      },
+      "reviewExamples": [
+        {
+          "page": 1,
+          "university": "강서대",
+          "major": "산업경영학과 아동가족복지학과",
+          "reason": "name-or-key-review"
+        },
+        {
+          "page": 2,
+          "university": "서경대",
+          "major": "헤어디자인학과 코스메틱뷰티매니지먼트 학과",
+          "reason": "name-or-key-review"
+        },
+        {
+          "page": 2,
+          "university": "성균관대 (서울･수원)",
+          "major": "반도체시스템공학",
+          "reason": "name-or-key-review"
+        },
+        {
+          "page": 3,
+          "university": "세종대",
+          "major": "우주항공시스템공학부 항공시스템공학전공공군",
+          "reason": "name-or-key-review"
+        },
+        {
+          "page": 3,
+          "university": "세종대",
+          "major": "사이버국방학과육군",
+          "reason": "name-or-key-review"
+        },
+        {
+          "page": 3,
+          "university": "세종대",
+          "major": "국방AI융합 시스템공학과해군",
+          "reason": "name-or-key-review"
+        },
+        {
+          "page": 3,
+          "university": "세종대",
+          "major": "국방AI로봇 융합공학과해병대",
+          "reason": "name-or-key-review"
+        },
+        {
+          "page": 4,
+          "university": "연세대(서울)",
+          "major": "공과대학 시스템반도체공학과",
+          "reason": "name-or-key-review"
+        }
+      ]
+    },
+    "advanced": {
+      "label": "첨단학과",
+      "title": "2027학년도 첨단학과 현황",
+      "publisher": "한국대학교육협의회",
+      "pages": 62,
+      "sourceRows": 316,
+      "sourceUniversities": 89,
+      "linkedRows": 220,
+      "linkedKeys": 217,
+      "reviewRows": 96,
+      "futureNewKeyExact": [
+        {
+          "u": "국립금오공대",
+          "m": "AX융합학과"
+        },
+        {
+          "u": "국립금오공대",
+          "m": "반도체소부장전공"
+        },
+        {
+          "u": "서원대",
+          "m": "AI로봇학과"
+        },
+        {
+          "u": "성균관대",
+          "m": "인공지능학과"
+        },
+        {
+          "u": "연세대(미래)",
+          "m": "기후에너지시스템공학부"
+        },
+        {
+          "u": "연세대(미래)",
+          "m": "반도체공학물리학과"
+        },
+        {
+          "u": "연세대(미래)",
+          "m": "의공학부"
+        },
+        {
+          "u": "청운대",
+          "m": "AI융합학과"
+        },
+        {
+          "u": "한남대",
+          "m": "AI로봇융합공학과"
+        }
+      ],
+      "reviewReasonCounts": {
+        "future-new-key": 9,
+        "name-or-key-review": 87
+      },
+      "reviewExamples": [
+        {
+          "page": 2,
+          "university": "경희대 (서울･국제)",
+          "major": "이과대학 미래정보디스플 레이 학부",
+          "reason": "name-or-key-review"
+        },
+        {
+          "page": 3,
+          "university": "경희대(서울 ･국제)",
+          "major": "전자정보대학 전자공학부 반도체 공학과",
+          "reason": "name-or-key-review"
+        },
+        {
+          "page": 3,
+          "university": "경희대(서울 ･국제)",
+          "major": "소프트웨어 융합대학 컴퓨터 공학부 인공지능학과",
+          "reason": "name-or-key-review"
+        },
+        {
+          "page": 3,
+          "university": "경희대(서울 ･국제)",
+          "major": "생명과학대학 스마트팜과학과",
+          "reason": "name-or-key-review"
+        },
+        {
+          "page": 4,
+          "university": "광운대",
+          "major": "반도체시스템공 학부 반도체시스템공 학전공",
+          "reason": "name-or-key-review"
+        },
+        {
+          "page": 4,
+          "university": "국민대",
+          "major": "전자공학부 지능형반도체융 합전자전공",
+          "reason": "name-or-key-review"
+        },
+        {
+          "page": 6,
+          "university": "동국대(서울 ･고양)",
+          "major": "공과대학 기계로봇에너지 공학과",
+          "reason": "name-or-key-review"
+        },
+        {
+          "page": 7,
+          "university": "동국대(서울 ･고양)",
+          "major": "첨단융합대학 시스템반도체학 부",
+          "reason": "name-or-key-review"
+        }
+      ]
+    }
+  },
+  "publicLinkCount": 252,
+  "decision": "검증된 정확 일치만 V10.7.2 보조 태그로 공개하고 검토 행은 입결 결과에 연결하지 않는다."
+}

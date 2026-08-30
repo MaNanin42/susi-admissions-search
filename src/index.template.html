@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>수시 입결 검색기 | 2027학년도 V10.7.1 공개용</title>
+<title>수시 입결 검색기 | 2027학년도 V10.7.2 공개용</title>
 <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 /* ── Professional Calm 테마 변수 ── */
@@ -47,6 +47,12 @@
   --score-score:#6d28d9;
   --score-score-bg:rgba(109,40,217,0.07);
   --score-score-ring:rgba(109,40,217,0.18);
+  --program-contract:#6d28d9;
+  --program-contract-bg:#f3e8ff;
+  --program-contract-ring:#c4b5fd;
+  --program-advanced:#0369a1;
+  --program-advanced-bg:#e0f2fe;
+  --program-advanced-ring:#7dd3fc;
   --thumb-shadow: 0 0 0 3px rgba(255,255,255,0.9), 0 1px 4px rgba(30,41,59,0.16);
   --row-hover:   #edf4ff;
 }
@@ -60,6 +66,10 @@ body {
   font-size: 13px; line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
+}
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
 }
 
 /* ── 헤더 ── */
@@ -95,6 +105,7 @@ body {
 }
 .workspace-tab[data-workspace="search"].active { border-bottom-color: #60a5fa; }
 .workspace-tab[data-workspace="admissions"].active { border-bottom-color: #2dd4bf; }
+.workspace-tab[data-workspace="contracts"].active { border-bottom-color: #c4b5fd; }
 .workspace-tab:focus-visible { outline: 2px solid #93c5fd; outline-offset: -3px; }
 .header-version {
   font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 600;
@@ -199,6 +210,147 @@ body {
 .admissions-directory-empty {
   margin: 54px auto; color: var(--text3); text-align: center; font-size: 13px;
 }
+
+/* ── 계약학과 모아보기 ── */
+.contract-program-panel {
+  height: calc(100vh - 52px); overflow: hidden;
+  display: flex; flex-direction: column; background: #f8fafc;
+}
+.contract-program-head {
+  min-height: 62px; padding: 10px 22px;
+  display: flex; align-items: center; gap: 16px;
+  border-bottom: 1px solid var(--border2); background: var(--panel); flex-shrink: 0;
+}
+.contract-program-heading { font-size: 18px; font-weight: 700; letter-spacing: -.02em; }
+.contract-program-summary { margin-left: auto; color: var(--text3); font-size: 11px; text-align: right; }
+.contract-program-summary strong {
+  margin-right: 3px; color: var(--program-contract); font-family: 'JetBrains Mono', monospace;
+  font-size: 18px;
+}
+.contract-program-tools {
+  min-height: 48px; padding: 8px 22px;
+  display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+  border-bottom: 1px solid var(--border2); background: #f5f3ff; flex-shrink: 0;
+}
+.contract-search, .contract-type-filter {
+  min-height: 32px; border: 1px solid var(--border2); border-radius: 7px;
+  background: #fff; color: var(--text); font: inherit; font-size: 12px;
+}
+.contract-search { width: min(420px, 55vw); padding: 6px 10px; }
+.contract-type-filter { min-width: 180px; padding: 5px 28px 5px 9px; }
+.contract-search:focus, .contract-type-filter:focus { outline: 2px solid var(--program-contract-ring); border-color: var(--program-contract); }
+.contract-grade-control, .contract-range-control {
+  min-height: 32px; display: flex; align-items: center; gap: 7px;
+  border: 1px solid var(--border2); border-radius: 7px; background: #fff; padding: 4px 8px;
+}
+.contract-grade-control label, .contract-range-control label { color: var(--text2); font-size: 10px; font-weight: 700; white-space: nowrap; }
+.contract-grade-input {
+  width: 62px; border: 0; background: transparent; color: var(--text); font: inherit;
+  font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 700;
+}
+.contract-grade-input:focus { outline: 0; }
+.contract-range-input { width: 100px; accent-color: var(--program-contract); }
+.contract-range-value { min-width: 36px; color: var(--program-contract); font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 700; }
+.contract-match-count { color: var(--text3); font-size: 10px; white-space: nowrap; }
+.contract-program-body {
+  min-height: 0; flex: 1; display: grid; grid-template-columns: minmax(250px, 31%) minmax(0, 1fr);
+}
+.contract-program-list {
+  overflow-y: auto; padding: 14px; border-right: 1px solid var(--border2); background: #f1f5f9;
+  scrollbar-width: thin; scrollbar-color: var(--border2) transparent;
+}
+.contract-list-region + .contract-list-region { margin-top: 16px; }
+.contract-list-region-title {
+  margin-bottom: 6px; color: var(--text3); font-size: 11px; font-weight: 700;
+}
+.contract-list-button {
+  width: 100%; margin-top: 5px; padding: 9px 10px;
+  display: block; border: 1px solid var(--border2); border-radius: 8px;
+  background: #fff; color: var(--text2); font: inherit; text-align: left; cursor: pointer;
+}
+.contract-list-button:hover { border-color: var(--program-contract-ring); background: #faf7ff; }
+.contract-list-button.active { border-color: var(--program-contract); background: var(--program-contract-bg); }
+.contract-list-button.grade-match {
+  border-color: #fda4af; background: #fff1f2; box-shadow: inset 3px 0 0 #fb7185;
+}
+.contract-list-button.grade-match:hover { border-color: #fb7185; background: #ffe4e6; }
+.contract-list-button.grade-match.active { border-color: #e11d48; background: #ffe4e6; }
+.contract-list-button:focus-visible { outline: 2px solid var(--program-contract); outline-offset: 2px; }
+.contract-list-university { display: block; font-size: 11px; font-weight: 600; color: var(--text3); }
+.contract-list-major { display: block; margin-top: 2px; font-size: 13px; font-weight: 700; color: var(--text); }
+.contract-list-type { display: block; margin-top: 3px; color: var(--program-contract); font-size: 10px; font-weight: 600; }
+.contract-grade-match-label {
+  display: inline-block; margin-top: 4px; padding: 1px 5px; border-radius: 999px;
+  background: #fecdd3; color: #9f1239; font-size: 9px; font-weight: 800;
+}
+.contract-program-detail {
+  overflow-y: auto; padding: 24px clamp(20px, 4vw, 54px) 40px; background: #fff;
+  scrollbar-width: thin; scrollbar-color: var(--border2) transparent;
+}
+.contract-detail-kicker { color: var(--program-contract); font-size: 11px; font-weight: 700; }
+.contract-detail-title { margin-top: 4px; font-size: 24px; line-height: 1.3; letter-spacing: -.03em; }
+.contract-detail-university { margin-top: 4px; color: var(--text3); font-size: 13px; }
+.contract-detail-type {
+  display: inline-block; margin-top: 12px; padding: 4px 8px;
+  border: 1px solid var(--program-contract-ring); border-radius: 999px;
+  background: var(--program-contract-bg); color: var(--program-contract); font-size: 11px; font-weight: 700;
+}
+.contract-detail-grid {
+  margin-top: 20px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px;
+}
+.contract-detail-section { padding: 14px 15px; border-top: 2px solid var(--border2); background: #f8fafc; }
+.contract-detail-section h3 { margin-bottom: 7px; font-size: 12px; color: var(--text2); }
+.contract-detail-section ul { padding-left: 17px; color: var(--text2); }
+.contract-detail-section li + li { margin-top: 5px; }
+.contract-detail-section.caution { border-top-color: #f59e0b; background: #fffaf0; }
+.contract-detail-empty { color: var(--text3); font-size: 12px; }
+.contract-detail-source {
+  margin-top: 18px; padding-top: 12px; border-top: 1px solid var(--border);
+  color: var(--text3); font-size: 11px; line-height: 1.6;
+}
+.contract-web-sources { margin-top: 8px; display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.contract-web-sources strong { color: var(--text2); }
+.contract-web-source {
+  display: inline-block; padding: 2px 6px; border: 1px solid var(--accent2-ring); border-radius: 5px;
+  background: var(--accent2-bg); color: var(--accent2); font-size: 10px; font-weight: 700; text-decoration: none;
+}
+.contract-web-source:hover { text-decoration: underline; }
+.contract-web-source:focus-visible { outline: 2px solid var(--accent2); outline-offset: 2px; }
+.contract-admission-section {
+  margin-top: 22px; padding: 16px; border: 1px solid var(--border2); border-radius: 10px;
+  background: #f8fafc;
+}
+.contract-admission-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+.contract-admission-head h3 { font-size: 14px; }
+.contract-admission-count { color: var(--accent); font-size: 11px; font-weight: 700; }
+.contract-admission-note { margin-top: 4px; color: var(--text3); font-size: 11px; line-height: 1.55; }
+.contract-admission-table-wrap { margin-top: 11px; overflow-x: auto; }
+.contract-admission-table {
+  width: 100%; min-width: 520px; table-layout: auto; border-collapse: collapse; font-size: 12px;
+}
+.contract-admission-table th {
+  padding: 7px 8px; border-bottom: 1px solid var(--border2); background: #eaf1ff;
+  color: var(--text2); font-size: 10px; letter-spacing: 0; text-transform: none; cursor: default;
+}
+.contract-admission-table th:hover { color: var(--text2); }
+.contract-admission-table td { padding: 8px; border-bottom: 1px solid var(--border); background: #fff; }
+.contract-admission-table tbody tr:last-child td { border-bottom: 0; }
+.contract-admission-type {
+  display: inline-block; padding: 2px 6px; border-radius: 999px; font-size: 10px; font-weight: 700;
+}
+.contract-admission-type.교과 { color: var(--accent); background: var(--accent-bg); }
+.contract-admission-type.종합 { color: var(--accent2); background: var(--accent2-bg); }
+.contract-admission-score { font-family: 'JetBrains Mono', monospace; font-weight: 700; white-space: nowrap; }
+.contract-admission-score.missing { color: var(--text3); font-family: inherit; font-weight: 500; }
+.contract-admission-status { color: var(--accent2); font-size: 10px; font-weight: 700; white-space: nowrap; }
+.contract-admission-status.missing { color: var(--text3); }
+.contract-admission-duplicate {
+  display: inline-block; margin-left: 5px; color: var(--c-amber); font-size: 9px; font-weight: 700;
+}
+.contract-directory-empty { padding: 32px 14px; color: var(--text3); text-align: center; }
+.badge-program-button { font: inherit; cursor: pointer; }
+.badge-program-button:hover { filter: brightness(.96); box-shadow: 0 0 0 2px rgba(109,40,217,.12); }
+.badge-program-button:focus-visible { outline: 2px solid var(--program-contract); outline-offset: 2px; }
 
 /* ── 사이드바 ── */
 .sidebar {
@@ -470,6 +622,18 @@ tr:hover td { background: var(--row-hover); }
   border: 1px solid var(--c-amber-ring);
   padding: 1px 6px; border-radius: 4px; margin-left: 6px;
 }
+.badge-program {
+  display: inline-block; margin-left: 6px; padding: 1px 6px;
+  border: 1px solid; border-radius: 999px;
+  font-size: 11px; font-weight: 700; line-height: 1.45; white-space: nowrap;
+  vertical-align: 1px;
+}
+.badge-program.contract {
+  color: var(--program-contract); background: var(--program-contract-bg); border-color: var(--program-contract-ring);
+}
+.badge-program.advanced {
+  color: var(--program-advanced); background: var(--program-advanced-bg); border-color: var(--program-advanced-ring);
+}
 
 /* ── 전형 카드 ── */
 .jtype-cell { display: flex; flex-direction: column; gap: 5px; width: 100%; min-width: 0; }
@@ -645,7 +809,7 @@ tr:hover td { background: var(--row-hover); }
 ::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 2px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--border3); }
 
-/* ── V10.7.1 상담 운영 패널 ── */
+/* ── V10.7.2 상담 운영 패널 ── */
 .result-area { min-width: 920px; }
 .jtype-item.snt-manual { border-color: var(--c-amber); background: rgba(255,251,235,0.70); }
 .jtype-item.snt-manual::before {
@@ -718,15 +882,28 @@ tr:hover td { background: var(--row-hover); }
   .result-header { height: auto; min-height: 44px; flex-wrap: wrap; padding: 8px 12px; }
   .result-insight { grid-template-columns: 1fr 1fr; padding: 8px 12px; }
   .legend { width: 100%; margin-left: 0; }
+  .contract-program-body { grid-template-columns: minmax(210px, 38%) minmax(0, 1fr); }
+  .contract-detail-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 560px) {
   .header { padding: 0 8px; gap: 6px; }
-  .workspace-tab { min-width: 0; padding: 0 10px; font-size: 12px; }
+  .logo-mark { width: 24px; height: 24px; }
+  .workspace-tabs { min-width: 0; flex: 1; overflow-x: auto; }
+  .workspace-tab { min-width: max-content; padding: 0 8px; font-size: 11px; white-space: nowrap; }
   .header-version { display: none; }
   .admissions-office-head { min-height: 58px; padding: 8px 14px; }
   .admissions-region-filters { padding: 8px 14px; }
   .admissions-directory { padding: 14px; }
   .university-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
+  .contract-program-head { min-height: 58px; padding: 8px 14px; }
+  .contract-program-tools { padding: 8px 14px; align-items: stretch; flex-direction: column; }
+  .contract-search, .contract-type-filter { width: 100%; min-width: 0; }
+  .contract-grade-control, .contract-range-control { width: 100%; }
+  .contract-range-input { flex: 1; width: auto; }
+  .contract-program-body { display: block; overflow-y: auto; }
+  .contract-program-list { max-height: 42vh; overflow-y: auto; border-right: 0; border-bottom: 1px solid var(--border2); }
+  .contract-program-detail { overflow: visible; padding: 20px 16px 34px; }
+  .contract-detail-title { font-size: 21px; }
 }
 </style>
 </head>
@@ -737,9 +914,10 @@ tr:hover td { background: var(--row-hover); }
   <div class="workspace-tabs" role="tablist" aria-label="서비스 전환">
     <button type="button" class="workspace-tab active" id="workspace-tab-search" data-workspace="search" role="tab" aria-selected="true" aria-controls="workspace-search">수시 입결 검색</button>
     <button type="button" class="workspace-tab" id="workspace-tab-admissions" data-workspace="admissions" role="tab" aria-selected="false" aria-controls="workspace-admissions" tabindex="-1">입학처 모아보기</button>
+    <button type="button" class="workspace-tab" id="workspace-tab-contracts" data-workspace="contracts" role="tab" aria-selected="false" aria-controls="workspace-contracts" tabindex="-1">계약학과 모아보기</button>
   </div>
   <div class="header-right">
-    <span class="header-version">2027학년도 V10.7.1</span>
+    <span class="header-version">2027학년도 V10.7.2</span>
     <span class="change-notice" id="headerChangeCount" style="display:none"></span>
   </div>
 </div>
@@ -806,6 +984,16 @@ tr:hover td { background: var(--row-hover); }
           </select>
           <div class="option-help" id="scoreTypeHelp"></div>
         </div>
+      </div>
+
+      <div class="filter-section">
+        <div class="filter-label">학과 특성</div>
+        <select class="select-input" id="programTypeFilter" aria-describedby="programTypeHelp">
+          <option value="">전체 학과</option>
+          <option value="contract">계약학과만</option>
+          <option value="advanced">첨단학과만</option>
+        </select>
+        <div class="option-help" id="programTypeHelp">2027 대교협 자료에서 현재 입결 모집단위와 정확히 연결된 학과만 표시합니다.</div>
       </div>
 
       <div class="filter-section">
@@ -924,12 +1112,45 @@ tr:hover td { background: var(--row-hover); }
   <div class="admissions-directory" id="admissionsDirectory" aria-live="polite"></div>
 </section>
 
+<section class="workspace-panel contract-program-panel" id="workspace-contracts" role="tabpanel" aria-labelledby="workspace-tab-contracts" hidden>
+  <div class="contract-program-head">
+    <div class="contract-program-heading">계약학과 모아보기</div>
+    <div class="contract-program-summary"><strong id="contractProgramTotal">—</strong>개 모집단위</div>
+  </div>
+  <div class="contract-program-tools">
+    <label class="sr-only" for="contractProgramSearch">대학·학과·협약기관 검색</label>
+    <input class="contract-search" id="contractProgramSearch" type="search" placeholder="대학·학과·협약기관 검색">
+    <label class="sr-only" for="contractTypeFilter">계약학과 유형 필터</label>
+    <select class="contract-type-filter" id="contractTypeFilter">
+      <option value="">전체 유형</option>
+    </select>
+    <div class="contract-grade-control">
+      <label for="contractGradeInput">학생 내신</label>
+      <input class="contract-grade-input" id="contractGradeInput" type="number" min="1" max="9" step="0.01" placeholder="2.50" inputmode="decimal">
+    </div>
+    <div class="contract-range-control">
+      <label for="contractRangeInput">범위</label>
+      <input class="contract-range-input" id="contractRangeInput" type="range" min="0.1" max="1.5" step="0.05" value="0.3">
+      <output class="contract-range-value" id="contractRangeValue" for="contractRangeInput">±0.30</output>
+    </div>
+    <span class="contract-match-count" id="contractMatchCount" aria-live="polite">내신을 입력하면 범위 해당 학과를 표시합니다.</span>
+  </div>
+  <div class="contract-program-body">
+    <nav class="contract-program-list" id="contractProgramList" aria-label="계약학과 목록"></nav>
+    <article class="contract-program-detail" id="contractProgramDetail" aria-live="polite"></article>
+  </div>
+</section>
+
 <script>
 const RAW = __RAW_DATA__;
 
 const SN  = __SNT_DATA__;
 
 const ADMISSIONS_OFFICE_LINKS = __ADMISSIONS_OFFICE_LINKS__;
+
+const PROGRAM_TAGS = __PROGRAM_TAGS__;
+
+const CONTRACT_PROGRAM_DETAILS = __CONTRACT_PROGRAM_DETAILS__;
 
 
 
@@ -941,6 +1162,8 @@ let visibleLimit   = 100;
 let pickedItems    = [];
 let renderPickPayloads = [];
 let admissionsDirectoryReady = false;
+let contractDirectoryReady = false;
+let selectedContractProgramId = null;
 
 const ADMISSIONS_REGION_ALIASES = { '수도권': '경인권', '호남권': '전라권' };
 const ADMISSIONS_REGION_ORDER = ['서울', '경인권', '강원권', '충청권', '전라권', '경상권', '제주권'];
@@ -1083,6 +1306,30 @@ const SNT_FILTER_HELP = {
   fail: '입력 등급 기준으로 자동 미충족 처리된 전형만 봅니다.'
 };
 const SCORE_DATA_FILTER_LABELS = { known: '입결 공개만', missing: '입결 미공개만' };
+const PROGRAM_TYPE_LABELS = { contract: '계약학과', advanced: '첨단학과' };
+const PROGRAM_BY_KEY = new Map(PROGRAM_TAGS.links.map(item => [item.u + '\u241f' + item.m, item]));
+const CONTRACT_BY_KEY = new Map(CONTRACT_PROGRAM_DETAILS.programs.map(item => [item.u + '\u241f' + item.m, item]));
+const CONTRACT_BY_ID = new Map(CONTRACT_PROGRAM_DETAILS.programs.map(item => [item.id, item]));
+const ENTRANCE_SLOTS = [
+  { type: '교과', nameKey: 'k1n', score50Key: 'k1a', score70Key: 'k1b' },
+  { type: '교과', nameKey: 'k2n', score50Key: 'k2a', score70Key: 'k2b' },
+  { type: '교과', nameKey: 'k3n', score50Key: 'k3a', score70Key: 'k3b' },
+  { type: '종합', nameKey: 'j1n', score50Key: 'j1a', score70Key: 'j1b' },
+  { type: '종합', nameKey: 'j2n', score50Key: 'j2a', score70Key: 'j2b' }
+];
+const CONTRACT_ADMISSION_ROWS_BY_KEY = new Map();
+RAW.forEach(row => {
+  const key = row.u + '\u241f' + row.m;
+  if (!CONTRACT_BY_KEY.has(key)) return;
+  if (!CONTRACT_ADMISSION_ROWS_BY_KEY.has(key)) CONTRACT_ADMISSION_ROWS_BY_KEY.set(key, []);
+  CONTRACT_ADMISSION_ROWS_BY_KEY.get(key).push(row);
+});
+const CONTRACT_PROGRAMS = CONTRACT_PROGRAM_DETAILS.programs.map(item => {
+  const baseline = RAW.find(row => row.u === item.u && row.m === item.m);
+  const region = baseline ? (ADMISSIONS_REGION_ALIASES[baseline.r] || baseline.r) : '기타';
+  const displayUniversity = UNIVERSITY_CAMPUS_LABELS[region + '|' + item.u] || item.u;
+  return { ...item, region, displayUniversity };
+});
 
 // ── 유틸 ──
 function esc(s) {
@@ -1097,6 +1344,27 @@ function clearSntGradeInputs() {
   SNT_INPUT_IDS.forEach(id => { byId(id).value = ''; });
 }
 
+function getProgramInfo(university, major) {
+  return PROGRAM_BY_KEY.get(university + '\u241f' + major) || null;
+}
+
+function renderProgramBadges(program) {
+  if (!program) return '';
+  return program.tags.map(tag => {
+    const source = PROGRAM_TAGS.sources[tag.type];
+    const pages = tag.pages.map(page => page + '쪽').join(', ');
+    const description = source.title + ' · ' + pages + ' · ' + PROGRAM_TAGS.notice;
+    if (tag.type === 'contract') {
+      const detail = CONTRACT_BY_KEY.get(program.u + '\u241f' + program.m);
+      if (detail) {
+        const actionLabel = source.label + ' 상세정보 보기 · ' + description;
+        return `<button type="button" class="badge-program badge-program-button contract" data-contract-id="${esc(detail.id)}" title="${esc(actionLabel)}" aria-label="${esc(actionLabel)}">${esc(source.label)}</button>`;
+      }
+    }
+    return `<span class="badge-program ${esc(tag.type)}" title="${esc(description)}" aria-label="${esc(description)}">${esc(source.label)}</span>`;
+  }).join('');
+}
+
 // ── 슬라이더 / 등급 ──
 function updateRangeDesc() {
   const g = parseGrade(), r = parseRange();
@@ -1106,12 +1374,16 @@ function updateRangeDesc() {
 DOM.slider.addEventListener('input', () => {
   DOM.rangeVal.textContent = '±' + parseRange().toFixed(2);
   updateRangeDesc();
+  syncContractGradeControls();
+  if (contractDirectoryReady) renderContractProgramList();
   if (currentResults.length) rerender();
 });
 DOM.grade.addEventListener('input', () => {
   const g = parseGrade();
   DOM.gradeDisplay.textContent = isNaN(g) ? '미입력' : g.toFixed(2) + '등급';
   updateRangeDesc();
+  syncContractGradeControls();
+  if (contractDirectoryReady) renderContractProgramList();
   if (currentResults.length) rerender();
 });
 
@@ -1144,6 +1416,7 @@ byId('sntStatusFilter').addEventListener('change', () => {
 });
 byId('chkScoreType').addEventListener('change', () => { if (currentResults.length) doSearch(); });
 byId('scoreDataFilter').addEventListener('change', () => { if (currentResults.length) doSearch(); });
+byId('programTypeFilter').addEventListener('change', doSearch);
 DOM.searchBtn.addEventListener('click', doSearch);
 DOM.resetBtn.addEventListener('click', doReset);
 
@@ -1229,8 +1502,244 @@ function setupAdmissionsDirectory() {
   admissionsDirectoryReady = true;
 }
 
+function renderContractDetailItems(items) {
+  if (!items.length) return '<div class="contract-detail-empty">자료에 명시되지 않음</div>';
+  return '<ul>' + items.map(item => '<li>' + esc(item) + '</li>').join('') + '</ul>';
+}
+
+function renderContractWebSources(program) {
+  if (!Array.isArray(program.webSources) || !program.webSources.length) return '';
+  return '<div class="contract-web-sources"><strong>공식 웹 보완</strong>' + program.webSources.map(source =>
+    '<a class="contract-web-source" href="' + esc(source.url) + '" target="_blank" rel="noopener noreferrer" title="' +
+      esc(source.verifiedAt + ' 확인') + '">' + esc(source.title) + ' ↗</a>'
+  ).join('') + '</div>';
+}
+
+function getContractAdmissionResults(program) {
+  const key = program.u + '\u241f' + program.m;
+  const sourceRows = CONTRACT_ADMISSION_ROWS_BY_KEY.get(key) || [];
+  const exactEntries = new Map();
+  sourceRows.forEach((row, sourceRowIndex) => {
+    ENTRANCE_SLOTS.forEach((slot, slotIndex) => {
+      const name = row[slot.nameKey];
+      if (!name) return;
+      const prefix = slot.nameKey.slice(0, -1);
+      const entry = {
+        type: slot.type,
+        name,
+        s50: row[slot.score50Key] || '',
+        s70: row[slot.score70Key] || '',
+        metricKind: row[prefix + 'metric'] || '',
+        isScore: Boolean(row.su),
+        sourceRowIndex,
+        slotIndex
+      };
+      const exactKey = [entry.type, entry.name, entry.s50, entry.s70, entry.metricKind, entry.isScore].join('\u241f');
+      if (!exactEntries.has(exactKey)) exactEntries.set(exactKey, entry);
+    });
+  });
+  const entries = [...exactEntries.values()];
+  const namesWithPublishedScore = new Set(entries
+    .filter(entry => entry.s50 || entry.s70)
+    .map(entry => entry.type + '\u241f' + entry.name));
+  const filtered = entries
+    .filter(entry => entry.s50 || entry.s70 || !namesWithPublishedScore.has(entry.type + '\u241f' + entry.name))
+    .sort((a, b) => a.sourceRowIndex - b.sourceRowIndex || a.slotIndex - b.slotIndex);
+  const repeatedNames = new Set();
+  const nameCounts = new Map();
+  filtered.forEach(entry => {
+    const nameKey = entry.type + '\u241f' + entry.name;
+    nameCounts.set(nameKey, (nameCounts.get(nameKey) || 0) + 1);
+  });
+  nameCounts.forEach((count, nameKey) => { if (count > 1) repeatedNames.add(nameKey); });
+  return { entries: filtered, sourceRowCount: sourceRows.length, repeatedNames };
+}
+
+function renderContractAdmissionResults(program) {
+  const result = getContractAdmissionResults(program);
+  const publishedCount = result.entries.filter(entry => entry.s50 || entry.s70).length;
+  const sourceRowNote = result.sourceRowCount > 1
+    ? ' 같은 대학·모집단위 키의 원본 ' + result.sourceRowCount.toLocaleString() + '개 행을 합쳐 중복을 제거해 표시합니다.'
+    : '';
+  if (!result.entries.length) {
+    return '<section class="contract-admission-section" aria-labelledby="contractAdmissionHeading">' +
+      '<div class="contract-admission-head"><h3 id="contractAdmissionHeading">현재 입결자료</h3><span class="contract-admission-count">연결 전형 없음</span></div>' +
+      '<p class="contract-admission-note">현재 입결 기준선에 연결된 전형명이 없습니다. 입결 없음으로 단정하지 말고 대학 발표자료를 확인하세요.</p></section>';
+  }
+  const rows = result.entries.map(entry => {
+    const hasScore = Boolean(entry.s50 || entry.s70);
+    const repeated = result.repeatedNames.has(entry.type + '\u241f' + entry.name);
+    return '<tr>' +
+      '<td><span class="contract-admission-type ' + esc(entry.type) + '">' + esc(entry.type) + '</span></td>' +
+      '<td>' + esc(entry.name) + (repeated ? '<span class="contract-admission-duplicate">복수 원본</span>' : '') + '</td>' +
+      '<td><span class="contract-admission-score' + (entry.s50 ? '' : ' missing') + '">' + esc(entry.s50 || '미공개') + '</span></td>' +
+      '<td><span class="contract-admission-score' + (entry.s70 ? '' : ' missing') + '">' + esc(entry.s70 || '미공개') + '</span></td>' +
+      '<td><span class="contract-admission-status' + (hasScore ? '' : ' missing') + '">' + (hasScore ? (entry.isScore ? '점수형' : '등급 공개') : '입결 미공개') + '</span></td>' +
+    '</tr>';
+  }).join('');
+  return '<section class="contract-admission-section" aria-labelledby="contractAdmissionHeading">' +
+    '<div class="contract-admission-head"><h3 id="contractAdmissionHeading">현재 입결자료</h3>' +
+      '<span class="contract-admission-count">공개 ' + publishedCount.toLocaleString() + ' / 전형 ' + result.entries.length.toLocaleString() + '</span></div>' +
+    '<p class="contract-admission-note">현재 검색기의 2026 공개 입결 기준입니다. 50%·70% 값의 산출 과목과 방식은 대학별로 다릅니다.' + esc(sourceRowNote) + '</p>' +
+    '<div class="contract-admission-table-wrap"><table class="contract-admission-table">' +
+      '<caption class="sr-only">' + esc(program.displayUniversity + ' ' + program.m + ' 입결자료') + '</caption>' +
+      '<thead><tr><th>유형</th><th>전형명</th><th>50%</th><th>70%</th><th>공개 상태</th></tr></thead>' +
+      '<tbody>' + rows + '</tbody></table></div></section>';
+}
+
+function renderContractProgramDetail(program) {
+  if (!program) {
+    setHTML(byId('contractProgramDetail'), '<div class="contract-directory-empty">조건에 맞는 계약학과가 없습니다.</div>');
+    return;
+  }
+  const sourcePages = program.sourcePages.map(page => page + '쪽').join(', ');
+  setHTML(byId('contractProgramDetail'),
+    '<div class="contract-detail-kicker">' + esc(program.region) + ' · 2027학년도 자료</div>' +
+    '<h2 class="contract-detail-title" id="contractDetailTitle" tabindex="-1">' + esc(program.m) + '</h2>' +
+    '<div class="contract-detail-university">' + esc(program.displayUniversity) + '</div>' +
+    '<div class="contract-detail-type">' + esc(program.category) + '</div>' +
+    '<div class="contract-detail-grid">' +
+      '<section class="contract-detail-section"><h3>협약기업·기관</h3>' + renderContractDetailItems(program.partners) + '</section>' +
+      '<section class="contract-detail-section"><h3>등록금·장학금 지원</h3>' + renderContractDetailItems(program.support) + '</section>' +
+      '<section class="contract-detail-section"><h3>별도 선발·채용 조건</h3>' + renderContractDetailItems(program.selection) + '</section>' +
+      '<section class="contract-detail-section"><h3>의무근무·복무·과정 조건</h3>' + renderContractDetailItems(program.obligations) + '</section>' +
+      '<section class="contract-detail-section caution"><h3>반드시 확인할 점</h3>' + renderContractDetailItems(program.cautions) + '</section>' +
+    '</div>' +
+    renderContractAdmissionResults(program) +
+    '<div class="contract-detail-source">출처: ' + esc(CONTRACT_PROGRAM_DETAILS.source.publisher) +
+      ' 「' + esc(CONTRACT_PROGRAM_DETAILS.source.title) + '」 ' + esc(sourcePages) + '<br>' +
+      esc(CONTRACT_PROGRAM_DETAILS.scopeNotice) + renderContractWebSources(program) + '</div>'
+  );
+}
+
+function getFilteredContractPrograms() {
+  const query = byId('contractProgramSearch').value.trim().toLocaleLowerCase('ko-KR');
+  const category = byId('contractTypeFilter').value;
+  return CONTRACT_PROGRAMS.filter(program => {
+    if (category && program.category !== category) return false;
+    if (!query) return true;
+    const haystack = [program.displayUniversity, program.m, program.category, ...program.partners]
+      .join(' ').toLocaleLowerCase('ko-KR');
+    return haystack.includes(query);
+  });
+}
+
+function syncContractGradeControls() {
+  const contractGrade = byId('contractGradeInput');
+  const contractRange = byId('contractRangeInput');
+  if (!contractGrade || !contractRange) return;
+  contractGrade.value = DOM.grade.value;
+  contractRange.value = DOM.slider.value;
+  byId('contractRangeValue').textContent = '±' + parseRange().toFixed(2);
+}
+
+function contractProgramMatchesGrade(program) {
+  const grade = parseGrade();
+  if (isNaN(grade)) return false;
+  const range = parseRange();
+  const cutLo = grade - range;
+  const cutHi = grade + range;
+  return getContractAdmissionResults(program).entries.some(entry => {
+    if (entry.isScore || entry.metricKind) return false;
+    return [entry.s50, entry.s70].some(value => {
+      const score = parseFloat(value);
+      return isFinite(score) && score >= cutLo && score <= cutHi;
+    });
+  });
+}
+
+function renderContractProgramList() {
+  const filtered = getFilteredContractPrograms();
+  const grade = parseGrade();
+  const matchedPrograms = isNaN(grade) ? [] : filtered.filter(contractProgramMatchesGrade);
+  byId('contractMatchCount').textContent = isNaN(grade)
+    ? '내신을 입력하면 범위 해당 학과를 표시합니다.'
+    : '성적 범위 해당 ' + matchedPrograms.length.toLocaleString() + '개 · 50%·70% 중 하나 기준';
+  if (!filtered.some(program => program.id === selectedContractProgramId)) {
+    selectedContractProgramId = filtered[0]?.id || null;
+    renderContractProgramDetail(filtered[0] || null);
+  }
+  const regions = [...ADMISSIONS_REGION_ORDER, '기타'];
+  const sections = regions.map(region => {
+    const programs = filtered.filter(program => program.region === region);
+    if (!programs.length) return '';
+    return '<section class="contract-list-region" data-region="' + esc(region) + '">' +
+      '<h2 class="contract-list-region-title">' + esc(region) + ' ' + programs.length.toLocaleString() + '개</h2>' +
+      programs.map(program => {
+        const gradeMatch = contractProgramMatchesGrade(program);
+        const matchTitle = gradeMatch
+          ? ' title="' + esc(grade.toFixed(2) + '등급 ±' + parseRange().toFixed(2) + ' 범위에 50%·70% 입결 중 하나가 포함됩니다.') + '"'
+          : '';
+        return '<button type="button" class="contract-list-button' + (program.id === selectedContractProgramId ? ' active' : '') + (gradeMatch ? ' grade-match' : '') +
+        '" data-contract-program-id="' + esc(program.id) + '"' + (program.id === selectedContractProgramId ? ' aria-current="true"' : '') + matchTitle + '>' +
+        '<span class="contract-list-university">' + esc(program.displayUniversity) + '</span>' +
+        '<span class="contract-list-major">' + esc(program.m) + '</span>' +
+        '<span class="contract-list-type">' + esc(program.category) + '</span>' +
+        (gradeMatch ? '<span class="contract-grade-match-label">성적 범위 해당</span>' : '') + '</button>';
+      }).join('') + '</section>';
+  }).join('');
+  setHTML(byId('contractProgramList'), sections || '<div class="contract-directory-empty">검색 결과가 없습니다.</div>');
+  $$('.contract-list-button[data-contract-program-id]').forEach(button => {
+    button.addEventListener('click', () => selectContractProgram(button.dataset.contractProgramId, false));
+  });
+}
+
+function selectContractProgram(id, focusDetail) {
+  const program = CONTRACT_PROGRAMS.find(item => item.id === id);
+  if (!program) return;
+  selectedContractProgramId = id;
+  renderContractProgramList();
+  renderContractProgramDetail(program);
+  if (focusDetail) {
+    requestAnimationFrame(() => {
+      const title = byId('contractDetailTitle');
+      title?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      title?.focus({ preventScroll: true });
+    });
+  }
+}
+
+function setupContractDirectory() {
+  if (contractDirectoryReady) return;
+  byId('contractProgramTotal').textContent = CONTRACT_PROGRAMS.length.toLocaleString();
+  const categories = [...new Set(CONTRACT_PROGRAMS.map(program => program.category))].sort((a, b) => a.localeCompare(b, 'ko-KR'));
+  setHTML(byId('contractTypeFilter'), '<option value="">전체 유형</option>' + categories.map(category =>
+    '<option value="' + esc(category) + '">' + esc(category) + '</option>'
+  ).join(''));
+  byId('contractProgramSearch').addEventListener('input', renderContractProgramList);
+  byId('contractTypeFilter').addEventListener('change', renderContractProgramList);
+  syncContractGradeControls();
+  byId('contractGradeInput').addEventListener('input', event => {
+    DOM.grade.value = event.target.value;
+    const grade = parseGrade();
+    DOM.gradeDisplay.textContent = isNaN(grade) ? '미입력' : grade.toFixed(2) + '등급';
+    updateRangeDesc();
+    renderContractProgramList();
+    if (currentResults.length) rerender();
+  });
+  byId('contractRangeInput').addEventListener('input', event => {
+    DOM.slider.value = event.target.value;
+    DOM.rangeVal.textContent = '±' + parseRange().toFixed(2);
+    byId('contractRangeValue').textContent = '±' + parseRange().toFixed(2);
+    updateRangeDesc();
+    renderContractProgramList();
+    if (currentResults.length) rerender();
+  });
+  selectedContractProgramId = CONTRACT_PROGRAMS[0]?.id || null;
+  renderContractProgramList();
+  renderContractProgramDetail(CONTRACT_PROGRAMS[0] || null);
+  contractDirectoryReady = true;
+}
+
+function openContractProgram(id) {
+  switchWorkspace('contracts');
+  byId('contractProgramSearch').value = '';
+  byId('contractTypeFilter').value = '';
+  selectContractProgram(id, true);
+}
+
 function switchWorkspace(workspace) {
-  const target = workspace === 'admissions' ? 'admissions' : 'search';
+  const target = ['search', 'admissions', 'contracts'].includes(workspace) ? workspace : 'search';
   $$('.workspace-tab[data-workspace]').forEach(tab => {
     const active = tab.dataset.workspace === target;
     tab.classList.toggle('active', active);
@@ -1239,7 +1748,9 @@ function switchWorkspace(workspace) {
   });
   byId('workspace-search').hidden = target !== 'search';
   byId('workspace-admissions').hidden = target !== 'admissions';
+  byId('workspace-contracts').hidden = target !== 'contracts';
   if (target === 'admissions') setupAdmissionsDirectory();
+  if (target === 'contracts') setupContractDirectory();
 }
 
 $$('.workspace-tab[data-workspace]').forEach((tab, index, tabs) => {
@@ -1252,6 +1763,13 @@ $$('.workspace-tab[data-workspace]').forEach((tab, index, tabs) => {
     switchWorkspace(nextTab.dataset.workspace);
     nextTab.focus();
   });
+});
+
+document.addEventListener('click', event => {
+  const badge = event.target.closest('.badge-program-button[data-contract-id]');
+  if (!badge) return;
+  event.preventDefault();
+  openContractProgram(badge.dataset.contractId);
 });
 
 $$('.tab[data-tab]').forEach(tab => {
@@ -1270,14 +1788,6 @@ function switchTab(tab) {
 }
 
 // ── 전형 목록 구성 ──
-const ENTRANCE_SLOTS = [
-  { type: '교과', nameKey: 'k1n', score50Key: 'k1a', score70Key: 'k1b' },
-  { type: '교과', nameKey: 'k2n', score50Key: 'k2a', score70Key: 'k2b' },
-  { type: '교과', nameKey: 'k3n', score50Key: 'k3a', score70Key: 'k3b' },
-  { type: '종합', nameKey: 'j1n', score50Key: 'j1a', score70Key: 'j1b' },
-  { type: '종합', nameKey: 'j2n', score50Key: 'j2a', score70Key: 'j2b' }
-];
-
 function selectedEntranceTypes(showK, showJ) {
   const types = new Set();
   if (showK) types.add('교과');
@@ -1336,6 +1846,7 @@ function getSearchOptions() {
     showJ: checked('chkJonghap'),
     showScoreType: checked('chkScoreType'),
     scoreDataFilter: val('scoreDataFilter'),
+    programTypeFilter: val('programTypeFilter'),
     univQ: trimVal('univSearch'),
     deptQ: trimVal('deptSearch')
   };
@@ -1392,6 +1903,9 @@ function doSearch() {
   for (const d of RAW) {
     if (!rowMatchesSearch(d, opt)) continue;
 
+    const program = getProgramInfo(d.u, d.m || '');
+    if (opt.programTypeFilter && !program?.tags.some(tag => tag.type === opt.programTypeFilter)) continue;
+
     const jtypes = buildJtypes(d, opt.showK, opt.showJ);
     if (!jtypes.length) continue;
 
@@ -1404,6 +1918,7 @@ function doSearch() {
     results.push({
       r: d.r, u: d.u, c: d.c, m: d.m || '',
       tc: d.tc, mc: d.mc, su: !!d.su,
+      program,
       jtypes: filtered
     });
   }
@@ -1805,7 +2320,7 @@ function printPicked() {
   const sheet = document.createElement('section');
   sheet.id = 'printSheet';
   sheet.className = 'print-sheet print-only';
-  sheet.innerHTML = '<h1>\uC218\uC2DC \uC785\uACB0 \uC0C1\uB2F4 \uD6C4\uBCF4\uC9C0</h1><div class="meta">V10.7.1 \u00B7 \uC0DD\uC131 \uC2DC\uAC01 ' + esc(new Date().toLocaleString('ko-KR')) + ' \u00B7 \uC218\uB2A5\uCD5C\uC800 \uC790\uB3D9 \uD45C\uC2DC\uB294 \uC0C1\uB2F4 \uCC38\uACE0\uC6A9</div><table><thead><tr><th>No</th><th>\uB300\uD559\u00B7\uBAA8\uC9D1\uB2E8\uC704</th><th>\uC804\uD615</th><th>\uC785\uACB0 \uC9C0\uD45C</th><th>\uC218\uB2A5\uCD5C\uC800 \uD655\uC778</th></tr></thead><tbody>' + rows + '</tbody></table><h2 style="font-size:15px;margin-top:18px">\uC0C1\uB2F4 \uBA54\uBAA8</h2><table><tr><td style="height:72px"></td></tr></table>';
+  sheet.innerHTML = '<h1>\uC218\uC2DC \uC785\uACB0 \uC0C1\uB2F4 \uD6C4\uBCF4\uC9C0</h1><div class="meta">V10.7.2 \u00B7 \uC0DD\uC131 \uC2DC\uAC01 ' + esc(new Date().toLocaleString('ko-KR')) + ' \u00B7 \uC218\uB2A5\uCD5C\uC800 \uC790\uB3D9 \uD45C\uC2DC\uB294 \uC0C1\uB2F4 \uCC38\uACE0\uC6A9</div><table><thead><tr><th>No</th><th>\uB300\uD559\u00B7\uBAA8\uC9D1\uB2E8\uC704</th><th>\uC804\uD615</th><th>\uC785\uACB0 \uC9C0\uD45C</th><th>\uC218\uB2A5\uCD5C\uC800 \uD655\uC778</th></tr></thead><tbody>' + rows + '</tbody></table><h2 style="font-size:15px;margin-top:18px">\uC0C1\uB2F4 \uBA54\uBAA8</h2><table><tr><td style="height:72px"></td></tr></table>';
   document.body.appendChild(sheet);
   window.print();
   setTimeout(() => sheet.remove(), 500);
@@ -1954,6 +2469,9 @@ function getActiveFilterItems({ includeScoreType = false, includeSort = false, i
 
   const scoreData = val('scoreDataFilter');
   if (scoreData) items.push({ text: SCORE_DATA_FILTER_LABELS[scoreData], warn: scoreData === 'missing' });
+
+  const programType = val('programTypeFilter');
+  if (programType) items.push({ text: PROGRAM_TYPE_LABELS[programType] + '만' });
 
   const sntVal = getSntStatusFilter();
   if (sntVal) items.push({ text: SNT_FILTER_LABELS[sntVal], warn: sntVal !== 'ok' });
@@ -2182,6 +2700,7 @@ function renderList() {
     if (row.mc && row.mc !== '유지') badges += `<span class="badge-change">${esc(row.mc)}</span>`;
     if (row.su) badges += '<span class="badge-score">점수형</span>';
     if (rowHasSntCaution(row, grades)) badges += '<span class="badge-check">최저확인</span>';
+    badges += renderProgramBadges(row.program);
 
     html += `<tr>
       <td><span class="region-tag">${esc(row.r)}</span></td>
@@ -2266,7 +2785,7 @@ function renderCompare() {
       <td><span class="region-tag">${esc(item.r.r)}</span></td>
       <td>
         <span class="t-univ" style="font-size:14px">${esc(item.r.u)}</span><br>
-        <span style="font-size:11px;color:var(--text3)">${esc(item.r.m)}</span>
+        <span style="font-size:11px;color:var(--text3)">${esc(item.r.m)}</span>${renderProgramBadges(item.r.program)}
       </td>
       <td><span class="score-num ${kCls}" style="font-size:17px">${item.kMin.toFixed(2)}</span></td>
       <td><span class="score-num ${jCls}" style="font-size:17px">${item.jMin.toFixed(2)}</span></td>
@@ -2318,6 +2837,7 @@ function doReset() {
   setChecked('chkScoreType', false);
   setChecked('chkHideFail', false);
   byId('scoreDataFilter').value = '';
+  byId('programTypeFilter').value = '';
   byId('sntStatusFilter').value = '';
   updateSntFilterHelp();
   clearSntGradeInputs();
@@ -2341,10 +2861,16 @@ function doReset() {
   setHTML(DOM.viewList, emptyHtml('🔍'));
   setHTML(DOM.viewCompare, emptyHtml('⚖️'));
   setHTML(DOM.viewPicked, emptyHtml('?'));
+  syncContractGradeControls();
+  if (contractDirectoryReady) renderContractProgramList();
 }
 
 // ── Enter 키 검색 ──
 setupScoreTypeAvailability();
+byId('programTypeHelp').textContent =
+  '2027 대교협 자료 · 계약학과 ' + PROGRAM_TAGS.sources.contract.linkedKeys.toLocaleString() +
+  '개 · 첨단학과 ' + PROGRAM_TAGS.sources.advanced.linkedKeys.toLocaleString() +
+  '개 모집단위를 정확 연결했습니다. 계약학과는 채용 보장을 뜻하지 않습니다.';
 resetVisibleLimit();
 pickedItems = loadPickedItems();
 renderPickBoard();

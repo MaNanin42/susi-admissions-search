@@ -20,6 +20,8 @@ const template = normalize(fs.readFileSync(path.join(root, 'src', 'index.templat
 const admissions = normalize(fs.readFileSync(path.join(root, 'data', 'baseline', 'admissions.json'), 'utf8')).trim();
 const minimums = normalize(fs.readFileSync(path.join(root, 'data', 'baseline', 'suneung-minimum.json'), 'utf8')).trim();
 const admissionsOfficeLinks = normalize(fs.readFileSync(path.join(root, 'data', 'admissions-office-links.json'), 'utf8')).trim();
+const programTags = normalize(fs.readFileSync(path.join(root, 'data', 'program-tags.json'), 'utf8')).trim();
+const contractProgramDetails = normalize(fs.readFileSync(path.join(root, 'data', 'contract-program-details.json'), 'utf8')).trim();
 const manifest = JSON.parse(fs.readFileSync(path.join(root, 'data', 'baseline', 'manifest.json'), 'utf8'));
 
 if (sha256(admissions) !== manifest.admissions.sha256) throw new Error('admissions baseline hash mismatch');
@@ -28,6 +30,8 @@ if (sha256(minimums) !== manifest.suneungMinimum.sha256) throw new Error('CSAT m
 let built = replaceOnce(template, '__RAW_DATA__', admissions);
 built = replaceOnce(built, '__SNT_DATA__', minimums);
 built = replaceOnce(built, '__ADMISSIONS_OFFICE_LINKS__', admissionsOfficeLinks);
+built = replaceOnce(built, '__PROGRAM_TAGS__', programTags);
+built = replaceOnce(built, '__CONTRACT_PROGRAM_DETAILS__', contractProgramDetails);
 
 const target = path.join(root, 'index.html');
 if (args.has('--write')) {

@@ -1,5 +1,5 @@
 {
-  "recordedAt": "2026-08-16",
+  "recordedAt": "2026-08-30",
   "policy": "Reference official source files in the adjacent local archive. Do not commit source binaries to this public repository.",
   "sources": [
     {
@@ -22,6 +22,22 @@
       "bytes": 8604483,
       "sha256": "F4D1302ECCA2498963C9D683B7615EB866AECC67B87FDB44F71359258D947309",
       "pages": 40
+    },
+    {
+      "role": "contract-program-directory",
+      "file": "2027학년도 계약학과 현황(대교협).pdf",
+      "relativeLocator": "../../04-Student Record/진로진학자료집/2027학년도 계약학과 현황(대교협).pdf",
+      "bytes": 195948,
+      "sha256": "918E0090B796FB5317E5B422F57E990452C2904A1B2EE117D139F3A55330A6F1",
+      "pages": 15
+    },
+    {
+      "role": "advanced-program-directory",
+      "file": "2027학년도 첨단학과 현황-대교협.pdf",
+      "relativeLocator": "../../04-Student Record/진로진학자료집/2027학년도 첨단학과 현황-대교협.pdf",
+      "bytes": 578151,
+      "sha256": "09B127CF881847582D32652CC8742CFDCE70FCF3E7ACE3A40F422CB92AB279AB",
+      "pages": 62
     }
   ]
 }
