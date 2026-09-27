@@ -26,7 +26,12 @@ check(html.includes('id="workspace-tab-search"') && html.includes('id="workspace
 check(html.includes('id="workspace-search"') && html.includes('id="workspace-admissions"') && html.includes('id="workspace-contracts"') && html.includes('id="workspace-admission2028"'), 'top workspace panels missing');
 check(html.includes('function switchWorkspace(workspace)'), 'top workspace switching logic missing');
 check(html.includes('data-src="modules/admission-2028/index.html"'), '2028 module relative path missing');
-check(html.includes("if (!frame.getAttribute('src')) frame.setAttribute('src', frame.dataset.src)"), '2028 module lazy-load state preservation missing');
+check(
+  html.includes('data-version="11.0.0-design-2"')
+    && html.includes("if (!frame.getAttribute('src'))")
+    && html.includes('frame.setAttribute(\'src\', `${frame.dataset.src}?v=${version}`)'),
+  '2028 module versioned lazy-load state preservation missing',
+);
 check(html.includes('id="admissionsRegionFilters"') && html.includes('id="admissionsDirectory"'), 'admissions directory UI missing');
 check(html.includes('const UNIVERSITY_CAMPUS_LABELS'), 'campus display mapping missing');
 check(html.includes('const ADMISSIONS_OFFICE_LINKS'), 'verified admissions-office links missing');

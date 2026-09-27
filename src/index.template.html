@@ -1155,6 +1155,7 @@ tr:hover td { background: var(--row-hover); }
     id="admission2028Frame"
     title="2028 대입 조건별 대학·학과·전형 탐색"
     data-src="modules/admission-2028/index.html"
+    data-version="11.0.0-design-2"
     sandbox="allow-scripts allow-popups allow-popups-to-escape-sandbox"
   ></iframe>
 </section>
@@ -1772,7 +1773,10 @@ function switchWorkspace(workspace) {
   if (target === 'contracts') setupContractDirectory();
   if (target === 'admission2028') {
     const frame = byId('admission2028Frame');
-    if (!frame.getAttribute('src')) frame.setAttribute('src', frame.dataset.src);
+    if (!frame.getAttribute('src')) {
+      const version = encodeURIComponent(frame.dataset.version || 'current');
+      frame.setAttribute('src', `${frame.dataset.src}?v=${version}`);
+    }
   }
 }
 
