@@ -17,6 +17,69 @@ input[type=text],input[type=search]{width:100%;font:inherit;padding:11px;border:
 #comparison{max-height:none}.result-explainer{margin:8px 0 18px;font-size:11.7px}.compare th:nth-child(3),.compare th:nth-child(4),.compare th:nth-child(5),.compare th:nth-child(6),.compare th:nth-child(8){white-space:nowrap}.compare td:nth-child(6),.compare td:nth-child(8){white-space:nowrap}@media(min-width:1000px){header>div{padding-top:12px;padding-bottom:12px}main{padding-top:16px}.intro h1{font-size:25.2px}.eyebrow{font-size:9.9px}.result-explainer{margin:6px 0 12px}#step2>h2{font-size:19.8px}#step2>p#summary{font-size:12.6px;margin:5px 0 10px}.compare th,.compare td{padding:9px 8px}.compare{margin-top:10px}}.grade-averages{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.grade-averages label{font-size:12.6px;margin-bottom:5px}.preference-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;min-width:0}.preference-pair .chips label{font-size:11.7px;padding:7px 8px;gap:5px}.preference-pair small{font-size:10.8px}.candidate-detail{table-layout:fixed;width:100%;min-width:0;margin-top:14px;font-size:12.6px}.candidate-detail th{background:#f1f5ef;font-weight:650}.candidate-detail td{overflow-wrap:anywhere}.candidate-detail th,.candidate-detail td{padding:11px 14px;border:1px solid var(--line);white-space:normal}.qualification-status{background:#edf4ed;padding:12px 14px;border-left:3px solid var(--green);font-weight:650}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}@media(max-width:720px){.candidate-detail th,.candidate-detail td{padding:8px 7px;font-size:10.8px}.preference-pair{gap:10px}}.candidate-detail tr:nth-child(2) td{font-weight:700;font-variant-numeric:tabular-nums}.candidate-detail a{display:inline-block}.cut-range{margin-top:14px;padding-top:12px;border-top:1px solid var(--line)}.cut-range .label{font-size:12.6px;margin:0 0 7px}.cut-range>small{display:block;font-size:10.8px}.range-actions{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}.range-actions button{font-size:10.8px;padding:5px 8px;min-height:32px}.cut-range-status{padding:9px 12px;background:#edf4ed;font-size:11.7px}#cutRangeFeedback:empty{display:none}.range-feedback{font-size:10.8px;color:var(--green);margin:7px 0 0}.range-feedback:empty{display:none}#step0>.actions{justify-content:flex-end}.result{padding:0}.candidate-disclosure>summary{padding:13px 0;align-items:center;list-style:none;color:var(--ink)}.candidate-disclosure>summary::-webkit-details-marker{display:none}.candidate-title{flex:1;min-width:0}.candidate-name{display:inline;font-size:14.4px;overflow-wrap:anywhere}.candidate-meta{display:inline;font-size:12.6px;font-weight:400;color:var(--muted);overflow-wrap:anywhere;line-height:1.65}.candidate-disclosure>summary>.tag{margin:0;flex-shrink:0}.candidate-disclosure>summary::after{content:'▸';color:var(--green);font-size:16.2px}.candidate-disclosure[open]>summary::after{content:'▾'}.candidate-disclosure[open]{padding-bottom:16px}.candidate-disclosure>summary:hover .candidate-name{text-decoration:underline;text-underline-offset:4px}@media(max-width:600px){.candidate-disclosure>summary{gap:9px;flex-wrap:wrap}.candidate-title{flex-basis:calc(100% - 65px)}.candidate-disclosure>summary>.tag{margin-left:44px}.candidate-name{font-size:14.4px}.candidate-disclosure>summary::after{margin-left:auto}}
 
 .candidate-group-title{margin:26px 0 8px;padding-bottom:9px;border-bottom:2px solid var(--line);font-size:17.1px}
+
+/* V11.0.0 tone alignment with the parent admissions workspace. */
+:root{
+  --ink:#162033;
+  --muted:#64748b;
+  --green:#1d4ed8;
+  --line:#d9e1ea;
+  --paper:#ffffff;
+  --bg:#f8fafc;
+  --warm:#fff7e8;
+  --navy:#0f2747;
+  --navy-soft:#173a67;
+  --accent-bg:#eaf1ff;
+  --accent-ring:#93b4f5;
+  --teal:#047857;
+  --teal-bg:#e6f6f1;
+  --teal-ring:#85c9b7;
+  --panel2:#edf2f7;
+}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:'Pretendard','Apple SD Gothic Neo','Noto Sans KR','Malgun Gothic',system-ui,sans-serif;
+}
+.intro h1,.candidate-name,.candidate-group-title{color:var(--navy)}
+.eyebrow{color:var(--green)}
+.panel{
+  border-color:#c5d0dd;
+  border-radius:10px;
+  box-shadow:0 5px 14px rgba(15,39,71,.08);
+}
+.rail{
+  padding:4px 10px;
+  border:1px solid var(--line);
+  border-radius:8px;
+  background:#eef3f8;
+}
+.rail li.active button{color:var(--navy);border-bottom-color:var(--green)}
+.rail button:hover{background:var(--accent-bg);color:var(--green)}
+select,input[type=number],input[type=text],input[type=search]{border-color:#c5d0dd;color:var(--ink)}
+button{border-color:#c5d0dd;color:#43516a}
+button.primary{background:var(--green);border-color:var(--green);color:#fff}
+button:not(.primary):hover{background:var(--accent-bg);border-color:var(--accent-ring);color:var(--green);filter:none}
+button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{
+  outline:2px solid var(--green);
+  outline-offset:2px;
+}
+.chips label{border-color:var(--line);background:#fff}
+.chips label:hover{border-color:var(--accent-ring)}
+.chips label:has(input:checked){background:var(--accent-bg);border-color:var(--green);color:var(--navy-soft)}
+.chips label:has(input:focus-visible){outline:2px solid var(--green);outline-offset:2px}
+input[type=checkbox]{accent-color:var(--green)}
+.course-section{padding-left:12px;padding-right:12px;border-color:var(--line);border-radius:8px;background:var(--bg)}
+.notice{background:var(--warm);border-left-color:#c76a10;color:#43516a}
+.tag{background:var(--teal-bg);color:var(--teal);border:1px solid var(--teal-ring)}
+.tag.warn{background:var(--warm);color:#92400e;border-color:#f2c98f}
+th,.candidate-detail th{background:var(--panel2);color:#43516a}
+#comparison tbody tr:hover{background:#edf4ff}
+.qualification-status,.cut-range-status{background:var(--accent-bg);border-left:3px solid var(--green);color:var(--navy-soft)}
+.candidate-group-title{border-color:#c5d0dd}
+.candidate-disclosure>summary::after,summary,a,.range-feedback{color:var(--green)}
+.grade-row:focus-within{background:#f5f8ff}
+.rank{color:#5b72a1}
 </style></head>
 <body>
 
