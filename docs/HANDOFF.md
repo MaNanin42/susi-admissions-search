@@ -1,4 +1,4 @@
-# 수시 입결 검색기 V10.7.2 인계서
+# 수시 입결 검색기 V11.0.0 인계서
 
 ## 현재 상태
 
@@ -8,13 +8,13 @@
 - 복구 기준 커밋: `6b816606a56ca9324e44e8a9ddec7e8db921a034`
 - 공개 기준선: 입결 5,863행, 대학·모집단위 키 5,800개, 수능최저 3,576건
 - 개인정보 경계: 학생 모의고사 성적, 반·번호 선택기, 자동 성적 불러오기 코드는 공개본에 없음
-- V10.7.2 후보 기능: V10.7.1 기능에 더해 대교협 2027 계약학과 35개·첨단학과 217개 모집단위 필터, 목록·비교 배지, 계약학과 상세 탭과 배지 바로가기, 계약학과별 현재 입결표, 내신범위 해당 카드 강조
-- 배포 상태: V10.7.2 GitHub Pages 배포본
+- V11.0.0 기능: V10.7.2의 계약·첨단학과 기능과 `2028 대입 탐색` 독립 모듈을 네 번째 작업 탭으로 통합
+- 배포 상태: V11.0.0 GitHub Pages 배포본
 - 입결·수능최저 데이터: V10.6 검증 기준선 5,863행·3,576건을 그대로 유지
 
 ## 복구된 구조
 
-- `index.html`: V10.7.2 로컬 배포 후보 산출물
+- `index.html`: V11.0.0 배포 산출물
 - `src/index.template.html`: 대용량 데이터만 플레이스홀더로 분리한 HTML 소스
 - `data/baseline/admissions.json`: V10.6 입결 기준 데이터
 - `data/baseline/suneung-minimum.json`: V10.6 수능최저 기준 데이터
@@ -29,6 +29,9 @@
 - `scripts/generate-program-tags.py`: 대교협 PDF 표 재추출, 대학 약칭 정규화, 유일 정확 일치 태그 생성
 - `docs/program-tags-audit-270830.json`: 393행의 연결·검토 건수와 매핑 정책 기록
 - `sources/source-manifest.json`: 원본 위치, 크기, 해시, 구조 기록
+- `modules/admission-2028`: 2028 탐색 실행 HTML, 21,720개 현재 후보 데이터, UI 원본, 재생성·통합 검증 스크립트
+- 2028 탐색 기준선: 공식 확인 20,153개, 추가조사 필요 1,567개, 보관·검색 제외 1,031개, 과거 입결 원본 16,412행, 확인율 92.7854511970534%
+- 2028 개인정보 경계: 학생 입력은 iframe 페이지 메모리에만 유지하며 서버 저장·외부 전송·AI API·텔레메트리·영구 저장소 없음
 
 ## 260813 원본과의 차이
 
@@ -51,6 +54,8 @@
 ```powershell
 node scripts/build.mjs --check
 node scripts/validate-public.mjs
+node modules/admission-2028/scripts/build.mjs --check
+node modules/admission-2028/scripts/verify.cjs
 ```
 
 대교협 PDF 태그 재생성·동등성 확인:
@@ -76,7 +81,7 @@ node scripts/validate-public.mjs
 4. 동국대 보정 필드 `k1navi50`, `k1navi70`, `k1appAvg`, `k1metric`을 보존한다.
 5. 수능최저 3,576건의 연결률과 자동판정 상태를 별도로 비교한다.
 6. 계약학과 검토 42행·첨단학과 검토 96행은 공식 모집단위 구조를 확인한 뒤 명시적 매핑만 추가한다.
-7. 260813 데이터 갱신본은 현재 V10.7.2를 덮어쓰지 말고 V10.8 이상으로 만든다.
+7. 260813 데이터 갱신은 현재 V11.0.0 기준선을 직접 덮어쓰지 말고 검증된 후속 데이터 버전으로 만든다.
 8. 공개 전 `node scripts/validate-public.mjs`와 실제 Pages HTTP 검사를 모두 통과시킨다.
 
 ## 금지 사항

@@ -1,9 +1,12 @@
 {
   "name": "susi-admissions-search",
   "private": true,
-  "version": "10.7.2",
+  "version": "11.0.0",
   "scripts": {
     "build:check": "node scripts/build.mjs --check",
+    "build:2028": "node modules/admission-2028/scripts/build.mjs",
+    "build:2028:check": "node modules/admission-2028/scripts/build.mjs --check",
+    "verify:2028": "node modules/admission-2028/scripts/verify.cjs",
     "validate": "node scripts/validate-public.mjs"
   }
 }

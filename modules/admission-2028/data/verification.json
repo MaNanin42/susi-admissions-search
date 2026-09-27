@@ -1,0 +1,9 @@
+{
+  "checks": 6,
+  "passed": true,
+  "records": 22751,
+  "current2028Candidates": 21720,
+  "current2028Verified": 20153,
+  "needsResearch": 1567,
+  "type": "integrated module data, build, privacy and candidate-group checks"
+}

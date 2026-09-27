@@ -6,6 +6,10 @@ import { fileURLToPath } from 'node:url';
 
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8').replace(/\r\n/g, '\n');
+const admission2028Root = path.join(root, 'modules', 'admission-2028');
+const admission2028Html = fs.readFileSync(path.join(admission2028Root, 'index.html'), 'utf8').replace(/\r\n/g, '\n');
+const admission2028DataText = fs.readFileSync(path.join(admission2028Root, 'data', 'nationwide.json'), 'utf8');
+const admission2028Data = JSON.parse(admission2028DataText);
 const errors = [];
 const check = (condition, message) => { if (!condition) errors.push(message); };
 const sha256 = value => crypto.createHash('sha256').update(value).digest('hex');
@@ -16,11 +20,13 @@ const forbidden = [
 ];
 for (const token of forbidden) check(!html.includes(token), `private token: ${token}`);
 
-check(html.includes('2027학년도 V10.7.2'), 'version missing');
-check(html.includes('<title>수시 입결 검색기 | 2027학년도 V10.7.2 공개용</title>'), 'public-only title missing');
-check(html.includes('id="workspace-tab-search"') && html.includes('id="workspace-tab-admissions"') && html.includes('id="workspace-tab-contracts"'), 'top workspace tabs missing');
-check(html.includes('id="workspace-search"') && html.includes('id="workspace-admissions"') && html.includes('id="workspace-contracts"'), 'top workspace panels missing');
+check(html.includes('2027학년도 V11.0.0'), 'version missing');
+check(html.includes('<title>수시 입결 검색기 | 2027학년도 V11.0.0 공개용</title>'), 'public-only title missing');
+check(html.includes('id="workspace-tab-search"') && html.includes('id="workspace-tab-admissions"') && html.includes('id="workspace-tab-contracts"') && html.includes('id="workspace-tab-admission2028"'), 'top workspace tabs missing');
+check(html.includes('id="workspace-search"') && html.includes('id="workspace-admissions"') && html.includes('id="workspace-contracts"') && html.includes('id="workspace-admission2028"'), 'top workspace panels missing');
 check(html.includes('function switchWorkspace(workspace)'), 'top workspace switching logic missing');
+check(html.includes('data-src="modules/admission-2028/index.html"'), '2028 module relative path missing');
+check(html.includes("if (!frame.getAttribute('src')) frame.setAttribute('src', frame.dataset.src)"), '2028 module lazy-load state preservation missing');
 check(html.includes('id="admissionsRegionFilters"') && html.includes('id="admissionsDirectory"'), 'admissions directory UI missing');
 check(html.includes('const UNIVERSITY_CAMPUS_LABELS'), 'campus display mapping missing');
 check(html.includes('const ADMISSIONS_OFFICE_LINKS'), 'verified admissions-office links missing');
@@ -39,6 +45,23 @@ check(!html.includes('class="criteria-strip"'), 'removed criteria strip returned
 check(!html.includes('공개용 · 학생 성적 미포함'), 'removed public privacy badge returned');
 check(html.includes('id="sntK"') && html.includes('id="sntM"'), 'manual CSAT inputs missing');
 check(html.includes('id="pickList"') && html.includes('id="comparePickedBtn"'), 'shortlist UI missing');
+
+const admission2028Active = admission2028Data.records.filter(record => !record.legacyDisposition2028);
+const admission2028Verified = admission2028Active.filter(record => record.official);
+const admission2028Research = admission2028Active.filter(record => !record.official);
+check(admission2028Data.records.length === 22751, `2028 record count: ${admission2028Data.records.length}`);
+check(admission2028Active.length === 21720, `2028 active denominator: ${admission2028Active.length}`);
+check(admission2028Verified.length === 20153, `2028 verified count: ${admission2028Verified.length}`);
+check(admission2028Research.length === 1567, `2028 needs-research count: ${admission2028Research.length}`);
+check(admission2028Research.every(record => record.researchStatus === 'needs-research' && record.researchLabel === '추가조사 필요'), '2028 research status boundary changed');
+check(admission2028Data.records.length - admission2028Active.length === 1031, '2028 archived count changed');
+check(admission2028Data.meta.sourceRecords === 16412, '2028 historical source-row count changed');
+check(admission2028Data.meta.current2028Percent === 92.7854511970534, '2028 verified percent changed');
+check(!/[A-Z]:\\/i.test(admission2028DataText), '2028 data contains an absolute Windows path');
+check(admission2028Html.includes('추가조사 필요') && admission2028Html.includes('과거 입결 참고'), '2028 research labels missing');
+check(admission2028Html.includes('id="verifiedOnly" type="checkbox" checked'), '2028 verified-only default missing');
+check(admission2028Html.includes("connect-src 'none'"), '2028 no-network CSP missing');
+check(!/localStorage|sessionStorage|indexedDB|sendBeacon|fetch\(|XMLHttpRequest|WebSocket/.test(admission2028Html), '2028 persistent storage or network API returned');
 
 const scripts = [...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/gi)].map(match => match[1]);
 check(scripts.length > 0, 'inline script missing');
@@ -285,7 +308,7 @@ for (const file of listFiles(root)) {
 
 const allowedRoot = new Set([
   '.git', '.gitignore', 'README.md', 'data', 'docs', 'index.html',
-  'package.json', 'requirements.txt', 'scripts', 'sources', 'src'
+  'modules', 'package.json', 'requirements.txt', 'scripts', 'sources', 'src'
 ]);
 for (const entry of fs.readdirSync(root)) {
   if (ignoredLocalDirectories.has(entry)) continue;
@@ -295,11 +318,30 @@ for (const file of fs.readdirSync(path.join(root, 'scripts'))) {
   check(['audit-source.py', 'build.mjs', 'extract-baseline.mjs', 'generate-program-tags.py', 'validate-public.mjs'].includes(file), `unexpected script: ${file}`);
 }
 
+const admission2028Allowed = new Set([
+  'README.md',
+  'data/nationwide.json',
+  'data/verification.json',
+  'index.html',
+  'scripts/build.mjs',
+  'scripts/grade-ui.js',
+  'scripts/real-ui.js',
+  'scripts/verify.cjs',
+  'src/index.template.html'
+]);
+for (const file of listFiles(admission2028Root)) {
+  const relative = path.relative(admission2028Root, file).replaceAll('\\', '/');
+  check(admission2028Allowed.has(relative), `unexpected 2028 module path: ${relative}`);
+}
+for (const expected of admission2028Allowed) {
+  check(fs.existsSync(path.join(admission2028Root, ...expected.split('/'))), `missing 2028 module path: ${expected}`);
+}
+
 if (errors.length) {
   console.error(errors.map(error => `[FAIL] ${error}`).join('\n'));
   process.exit(1);
 }
-console.log('[PASS] V10.7.2 label, top workspace tabs, core UI, and inline JavaScript');
+console.log('[PASS] V11.0.0 label, top workspace tabs, core UI, and inline JavaScript');
 console.log('[PASS] student mock-exam data and loader remain excluded');
 console.log('[PASS] baseline counts, 223 university-campus directory entries, and SHA-256 fingerprints');
 console.log(`[PASS] all ${seoulDirectoryPairs.size} Seoul and all ${gyeonginDirectoryPairs.size} Gyeongin university-campus entries have verified rolling-admissions guideline links`);
@@ -315,5 +357,6 @@ console.log('[PASS] 35 contract-program detail records and badge-to-detail navig
 console.log('[PASS] contract detail admissions results: 23 programs, 35 published rows, 18 unpublished rows');
 console.log('[PASS] synchronized contract grade-range controls and light-red match-card rules');
 console.log('[PASS] official-web enrichment: 12 programs, 17 source links, 4 unique official URLs');
+console.log('[PASS] integrated 2028 explorer: 21,720 active, 20,153 verified, 1,567 needs research');
 console.log('[PASS] 260813 and program-tag source audits plus public source-binary boundary');
 console.log('[PASS] recovery project file allowlist');

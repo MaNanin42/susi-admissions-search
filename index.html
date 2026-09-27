@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>수시 입결 검색기 | 2027학년도 V10.7.2 공개용</title>
+<title>수시 입결 검색기 | 2027학년도 V11.0.0 공개용</title>
 <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 /* ── Professional Calm 테마 변수 ── */
@@ -106,6 +106,7 @@ body {
 .workspace-tab[data-workspace="search"].active { border-bottom-color: #60a5fa; }
 .workspace-tab[data-workspace="admissions"].active { border-bottom-color: #2dd4bf; }
 .workspace-tab[data-workspace="contracts"].active { border-bottom-color: #c4b5fd; }
+.workspace-tab[data-workspace="admission2028"].active { border-bottom-color: #fbbf24; }
 .workspace-tab:focus-visible { outline: 2px solid #93c5fd; outline-offset: -3px; }
 .header-version {
   font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 600;
@@ -120,6 +121,12 @@ body {
 }
 /* ── 레이아웃 ── */
 .workspace-panel[hidden] { display: none; }
+.admission-2028-panel {
+  height: calc(100vh - 52px); overflow: hidden; background: #f4f6f1;
+}
+.admission-2028-frame {
+  width: 100%; height: 100%; display: block; border: 0; background: #f4f6f1;
+}
 .main { display: grid; grid-template-columns: 276px 1fr; height: calc(100vh - 52px); }
 .admissions-office-panel {
   height: calc(100vh - 52px); overflow: hidden;
@@ -809,7 +816,7 @@ tr:hover td { background: var(--row-hover); }
 ::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 2px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--border3); }
 
-/* ── V10.7.2 상담 운영 패널 ── */
+/* ── V11.0.0 상담 운영 패널 ── */
 .result-area { min-width: 920px; }
 .jtype-item.snt-manual { border-color: var(--c-amber); background: rgba(255,251,235,0.70); }
 .jtype-item.snt-manual::before {
@@ -915,9 +922,10 @@ tr:hover td { background: var(--row-hover); }
     <button type="button" class="workspace-tab active" id="workspace-tab-search" data-workspace="search" role="tab" aria-selected="true" aria-controls="workspace-search">수시 입결 검색</button>
     <button type="button" class="workspace-tab" id="workspace-tab-admissions" data-workspace="admissions" role="tab" aria-selected="false" aria-controls="workspace-admissions" tabindex="-1">입학처 모아보기</button>
     <button type="button" class="workspace-tab" id="workspace-tab-contracts" data-workspace="contracts" role="tab" aria-selected="false" aria-controls="workspace-contracts" tabindex="-1">계약학과 모아보기</button>
+    <button type="button" class="workspace-tab" id="workspace-tab-admission2028" data-workspace="admission2028" role="tab" aria-selected="false" aria-controls="workspace-admission2028" tabindex="-1">2028 대입 탐색</button>
   </div>
   <div class="header-right">
-    <span class="header-version">2027학년도 V10.7.2</span>
+    <span class="header-version">2027학년도 V11.0.0</span>
     <span class="change-notice" id="headerChangeCount" style="display:none"></span>
   </div>
 </div>
@@ -1139,6 +1147,16 @@ tr:hover td { background: var(--row-hover); }
     <nav class="contract-program-list" id="contractProgramList" aria-label="계약학과 목록"></nav>
     <article class="contract-program-detail" id="contractProgramDetail" aria-live="polite"></article>
   </div>
+</section>
+
+<section class="workspace-panel admission-2028-panel" id="workspace-admission2028" role="tabpanel" aria-labelledby="workspace-tab-admission2028" hidden>
+  <iframe
+    class="admission-2028-frame"
+    id="admission2028Frame"
+    title="2028 대입 조건별 대학·학과·전형 탐색"
+    data-src="modules/admission-2028/index.html"
+    sandbox="allow-scripts allow-popups allow-popups-to-escape-sandbox"
+  ></iframe>
 </section>
 
 <script>
@@ -5468,7 +5486,7 @@ function openContractProgram(id) {
 }
 
 function switchWorkspace(workspace) {
-  const target = ['search', 'admissions', 'contracts'].includes(workspace) ? workspace : 'search';
+  const target = ['search', 'admissions', 'contracts', 'admission2028'].includes(workspace) ? workspace : 'search';
   $$('.workspace-tab[data-workspace]').forEach(tab => {
     const active = tab.dataset.workspace === target;
     tab.classList.toggle('active', active);
@@ -5478,8 +5496,13 @@ function switchWorkspace(workspace) {
   byId('workspace-search').hidden = target !== 'search';
   byId('workspace-admissions').hidden = target !== 'admissions';
   byId('workspace-contracts').hidden = target !== 'contracts';
+  byId('workspace-admission2028').hidden = target !== 'admission2028';
   if (target === 'admissions') setupAdmissionsDirectory();
   if (target === 'contracts') setupContractDirectory();
+  if (target === 'admission2028') {
+    const frame = byId('admission2028Frame');
+    if (!frame.getAttribute('src')) frame.setAttribute('src', frame.dataset.src);
+  }
 }
 
 $$('.workspace-tab[data-workspace]').forEach((tab, index, tabs) => {
@@ -6049,7 +6072,7 @@ function printPicked() {
   const sheet = document.createElement('section');
   sheet.id = 'printSheet';
   sheet.className = 'print-sheet print-only';
-  sheet.innerHTML = '<h1>\uC218\uC2DC \uC785\uACB0 \uC0C1\uB2F4 \uD6C4\uBCF4\uC9C0</h1><div class="meta">V10.7.2 \u00B7 \uC0DD\uC131 \uC2DC\uAC01 ' + esc(new Date().toLocaleString('ko-KR')) + ' \u00B7 \uC218\uB2A5\uCD5C\uC800 \uC790\uB3D9 \uD45C\uC2DC\uB294 \uC0C1\uB2F4 \uCC38\uACE0\uC6A9</div><table><thead><tr><th>No</th><th>\uB300\uD559\u00B7\uBAA8\uC9D1\uB2E8\uC704</th><th>\uC804\uD615</th><th>\uC785\uACB0 \uC9C0\uD45C</th><th>\uC218\uB2A5\uCD5C\uC800 \uD655\uC778</th></tr></thead><tbody>' + rows + '</tbody></table><h2 style="font-size:15px;margin-top:18px">\uC0C1\uB2F4 \uBA54\uBAA8</h2><table><tr><td style="height:72px"></td></tr></table>';
+  sheet.innerHTML = '<h1>\uC218\uC2DC \uC785\uACB0 \uC0C1\uB2F4 \uD6C4\uBCF4\uC9C0</h1><div class="meta">V11.0.0 \u00B7 \uC0DD\uC131 \uC2DC\uAC01 ' + esc(new Date().toLocaleString('ko-KR')) + ' \u00B7 \uC218\uB2A5\uCD5C\uC800 \uC790\uB3D9 \uD45C\uC2DC\uB294 \uC0C1\uB2F4 \uCC38\uACE0\uC6A9</div><table><thead><tr><th>No</th><th>\uB300\uD559\u00B7\uBAA8\uC9D1\uB2E8\uC704</th><th>\uC804\uD615</th><th>\uC785\uACB0 \uC9C0\uD45C</th><th>\uC218\uB2A5\uCD5C\uC800 \uD655\uC778</th></tr></thead><tbody>' + rows + '</tbody></table><h2 style="font-size:15px;margin-top:18px">\uC0C1\uB2F4 \uBA54\uBAA8</h2><table><tr><td style="height:72px"></td></tr></table>';
   document.body.appendChild(sheet);
   window.print();
   setTimeout(() => sheet.remove(), 500);
