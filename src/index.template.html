@@ -1059,29 +1059,6 @@ tr:hover td { background: var(--row-hover); }
   </div>
 
   <div class="result-area">
-    <div class="result-header">
-      <div class="result-count"><span class="result-count-n" id="resultCount">—</span> 개</div>
-      <span class="grade-tag" id="gradeTag" style="display:none"></span>
-      <div class="filter-summary" id="filterSummary" aria-live="polite"></div>
-      <div class="legend" id="legend" style="display:none">
-        <div class="legend-item"><div class="legend-dot ld-safe"></div>학생 수치 우위</div>
-        <div class="legend-item"><div class="legend-dot ld-near"></div>수치 근접</div>
-        <div class="legend-item"><div class="legend-dot ld-hard"></div>학생 수치 열위</div>
-      </div>
-    </div>
-    <div class="result-insight" id="resultInsight" aria-live="polite"></div>
-    <div class="counsel-board" id="counselBoard">
-      <div>
-        <div class="counsel-title">상담 후보함 <span id="pickCount">0</span>개</div>
-        <div class="counsel-sub">결과 카드에서 후보를 담으면 선택 비교와 인쇄용 상담지를 만들 수 있습니다.</div>
-      </div>
-      <div class="counsel-list" id="pickList"><span class="counsel-empty">아직 담은 전형이 없습니다.</span></div>
-      <div class="counsel-actions">
-        <button type="button" id="comparePickedBtn" disabled>선택 비교</button>
-        <button type="button" id="printPickedBtn" disabled>상담지 인쇄</button>
-        <button type="button" id="clearPickedBtn" disabled>비우기</button>
-      </div>
-    </div>
     <div class="tabs">
       <div class="tab active" id="tab-list" data-tab="list">목록</div>
       <div class="tab" id="tab-compare" data-tab="compare">교과 vs 종합 비교</div>
@@ -1292,23 +1269,13 @@ const DOM = {
   rangeVal: byId('rangeVal'),
   rangeDesc: byId('rangeDesc'),
   gradeDisplay: byId('gradeDisplay'),
-  gradeTag: byId('gradeTag'),
-  legend: byId('legend'),
-  resultCount: byId('resultCount'),
   changeCount: byId('headerChangeCount'),
   viewList: byId('view-list'),
   viewCompare: byId('view-compare'),
   viewPicked: byId('view-picked'),
-  filterSummary: byId('filterSummary'),
-  resultInsight: byId('resultInsight'),
   sntFilterHelp: byId('sntFilterHelp'),
   searchBtn: byId('searchBtn'),
   resetBtn: byId('resetBtn'),
-  pickCount: byId('pickCount'),
-  pickList: byId('pickList'),
-  comparePickedBtn: byId('comparePickedBtn'),
-  printPickedBtn: byId('printPickedBtn'),
-  clearPickedBtn: byId('clearPickedBtn')
 };
 const SNT_INPUT_IDS = ['sntK', 'sntM', 'sntE', 'sntS1', 'sntS2', 'sntH'];
 const PAGE_SIZE = 100;
@@ -1963,15 +1930,6 @@ function doSearch() {
 
 // ── 재렌더 ──
 function rerender() {
-  const g = parseGrade();
-  if (!isNaN(g)) {
-    DOM.gradeTag.style.display = 'inline-block';
-    DOM.gradeTag.textContent   = g.toFixed(2) + '등급  ±' + parseRange().toFixed(2);
-    DOM.legend.style.display   = 'flex';
-  } else {
-    DOM.gradeTag.style.display = 'none';
-    DOM.legend.style.display   = 'none';
-  }
   if (currentTab === 'list')    renderList();
   if (currentTab === 'compare') renderCompare();
   if (currentTab === 'picked')  renderPickedCompare();
@@ -2300,13 +2258,11 @@ function togglePick(payload) {
   if (idx >= 0) pickedItems.splice(idx, 1);
   else pickedItems.push(payload);
   persistPickedItems();
-  renderPickBoard();
   rerender();
 }
 function removePick(id) {
   pickedItems = pickedItems.filter(item => item.id !== id);
   persistPickedItems();
-  renderPickBoard();
   rerender();
 }
 function bindPickButtons() {
@@ -2319,20 +2275,6 @@ function bindPickButtons() {
     }
     btn.addEventListener('click', () => togglePick(payload));
   });
-}
-function renderPickBoard() {
-  DOM.pickCount.textContent = pickedItems.length.toLocaleString();
-  DOM.comparePickedBtn.disabled = pickedItems.length < 2;
-  DOM.printPickedBtn.disabled = pickedItems.length === 0;
-  DOM.clearPickedBtn.disabled = pickedItems.length === 0;
-  if (!pickedItems.length) {
-    setHTML(DOM.pickList, '<span class="counsel-empty">아직 담은 전형이 없습니다.</span>');
-    return;
-  }
-  setHTML(DOM.pickList, pickedItems.map(item =>
-    '<span class="counsel-chip"><strong>' + esc(item.univ + ' ' + item.dept) + '</strong><small>' + esc(item.type + '·' + item.name) + '</small><button class="counsel-remove" type="button" aria-label="' + esc(item.univ + ' ' + item.dept + ' \uD6C4\uBCF4 \uC0AD\uC81C') + ' data-remove-pick="' + esc(item.id) + '">×</button></span>'
-  ).join(''));
-  $$('[data-remove-pick]').forEach(btn => btn.addEventListener('click', () => removePick(btn.dataset.removePick)));
 }
 function selectedCompareSection() {
   if (!pickedItems.length) return '';
@@ -2570,50 +2512,6 @@ function filterJtypesBySnt(row, grades, hideFail, wantedState) {
   });
 }
 
-function summarizeRows(rows, grades) {
-  const summary = { rows: rows.length, entrances: 0, snt: { ok: 0, fail: 0, check: 0, none: 0, missing: 0 }, scoreKnown: 0, scoreMissing: 0 };
-  for (const row of rows) {
-    for (const t of row.jtypes) {
-      summary.entrances += 1;
-      const status = getSntStatusForEntrance(row, t, grades);
-      summary.snt[status.state] = (summary.snt[status.state] || 0) + 1;
-      if (hasAdmissionScore(t)) summary.scoreKnown += 1;
-      else summary.scoreMissing += 1;
-    }
-  }
-  return summary;
-}
-
-
-function renderResultInsight(rows, grades) {
-  const s = summarizeRows(rows, grades);
-  if (!rows.length) {
-    setHTML(DOM.resultInsight, '<div class="insight-card action"><div class="insight-label">상담 시작</div><div class="insight-value">학생·내신·검색어를 먼저 설정하세요<span class="insight-note">상단 요약은 검색 후 상담 판단용으로 바뀝니다.</span></div></div>');
-    return;
-  }
-  const autoOk = s.snt.ok || 0;
-  const autoFail = s.snt.fail || 0;
-  const manual = (s.snt.check || 0) + (s.snt.missing || 0);
-  const noData = s.snt.none || 0;
-  const picked = pickedItems.length;
-  const riskParts = [];
-  if (manual) riskParts.push(manual.toLocaleString() + '개 요강확인');
-  if (noData) riskParts.push(noData.toLocaleString() + '개 최저자료 없음');
-  if (autoFail) riskParts.push(autoFail.toLocaleString() + '개 자동 미충족');
-  const riskText = riskParts.length ? riskParts.join(' · ') : '큰 위험 신호 없음';
-  const action = picked ? '후보함에서 선택 비교·인쇄 진행' : '눈에 띄는 전형을 후보함에 담기';
-  const cards = [
-    { label: '\uC0C1\uB2F4 \uD6C4\uBCF4', value: picked.toLocaleString() + '\uAC1C \uB2F4\uC74C', note: picked ? '\uC120\uD0DD \uBE44\uAD50\u00B7\uC778\uC1C4\uB85C \uC774\uC5B4\uC11C \uAC80\uD1A0' : '\uACB0\uACFC \uCE74\uB4DC\uC5D0\uC11C \uC0C1\uB2F4 \uD6C4\uBCF4\uB97C \uB2F4\uC73C\uC138\uC694' },
-    { label: '\uC218\uB2A5\uCD5C\uC800 \uC790\uB3D9 \uD655\uC778', value: autoOk.toLocaleString() + '\uAC1C', note: '\uADF8\uB798\uB3C4 \uCD5C\uC885 \uC0C1\uB2F4 \uC804 \uBAA8\uC9D1\uC694\uAC15 \uD655\uC778 \uAD8C\uC7A5' },
-    { label: '주의해서 볼 항목', value: riskText, note: '이 항목은 학생에게 단정적으로 말하지 않기', warn: true },
-    { label: '다음 행동', value: action, note: picked.toLocaleString() + '개 담김 · 필요 시 조건을 더 좁히기', action: true }
-  ];
-  setHTML(DOM.resultInsight, cards.map(item =>
-    '<div class="insight-card' + (item.warn ? ' warn' : '') + (item.action ? ' action' : '') + '"><div class="insight-label">' + esc(item.label) + '</div><div class="insight-value">' + esc(item.value) + '<span class="insight-note">' + esc(item.note) + '</span>' + (item.action ? '<span class="insight-action">상담 후보함 활용</span>' : '') + '</div></div>'
-  ).join(''));
-}
-
-
 function bindLoadMore(totalRows) {
   const btn = $('#loadMoreBtn');
   if (!btn) return;
@@ -2661,18 +2559,6 @@ function sortLabel() {
   return (SORT_LABELS[sortState.col] || sortState.col) + (sortState.dir === 'asc' ? ' 가나다순' : ' 역순');
 }
 
-function renderFilterSummary(resultCount) {
-  const chips = getActiveFilterItems({
-    includeScoreType: true,
-    includeSort: true,
-    includeResultCount: resultCount
-  });
-
-  setHTML(DOM.filterSummary, chips.map(item =>
-    '<span class="summary-chip' + (item.warn ? ' warn' : '') + '">' + esc(item.text) + '</span>'
-  ).join(''));
-}
-
 function bindSortHeaders() {
   $$('th[data-sort]').forEach(th => {
     th.addEventListener('click', () => handleSort(th.dataset.sort));
@@ -2690,9 +2576,6 @@ function renderList() {
   renderPickPayloads = [];
   const grades   = getSntGrades();
   const sorted = getVisibleRows(grades);
-  DOM.resultCount.textContent = sorted.length.toLocaleString();
-  renderFilterSummary(sorted.length);
-  renderResultInsight(sorted, grades);
 
   if (!sorted.length) {
     setHTML(DOM.viewList,
@@ -2753,9 +2636,6 @@ function renderList() {
 function renderPickedCompare() {
   const grades = getSntGrades();
   const rows = currentResults.length ? getVisibleRows(grades) : [];
-  DOM.resultCount.textContent = pickedItems.length.toLocaleString();
-  renderFilterSummary(rows.length);
-  renderResultInsight(rows, grades);
   if (!pickedItems.length) {
     setHTML(DOM.viewPicked, '<div class="empty-state"><div class="empty-icon">★</div><div class="empty-title">상담 후보가 아직 없습니다</div><div class="empty-desc">목록의 결과 카드에서 상담 후보 담기를 누르면 이 탭에서 직접 고른 전형만 비교합니다.</div></div>');
     return;
@@ -2766,9 +2646,6 @@ function renderPickedCompare() {
 function renderCompare() {
   const grades = getSntGrades();
   const rows = getVisibleRows(grades);
-  DOM.resultCount.textContent = rows.length.toLocaleString();
-  renderFilterSummary(rows.length);
-  renderResultInsight(rows, grades);
 
   const comp = rows.filter(r =>
     !r.su &&
@@ -2869,14 +2746,8 @@ function doReset() {
   updateSntFilterHelp();
   clearSntGradeInputs();
   DOM.changeCount.style.display = 'none';
-  DOM.gradeTag.style.display = 'none';
-  DOM.legend.style.display = 'none';
-  setHTML(DOM.filterSummary, '');
-  setHTML(DOM.resultInsight, '');
   pickedItems = [];
   persistPickedItems();
-  renderPickBoard();
-  DOM.resultCount.textContent = '—';
   resetVisibleLimit();
   currentResults = [];
   sortState      = { col: null, dir: null };
@@ -2900,10 +2771,6 @@ byId('programTypeHelp').textContent =
   '개 모집단위를 정확 연결했습니다. 계약학과는 채용 보장을 뜻하지 않습니다.';
 resetVisibleLimit();
 pickedItems = loadPickedItems();
-renderPickBoard();
-DOM.clearPickedBtn.addEventListener('click', () => { pickedItems = []; persistPickedItems(); renderPickBoard(); rerender(); });
-DOM.comparePickedBtn.addEventListener('click', () => { if (pickedItems.length >= 2) switchTab('picked'); });
-DOM.printPickedBtn.addEventListener('click', printPicked);
 
 $$('input').forEach(inp => {
   inp.addEventListener('keydown', e => { if (e.key === 'Enter') doSearch(); });

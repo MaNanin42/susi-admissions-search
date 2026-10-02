@@ -49,7 +49,8 @@ check(html.includes('function renderContractWebSources(program)') && html.includ
 check(!html.includes('class="criteria-strip"'), 'removed criteria strip returned');
 check(!html.includes('공개용 · 학생 성적 미포함'), 'removed public privacy badge returned');
 check(html.includes('id="sntK"') && html.includes('id="sntM"'), 'manual CSAT inputs missing');
-check(html.includes('id="pickList"') && html.includes('id="comparePickedBtn"'), 'shortlist UI missing');
+check(html.includes('id="tab-picked"') && html.includes('function togglePick(payload)'), 'candidate comparison missing');
+check(!html.includes('id="resultInsight"') && !html.includes('id="counselBoard"') && !html.includes('class="result-header"'), 'removed search top panels returned');
 
 const admission2028Active = admission2028Data.records.filter(record => !record.legacyDisposition2028);
 const admission2028Verified = admission2028Active.filter(record => record.official);
