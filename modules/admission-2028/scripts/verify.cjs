@@ -4,10 +4,10 @@ const path = require('node:path');
 const vm = require('node:vm');
 
 const root = path.resolve(__dirname, '..');
-const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
+const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8').replace(/\r\n/g, '\n');
 const data = JSON.parse(fs.readFileSync(path.join(root, 'data', 'nationwide.json'), 'utf8'));
-const realUi = fs.readFileSync(path.join(root, 'scripts', 'real-ui.js'), 'utf8');
-const gradeUi = fs.readFileSync(path.join(root, 'scripts', 'grade-ui.js'), 'utf8');
+const realUi = fs.readFileSync(path.join(root, 'scripts', 'real-ui.js'), 'utf8').replace(/\r\n/g, '\n');
+const gradeUi = fs.readFileSync(path.join(root, 'scripts', 'grade-ui.js'), 'utf8').replace(/\r\n/g, '\n');
 let checks = 0;
 const test = (name, fn) => { fn(); checks += 1; console.log(`PASS ${name}`); };
 
@@ -180,6 +180,31 @@ test('candidate selection toggles by stable identity and rejects archived record
  c.toggleCandidate(active.id);assert.equal(vm.runInContext('pickedCandidates.size',c),1);
  c.toggleCandidate(active.id);assert.equal(vm.runInContext('pickedCandidates.size',c),0);
  c.toggleCandidate(archived.id);c.toggleCandidate('missing');assert.equal(vm.runInContext('pickedCandidates.size',c),0);
+});
+
+test('full browse keeps manual eligibility visible but excludes explicit regular admissions and separate contracts',()=>{
+ const {context:c,profile:p}=candidateContext();
+ const contract=JSON.parse(fs.readFileSync(path.join(root,'..','contracts-2028','data.json'),'utf8'));
+ c.CONTRACT_IDENTITIES=contract.records.filter(r=>r.status==='plan2028').map(r=>({uni:r.uni,major:r.major}));
+ const rows=c.candidates({...p,browseMode:'all',family:'unknown',economic:[],single:'unknown',regional:{enabled:false}});
+ assert.ok(rows.some(r=>r.type==='manual'));
+ assert.ok(rows.every(r=>!/정시/.test(r.official?.admissionsSeason||'')));
+ assert.ok(rows.every(r=>!c.CONTRACT_IDENTITIES.some(x=>x.uni===r.uni&&x.major===r.major)));
+ const chemistry=c.candidates({...p,browseMode:'all',programQuery:'화학'});
+ assert.ok(chemistry.length>0&&chemistry.every(r=>[r.uni,r.major,r.track].join(' ').includes('화학')));
+});
+
+test('course data preserves public fields and does not invent a missing-subject verdict',()=>{
+ const courses=JSON.parse(fs.readFileSync(path.join(root,'data','recommended-courses.json'),'utf8'));
+ assert.equal(courses.rows.length,914);assert.equal(new Set(courses.rows.map(r=>r.university)).size,44);assert.equal(courses.policies.length,45);
+ const allowed=new Set(['university','campus','major_group','core_subjects','recommended_subjects','quantitative_criteria','evaluation_method','sourceId','sourcePage','subjectClassification','year']);
+ assert.ok(courses.rows.every(r=>Object.keys(r).every(k=>allowed.has(k))&&r.university&&r.major_group));
+ assert.ok(html.includes('미입력 과목을 미이수로 판정하지 않으며'));
+ assert.ok(!html.includes('usePastCut'));
+ const courseHtml=fs.readFileSync(path.join(root,'courses.html'),'utf8');
+ assert.ok(courseHtml.includes('id="courseCoverage"'));
+ assert.ok(!html.includes('id="courseGuidance"'));
+ assert.ok(courseHtml.includes(fs.readFileSync(path.join(root,'scripts','course-ui.js'),'utf8').replace(/\r\n/g,'\n')));
 });
 
 fs.writeFileSync(path.join(root, 'data', 'verification.json'), `${JSON.stringify({

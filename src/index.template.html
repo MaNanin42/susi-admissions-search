@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>수시 입결 검색기 | 2027학년도 V11.0.0 공개용</title>
+<title>대입 상담 탐색 | 2028학년도 V12.0.0 공개용</title>
 <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 /* ── Professional Calm 테마 변수 ── */
@@ -220,7 +220,7 @@ body {
 
 /* ── 계약학과 모아보기 ── */
 .contract-program-panel {
-  height: calc(100vh - 52px); overflow: hidden;
+  height: calc(100vh - 52px); overflow: auto;
   display: flex; flex-direction: column; background: #f8fafc;
 }
 .contract-program-head {
@@ -360,7 +360,21 @@ body {
 .badge-program-button:focus-visible { outline: 2px solid var(--program-contract); outline-offset: 2px; }
 
 /* ── 사이드바 ── */
+#searchLayout { grid-template-columns: 276px minmax(0, 1fr); transition: grid-template-columns .24s ease; }
+#searchLayout.sidebar-collapsed { grid-template-columns: 44px minmax(0, 1fr); }
+#searchLayout > .result-area { min-width: 0; }
+.sidebar-toggle { display:flex; align-items:center; justify-content:space-between; gap:8px; width:100%; min-height:42px; padding:10px 14px; border:0; border-bottom:1px solid var(--border2); background:var(--glass-strong); color:var(--text2); font-family:inherit; font-size:12px; font-weight:600; cursor:pointer; white-space:nowrap; }
+.sidebar-toggle:focus-visible { outline:2px solid var(--accent); outline-offset:-3px; }
+.sidebar-toggle-icon { font-size:18px; line-height:1; transition:transform .24s ease; }
+.sidebar-body { display:grid; grid-template-rows:1fr; flex:1; min-height:0; transition:grid-template-rows .24s ease, opacity .18s ease, visibility .24s; }
+.sidebar-content { display:flex; flex-direction:column; min-height:0; overflow:hidden; }
+.sidebar-collapsed .sidebar-body { grid-template-rows:0fr; opacity:0; visibility:hidden; }
+.sidebar-collapsed .sidebar-toggle-label { display:none; }
+.sidebar-collapsed .sidebar-toggle { justify-content:center; padding-inline:8px; }
+.sidebar-collapsed .sidebar-toggle-icon { transform:rotate(180deg); }
+@media (prefers-reduced-motion: reduce) { #searchLayout, .sidebar-body, .sidebar-toggle-icon { transition:none; } }
 .sidebar {
+  min-width:0;
   background: var(--glass);
   border-right: 1px solid var(--border2);
   display: flex; flex-direction: column; overflow: hidden;
@@ -881,6 +895,12 @@ tr:hover td { background: var(--row-hover); }
 }
 
 @media (max-width: 860px) {
+  #searchLayout, #searchLayout.sidebar-collapsed { grid-template-columns:minmax(0, 1fr); }
+  #searchLayout .sidebar-body { flex:0 1 auto; }
+  .sidebar-toggle-icon { transform:rotate(90deg); }
+  .sidebar-collapsed .sidebar-toggle-icon { transform:rotate(270deg); }
+  .sidebar-collapsed .sidebar-toggle-label { display:inline; }
+  .sidebar-collapsed .sidebar-toggle { justify-content:space-between; padding-inline:14px; }
   .main { width: 100%; min-width: 0; grid-template-columns: minmax(0, 1fr); height: auto; min-height: calc(100vh - 52px); overflow: hidden; }
   .sidebar { width: 100%; min-width: 0; border-right: none; border-bottom: 1px solid var(--border); }
   .sidebar-scroll { min-width: 0; }
@@ -919,20 +939,23 @@ tr:hover td { background: var(--row-hover); }
 <div class="header">
   <div class="logo-mark">시</div>
   <div class="workspace-tabs" role="tablist" aria-label="서비스 전환">
-    <button type="button" class="workspace-tab active" id="workspace-tab-search" data-workspace="search" role="tab" aria-selected="true" aria-controls="workspace-search">수시 입결 검색</button>
-    <button type="button" class="workspace-tab" id="workspace-tab-admissions" data-workspace="admissions" role="tab" aria-selected="false" aria-controls="workspace-admissions" tabindex="-1">입학처 모아보기</button>
-    <button type="button" class="workspace-tab" id="workspace-tab-contracts" data-workspace="contracts" role="tab" aria-selected="false" aria-controls="workspace-contracts" tabindex="-1">계약학과 모아보기</button>
+    <button type="button" class="workspace-tab active" id="workspace-tab-search" data-workspace="search" role="tab" aria-selected="true" aria-controls="workspace-search">2026 입결 현황</button>
     <button type="button" class="workspace-tab" id="workspace-tab-admission2028" data-workspace="admission2028" role="tab" aria-selected="false" aria-controls="workspace-admission2028" tabindex="-1">2028 대입 탐색</button>
+    <button type="button" class="workspace-tab" id="workspace-tab-contracts" data-workspace="contracts" role="tab" aria-selected="false" aria-controls="workspace-contracts" tabindex="-1">계약학과 탐색</button>
+    <button type="button" class="workspace-tab" id="workspace-tab-admissions" data-workspace="admissions" role="tab" aria-selected="false" aria-controls="workspace-admissions" tabindex="-1">입학처</button>
+    <button type="button" class="workspace-tab" id="workspace-tab-courses" data-workspace="courses" role="tab" aria-selected="false" aria-controls="workspace-courses" tabindex="-1">대학별 권장과목</button>
   </div>
   <div class="header-right">
-    <span class="header-version">2027학년도 V11.0.0</span>
+    <span class="header-version">2028학년도 V12.0.0</span>
     <span class="change-notice" id="headerChangeCount" style="display:none"></span>
   </div>
 </div>
 
 <section class="workspace-panel" id="workspace-search" role="tabpanel" aria-labelledby="workspace-tab-search">
-<div class="main">
+<div class="main" id="searchLayout">
   <div class="sidebar">
+    <button class="sidebar-toggle" id="searchSidebarToggle" type="button" aria-expanded="true" aria-controls="searchSidebarBody" aria-label="검색 조건 접기" title="검색 조건 접기"><span class="sidebar-toggle-label">검색 조건</span><span class="sidebar-toggle-icon" aria-hidden="true">‹</span></button>
+    <div class="sidebar-body" id="searchSidebarBody"><div class="sidebar-content">
     <div class="sidebar-scroll">
 
       <div class="filter-section">
@@ -1056,6 +1079,7 @@ tr:hover td { background: var(--row-hover); }
       <button class="btn-search" id="searchBtn">🔍 &nbsp;검색</button>
       <button class="btn-reset" id="resetBtn">초기화</button>
     </div>
+    </div></div>
   </div>
 
   <div class="result-area">
@@ -1069,7 +1093,7 @@ tr:hover td { background: var(--row-hover); }
         <div class="empty-state">
           <div class="empty-icon">🔍</div>
           <div class="empty-title">3단계로 상담 후보를 좁혀보세요</div>
-          <div class="empty-desc">1. 학생 반·번호를 선택해 수능 등급을 불러옵니다.<br>2. 내신 등급과 검색 범위를 확인합니다.<br>3. 검색 후 최저확인·미공개·모집요강 확인 배지를 함께 봅니다.</div>
+          <div class="empty-desc">1. 검색 조건을 선택하고 수능 등급을 입력합니다.<br>2. 내신 등급과 검색 범위를 확인합니다.<br>3. 검색 후 최저확인·미공개·모집요강 확인 배지를 함께 봅니다.</div>
         </div>
       </div>
       <div id="view-compare" style="display:none">
@@ -1098,6 +1122,8 @@ tr:hover td { background: var(--row-hover); }
 </section>
 
 <section class="workspace-panel contract-program-panel" id="workspace-contracts" role="tabpanel" aria-labelledby="workspace-tab-contracts" hidden>
+  <iframe id="contracts2028Frame" title="2028 계약학과 조건별 탐색" class="admission-2028-frame" data-src="modules/contracts-2028/index.html" sandbox="allow-scripts allow-popups allow-popups-to-escape-sandbox allow-modals" style="height:calc(100vh - 85px);flex-shrink:0"></iframe>
+  <details id="legacyContracts" style="padding:12px"><summary>2027 계약학과·과거 입결 참고 자료 펼치기</summary><p>아래는 2027 자료입니다. 2028 지원자 성적과 직접 비교하지 마세요.</p>
   <div class="contract-program-head">
     <div class="contract-program-heading">계약학과 모아보기</div>
     <div class="contract-program-summary"><strong id="contractProgramTotal">—</strong>개 모집단위</div>
@@ -1110,7 +1136,7 @@ tr:hover td { background: var(--row-hover); }
       <option value="">전체 유형</option>
     </select>
     <div class="contract-grade-control">
-      <label for="contractGradeInput">학생 내신</label>
+      <label for="contractGradeInput">과거 입결 기준값 (9등급제)</label>
       <input class="contract-grade-input" id="contractGradeInput" type="number" min="1" max="9" step="0.01" placeholder="2.50" inputmode="decimal">
     </div>
     <div class="contract-range-control">
@@ -1124,6 +1150,7 @@ tr:hover td { background: var(--row-hover); }
     <nav class="contract-program-list" id="contractProgramList" aria-label="계약학과 목록"></nav>
     <article class="contract-program-detail" id="contractProgramDetail" aria-live="polite"></article>
   </div>
+</details>
 </section>
 
 <section class="workspace-panel admission-2028-panel" id="workspace-admission2028" role="tabpanel" aria-labelledby="workspace-tab-admission2028" hidden>
@@ -1132,10 +1159,12 @@ tr:hover td { background: var(--row-hover); }
     id="admission2028Frame"
     title="2028 대입 조건별 대학·학과·전형 탐색"
     data-src="modules/admission-2028/index.html"
-    data-version="11.0.0-counsel-20261003"
+    data-version="12.0.0-release-20261004"
     sandbox="allow-scripts allow-popups allow-popups-to-escape-sandbox allow-modals"
   ></iframe>
 </section>
+
+<section class="workspace-panel admission-2028-panel" id="workspace-courses" role="tabpanel" aria-labelledby="workspace-tab-courses" hidden><iframe class="admission-2028-frame" id="coursesFrame" title="대학별 권장과목 자료 조회" data-src="modules/admission-2028/courses.html" sandbox="allow-scripts allow-popups allow-popups-to-escape-sandbox"></iframe></section>
 
 <script>
 const RAW = __RAW_DATA__;
@@ -1719,13 +1748,23 @@ function setupContractDirectory() {
 
 function openContractProgram(id) {
   switchWorkspace('contracts');
+  byId('legacyContracts').open=true;
   byId('contractProgramSearch').value = '';
   byId('contractTypeFilter').value = '';
   selectContractProgram(id, true);
 }
 
+byId('searchSidebarToggle').addEventListener('click', () => {
+  const collapsed = byId('searchLayout').classList.toggle('sidebar-collapsed');
+  const toggle = byId('searchSidebarToggle');
+  toggle.setAttribute('aria-expanded', String(!collapsed));
+  toggle.setAttribute('aria-label', collapsed ? '검색 조건 펼치기' : '검색 조건 접기');
+  toggle.title = collapsed ? '검색 조건 펼치기' : '검색 조건 접기';
+  byId('searchSidebarBody').inert = collapsed;
+});
+
 function switchWorkspace(workspace) {
-  const target = ['search', 'admissions', 'contracts', 'admission2028'].includes(workspace) ? workspace : 'search';
+  const target = ['search', 'admissions', 'contracts', 'admission2028', 'courses'].includes(workspace) ? workspace : 'search';
   $$('.workspace-tab[data-workspace]').forEach(tab => {
     const active = tab.dataset.workspace === target;
     tab.classList.toggle('active', active);
@@ -1736,8 +1775,14 @@ function switchWorkspace(workspace) {
   byId('workspace-admissions').hidden = target !== 'admissions';
   byId('workspace-contracts').hidden = target !== 'contracts';
   byId('workspace-admission2028').hidden = target !== 'admission2028';
+  byId('workspace-courses').hidden = target !== 'courses';
+  if(target==='courses'){const frame=byId('coursesFrame');if(!frame.getAttribute('src'))frame.src=frame.dataset.src+'?v=12.0.0-release-20261004';}
   if (target === 'admissions') setupAdmissionsDirectory();
-  if (target === 'contracts') setupContractDirectory();
+  if (target === 'contracts') {
+    setupContractDirectory();
+    const contractFrame=byId('contracts2028Frame');
+    if(!contractFrame.getAttribute('src'))contractFrame.src=contractFrame.dataset.src+'?v=12.0.0-release-20261004';
+  }
   if (target === 'admission2028') {
     const frame = byId('admission2028Frame');
     if (!frame.getAttribute('src')) {
@@ -2776,6 +2821,7 @@ $$('input').forEach(inp => {
   inp.addEventListener('keydown', e => { if (e.key === 'Enter') doSearch(); });
 });
 
+switchWorkspace('search');
 </script>
 </body>
 </html>

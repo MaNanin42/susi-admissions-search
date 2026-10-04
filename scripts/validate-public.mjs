@@ -20,14 +20,14 @@ const forbidden = [
 ];
 for (const token of forbidden) check(!html.includes(token), `private token: ${token}`);
 
-check(html.includes('2027학년도 V11.0.0'), 'version missing');
-check(html.includes('<title>수시 입결 검색기 | 2027학년도 V11.0.0 공개용</title>'), 'public-only title missing');
+check(html.includes('2028학년도 V12.0.0'), 'version missing');
+check(html.includes('<title>대입 상담 탐색 | 2028학년도 V12.0.0 공개용</title>'), 'public-only title missing');
 check(html.includes('id="workspace-tab-search"') && html.includes('id="workspace-tab-admissions"') && html.includes('id="workspace-tab-contracts"') && html.includes('id="workspace-tab-admission2028"'), 'top workspace tabs missing');
 check(html.includes('id="workspace-search"') && html.includes('id="workspace-admissions"') && html.includes('id="workspace-contracts"') && html.includes('id="workspace-admission2028"'), 'top workspace panels missing');
 check(html.includes('function switchWorkspace(workspace)'), 'top workspace switching logic missing');
 check(html.includes('data-src="modules/admission-2028/index.html"'), '2028 module relative path missing');
 check(
-  html.includes('data-version="11.0.0-counsel-20261003"')
+  html.includes('data-version="12.0.0-release-20261004"')
     && html.includes("if (!frame.getAttribute('src'))")
     && html.includes('frame.setAttribute(\'src\', `${frame.dataset.src}?v=${version}`)'),
   '2028 module versioned lazy-load state preservation missing',
@@ -327,6 +327,10 @@ for (const file of fs.readdirSync(path.join(root, 'scripts'))) {
 const admission2028Allowed = new Set([
   'README.md',
   'data/nationwide.json',
+  'data/recommended-courses.json',
+  'scripts/course-ui.js',
+  'courses.html',
+  'src/courses.template.html',
   'data/verification.json',
   'index.html',
   'scripts/build.mjs',
@@ -343,11 +347,25 @@ for (const expected of admission2028Allowed) {
   check(fs.existsSync(path.join(admission2028Root, ...expected.split('/'))), `missing 2028 module path: ${expected}`);
 }
 
+const contractsRoot=path.join(root,'modules','contracts-2028');
+const contractsAllowed=new Set(['data.json','template.html','ui.js','build.mjs','verify.cjs','index.html']);
+for(const file of listFiles(contractsRoot))check(contractsAllowed.has(path.relative(contractsRoot,file).replaceAll('\\','/')),`unexpected contract module file: ${path.relative(contractsRoot,file)}`);
+for(const file of contractsAllowed)check(fs.existsSync(path.join(contractsRoot,file)),`missing contract module file: ${file}`);
+const contractsHtml=fs.readFileSync(path.join(contractsRoot,'index.html'),'utf8');
+check(contractsHtml.includes("connect-src 'none'"),'contract module no-network CSP missing');
+check(!/localStorage|sessionStorage|indexedDB|sendBeacon|fetch\(|XMLHttpRequest|WebSocket/.test(contractsHtml),'contract module storage/network API found');
+check(html.includes('id="contracts2028Frame"')&&html.includes("switchWorkspace('search');"),'default admissions-results workspace and separate contract frame missing');
+const courses=JSON.parse(fs.readFileSync(path.join(admission2028Root,'data','recommended-courses.json'),'utf8'));
+const courseHtml=fs.readFileSync(path.join(admission2028Root,'courses.html'),'utf8');
+check(html.includes('id="workspace-tab-courses"')&&html.includes('id="coursesFrame"'),'separate recommended-courses tab missing');
+check(courseHtml.includes("connect-src 'none'")&&!/localStorage|sessionStorage|indexedDB|sendBeacon|fetch\(|XMLHttpRequest|WebSocket/.test(courseHtml),'course document network/storage boundary failed');
+check(courses.rows.length===914&&new Set(courses.rows.map(r=>r.university)).size===44&&courses.policies.length===45,'public recommended-course dataset coverage changed');
+
 if (errors.length) {
   console.error(errors.map(error => `[FAIL] ${error}`).join('\n'));
   process.exit(1);
 }
-console.log('[PASS] V11.0.0 label, top workspace tabs, core UI, and inline JavaScript');
+console.log('[PASS] V12.0.0 public label, top workspace tabs, core UI, and inline JavaScript');
 console.log('[PASS] student mock-exam data and loader remain excluded');
 console.log('[PASS] baseline counts, 223 university-campus directory entries, and SHA-256 fingerprints');
 console.log(`[PASS] all ${seoulDirectoryPairs.size} Seoul and all ${gyeonginDirectoryPairs.size} Gyeongin university-campus entries have verified rolling-admissions guideline links`);

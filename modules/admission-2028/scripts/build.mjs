@@ -16,7 +16,12 @@ if (dataset.records.length !== 22751) throw new Error(`2028 record count changed
 if (dataset.meta.current2028Candidates !== 21720) throw new Error('2028 active denominator changed');
 if (dataset.meta.current2028Verified !== 20153) throw new Error('2028 verified count changed');
 
+const courses=JSON.parse(fs.readFileSync(path.join(root,'data','recommended-courses.json'),'utf8'));
+const contractData=JSON.parse(fs.readFileSync(path.join(root,'..','contracts-2028','data.json'),'utf8'));
+const identities=contractData.records.filter(r=>r.status==='plan2028').map(r=>({uni:r.uni,major:r.major}));
+const courseUi=fs.readFileSync(path.join(root,'scripts','course-ui.js'),'utf8').replace(/\r\n/g,'\n');
 const payload = [
+  `const CONTRACT_IDENTITIES=${JSON.stringify(identities)};`,
   '/* REAL_DATA_START */',
   `const DATA=${JSON.stringify(dataset.records)};`,
   `const DATA_META=${JSON.stringify(dataset.meta)};`,
@@ -32,14 +37,11 @@ for (const placeholder of ['__REAL_DATA__', '__GRADE_UI__', '__REAL_UI__']) {
   if (generated.includes(placeholder)) throw new Error(`build placeholder remains: ${placeholder}`);
 }
 
-if (process.argv.includes('--check')) {
-  const current = fs.readFileSync(outputPath, 'utf8').replace(/\r\n/g, '\n');
-  if (current !== generated) {
-    console.error('[FAIL] 2028 generated HTML differs from modules/admission-2028/index.html');
-    process.exit(1);
-  }
-  console.log('[PASS] 2028 module build reproduces index.html');
-} else {
-  fs.writeFileSync(outputPath, generated, 'utf8');
-  console.log(`[PASS] wrote ${path.relative(process.cwd(), outputPath)}`);
+const courseTemplate=fs.readFileSync(path.join(root,'src','courses.template.html'),'utf8').replace(/\r\n/g,'\n');
+const courseGenerated=courseTemplate.replace('__COURSE_DATA__',JSON.stringify(courses).replace(/</g,'\\u003c')).replace('__COURSE_UI__',courseUi);
+for(const [destination,content] of [[outputPath,generated],[path.join(root,'courses.html'),courseGenerated]]){
+ if(process.argv.includes('--check')){
+  if(fs.readFileSync(destination,'utf8').replace(/\r\n/g,'\n')!==content)throw new Error('Generated HTML differs: '+destination);
+  console.log('[PASS] build reproduces '+path.relative(root,destination));
+ }else{fs.writeFileSync(destination,content,'utf8');console.log('[PASS] wrote '+path.relative(root,destination))}
 }

@@ -1,12 +1,14 @@
 {
   "name": "susi-admissions-search",
   "private": true,
-  "version": "11.0.0",
+  "version": "12.0.0",
   "scripts": {
     "build:check": "node scripts/build.mjs --check",
     "build:2028": "node modules/admission-2028/scripts/build.mjs",
     "build:2028:check": "node modules/admission-2028/scripts/build.mjs --check",
     "verify:2028": "node modules/admission-2028/scripts/verify.cjs",
-    "validate": "node scripts/validate-public.mjs"
+    "validate": "node scripts/validate-public.mjs",
+    "build:contracts": "node modules/contracts-2028/build.mjs",
+    "verify:contracts": "node modules/contracts-2028/verify.cjs"
   }
 }
