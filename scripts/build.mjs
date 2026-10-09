@@ -28,6 +28,7 @@ if (sha256(admissions) !== manifest.admissions.sha256) throw new Error('admissio
 if (sha256(minimums) !== manifest.suneungMinimum.sha256) throw new Error('CSAT minimum baseline hash mismatch');
 
 let built = replaceOnce(template, '__RAW_DATA__', admissions);
+built = replaceOnce(built, '__CUTOFF_CURRENT__', JSON.stringify(JSON.parse(fs.readFileSync(path.join(root,'data/cutoff-current.json'),'utf8')).baseline));
 built = replaceOnce(built, '__SNT_DATA__', minimums);
 built = replaceOnce(built, '__ADMISSIONS_OFFICE_LINKS__', admissionsOfficeLinks);
 built = replaceOnce(built, '__PROGRAM_TAGS__', programTags);

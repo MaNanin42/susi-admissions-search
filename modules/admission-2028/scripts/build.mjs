@@ -1,6 +1,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import baselineLinker from './link-baseline.cjs';
+import applicationLinker from '../../../scripts/link-application-2027.cjs';
 
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const templatePath = path.join(root, 'src', 'index.template.html');
@@ -9,6 +11,16 @@ const outputPath = path.join(root, 'index.html');
 
 const template = fs.readFileSync(templatePath, 'utf8').replace(/\r\n/g, '\n');
 const dataset = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
+const baseline = JSON.parse(fs.readFileSync(path.join(root, '..', '..', 'data', 'baseline', 'admissions.json'), 'utf8'));
+const baselineLinks = baselineLinker.linkBaseline(dataset.records, baseline);
+dataset.records = dataset.records.map(record => baselineLinks.links[record.id] ? {...record, baseline2026: baselineLinks.links[record.id]} : record);
+dataset.meta.baseline2026Links = baselineLinks.stats;
+const cutoffCurrent=JSON.parse(fs.readFileSync(path.join(root,'..','..','data','cutoff-current.json'),'utf8'));
+dataset.records=dataset.records.map(r=>({...r,cutoffCurrent:cutoffCurrent.national[r.id]}));
+dataset.meta.cutoffCurrent=cutoffCurrent.summary;
+const applicationData=JSON.parse(fs.readFileSync(path.join(root,'..','..','data','application-2027.json'),'utf8'));
+dataset.records=applicationLinker.linkApplications(dataset.records,applicationData);
+dataset.meta.application2027={linked:dataset.records.filter(r=>r.application2027).length,universities:new Set(dataset.records.filter(r=>r.application2027).map(r=>r.uni)).size,collectedUniversities:applicationData.coverage.universitiesCollected,scope:applicationData.scope,reviewed:applicationData.reviewed};
 const gradeUi = fs.readFileSync(path.join(root, 'scripts', 'grade-ui.js'), 'utf8').replace(/\r\n/g, '\n');
 const realUi = fs.readFileSync(path.join(root, 'scripts', 'real-ui.js'), 'utf8').replace(/\r\n/g, '\n');
 

@@ -1,0 +1,1047 @@
+{
+  "reviewed": "2026-10-09",
+  "rules": [
+    {
+      "university": "부산대학교",
+      "category": "학생부교과",
+      "target": "교과우수전형",
+      "source": "학생부교과전형",
+      "evidence": "https://go.pusan.ac.kr/_common/new_download_file.asp?menu=boardfile&file_no=4304",
+      "page": 4,
+      "note": "2028 시행계획 PDF 4쪽 전형명칭 변경표 대조. 지원자격·평가방법 변경은 2028 계획에서 별도 확인."
+    },
+    {
+      "university": "부산대학교",
+      "category": "학생부교과",
+      "target": "교과지역전형",
+      "source": "지역인재전형",
+      "evidence": "https://go.pusan.ac.kr/_common/new_download_file.asp?menu=boardfile&file_no=4304",
+      "page": 4,
+      "note": "2028 시행계획 PDF 4쪽 전형명칭 변경표 대조."
+    },
+    {
+      "university": "부산대학교",
+      "category": "학생부종합",
+      "target": "면접전형",
+      "source": "학생부종합전형",
+      "evidence": "https://go.pusan.ac.kr/_common/new_download_file.asp?menu=boardfile&file_no=4304",
+      "page": 4,
+      "note": "2028 시행계획 PDF 4쪽 명칭 변경표 대조. 면접 반영비율은 20%에서 30%로 변경되므로 2027 수치는 과거 참고값."
+    },
+    {
+      "university": "충남대학교",
+      "category": "학생부종합",
+      "target": "종합전형Ⅰ면접전형",
+      "source": "학생부종합 면접전형",
+      "evidence": "https://ipsi.cnu.ac.kr/_prog/_board/common/download.php?atch_no=1&code=notice_faculty&ntt_no=2025645",
+      "page": 5,
+      "note": "2028 시행계획 목차의 학생부종합Ⅰ(면접)과 2027 원문의 학생부종합 면접전형을 대조. 면접·서류는 따로 연결."
+    },
+    {
+      "university": "충남대학교",
+      "category": "학생부종합",
+      "target": "종합전형Ⅰ서류전형",
+      "source": "학생부종합 서류전형",
+      "evidence": "https://ipsi.cnu.ac.kr/_prog/_board/common/download.php?atch_no=1&code=notice_faculty&ntt_no=2025645",
+      "page": 5,
+      "note": "2028 시행계획 목차의 학생부종합Ⅰ(서류)과 2027 원문의 학생부종합 서류전형을 대조. 면접·서류는 따로 연결.",
+      "recordIds": [
+        "RES-009671",
+        "RES-009688",
+        "RES-009695",
+        "RES-009700"
+      ]
+    },
+    {
+      "university": "중앙대학교",
+      "category": "학생부종합",
+      "target": "탐구하는 학종(Core)",
+      "source": "탐구형인재",
+      "evidence": "https://use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876417&q_fileId=40078ca7-a40c-41e2-aa6e-09282e8ecdb8",
+      "page": 4,
+      "note": "2028 시행계획 PDF 4쪽의 2027→2028 전형 대응표 대조. 전형방법·지원자격은 변경될 수 있으므로 2027 수치는 이전 전형의 참고값."
+    },
+    {
+      "university": "중앙대학교",
+      "category": "학생부종합",
+      "target": "모두의 학종(All)",
+      "source": "융합형인재",
+      "evidence": "https://use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876417&q_fileId=40078ca7-a40c-41e2-aa6e-09282e8ecdb8",
+      "page": 4,
+      "note": "2028 시행계획 PDF 4쪽의 2027→2028 전형 대응표 대조. 전형방법·지원자격은 변경될 수 있으므로 2027 수치는 이전 전형의 참고값."
+    },
+    {
+      "university": "중앙대학교",
+      "category": "학생부종합",
+      "target": "최저 있는 학종(Up)",
+      "source": "성장형인재",
+      "evidence": "https://use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876417&q_fileId=40078ca7-a40c-41e2-aa6e-09282e8ecdb8",
+      "page": 4,
+      "note": "2028 시행계획 PDF 4쪽의 2027→2028 전형 대응표 대조. 전형방법·지원자격은 변경될 수 있으므로 2027 수치는 이전 전형의 참고값."
+    },
+    {
+      "university": "중앙대학교",
+      "category": "논술",
+      "target": "모두의 논술",
+      "source": "일반형",
+      "evidence": "https://use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876417&q_fileId=40078ca7-a40c-41e2-aa6e-09282e8ecdb8",
+      "page": 4,
+      "note": "2028 시행계획 PDF 4쪽의 2027→2028 전형 대응표 대조. 전형방법·지원자격은 변경될 수 있으므로 2027 수치는 이전 전형의 참고값."
+    },
+    {
+      "university": "중앙대학교",
+      "category": "논술",
+      "target": "재학생 논술",
+      "source": "창의형",
+      "evidence": "https://use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876417&q_fileId=40078ca7-a40c-41e2-aa6e-09282e8ecdb8",
+      "page": 4,
+      "note": "2028 시행계획 PDF 4쪽의 2027→2028 전형 대응표 대조. 전형방법·지원자격은 변경될 수 있으므로 2027 수치는 이전 전형의 참고값."
+    },
+    {
+      "university": "안양대학교",
+      "category": "학생부교과",
+      "target": "교과일반전형",
+      "source": "아리학생부교과",
+      "evidence": "https://enter.anyang.ac.kr/files/enter/content/202604/482a3133e2f846edd00b3761a520916b.pdf",
+      "page": 3,
+      "note": "2028 시행계획 PDF 3쪽의 2027→2028 전형 대응표 대조. 전형방법·지원자격은 변경될 수 있으므로 2027 수치는 이전 전형의 참고값."
+    },
+    {
+      "university": "안양대학교",
+      "category": "학생부교과",
+      "target": "교과면접전형",
+      "source": "아리학생부면접",
+      "evidence": "https://enter.anyang.ac.kr/files/enter/content/202604/482a3133e2f846edd00b3761a520916b.pdf",
+      "page": 3,
+      "note": "2028 시행계획 PDF 3쪽의 2027→2028 전형 대응표 대조. 전형방법·지원자격은 변경될 수 있으므로 2027 수치는 이전 전형의 참고값."
+    },
+    {
+      "university": "안양대학교",
+      "category": "학생부종합",
+      "target": "아리종합전형",
+      "source": "아리학생부종합",
+      "evidence": "https://enter.anyang.ac.kr/files/enter/content/202604/482a3133e2f846edd00b3761a520916b.pdf",
+      "page": 3,
+      "note": "2028 시행계획 PDF 3쪽의 2027→2028 전형 대응표 대조. 전형방법·지원자격은 변경될 수 있으므로 2027 수치는 이전 전형의 참고값."
+    },
+    {
+      "university": "영남대학교",
+      "category": "학생부종합",
+      "target": "일반학생전형",
+      "source": "잠재능력우수자",
+      "evidence": "https://use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876950&q_fileId=8b248f92-6a4e-4122-a4dc-a0687f8bf92c",
+      "page": 4,
+      "note": "2028 시행계획 PDF 4쪽의 2027→2028 전형 대응표 대조. 전형방법·지원자격은 변경될 수 있으므로 2027 수치는 이전 전형의 참고값."
+    },
+    {
+      "university": "영남대학교",
+      "category": "학생부교과",
+      "target": "의학창의인재전형",
+      "source": "창의인재",
+      "evidence": "https://use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876950&q_fileId=8b248f92-6a4e-4122-a4dc-a0687f8bf92c",
+      "page": 4,
+      "note": "2028 시행계획 PDF 4쪽의 2027→2028 전형 대응표 대조. 전형방법·지원자격은 변경될 수 있으므로 2027 수치는 이전 전형의 참고값."
+    },
+    {
+      "university": "영남대학교",
+      "category": "학생부종합",
+      "target": "기회균형전형",
+      "source": "기회균형(일반)",
+      "evidence": "https://use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876950&q_fileId=8b248f92-6a4e-4122-a4dc-a0687f8bf92c",
+      "page": 4,
+      "note": "2028 시행계획 PDF 4쪽 대조. 2027 교과 기회균형(일반) → 2028 종합 기회균형으로 유형 변경. 수능최저도 폐지되어 직접적인 경쟁률 비교에 주의.",
+      "sourceCategory": "학생부교과"
+    },
+    {
+      "university": "강원대학교",
+      "campuses": [
+        "춘천"
+      ],
+      "category": "학생부교과",
+      "target": "일반전형",
+      "source": "일반교과전형",
+      "evidence": "https://admission.kangwon.ac.kr/admission/cmmn/download.do?dn=20260611034926546.pdf&path=%2Fbbs%2F20260611135835",
+      "page": 4,
+      "note": "2028 춘천 캠퍼스 시행계획 PDF 4쪽의 2027→2028 전형 대응표 대조. 해당 캠퍼스에만 적용하며 전형방법·모집인원 변경은 2028 계획에서 별도 확인."
+    },
+    {
+      "university": "강원대학교",
+      "campuses": [
+        "춘천"
+      ],
+      "category": "학생부교과",
+      "target": "강원인재전형",
+      "source": "지역교과전형",
+      "evidence": "https://admission.kangwon.ac.kr/admission/cmmn/download.do?dn=20260611034926546.pdf&path=%2Fbbs%2F20260611135835",
+      "page": 4,
+      "note": "2028 춘천 캠퍼스 시행계획 PDF 4쪽의 2027→2028 전형 대응표 대조. 해당 캠퍼스에만 적용하며 전형방법·모집인원 변경은 2028 계획에서 별도 확인."
+    },
+    {
+      "university": "강원대학교",
+      "campuses": [
+        "춘천"
+      ],
+      "category": "학생부교과",
+      "target": "교과-실기전형",
+      "source": "실기우수자전형",
+      "evidence": "https://admission.kangwon.ac.kr/admission/cmmn/download.do?dn=20260611034926546.pdf&path=%2Fbbs%2F20260611135835",
+      "page": 4,
+      "note": "2028 춘천 캠퍼스 시행계획 PDF 4쪽의 2027→2028 전형 대응표 대조. 해당 캠퍼스에만 적용하며 전형방법·모집인원 변경은 2028 계획에서 별도 확인."
+    },
+    {
+      "university": "강원대학교",
+      "campuses": [
+        "삼척",
+        "도계"
+      ],
+      "category": "학생부교과",
+      "target": "일반전형",
+      "source": "일반교과전형",
+      "evidence": "https://admission.kangwon.ac.kr/admission/cmmn/download.do?dn=20260611034944247.pdf&path=%2Fbbs%2F20260611135835",
+      "page": 4,
+      "note": "2028 삼척·도계 캠퍼스 시행계획 PDF 4쪽의 2027→2028 전형 대응표 대조. 해당 캠퍼스에만 적용하며 전형방법·모집인원 변경은 2028 계획에서 별도 확인."
+    },
+    {
+      "university": "강원대학교",
+      "campuses": [
+        "삼척",
+        "도계"
+      ],
+      "category": "학생부교과",
+      "target": "강원인재전형",
+      "source": "지역교과전형",
+      "evidence": "https://admission.kangwon.ac.kr/admission/cmmn/download.do?dn=20260611034944247.pdf&path=%2Fbbs%2F20260611135835",
+      "page": 4,
+      "note": "2028 삼척·도계 캠퍼스 시행계획 PDF 4쪽의 2027→2028 전형 대응표 대조. 해당 캠퍼스에만 적용하며 전형방법·모집인원 변경은 2028 계획에서 별도 확인."
+    },
+    {
+      "university": "강원대학교",
+      "campuses": [
+        "강릉"
+      ],
+      "category": "학생부교과",
+      "target": "일반전형",
+      "source": "일반교과Ⅰ전형",
+      "evidence": "https://admission.kangwon.ac.kr/admission/cmmn/download.do?dn=20260611035255948.pdf&path=%2Fbbs%2F20260611135835",
+      "page": 4,
+      "note": "2028 강릉 캠퍼스 시행계획 PDF 4쪽의 2027→2028 전형 대응표 대조. 해당 캠퍼스에만 적용하며 전형방법·모집인원 변경은 2028 계획에서 별도 확인."
+    },
+    {
+      "university": "강원대학교",
+      "campuses": [
+        "강릉"
+      ],
+      "category": "학생부교과",
+      "target": "강원인재전형",
+      "source": "지역교과Ⅰ전형",
+      "evidence": "https://admission.kangwon.ac.kr/admission/cmmn/download.do?dn=20260611035255948.pdf&path=%2Fbbs%2F20260611135835",
+      "page": 4,
+      "note": "2028 강릉 캠퍼스 시행계획 PDF 4쪽의 2027→2028 전형 대응표 대조. 해당 캠퍼스에만 적용하며 전형방법·모집인원 변경은 2028 계획에서 별도 확인."
+    },
+    {
+      "university": "강원대학교",
+      "campuses": [
+        "강릉"
+      ],
+      "category": "학생부종합",
+      "target": "미래인재서류전형",
+      "source": "미래인재서류Ⅰ전형",
+      "evidence": "https://admission.kangwon.ac.kr/admission/cmmn/download.do?dn=20260611035255948.pdf&path=%2Fbbs%2F20260611135835",
+      "page": 4,
+      "note": "2028 강릉 캠퍼스 시행계획 PDF 4쪽의 2027→2028 전형 대응표 대조. 해당 캠퍼스에만 적용하며 전형방법·모집인원 변경은 2028 계획에서 별도 확인."
+    },
+    {
+      "university": "강원대학교",
+      "campuses": [
+        "강릉"
+      ],
+      "category": "학생부종합",
+      "target": "미래인재면접전형",
+      "source": "미래인재면접Ⅰ전형",
+      "evidence": "https://admission.kangwon.ac.kr/admission/cmmn/download.do?dn=20260611035255948.pdf&path=%2Fbbs%2F20260611135835",
+      "page": 4,
+      "note": "2028 강릉 캠퍼스 시행계획 PDF 4쪽의 2027→2028 전형 대응표 대조. 해당 캠퍼스에만 적용하며 전형방법·모집인원 변경은 2028 계획에서 별도 확인."
+    },
+    {
+      "university": "강원대학교",
+      "campuses": [
+        "강릉"
+      ],
+      "category": "학생부종합",
+      "target": "강원인재서류전형",
+      "source": "지역인재서류전형",
+      "evidence": "https://admission.kangwon.ac.kr/admission/cmmn/download.do?dn=20260611035255948.pdf&path=%2Fbbs%2F20260611135835",
+      "page": 4,
+      "note": "2028 강릉 캠퍼스 시행계획 PDF 4쪽의 2027→2028 전형 대응표 대조. 해당 캠퍼스에만 적용하며 전형방법·모집인원 변경은 2028 계획에서 별도 확인."
+    },
+    {
+      "university": "강원대학교",
+      "campuses": [
+        "강릉"
+      ],
+      "category": "학생부종합",
+      "target": "기회균형전형",
+      "source": "기회균형Ⅰ전형",
+      "evidence": "https://admission.kangwon.ac.kr/admission/cmmn/download.do?dn=20260611035255948.pdf&path=%2Fbbs%2F20260611135835",
+      "page": 4,
+      "note": "2028 강릉 캠퍼스 시행계획 PDF 4쪽의 2027→2028 전형 대응표 대조. 해당 캠퍼스에만 적용하며 전형방법·모집인원 변경은 2028 계획에서 별도 확인."
+    },
+    {
+      "university": "강원대학교",
+      "campuses": [
+        "원주"
+      ],
+      "category": "학생부교과",
+      "target": "일반전형",
+      "source": "일반교과Ⅰ전형",
+      "evidence": "https://admission.kangwon.ac.kr/admission/cmmn/download.do?dn=20260611035332884.pdf&path=%2Fbbs%2F20260611135835",
+      "page": 4,
+      "note": "2028 원주 캠퍼스 시행계획 PDF 4쪽의 2027→2028 전형 대응표 대조. 해당 캠퍼스에만 적용하며 전형방법·모집인원 변경은 2028 계획에서 별도 확인."
+    },
+    {
+      "university": "강원대학교",
+      "campuses": [
+        "원주"
+      ],
+      "category": "학생부교과",
+      "target": "강원인재전형",
+      "source": "지역교과Ⅰ전형",
+      "evidence": "https://admission.kangwon.ac.kr/admission/cmmn/download.do?dn=20260611035332884.pdf&path=%2Fbbs%2F20260611135835",
+      "page": 4,
+      "note": "2028 원주 캠퍼스 시행계획 PDF 4쪽의 2027→2028 전형 대응표 대조. 해당 캠퍼스에만 적용하며 전형방법·모집인원 변경은 2028 계획에서 별도 확인."
+    },
+    {
+      "university": "강원대학교",
+      "campuses": [
+        "원주"
+      ],
+      "category": "학생부종합",
+      "target": "미래인재서류전형",
+      "source": "미래인재서류Ⅰ전형",
+      "evidence": "https://admission.kangwon.ac.kr/admission/cmmn/download.do?dn=20260611035332884.pdf&path=%2Fbbs%2F20260611135835",
+      "page": 4,
+      "note": "2028 원주 캠퍼스 시행계획 PDF 4쪽의 2027→2028 전형 대응표 대조. 해당 캠퍼스에만 적용하며 전형방법·모집인원 변경은 2028 계획에서 별도 확인."
+    },
+    {
+      "university": "강원대학교",
+      "campuses": [
+        "원주"
+      ],
+      "category": "학생부종합",
+      "target": "강원인재서류전형",
+      "source": "지역인재서류전형",
+      "evidence": "https://admission.kangwon.ac.kr/admission/cmmn/download.do?dn=20260611035332884.pdf&path=%2Fbbs%2F20260611135835",
+      "page": 4,
+      "note": "2028 원주 캠퍼스 시행계획 PDF 4쪽의 2027→2028 전형 대응표 대조. 해당 캠퍼스에만 적용하며 전형방법·모집인원 변경은 2028 계획에서 별도 확인."
+    },
+    {
+      "university": "강원대학교",
+      "campuses": [
+        "원주"
+      ],
+      "category": "학생부종합",
+      "target": "기회균형전형",
+      "source": "기회균형Ⅰ전형",
+      "evidence": "https://admission.kangwon.ac.kr/admission/cmmn/download.do?dn=20260611035332884.pdf&path=%2Fbbs%2F20260611135835",
+      "page": 4,
+      "note": "2028 원주 캠퍼스 시행계획 PDF 4쪽의 2027→2028 전형 대응표 대조. 해당 캠퍼스에만 적용하며 전형방법·모집인원 변경은 2028 계획에서 별도 확인."
+    },
+    {
+      "university": "경상국립대학교",
+      "category": "학생부교과",
+      "sourceCategory": "학생부종합",
+      "target": "기초생활수급자등전형",
+      "source": "기초생활수급자등전형",
+      "evidence": "https://use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876952&q_fileId=37bf35d9-e284-43e9-9910-ca52aa4702c3",
+      "page": 4,
+      "note": "2028 시행계획 PDF 4쪽 전형 변경표 대조. 2027 학생부종합 → 2028 학생부교과로 유형 변경. 2027 수치는 이전 종합전형 참고값이며 정원내·외는 따로 연결."
+    },
+    {
+      "university": "경상국립대학교",
+      "category": "학생부교과",
+      "sourceCategory": "학생부종합",
+      "target": "특성화고교졸업자전형",
+      "source": "특성화고교졸업자전형",
+      "evidence": "https://use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876952&q_fileId=37bf35d9-e284-43e9-9910-ca52aa4702c3",
+      "page": 4,
+      "note": "2028 시행계획 PDF 4쪽 전형 변경표 대조. 2027 학생부종합 → 2028 학생부교과로 유형 변경. 2027 수치는 이전 종합전형 참고값이며 정원내·외는 따로 연결."
+    },
+    {
+      "university": "경상국립대학교",
+      "category": "학생부교과",
+      "sourceCategory": "학생부종합",
+      "target": "평생학습자전형",
+      "source": "평생학습자전형",
+      "evidence": "https://use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876952&q_fileId=37bf35d9-e284-43e9-9910-ca52aa4702c3",
+      "page": 4,
+      "note": "2028 시행계획 PDF 4쪽 전형 변경표 대조. 2027 학생부종합 → 2028 학생부교과로 유형 변경. 2027 수치는 이전 종합전형 참고값이며 정원내·외는 따로 연결."
+    },
+    {
+      "university": "경상국립대학교",
+      "category": "학생부교과",
+      "sourceCategory": "학생부종합",
+      "target": "재직자전형",
+      "source": "재직자전형",
+      "evidence": "https://use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876952&q_fileId=37bf35d9-e284-43e9-9910-ca52aa4702c3",
+      "page": 4,
+      "note": "2028 시행계획 PDF 4쪽 전형 변경표 대조. 2027 학생부종합 → 2028 학생부교과로 유형 변경. 2027 수치는 이전 종합전형 참고값이며 정원내·외는 따로 연결."
+    },
+    {
+      "university": "동명대학교",
+      "category": "학생부교과",
+      "target": "일반고면접전형",
+      "source": "면접",
+      "evidence": "https://use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876952&q_fileId=b955dc3b-6ec1-4fcd-b256-d6535fa60c22",
+      "page": 3,
+      "note": "2028 시행계획 PDF 3쪽 전형명 변경표 대조. 2027 면접 → 2028 일반고면접. 면접 반영은 20%→30%이며 특성화고·마이스터고 등 지원자격도 달라져 2027 수치는 이전 전형 참고값."
+    },
+    {
+      "university": "성결대학교",
+      "category": "학생부종합",
+      "target": "영암인재(서류형)전형",
+      "source": "영암인재",
+      "evidence": "https://ipsi.sungkyul.ac.kr/files/ipsi/content/202606/7aa7e17718060d4adaee9f0e8c9e7a90.pdf",
+      "page": 8,
+      "note": "2028 시행계획 PDF 8쪽 대조. 2027 영암인재 186명은 서류형으로 명시. 2028 영암인재 서류형에만 이전 전형 수치를 연결하며 신설 면접형에는 연결하지 않음."
+    },
+    {
+      "university": "국립부경대학교",
+      "category": "학생부교과",
+      "target": "백경인재전형",
+      "source": "일반전형",
+      "page": 11,
+      "evidence": "https://use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876952&q_fileId=8aef73d2-6762-4eed-9a0f-cfc3898677cd",
+      "note": "2028 시행계획의 2027/2028 대비표에서 일반전형→백경인재 대응 확인. 모집인원·수능최저 등 변경 가능; 2027 값은 이전 전형 참고."
+    },
+    {
+      "university": "대진대학교",
+      "category": "학생부종합",
+      "target": "윈윈대진전형-면접형",
+      "source": "윈윈대진전형",
+      "page": 3,
+      "evidence": "https://admission.daejin.ac.kr/file/download.do?sfn=20260605113828476_2028%ed%95%99%eb%85%84%eb%8f%84+%eb%8c%80%ed%95%99%ec%9e%85%ed%95%99%ec%a0%84%ed%98%95+%ec%a3%bc%ec%9a%94%ec%82%ac%ed%95%ad.pdf&ofn=2028%ed%95%99%eb%85%84%eb%8f%84+%eb%8c%80%ed%95%99%ec%9e%85%ed%95%99%ec%a0%84%ed%98%95+%ec%a3%bc%ec%9a%94%ec%82%ac%ed%95%ad.pdf",
+      "note": "2028 주요사항에서 서류형 신설과 기존 면접형 면접비율 30%→40% 변경 확인. 2027 윈윈대진 면접 전형만 연결하며 신설 서류형은 제외."
+    },
+    {
+      "university": "경상국립대학교",
+      "category": "학생부종합",
+      "target": "일반전형(일괄)",
+      "source": "학생부종합(일반전형)",
+      "evidence": "https://use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876952&q_fileId=37bf35d9-e284-43e9-9910-ca52aa4702c3",
+      "page": 4,
+      "note": "2028 시행계획 PDF 4쪽 고지 분리 표에서 2027 일반전형과 2028 일괄·면접 표기를 대조. 같은 모집단위가 두 유형에 중복되지 않음을 확인. 2027 수치는 분리 전 일반전형의 참고값."
+    },
+    {
+      "university": "경상국립대학교",
+      "category": "학생부종합",
+      "target": "일반전형(면접)",
+      "source": "학생부종합(일반전형)",
+      "evidence": "https://use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876952&q_fileId=37bf35d9-e284-43e9-9910-ca52aa4702c3",
+      "page": 4,
+      "note": "2028 시행계획 PDF 4쪽 고지 분리 표에서 2027 일반전형과 2028 일괄·면접 표기를 대조. 같은 모집단위가 두 유형에 중복되지 않음을 확인. 2027 수치는 분리 전 일반전형의 참고값."
+    },
+    {
+      "university": "신라대학교",
+      "category": "학생부종합",
+      "target": "학생부종합",
+      "source": "학생부종합Ⅰ",
+      "evidence": "https://use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876954&q_fileId=77867f6b-cb00-41fa-ad6c-c4b90b7f6cf6",
+      "page": 3,
+      "note": "2028 시행계획 PDF 3쪽에서 종합Ⅱ 폐지, 5쪽의 존속 서류형 종합을 대조. 새 성취도전형에는 이전 전형을 연결하지 않음."
+    },
+    {
+      "university": "서울시립대학교",
+      "category": "학생부종합",
+      "target": "학생부종합전형",
+      "source": "학생부종합전형Ⅰ(면접형)",
+      "evidence": "https://www.use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876415&q_fileId=8db5fd39-a794-4dc6-8dd3-5b0c7c15429f",
+      "page": 4,
+      "note": "2028 시행계획 PDF 4쪽 전후 비교표에서 서류형 종합Ⅱ 폐지 및 면접형 종합Ⅰ 존속을 대조. 2027 면접형의 실제 수치만 참고."
+    },
+    {
+      "university": "경희대학교",
+      "category": "학생부종합",
+      "target": "네오르네상스전형(면접형)",
+      "source": "네오르네상스전형",
+      "evidence": "https://kr.object.gov-ncloudstorage.com/khuiphakstorage/upload/20260429032446325_2028%ED%95%99%EB%85%84%EB%8F%84%20%EA%B2%BD%ED%9D%AC%EB%8C%80%ED%95%99%EA%B5%90%20%EB%8C%80%ED%95%99%EC%9E%85%ED%95%99%EC%A0%84%ED%98%95%EA%B3%84%ED%9A%8D%28%EC%95%88%29.pdf",
+      "page": 5,
+      "note": "2028 시행계획 PDF 5쪽 전형 이원화와 공식 주요사항 PDF 2쪽 서류형 신설을 대조. 기존 면접형만 연결하며 모집인원·지원자 집단이 달라 직접 비교에 주의. 신설 서류형은 미연결."
+    },
+    {
+      "university": "연세대학교",
+      "category": "학생부종합",
+      "target": "종합인재형",
+      "source": "활동우수형",
+      "evidence": "https://use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876417&q_fileId=0d866d94-33bd-4c92-b939-8471ac631ed9",
+      "page": 5,
+      "note": "2028 시행계획 PDF 5쪽 활동우수형·국제인재 통합표 대조. 두 이전 전형을 모두 검색하여 동일 모집단위·캠퍼스에서 한 전형만 존재할 때 연결. 2027 통합 이전 참고값이며 합산하지 않음.",
+      "sourceAlternatives": [
+        "국제인재"
+      ],
+      "campuses": [
+        "서울·국제(학년·전공별)"
+      ]
+    },
+    {
+      "university": "인천대학교",
+      "category": "학생부종합",
+      "target": "자기추천전형-면접형",
+      "source": "자기추천",
+      "evidence": "https://use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876433&q_fileId=f2c597f3-ec47-496f-8278-7341c4a6e163",
+      "page": 2,
+      "note": "2028 시행계획 PDF 2쪽 기존 면접전형 변경표 대조. 자유전공 서류형은 신설로 제외. 면접비율 변경 전인 2027 참고값."
+    },
+    {
+      "university": "성신여자대학교",
+      "category": "학생부교과",
+      "target": "지역균형Ⅰ전형",
+      "source": "지역균형",
+      "evidence": "https://www.use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876417&q_fileId=7b921809-fc03-4ea2-b141-d95cab3360a7",
+      "page": 3,
+      "note": "2028 시행계획 PDF 3쪽 지역균형을 졸업예정자Ⅰ·졸업자Ⅱ로 분리한 대응표 대조. 2027 수치는 분리 전 전체 지원자 기준이며 2028Ⅰ만의 경쟁률이 아님."
+    },
+    {
+      "university": "국민대학교",
+      "category": "학생부교과",
+      "target": "교과우수자Ⅰ(학교장추천)전형",
+      "source": "교과우수자(학교장추천)",
+      "evidence": "https://admission.kookmin.ac.kr/common/file_download.php?id=notice&no=2170",
+      "page": 5,
+      "note": "2028 시행계획 PDF 5쪽 학교장추천을 졸업예정자Ⅰ·졸업자Ⅱ로 분리한 대응표 대조. 2027 수치는 분리 전 전체 지원자 기준이며 2028Ⅰ만의 경쟁률이 아님."
+    },
+    {
+      "university": "서울과학기술대학교",
+      "category": "학생부종합",
+      "target": "서울텍인재전형",
+      "source": "학교생활우수자전형",
+      "evidence": "https://www.use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876415&q_fileId=cc65c1ce-a888-4da1-af72-ecb57d5c1dfb",
+      "page": 3,
+      "note": "2028 시행계획 PDF 3쪽 전형 명칭 변경표 대조."
+    },
+    {
+      "university": "서울과학기술대학교",
+      "category": "학생부종합",
+      "target": "서울텍미래전형",
+      "source": "창의융합인재전형",
+      "evidence": "https://www.use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876415&q_fileId=cc65c1ce-a888-4da1-af72-ecb57d5c1dfb",
+      "page": 3,
+      "note": "2028 시행계획 PDF 3쪽 전형 명칭 변경표 대조."
+    },
+    {
+      "university": "남서울대학교",
+      "category": "학생부종합",
+      "target": "학생부종합전형",
+      "source": "학생부종합 서류형",
+      "evidence": "https://www.namseoul.net/file/download.do?ofn=%5B%EB%82%A8%EC%84%9C%EC%9A%B8%EB%8C%80%ED%95%99%EA%B5%90%5D2028%ED%95%99%EB%85%84%EB%8F%84%EB%8C%80%ED%95%99%EC%9E%85%ED%95%99%EC%A0%84%ED%98%95%EC%8B%9C%ED%96%89%EA%B3%84%ED%9A%8D.pdf&sfn=20260713044336216_%5B%EB%82%A8%EC%84%9C%EC%9A%B8%EB%8C%80%ED%95%99%EA%B5%90%5D2028%ED%95%99%EB%85%84%EB%8F%84%EB%8C%80%ED%95%99%EC%9E%85%ED%95%99%EC%A0%84%ED%98%95%EC%8B%9C%ED%96%89%EA%B3%84%ED%9A%8D.pdf",
+      "page": 2,
+      "note": "2028 시행계획 PDF 2쪽 서류형→학생부종합 통합 운영 및 면접형 폐지를 대조. 2027의 서류형 실제값만 참고."
+    },
+    {
+      "university": "한양대학교",
+      "category": "학생부종합",
+      "target": "학업형",
+      "source": "추천형",
+      "evidence": "https://use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876420&q_fileId=7e212d78-eaac-4f3e-a65d-b063c1fd4e5b",
+      "page": 9,
+      "note": "2028 시행계획 PDF 9쪽 추천형→학업형 명칭 변경표 대조. 폐지 서류형은 합산하지 않으며 2027 추천형의 값만 연결.",
+      "campuses": [
+        "서울"
+      ]
+    },
+    {
+      "university": "건국대학교",
+      "category": "논술",
+      "target": "KU논술",
+      "source": "KU논술우수자",
+      "evidence": "https://use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876413&q_fileId=25bbd553-d794-4d6d-b2de-56420229a26f",
+      "page": 4,
+      "note": "2028 시행계획 PDF 4쪽 KU논술우수자→KU논술 전형명 변경표 대조.",
+      "campuses": [
+        "서울"
+      ]
+    },
+    {
+      "university": "홍익대학교",
+      "category": "학생부종합",
+      "target": "학교생활우수자(서류형)전형",
+      "source": "학교생활우수자전형",
+      "evidence": "https://www.use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876420&q_fileId=e1d31da8-1e29-43bb-b07a-6da963208757",
+      "page": 4,
+      "note": "2028 시행계획 PDF 4쪽 면접형 신설 및 기존 서류형 존속 대조. 신설 면접형에는 연결하지 않음.",
+      "campuses": [
+        "서울"
+      ]
+    },
+    {
+      "university": "아주대학교",
+      "category": "학생부종합",
+      "target": "ACE전형(면접형)",
+      "source": "ACE전형",
+      "evidence": "https://www.iajou.ac.kr/notice/view.php?bn=78459&m_type=ALL&nPage=0",
+      "page": 2,
+      "note": "2028 시행계획 PDF 2쪽 ACE·첨단융합인재→ACE 면접·서류 구성 변경표 대조. 이전 두 전형을 모두 조회해 동일 모집단위에서 한 전형만 존재할 때 연결. 서류형에는 연결하지 않음.",
+      "sourceAlternatives": [
+        "첨단융합인재전형"
+      ]
+    },
+    {
+      "university": "충남대학교",
+      "category": "학생부종합",
+      "target": "고른기회특별전형(저소득층학생)",
+      "source": "저소득층학생전형",
+      "evidence": "https://ipsi.cnu.ac.kr/_prog/_board/common/download.php?atch_no=1&code=notice_faculty&ntt_no=2025645",
+      "page": 19,
+      "note": "2028 시행계획 PDF 19쪽 고른기회 특별전형 내 저소득층학생 지원자격을 확인. 2027 원문의 동일 저소득층 세부전형과만 연결하며 다른 고른기회 자격과 혼용하지 않음."
+    },
+    {
+      "university": "송원대학교",
+      "category": "학생부교과",
+      "target": "학생부우수자-일반전형",
+      "source": "일반전형",
+      "evidence": "https://iphak.songwon.ac.kr/sb/SE_Board.asp?action=downLoad&boardID=NEWS&SEQ=249&fileDownSEQ=1&pgKey=0",
+      "page": 2,
+      "note": "2028 시행계획 PDF 2쪽 2027·2028 전형별 대응표 대조. 학생부우수자는 분류 제목이며 일반과 수급자·차상위·한부모는 별개 세부전형으로 연결."
+    },
+    {
+      "university": "송원대학교",
+      "category": "학생부교과",
+      "target": "학생부우수자(수급자/차상위/한부모)",
+      "source": "수급자 차상위 한부모",
+      "evidence": "https://iphak.songwon.ac.kr/sb/SE_Board.asp?action=downLoad&boardID=NEWS&SEQ=249&fileDownSEQ=1&pgKey=0",
+      "page": 2,
+      "note": "2028 시행계획 PDF 2쪽 2027·2028 전형별 대응표 대조. 학생부우수자는 분류 제목이며 일반과 수급자·차상위·한부모는 별개 세부전형으로 연결."
+    },
+    {
+      "university": "국립순천대학교",
+      "category": "학생부교과",
+      "target": "교과지역인재전형",
+      "source": "지역인재전형",
+      "evidence": "https://www.scnu.ac.kr/common/nttFileDownload.do?fileKey=00da11bed821dc254ee3977a932c4f62",
+      "page": 3,
+      "note": "2028 시행계획 PDF 3쪽 지역인재전형 전후 비교 및 학생부교과 구분 대조. 교과 분류를 앞에 붙인 표기만 통일하며 종합지역인재서류는 연결하지 않음."
+    },
+    {
+      "university": "부산대학교",
+      "category": "학생부종합",
+      "target": "저소득층학생전형",
+      "source": "저소득층학생전형Ⅰ",
+      "evidence": "https://go.pusan.ac.kr/down/mojib/RF(0)_260611154120.pdf",
+      "page": 53,
+      "note": "2027 공식 수시요강 PDF 53~54쪽의 저소득층학생 모집표·자격 대조. 경쟁률 원문은 Ⅰ을 붙여 표기하지만 동일한 75개 모집단위·총 92명이며, 2028 계획 22쪽의 저소득층 자격과 구분 확인. 지역인재 저소득층은 별개 전형."
+    },
+    {
+      "university": "서울시립대학교",
+      "category": "학생부교과",
+      "target": "지역균형선발전형",
+      "source": "고교추천전형",
+      "evidence": "https://www.use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876415&q_fileId=8db5fd39-a794-4dc6-8dd3-5b0c7c15429f",
+      "page": 4,
+      "note": "2028 시행계획 PDF 4쪽의 학교장추천 학생부교과 지역균형선발과 2027 확정 수시요강 PDF 3~4쪽의 고교추천전형을 대조. 두 문서의 유일한 학교장추천 교과전형이며, 2027 인원·경쟁률은 확정 고교추천 원문값을 사용."
+    },
+    {
+      "university": "부산대학교",
+      "category": "학생부종합",
+      "target": "면접지역전형",
+      "source": "지역인재전형Ⅰ",
+      "evidence": "https://go.pusan.ac.kr/_common/new_download_file.asp?menu=boardfile&file_no=4304",
+      "page": 4,
+      "note": "2028 시행계획 PDF 4쪽 면접지역←지역인재 명칭 변경. 2027 수시요강 PDF 42쪽 지역인재 16개 모집단위·178명이 경쟁률 원문의 지역인재Ⅰ과 일치. 면접 비율은 20%에서 30%로 변경."
+    },
+    {
+      "university": "고신대학교",
+      "category": "학생부교과",
+      "target": "일반고교과",
+      "source": "일반고",
+      "evidence": "https://www.kosin.ac.kr/dream/?idx=2731&mode=fdn&num=1&pCode=MN7000055",
+      "page": 3,
+      "note": "2028 시행계획 PDF 3쪽 전형명 변경표: 일반고→일반고교과. 신설 일반고서류면접·일반고성장인재에는 연결하지 않음."
+    },
+    {
+      "university": "국립목포대학교",
+      "category": "학생부교과",
+      "target": "지역인재(일반)전형",
+      "source": "지역인재(교과)",
+      "evidence": "https://www.use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876920&q_fileId=b4b079a1-0792-4f5a-bc16-53a5c44048c0",
+      "page": 3,
+      "note": "2028 시행계획 PDF 3쪽에서 지역인재(일반)을 교과·종합으로 구분. 2027 공식 경쟁률 원문의 지역인재(교과)·지역인재(종합)을 각각 연결. 지역인재(기초-교과)는 별개이며 교차 연결하지 않음."
+    },
+    {
+      "university": "국립목포대학교",
+      "category": "학생부종합",
+      "target": "지역인재(일반)전형",
+      "source": "지역인재(종합)",
+      "evidence": "https://www.use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876920&q_fileId=b4b079a1-0792-4f5a-bc16-53a5c44048c0",
+      "page": 3,
+      "note": "2028 시행계획 PDF 3쪽에서 지역인재(일반)을 교과·종합으로 구분. 2027 공식 경쟁률 원문의 지역인재(교과)·지역인재(종합)을 각각 연결. 지역인재(기초-교과)는 별개이며 교차 연결하지 않음."
+    },
+    {
+      "university": "고려대학교",
+      "category": "학생부종합",
+      "target": "일반전형-서류형",
+      "source": "크림슨인재전형",
+      "evidence": "https://oku.korea.ac.kr/ajaxfile/FR_SVC/FileDown.do?GBN=X01&BOARD_SEQ=8&SITE_NO=3&BBS_SEQ=1958&FILE_SEQ=1",
+      "page": 3,
+      "note": "2028 시행계획 전형명 변경표에서 크림슨인재 → 일반-서류형 확인. 신설 면접형은 제외.",
+      "campuses": [
+        "세종캠퍼스"
+      ]
+    },
+    {
+      "university": "을지대학교",
+      "category": "학생부교과",
+      "target": "학교장추천",
+      "source": "지역균형(학교장추천)",
+      "evidence": "https://www.use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876520&q_fileId=e8a2add4-c02e-43a1-b03e-1467c86ef732",
+      "page": 3,
+      "note": "2028 시행계획 전형명 변경표 대조: 지역균형(학교장추천) → 학교장추천."
+    },
+    {
+      "university": "평택대학교",
+      "category": "학생부교과",
+      "target": "PTU지역균형",
+      "source": "PTU추천",
+      "evidence": "https://www.use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876520&q_fileId=5b4652b9-d26c-4fc3-8b98-0941a31bf685",
+      "page": 4,
+      "note": "2028 시행계획 전형명 변경표의 PTU추천 → PTU지역균형 대조."
+    },
+    {
+      "university": "대전대학교",
+      "category": "학생부교과",
+      "target": "사회통합전형",
+      "source": "고른기회전형",
+      "evidence": "https://ipsi.dju.ac.kr/upload/BBS0004/20260430170413001.pdf",
+      "page": 6,
+      "note": "2028 시행계획 주요 변경사항 전형 명칭 변경표 대조."
+    },
+    {
+      "university": "대전대학교",
+      "category": "학생부종합",
+      "target": "대전대종합전형(면접형)",
+      "source": "혜화인재전형",
+      "evidence": "https://ipsi.dju.ac.kr/upload/BBS0004/20260430170413001.pdf",
+      "page": 6,
+      "note": "2028 시행계획 명칭 변경표 대조. 서류형은 신설이므로 연결 제외. 기존 혜화인재에서 모집한 동일 학과만 연결."
+    },
+    {
+      "university": "전북대학교",
+      "category": "학생부종합",
+      "target": "지역인재1유형전형",
+      "source": "지역인재1유형전형-호남권",
+      "evidence": "https://use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876929&q_fileId=740ae2d8-a30d-4180-857b-22402636dc6e",
+      "page": 15,
+      "note": "2028 시행계획 지역인재1유형 지원자격의 호남권을 대조. 2유형(전북권)과 구분."
+    },
+    {
+      "university": "전북대학교",
+      "category": "학생부교과",
+      "target": "지역인재1유형전형",
+      "source": "지역인재1유형전형-호남권",
+      "evidence": "https://use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876929&q_fileId=740ae2d8-a30d-4180-857b-22402636dc6e",
+      "page": 28,
+      "note": "2028 시행계획 지역인재1유형 지원자격의 호남권을 대조. 교과와 종합을 별도로 연결."
+    },
+    {
+      "university": "건양대학교",
+      "category": "학생부종합",
+      "target": "일반종합",
+      "source": "학생부종합",
+      "evidence": "https://www.use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876932&q_fileId=f9ed6e57-fe43-4d9e-9f90-b2e635b45577",
+      "page": 4,
+      "note": "2027 모집요강 요약표의 서류100% 학생부종합 241명과 2028 일반종합(서류100%, 241명)을 대조. 별도 면접형에는 연결하지 않음."
+    },
+    {
+      "university": "나사렛대학교",
+      "category": "학생부교과",
+      "target": "일반전형",
+      "source": "일반학생전형(학생부교과/실기위주)",
+      "evidence": "https://ipsi.kornu.ac.kr/bbs/ipsi/896/110281/download.do",
+      "page": 9,
+      "note": "2028 지원자격표에 일반전형(일반학생)으로 병기된 동일 전형. 학생부교과 모집단위만 연결."
+    },
+    {
+      "university": "나사렛대학교",
+      "category": "학생부종합",
+      "target": "창의융합인재(서류형)",
+      "source": "창의융합인재(학생부종합-서류형/면접형/실기위주)",
+      "evidence": "https://ipsi.kornu.ac.kr/bbs/ipsi/896/110281/download.do",
+      "page": 11,
+      "note": "2027 경쟁률은 창의융합인재 명칭으로 학과별 행을 공개. 2028 시행계획 3·11쪽의 서류형 학과 및 전년도 동일 평가방식 대조. 학과가 다른 면접형·실기 모집을 합산하지 않음."
+    },
+    {
+      "university": "나사렛대학교",
+      "category": "학생부종합",
+      "target": "창의융합인재(면접형)",
+      "source": "창의융합인재(학생부종합-서류형/면접형/실기위주)",
+      "evidence": "https://ipsi.kornu.ac.kr/bbs/ipsi/896/110281/download.do",
+      "page": 11,
+      "note": "2028 시행계획 3·11쪽의 간호학과 면접형 및 전년도 동일 방식 대조. 학과별로 공개된 2027 창의융합인재 행만 연결."
+    },
+    {
+      "university": "한국기술교육대학교",
+      "category": "논술",
+      "target": "논술일반전형",
+      "source": "논술전형",
+      "evidence": "https://www.koreatech.ac.kr/boardDownload.es?bid=0036&list_no=55718&mid=a40601000000&seq=1",
+      "page": 4,
+      "note": "2028 시행계획 3·4쪽에서 논술 일반전형으로 병기된 논술100% 전형과 2027 논술전형 원문 대조. 동일 모집단위의 이전년도 실적."
+    },
+    {
+      "university": "홍익대학교",
+      "category": "학생부종합",
+      "target": "학교생활우수자(서류형)전형",
+      "source": "학교생활우수자전형",
+      "evidence": "https://www.use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876420&q_fileId=e1d31da8-1e29-43bb-b07a-6da963208757",
+      "page": 37,
+      "note": "2028 시행계획 세종캠퍼스 37쪽 서류100% 학교생활우수자(서류형)와 기존 학교생활우수자전형 대조. 서울의 신설 면접형은 제외.",
+      "campuses": [
+        "세종"
+      ]
+    },
+    {
+      "university": "부산가톨릭대학교",
+      "category": "학생부교과",
+      "target": "교과일반전형",
+      "source": "교과우수Ⅰ",
+      "evidence": "https://www.cup.ac.kr/pdf/ipsi/2028%ED%95%99%EB%85%84%EB%8F%84%20%EB%8C%80%ED%95%99%EC%9E%85%ED%95%99%EC%A0%84%ED%98%95%20%EC%8B%9C%ED%96%89%EA%B3%84%ED%9A%8D.pdf",
+      "page": 2,
+      "note": "2028 시행계획 PDF 2쪽 전형 명칭 변경표의 교과우수Ⅰ→교과일반 대응을 확인. 신설 교과진로에는 연결하지 않음."
+    },
+    {
+      "university": "부산가톨릭대학교",
+      "category": "학생부교과",
+      "target": "교과공동체전형",
+      "source": "교과우수Ⅱ",
+      "evidence": "https://www.cup.ac.kr/pdf/ipsi/2028%ED%95%99%EB%85%84%EB%8F%84%20%EB%8C%80%ED%95%99%EC%9E%85%ED%95%99%EC%A0%84%ED%98%95%20%EC%8B%9C%ED%96%89%EA%B3%84%ED%9A%8D.pdf",
+      "page": 2,
+      "note": "2028 시행계획 PDF 2쪽 명칭 변경표의 교과우수Ⅱ→공동체 대응을 확인. 교과80%+공동체역량 서류20%로 구분."
+    },
+    {
+      "university": "남부대학교",
+      "category": "학생부교과",
+      "target": "기초/차상위/한부모",
+      "source": "기초생활수급자/차상위계층/한부모가족(정원외)",
+      "evidence": "https://use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876920&q_fileId=e75a2f9e-8fc6-404c-bded-6164fcd2ea86",
+      "page": 2,
+      "note": "2028 시행계획 PDF 2쪽 전년도 대비 표의 동일 정원외 자격 약칭 대조."
+    },
+    {
+      "university": "안양대학교",
+      "category": "학생부교과",
+      "target": "기회균형특별전형",
+      "source": "기회균형",
+      "evidence": "https://enter.anyang.ac.kr/files/enter/content/202604/482a3133e2f846edd00b3761a520916b.pdf",
+      "page": 10,
+      "note": "2028 시행계획 PDF 4·5쪽 모집표의 기회균형과 7·10쪽의 기회균형 특별전형 병기 및 정원외 저소득층 지원자격 대조."
+    },
+    {
+      "university": "경운대학교",
+      "category": "학생부교과",
+      "target": "교과1전형",
+      "source": "교과일반전형",
+      "evidence": "https://www.adiga.kr/ucp/uvt/uni/univDetailSelection.do?menuId=PCUVTINF2000&searchSyr=2027&unvCd=0000244",
+      "page": 5,
+      "note": "공식 2027 전년대비 변경표의 교과일반·교과면접 명칭 변경과 2028 시행계획의 교과1·교과2 전형방법을 대조. 면접 유무를 구분한 전년도 실적 참고값.",
+      "recordIds": [
+        "PLAN-55796f33e059e503",
+        "RES-005293",
+        "RES-005295",
+        "RES-005299",
+        "RES-005300",
+        "RES-005303",
+        "RES-005310"
+      ]
+    },
+    {
+      "university": "경운대학교",
+      "category": "학생부교과",
+      "target": "교과2전형",
+      "source": "교과면접전형",
+      "evidence": "https://www.adiga.kr/ucp/uvt/uni/univDetailSelection.do?menuId=PCUVTINF2000&searchSyr=2027&unvCd=0000244",
+      "page": 5,
+      "note": "공식 2027 전년대비 변경표의 교과일반·교과면접 명칭 변경과 2028 시행계획의 교과1·교과2 전형방법을 대조. 면접 유무를 구분한 전년도 실적 참고값.",
+      "recordIds": [
+        "RES-005317",
+        "RES-005319",
+        "RES-005322",
+        "RES-005323"
+      ]
+    },
+    {
+      "university": "경운대학교",
+      "category": "학생부교과",
+      "target": "지역교과전형",
+      "source": "지역인재전형",
+      "evidence": "https://www.adiga.kr/ucp/uvt/uni/univDetailSelection.do?menuId=PCUVTINF2000&searchSyr=2027&unvCd=0000244",
+      "note": "공식 2027 전년대비 변경표의 지역교과→지역인재 명칭 변경 확인. 학생부100% 지역교과에만 연결하며 별도 지역인재종합에는 연결하지 않음."
+    },
+    {
+      "university": "목원대학교",
+      "category": "학생부교과",
+      "target": "교과Ⅰ전형",
+      "source": "교과전형",
+      "evidence": "https://use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876933&q_fileId=1b2411c7-357f-42e1-b645-3d23e580cb47",
+      "page": 3,
+      "note": "2028 시행계획 PDF 3쪽의 전년도 교과 성적반영 비교표와 2027 수시요강 PDF 5쪽 교과100% 전형 대조. 기존 최저 미적용 교과전형의 참고값이며, 새 수능최저를 적용하는 교과Ⅱ와 면접에는 연결하지 않음."
+    },
+    {
+      "university": "목원대학교",
+      "category": "학생부종합",
+      "target": "MW인재전형",
+      "source": "학생부종합전형",
+      "evidence": "https://use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876933&q_fileId=1b2411c7-357f-42e1-b645-3d23e580cb47",
+      "page": 7,
+      "note": "2027 수시요강 PDF 5쪽 학생부종합 서류100%와 2028 시행계획 PDF 7쪽 MW인재 서류100% 전형 대조. 이전에도 모집한 동일 학과의 원문값만 연결."
+    },
+    {
+      "university": "창신대학교",
+      "category": "학생부교과",
+      "target": "일반교과전형",
+      "source": "일반계고교",
+      "evidence": "https://use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876955&q_fileId=d8af0790-53f7-493f-a62d-62e7cc685cf4",
+      "page": 3,
+      "note": "2027 수시요강 일반계고교와 2028 시행계획 PDF 3·7쪽 일반교과 대응 및 평가방식 대조. 2028 지원자격이 확대되므로 2027 일반계고교 지원자 집단의 이전 전형 참고값임."
+    },
+    {
+      "university": "창신대학교",
+      "category": "학생부교과",
+      "target": "CSU면접전형",
+      "source": "창신인재면접",
+      "evidence": "https://use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876955&q_fileId=d8af0790-53f7-493f-a62d-62e7cc685cf4",
+      "page": 4,
+      "note": "2027 수시요강 창신인재면접과 2028 시행계획 CSU면접의 학생부60%+면접40% 전형 대조. 2028 신설 CSU종합에는 연결하지 않음."
+    },
+    {
+      "university": "중부대학교",
+      "category": "학생부교과",
+      "target": "학교생활우수자Ⅰ전형",
+      "source": "학교생활우수자전형",
+      "evidence": "https://grad.joongbu.ac.kr/boardDownload.es?bid=0232&list_no=333882&seq=1",
+      "page": 1,
+      "note": "2028 시행계획 전형요약의 학생부70%+면접30% 학교생활우수자Ⅰ과 2027 동일 평가방식 학교생활우수자 대조. 2027은 분리 전 지원자 기준이며, 학생부50%+면접50%인Ⅱ에는 연결하지 않음."
+    },
+    {
+      "university": "건국대학교",
+      "category": "학생부종합",
+      "target": "Cogito자기추천전형(면접형)",
+      "source": "Cogito자기추천",
+      "evidence": "https://enter.kku.ac.kr/upload_data/mojib/20260429144549_68.pdf",
+      "page": 7,
+      "note": "2027 수시요강 PDF 5쪽의 Cogito자기추천과 2028 시행계획 PDF 7쪽 면접형을 대조. 2단계 서류70%+면접30%를 유지하되 1단계 선발배수는 3배수에서 4배수로 변경. 신설 서류형에는 연결하지 않음.",
+      "campuses": [
+        "글로컬캠퍼스"
+      ]
+    },
+    {
+      "university": "한경국립대학교",
+      "target": "일반전형",
+      "source": "일반전형_안성",
+      "category": "학생부교과",
+      "recordIds": [
+        "RES-003662",
+        "RES-003629",
+        "RES-003631",
+        "RES-003632",
+        "RES-003633",
+        "RES-003634",
+        "RES-003635",
+        "RES-003636",
+        "RES-003637",
+        "RES-003638",
+        "RES-003640",
+        "RES-003641",
+        "RES-003643",
+        "RES-003644",
+        "RES-003645",
+        "RES-003646",
+        "RES-003647",
+        "RES-003648",
+        "RES-003649",
+        "RES-003650",
+        "RES-003651",
+        "RES-003654",
+        "RES-003655",
+        "RES-003656",
+        "RES-003657",
+        "RES-003658",
+        "RES-003659",
+        "RES-003660"
+      ],
+      "evidence": "https://ipsi.hknu.ac.kr/upload_data/mojib/20260601140951_33.pdf",
+      "page": 5,
+      "note": "2027 모집요강의 전형명 및 캠퍼스 구분 대조. 원자료 P는 평택 일반전형으로 확인. 과거 참고 행의 2027 실제 지원현황만 연결하며 2028 모집조건 확정으로 해석하지 않음."
+    },
+    {
+      "university": "한경국립대학교",
+      "target": "일반전형P",
+      "source": "일반전형_평택",
+      "category": "학생부교과",
+      "recordIds": [
+        "RES-003670",
+        "RES-003664",
+        "RES-003665",
+        "RES-003667",
+        "RES-003668"
+      ],
+      "evidence": "https://ipsi.hknu.ac.kr/upload_data/mojib/20260601140951_33.pdf",
+      "page": 5,
+      "note": "2027 모집요강의 전형명 및 캠퍼스 구분 대조. 원자료 P는 평택 일반전형으로 확인. 과거 참고 행의 2027 실제 지원현황만 연결하며 2028 모집조건 확정으로 해석하지 않음."
+    },
+    {
+      "university": "한경국립대학교",
+      "target": "잠재력우수자전형",
+      "source": "잠재력우수자_안성",
+      "category": "학생부종합",
+      "recordIds": [
+        "RES-003755",
+        "RES-003725",
+        "RES-003726",
+        "RES-003727",
+        "RES-003728",
+        "RES-003729",
+        "RES-003730",
+        "RES-003731",
+        "RES-003732",
+        "RES-003736",
+        "RES-003737",
+        "RES-003738",
+        "RES-003739",
+        "RES-003740",
+        "RES-003741",
+        "RES-003742",
+        "RES-003743",
+        "RES-003744",
+        "RES-003745",
+        "RES-003746",
+        "RES-003747",
+        "RES-003748",
+        "RES-003749",
+        "RES-003750",
+        "RES-003751",
+        "RES-003752",
+        "RES-003753",
+        "RES-003754"
+      ],
+      "evidence": "https://ipsi.hknu.ac.kr/upload_data/mojib/20260601140951_33.pdf",
+      "page": 5,
+      "note": "2027 모집요강의 전형명 및 캠퍼스 구분 대조. 원자료 P는 평택 일반전형으로 확인. 과거 참고 행의 2027 실제 지원현황만 연결하며 2028 모집조건 확정으로 해석하지 않음."
+    },
+    {
+      "university": "가야대학교",
+      "target": "일반전형",
+      "source": "일반학생(정원내)",
+      "category": "학생부교과",
+      "evidence": "https://ipsi.kaya.ac.kr/File/Download.do?dir=board&realname=2028%ED%95%99%EB%85%84%EB%8F%84+%EB%8C%80%ED%95%99%EC%9E%85%ED%95%99%EC%A0%84%ED%98%95+%EC%8B%9C%ED%96%89%EA%B3%84%ED%9A%8D.pdf&savename=20260504_541223120519",
+      "page": 3,
+      "note": "2028 시행계획 3쪽 전형변경 없음, 4·6쪽 일반 교과100% 전형과 2027 일반학생 정원내 실적을 대조."
+    },
+    {
+      "university": "한신대학교",
+      "target": "교과우수자전형",
+      "source": "학생부우수자",
+      "category": "학생부교과",
+      "evidence": "https://www.use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876526&q_fileId=17ace9c8-13a5-48c9-bb9f-4a1e70c47219",
+      "page": 3,
+      "note": "2028 시행계획 전년도 대비표에서 학생부우수자→교과우수자 확인. 지원자격 확대와 교과반영 과목수 변경이 있으므로 2027 실적 참고값으로만 표시."
+    }
+  ]
+}

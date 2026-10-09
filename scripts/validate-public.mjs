@@ -27,7 +27,7 @@ check(html.includes('id="workspace-search"') && html.includes('id="workspace-adm
 check(html.includes('function switchWorkspace(workspace)'), 'top workspace switching logic missing');
 check(html.includes('data-src="modules/admission-2028/index.html"'), '2028 module relative path missing');
 check(
-  html.includes('data-version="12.0.0-release-20261004"')
+  html.includes('data-version="12.0.0-cutoff-20261010"')
     && html.includes("if (!frame.getAttribute('src'))")
     && html.includes('frame.setAttribute(\'src\', `${frame.dataset.src}?v=${version}`)'),
   '2028 module versioned lazy-load state preservation missing',
@@ -273,6 +273,7 @@ check(sha256(minimumText) === manifest.suneungMinimum.sha256, 'CSAT minimum hash
 
 let generated = fs.readFileSync(path.join(root, 'src', 'index.template.html'), 'utf8').replace(/\r\n/g, '\n');
 generated = generated.replace('__RAW_DATA__', admissionsText).replace('__SNT_DATA__', minimumText);
+generated = generated.replace('__CUTOFF_CURRENT__',JSON.stringify(JSON.parse(fs.readFileSync(path.join(root,'data/cutoff-current.json'),'utf8')).baseline));
 generated = generated.replace('__ADMISSIONS_OFFICE_LINKS__', admissionsOfficeLinksText);
 generated = generated.replace('__PROGRAM_TAGS__', programTagsText);
 generated = generated.replace('__CONTRACT_PROGRAM_DETAILS__', contractProgramDetailsText);
@@ -321,7 +322,7 @@ for (const entry of fs.readdirSync(root)) {
   check(allowedRoot.has(entry), `unexpected public path: ${entry}`);
 }
 for (const file of fs.readdirSync(path.join(root, 'scripts'))) {
-  check(['audit-source.py', 'build.mjs', 'extract-baseline.mjs', 'generate-program-tags.py', 'validate-public.mjs'].includes(file), `unexpected script: ${file}`);
+  check(['audit-source.py', 'build.mjs', 'extract-baseline.mjs', 'generate-program-tags.py', 'validate-public.mjs', 'link-application-2027.cjs', 'audit-cutoff-workbook.py', 'audit-cutoffs.cjs', 'import-cutoff-current.cjs', 'verify-cutoff-metrics.cjs'].includes(file), `unexpected script: ${file}`);
 }
 
 const admission2028Allowed = new Set([
@@ -334,6 +335,7 @@ const admission2028Allowed = new Set([
   'data/verification.json',
   'index.html',
   'scripts/build.mjs',
+  'scripts/link-baseline.cjs',
   'scripts/grade-ui.js',
   'scripts/real-ui.js',
   'scripts/verify.cjs',

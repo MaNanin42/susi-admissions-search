@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "targetYear": 2028,
-  "reviewed": "2026-10-04",
-  "scope": "2028 시행계획 확인 43개 모집단위. 2027 참고 18개 별도 유지. 전남대 4학과는 전체 90명만 확인하여 학과별 인원은 미확인으로 표시.",
+  "reviewed": "2026-10-09",
+  "scope": "2028 시행계획 확인 47개 모집단위. 2027 참고 14개 별도 유지. 전남대 4학과는 전체 90명만 확인하여 학과별 인원은 미확인으로 표시. 고려대 3학과 표 인원은 계열적합전형 기준이며 학업우수는 상세에 구분.",
   "sources": {
     "tuk": {
       "university": "한국공학대학교",
@@ -236,6 +236,39 @@
       "documentDate": "2028 시행계획 · 교육청 공개 게시본",
       "sha256": "1c06280def9ffebdb6a54d96c7160cb86100879b35acec6a7f291f4eb2ea7f37",
       "access": "2026-10-04 교육청 공개 PDF 재다운로드·본문 대조. 대학 입학처 최신 개정 여부 별도 확인."
+    },
+    "korea-2028": {
+      "university": "고려대학교",
+      "year": 2028,
+      "title": "고려대학교 2028학년도 대학입학전형 시행계획",
+      "url": "https://oku.korea.ac.kr/ajaxfile/FR_SVC/FileDown.do?GBN=X01&BOARD_SEQ=5&SITE_NO=2&BBS_SEQ=1791&FILE_SEQ=2",
+      "file": "korea-2028.pdf",
+      "pages": [
+        5,
+        6,
+        13,
+        14
+      ],
+      "reviewed": "2026-10-09",
+      "documentDate": "2026-04-30",
+      "sha256": "57280290e01288001ef7101b9684a240022027a79d14288f7af97e8d75fb585a",
+      "access": "입학처 공식 PDF 직접 확인"
+    },
+    "ssu-2028": {
+      "university": "숭실대학교",
+      "year": 2028,
+      "title": "숭실대학교 2028학년도 대학입학전형 시행계획",
+      "url": "https://admission.ssu.ac.kr/upload/2028_plan.pdf",
+      "file": "ssu-2028.pdf",
+      "pages": [
+        8,
+        11,
+        13
+      ],
+      "reviewed": "2026-10-09",
+      "documentDate": "2026-04-30",
+      "sha256": "b1b700f9e8af4a9a13a0a85cf57467c87e71c0e18fc579b0d9b1deb462009104",
+      "access": "입학처 공식 PDF 직접 확인"
     }
   },
   "records": [
@@ -1354,92 +1387,125 @@
     },
     {
       "id": "contract-001",
-      "uni": "고려대",
+      "uni": "고려대학교",
       "major": "반도체공학과",
-      "region": "미확인",
-      "field": "기존 자료",
-      "status": "reference2027",
-      "year": 2027,
-      "kind": "reference",
-      "quota": null,
-      "method": "2028 전형방법 미확인",
-      "interviewWeight": null,
-      "minimum": "check",
-      "eligibility": "2028 지원자격 미확인",
-      "graduateEligible": null,
+      "region": "서울",
+      "field": "전기·전자·반도체",
+      "status": "plan2028",
+      "year": 2028,
+      "kind": "employment",
+      "quota": 14,
+      "method": "일괄합산 서류 100%",
+      "interviewWeight": 0,
+      "minimum": "none",
+      "eligibility": "국내·외 정규 고교 졸업(예정)자 또는 동등 이상 학력 인정자. SK하이닉스 채용조건형 정원외 계약학과.",
+      "graduateEligible": true,
       "workStudy": null,
-      "attendance": "2028 평가요소 미확인",
-      "support": "1~2학년은 지급 기준 충족 시 등록금·생활비·연구장학금 지원 / 3~4학년은 채용절차 통과자에게 등록금·생활비 지원, 미선발자는 등록금 50% 지원",
-      "obligations": "SK하이닉스 입사는 채용전형 합격자에 한해 보장 / 장학금은 학과 지급 기준 충족이 전제",
+      "attendance": "학교폭력 조치사항은 서류평가에서 정성평가로 반영. 출결 세부 평가기준은 최종 모집요강 확인.",
+      "support": "2027 참고: 1~2학년은 지급 기준 충족 시 등록금·생활비·연구장학금 지원 / 3~4학년은 채용절차 통과자에게 등록금·생활비 지원, 미선발자는 등록금 50% 지원 / 2028 계약조건 별도 확인",
+      "obligations": "2027 참고: SK하이닉스 입사는 채용전형 합격자에 한해 보장 / 장학금은 학과 지급 기준 충족이 전제 / 2028 계약조건 별도 확인",
       "partners": "SK하이닉스",
       "dormitory": "미확인",
       "schoolTypeEvidence": "unknown",
       "history": [],
       "sourceIds": [
-        "legacy"
+        "korea-2028"
       ],
-      "legacyPages": [
-        1
+      "track": "계열적합전형",
+      "quotaNote": "표의 14명은 계열적합전형. 학업우수 14명을 합한 수시 모집인원은 28명. 정시는 별도.",
+      "tracks": [
+        {
+          "name": "계열적합전형",
+          "quota": 14,
+          "method": "일괄합산 서류 100% · 수능최저 없음"
+        },
+        {
+          "name": "학업우수전형",
+          "quota": 14,
+          "method": "1단계 서류 100%(5배수) → 2단계 1단계 80% + 면접 20% · 수능최저 국·수·영·탐 4개 합 9, 한국사 4 이내(탐구 상위 1과목)"
+        }
       ]
     },
     {
       "id": "contract-002",
-      "uni": "고려대",
+      "uni": "고려대학교",
       "major": "차세대통신학과",
-      "region": "미확인",
-      "field": "기존 자료",
-      "status": "reference2027",
-      "year": 2027,
-      "kind": "reference",
-      "quota": null,
-      "method": "2028 전형방법 미확인",
-      "interviewWeight": null,
-      "minimum": "check",
-      "eligibility": "2028 지원자격 미확인",
-      "graduateEligible": null,
+      "region": "서울",
+      "field": "전기·전자·반도체",
+      "status": "plan2028",
+      "year": 2028,
+      "kind": "employment",
+      "quota": 10,
+      "method": "일괄합산 서류 100%",
+      "interviewWeight": 0,
+      "minimum": "none",
+      "eligibility": "국내·외 정규 고교 졸업(예정)자 또는 동등 이상 학력 인정자. 삼성전자 채용조건형 정원외 계약학과.",
+      "graduateEligible": true,
       "workStudy": null,
-      "attendance": "2028 평가요소 미확인",
-      "support": "1~2학년은 학과 기준 충족 시 등록금·생활비·교육지원 장학금 지원 / 3~4학년은 삼성전자 산학장학생 선발자에게 등록금·생활비 지원",
-      "obligations": "삼성전자 입사는 4학기 이수 후 채용절차 통과자에 한해 보장 / 산학장학생 불합격자의 등록금 50% 지원은 운영위원회 검토 사항",
+      "attendance": "학교폭력 조치사항은 서류평가에서 정성평가로 반영. 출결 세부 평가기준은 최종 모집요강 확인.",
+      "support": "2027 참고: 1~2학년은 학과 기준 충족 시 등록금·생활비·교육지원 장학금 지원 / 3~4학년은 삼성전자 산학장학생 선발자에게 등록금·생활비 지원 / 2028 계약조건 별도 확인",
+      "obligations": "2027 참고: 삼성전자 입사는 4학기 이수 후 채용절차 통과자에 한해 보장 / 산학장학생 불합격자의 등록금 50% 지원은 운영위원회 검토 사항 / 2028 계약조건 별도 확인",
       "partners": "삼성전자",
       "dormitory": "미확인",
       "schoolTypeEvidence": "unknown",
       "history": [],
       "sourceIds": [
-        "legacy"
+        "korea-2028"
       ],
-      "legacyPages": [
-        1
+      "track": "계열적합전형",
+      "quotaNote": "표의 10명은 계열적합전형. 학업우수 10명을 합한 수시 모집인원은 20명. 정시는 별도.",
+      "tracks": [
+        {
+          "name": "계열적합전형",
+          "quota": 10,
+          "method": "일괄합산 서류 100% · 수능최저 없음"
+        },
+        {
+          "name": "학업우수전형",
+          "quota": 10,
+          "method": "1단계 서류 100%(5배수) → 2단계 1단계 80% + 면접 20% · 수능최저 국·수·영·탐 4개 합 9, 한국사 4 이내(탐구 상위 1과목)"
+        }
       ]
     },
     {
       "id": "contract-003",
-      "uni": "고려대",
+      "uni": "고려대학교",
       "major": "스마트모빌리티학부",
-      "region": "미확인",
-      "field": "기존 자료",
-      "status": "reference2027",
-      "year": 2027,
-      "kind": "reference",
-      "quota": null,
-      "method": "2028 전형방법 미확인",
-      "interviewWeight": null,
-      "minimum": "check",
-      "eligibility": "2028 지원자격 미확인",
-      "graduateEligible": null,
+      "region": "서울",
+      "field": "기계·자동차·로봇",
+      "status": "plan2028",
+      "year": 2028,
+      "kind": "employment",
+      "quota": 20,
+      "method": "일괄합산 서류 100%",
+      "interviewWeight": 0,
+      "minimum": "none",
+      "eligibility": "국내·외 정규 고교 졸업(예정)자 또는 동등 이상 학력 인정자. 현대자동차 채용조건형 정원외 계약학과. 학·석사 통합 5년 과정.",
+      "graduateEligible": true,
       "workStudy": null,
-      "attendance": "2028 평가요소 미확인",
-      "support": "1~4학기는 학부 기준 충족 시 등록금 전액 지원 / 5~10학기는 현대자동차 장학생 선발자에게 등록금 전액 지원 / 1~7학기 학업보조비 및 최초 학기 연구장학금 지원",
-      "obligations": "학사 7학기와 석사 3학기의 학·석사통합과정 / 군입대 외 휴학은 운영위원회 심의 대상 / 현대자동차 입사는 채용절차와 회사 제시 기준 충족자에 한해 보장 / 최종 불합격자는 석사과정에 진입하지 않고 학사요건 충족 후 졸업",
-      "partners": "현대자동차 / 기아",
+      "attendance": "학교폭력 조치사항은 서류평가에서 정성평가로 반영. 출결 세부 평가기준은 최종 모집요강 확인.",
+      "support": "2027 참고: 1~4학기는 학부 기준 충족 시 등록금 전액 지원 / 5~10학기는 현대자동차 장학생 선발자에게 등록금 전액 지원 / 1~7학기 학업보조비 및 최초 학기 연구장학금 지원 / 2028 계약조건 별도 확인",
+      "obligations": "2027 참고: 학사 7학기와 석사 3학기의 학·석사통합과정 / 군입대 외 휴학은 운영위원회 심의 대상 / 현대자동차 입사는 채용절차와 회사 제시 기준 충족자에 한해 보장 / 최종 불합격자는 석사과정에 진입하지 않고 학사요건 충족 후 졸업 / 2028 계약조건 별도 확인",
+      "partners": "현대자동차",
       "dormitory": "미확인",
       "schoolTypeEvidence": "unknown",
       "history": [],
       "sourceIds": [
-        "legacy"
+        "korea-2028"
       ],
-      "legacyPages": [
-        2
+      "track": "계열적합전형",
+      "quotaNote": "표의 20명은 계열적합전형. 학업우수 10명을 합한 수시 모집인원은 30명. 정시는 별도.",
+      "tracks": [
+        {
+          "name": "계열적합전형",
+          "quota": 20,
+          "method": "일괄합산 서류 100% · 수능최저 없음"
+        },
+        {
+          "name": "학업우수전형",
+          "quota": 10,
+          "method": "1단계 서류 100%(5배수) → 2단계 1단계 80% + 면접 20% · 수능최저 국·수·영·탐 4개 합 9, 한국사 4 이내(탐구 상위 1과목)"
+        }
       ]
     },
     {
@@ -1504,33 +1570,49 @@
     },
     {
       "id": "contract-007",
-      "uni": "숭실대",
+      "uni": "숭실대학교",
       "major": "정보보호학과",
-      "region": "미확인",
-      "field": "기존 자료",
-      "status": "reference2027",
-      "year": 2027,
-      "kind": "reference",
-      "quota": null,
-      "method": "2028 전형방법 미확인",
-      "interviewWeight": null,
-      "minimum": "check",
-      "eligibility": "2028 지원자격 미확인",
-      "graduateEligible": null,
+      "region": "서울",
+      "field": "컴퓨터·소프트웨어·AI",
+      "status": "plan2028",
+      "year": 2028,
+      "kind": "employment",
+      "quota": 8,
+      "method": "1단계 서류 100%(3배수) → 2단계 1단계 50% + 면접 50%",
+      "interviewWeight": 50,
+      "minimum": "none",
+      "eligibility": "고교 졸업(예정)자 또는 동등 학력 인정자. LG유플러스 채용조건형 정원외 계약학과.",
+      "graduateEligible": true,
       "workStudy": null,
-      "attendance": "2028 평가요소 미확인",
-      "support": "1~2학년 입학자 전원 등록금 전액·학업장려금 지원 / 3~4학년은 LG산학대여장학생 선발자에게 등록금 전액·학업장려금 지원 / 교육 장비와 통신요금 지원",
-      "obligations": "LG유플러스 입사는 산학대여장학생 선발자에 한해 보장 / 지원 내용은 학과와 기업 사정에 따라 변경될 수 있음",
+      "attendance": "학업역량 20% · 진로역량 50% · 공동체역량 30%. 출결 세부 평가내용은 최종 모집요강 확인.",
+      "support": "2027 참고: 1~2학년 입학자 전원 등록금 전액·학업장려금 지원 / 3~4학년은 LG산학대여장학생 선발자에게 등록금 전액·학업장려금 지원 / 교육 장비와 통신요금 지원 / 2028 계약조건 별도 확인",
+      "obligations": "2027 참고: LG유플러스 입사는 산학대여장학생 선발자에 한해 보장 / 지원 내용은 학과와 기업 사정에 따라 변경될 수 있음 / 2028 계약조건 별도 확인",
       "partners": "LG유플러스",
       "dormitory": "미확인",
       "schoolTypeEvidence": "unknown",
-      "history": [],
-      "sourceIds": [
-        "legacy"
+      "history": [
+        {
+          "year": 2026,
+          "track": "SSU미래인재전형",
+          "cut70": 2.55,
+          "gradeMean": 2.78,
+          "competitionRatio": 15.8,
+          "metric": "등급",
+          "schoolType": "unknown",
+          "sourceType": "official",
+          "source": "https://admission.ssu.ac.kr/incs/incFiledo.asp?cot=1&mode=1&number=242",
+          "sourceTitle": "2026학년도 입시결과통계 (2027학년도 숭실대학교 입학전형 통계)",
+          "sourceLocation": "PDF 4쪽, 책자 6~7쪽, 정보보호학과 행",
+          "sourceSha256": "930412a79545e11a3bf9547d884d8222178727a03ab77882b1c1aa8700e0a6af",
+          "reviewed": "2026-10-09",
+          "note": "국·수·영·과 주요교과 단순평균, 진로선택 제외. 2026 SSU미래인재 결과이며 2028 면접형의 합격 예측값이 아님. 고교 유형별 학과 입결은 미확인."
+        }
       ],
-      "legacyPages": [
-        4
-      ]
+      "sourceIds": [
+        "ssu-2028"
+      ],
+      "track": "SSU미래인재전형(면접형)",
+      "quotaNote": "2028 수시 면접형 8명. 정시 12명은 별도. 2028 특기자전형 폐지."
     },
     {
       "id": "contract-008",

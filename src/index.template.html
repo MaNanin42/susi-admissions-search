@@ -932,6 +932,7 @@ tr:hover td { background: var(--row-hover); }
   .contract-program-detail { overflow: visible; padding: 20px 16px 34px; }
   .contract-detail-title { font-size: 21px; }
 }
+.university-with-plan{display:flex;flex-direction:column;align-items:stretch;gap:7px}.university-with-plan>.university-link{display:flex;justify-content:space-between;align-items:center;gap:8px;color:inherit;text-decoration:none}.university-plan-link{font-size:12px;color:#165c94;text-decoration:underline;text-underline-offset:3px}
 </style>
 </head>
 <body>
@@ -1159,7 +1160,7 @@ tr:hover td { background: var(--row-hover); }
     id="admission2028Frame"
     title="2028 대입 조건별 대학·학과·전형 탐색"
     data-src="modules/admission-2028/index.html"
-    data-version="12.0.0-release-20261004"
+    data-version="12.0.0-cutoff-20261010"
     sandbox="allow-scripts allow-popups allow-popups-to-escape-sandbox allow-modals"
   ></iframe>
 </section>
@@ -1168,6 +1169,18 @@ tr:hover td { background: var(--row-hover); }
 
 <script>
 const RAW = __RAW_DATA__;
+const CUTOFF_CURRENT = __CUTOFF_CURRENT__;
+RAW.forEach((row,i)=>{row.cutoffCurrent=CUTOFF_CURRENT[i+1]||{}});
+function cutoffHasPoints(s){return s?.status==='matched'&&(s.perfectScore>0||(!Number.isFinite(s.grade50)&&!Number.isFinite(s.grade70)&&[s.point50,s.point70].some(Number.isFinite)))}
+function cutoffEntrance(row,prefix){
+ const s=row.cutoffCurrent?.[prefix];
+ if(s?.status!=='matched')return {cutoff:s||{status:'unmatched'},metricUnverified:true};
+ // Existing mean/minimum correction remains explicitly a different statistic.
+ if(row[prefix+'metric']==='donggukOfficial')return {cutoff:s};
+ const points=cutoffHasPoints(s),text=v=>Number.isFinite(v)?String(v):'';
+ return {cutoff:s,isScore:points,metricKind:points?'cutoffPoints':'cutoffGrades',s50:text(points?s.point50:s.grade50),s70:text(points?s.point70:s.grade70)};
+}
+function cutoffSourceText(t){const s=t.cutoff;if(s?.status!=='matched')return 'cutoff 현재 원문 미연결 · 점수 기준 미확인';return 'cutoff 2026 대조 · '+(cutoffHasPoints(s)?'환산점수 자료 · 만점 '+(s.perfectScore??'미공개')+' · 원문 등급컷 50% '+(s.grade50??'-')+' / 70% '+(s.grade70??'-')+' (참고, 등급 비교 제외)':'등급컷 자료')}
 
 const SN  = __SNT_DATA__;
 
@@ -1308,7 +1321,7 @@ const DOM = {
 };
 const SNT_INPUT_IDS = ['sntK', 'sntM', 'sntE', 'sntS1', 'sntS2', 'sntH'];
 const PAGE_SIZE = 100;
-const HAS_SCORE_TYPE_ROWS = RAW.some(row => row.su);
+const HAS_SCORE_TYPE_ROWS = RAW.some(row => row.su||Object.values(row.cutoffCurrent||{}).some(cutoffHasPoints));
 const SORT_LABELS = { region: '권역', univ: '대학명', gyeol: '계열', dept: '모집단위', k50: '교과 50%', j50: '종합 50%' };
 const SNT_STATE_LABELS = { ok: '자동 확정', fail: '자동 미충족', check: '요강확인 필요', none: '최저자료 없음', missing: '전형명확인 필요' };
 const SNT_FILTER_LABELS = { ok: '자동 판정 가능만', check: '모집요강 확인만', none: '최저자료 없음만', missing: '전형명 확인만', fail: '자동 미충족만' };
@@ -1479,8 +1492,10 @@ function renderAdmissionsDirectory(region = 'all') {
         const nameHtml = '<span class="university-name">' + formatUniversityDisplayName(item.displayName) + '</span>';
         if (!link) return '<div class="university-entry" data-university="' + esc(item.sourceName) + '">' + nameHtml + '</div>';
         const linkLabel = link.linkLabel || '모집요강 ↗';
-        return '<a class="university-entry university-link" data-university="' + esc(item.sourceName) + '" href="' + esc(link.url) + '" target="_blank" rel="noopener noreferrer" aria-label="' + esc(item.displayName + ' ' + link.target + ' 새 창 열기') + '">' +
-          nameHtml + '<span class="university-link-label">' + esc(linkLabel) + '</span></a>';
+        const plan=link.plan2028;
+        const planHtml=plan?'<a class="university-plan-link" href="'+esc(plan.url)+'" target="_blank" rel="noopener noreferrer" title="'+esc(plan.verifiedAt+' 원문 확인')+'">'+esc(plan.title)+' ↗</a>':'';
+        return '<div class="university-entry university-with-plan"><a class="university-link"  data-university="' + esc(item.sourceName) + '" href="' + esc(link.url) + '" target="_blank" rel="noopener noreferrer" aria-label="' + esc(item.displayName + ' ' + link.target + ' 새 창 열기') + '">' +
+          nameHtml + '<span class="university-link-label">' + esc(linkLabel) + '</span></a>'+planHtml+'</div>';
       }).join('') + '</div></section>';
   }).join('');
   setHTML(byId('admissionsDirectory'), sections || '<div class="admissions-directory-empty">표시할 대학이 없습니다.</div>');
@@ -1489,7 +1504,7 @@ function renderAdmissionsDirectory(region = 'all') {
 function setupAdmissionsDirectory() {
   if (admissionsDirectoryReady) return;
   byId('admissionsUniversityTotal').textContent = ADMISSIONS_DIRECTORY.length.toLocaleString();
-  byId('admissionsLinkStatus').textContent = '검증 링크 ' + Object.keys(ADMISSIONS_OFFICE_LINKS.links).length.toLocaleString() + '개 확인';
+  byId('admissionsLinkStatus').textContent = '검증 링크 ' + Object.keys(ADMISSIONS_OFFICE_LINKS.links).length.toLocaleString() + '개 · 2028 시행계획 '+Object.values(ADMISSIONS_OFFICE_LINKS.links).filter(link=>link.plan2028).length+'개 원문 연결';
   const regionButtons = [
     { value: 'all', label: '전체', count: ADMISSIONS_DIRECTORY.length },
     ...ADMISSIONS_REGION_ORDER.map(region => ({
@@ -1547,7 +1562,8 @@ function getContractAdmissionResults(program) {
         metricKind: row[prefix + 'metric'] || '',
         isScore: Boolean(row.su),
         sourceRowIndex,
-        slotIndex
+        slotIndex,
+        ...cutoffEntrance(row,prefix)
       };
       const exactKey = [entry.type, entry.name, entry.s50, entry.s70, entry.metricKind, entry.isScore].join('\u241f');
       if (!exactEntries.has(exactKey)) exactEntries.set(exactKey, entry);
@@ -1587,9 +1603,9 @@ function renderContractAdmissionResults(program) {
     return '<tr>' +
       '<td><span class="contract-admission-type ' + esc(entry.type) + '">' + esc(entry.type) + '</span></td>' +
       '<td>' + esc(entry.name) + (repeated ? '<span class="contract-admission-duplicate">복수 원본</span>' : '') + '</td>' +
-      '<td><span class="contract-admission-score' + (entry.s50 ? '' : ' missing') + '">' + esc(entry.s50 || '미공개') + '</span></td>' +
-      '<td><span class="contract-admission-score' + (entry.s70 ? '' : ' missing') + '">' + esc(entry.s70 || '미공개') + '</span></td>' +
-      '<td><span class="contract-admission-status' + (hasScore ? '' : ' missing') + '">' + (hasScore ? (entry.isScore ? '점수형' : '등급 공개') : '입결 미공개') + '</span></td>' +
+      '<td><span class="contract-admission-score' + (entry.s50 ? '' : ' missing') + '">' + esc(entry.s50 ? entry.s50+(entry.isScore?'점':'등급') : '미공개') + '</span></td>' +
+      '<td><span class="contract-admission-score' + (entry.s70 ? '' : ' missing') + '">' + esc(entry.s70 ? entry.s70+(entry.isScore?'점':'등급') : '미공개') + '</span></td>' +
+      '<td><span class="contract-admission-status' + (hasScore ? '' : ' missing') + '">' + esc(entry.metricUnverified?'기준 미확인':hasScore ? (entry.isScore ? '점수형 · 만점 '+(entry.cutoff?.perfectScore??'미공개') : '등급 공개') : '입결 미공개') + '</span></td>' +
     '</tr>';
   }).join('');
   return '<section class="contract-admission-section" aria-labelledby="contractAdmissionHeading">' +
@@ -1655,7 +1671,7 @@ function contractProgramMatchesGrade(program) {
   const cutLo = grade - range;
   const cutHi = grade + range;
   return getContractAdmissionResults(program).entries.some(entry => {
-    if (entry.isScore || entry.metricKind) return false;
+    if (entry.isScore || entry.metricUnverified || (entry.metricKind&&entry.metricKind!=='cutoffGrades')) return false;
     return [entry.s50, entry.s70].some(value => {
       const score = parseFloat(value);
       return isFinite(score) && score >= cutLo && score <= cutHi;
@@ -1776,12 +1792,12 @@ function switchWorkspace(workspace) {
   byId('workspace-contracts').hidden = target !== 'contracts';
   byId('workspace-admission2028').hidden = target !== 'admission2028';
   byId('workspace-courses').hidden = target !== 'courses';
-  if(target==='courses'){const frame=byId('coursesFrame');if(!frame.getAttribute('src'))frame.src=frame.dataset.src+'?v=12.0.0-release-20261004';}
+  if(target==='courses'){const frame=byId('coursesFrame');if(!frame.getAttribute('src'))frame.src=frame.dataset.src+'?v=12.0.0-cutoff-20261010';}
   if (target === 'admissions') setupAdmissionsDirectory();
   if (target === 'contracts') {
     setupContractDirectory();
     const contractFrame=byId('contracts2028Frame');
-    if(!contractFrame.getAttribute('src'))contractFrame.src=contractFrame.dataset.src+'?v=12.0.0-release-20261004';
+    if(!contractFrame.getAttribute('src'))contractFrame.src=contractFrame.dataset.src+'?v=12.0.0-cutoff-20261010';
   }
   if (target === 'admission2028') {
     const frame = byId('admission2028Frame');
@@ -1848,7 +1864,8 @@ function buildJtypes(d, showK, showJ) {
         metricKind: d[prefix + 'metric'] || '',
         applicantAverage: d[prefix + 'appAvg'] || '',
         navi50: d[prefix + 'navi50'] || '',
-        navi70: d[prefix + 'navi70'] || ''
+        navi70: d[prefix + 'navi70'] || '',
+        ...cutoffEntrance(d,prefix)
       };
     });
 }
@@ -1862,7 +1879,7 @@ function splitJtypesByType(jtypes) {
 
 function scoreValuesByType(row, type, scoreKey = 's50') {
   return row.jtypes
-    .filter(t => t.type === type && t[scoreKey] !== '' && !t.metricKind)
+    .filter(t => t.type === type && t[scoreKey] !== '' && !t.isScore && !t.metricUnverified && (!t.metricKind||t.metricKind==='cutoffGrades'))
     .map(t => parseFloat(t[scoreKey]))
     .filter(v => !isNaN(v));
 }
@@ -1901,6 +1918,8 @@ function rowMatchesSearch(row, opt) {
 }
 
 function entranceInGradeRange(t, row, opt) {
+  if(t.metricUnverified&&!isNaN(opt.grade))return false;
+  if(t.isScore)return opt.showScoreType&&isNaN(opt.grade);
   if (isNaN(opt.grade) || row.su) return true;
   const s = parseFloat(t.s50);
   return isNaN(s) || (s >= opt.cutLo && s <= opt.cutHi);
@@ -1926,7 +1945,8 @@ function setupScoreTypeAvailability() {
     scoreType.title = '현재 원본에는 점수형 전형 행이 없습니다.';
     help.textContent = '현재 원본 데이터에는 점수형 전형 행이 없어 이 옵션은 자동 비활성화됩니다.';
   } else {
-    help.textContent = '점수형 전형은 등급 색상 비교에서 제외됩니다.';
+    scoreType.checked = true;
+    help.textContent = '만점이 공개된 자료와 환산점수만 있는 자료를 점수형으로 분리합니다. 점수형·기준 미확인은 내신 범위와 등급 비교에서 제외합니다.';
   }
   scoreFilter.title = '입결 공개 여부는 전형별 50%/70% 값 존재 여부 기준입니다.';
 }
@@ -2000,7 +2020,7 @@ function formatScore(v, isScore) {
   if (!isFinite(n)) return esc(v);
   const rounded = Math.round(n * 100) / 100;
   const text = rounded.toFixed(2).replace(/\.?0+$/, '');
-  return esc(text + (isScore ? 'p' : ''));
+  return esc(text + (isScore ? '점' : ''));
 }
 
 // ── 수능 등급 읽기 ──
@@ -2248,6 +2268,7 @@ function sntCardClass(snt) {
   return 'snt-manual';
 }
 function admissionScoreLabels(t) {
+  if(t.metricKind==='cutoffPoints')return ['50% 환산점수','70% 환산점수'];
   return t.metricKind === 'donggukOfficial' ? ['\uB4F1\uB85D\uD3C9\uADE0', '\uB4F1\uB85D\uCD5C\uC800'] : ['50%', '70%'];
 }
 function admissionMetricHelp(t) {
@@ -2293,7 +2314,7 @@ function buildPickPayload(region, category, univ, dept, t, snt) {
     type: t.type, name: t.name,
     s50: t.s50 || '', s70: t.s70 || '',
     sntState: snt.state, sntLabel: friendlySntLabel(snt), sntRisk: sntRiskText(snt),
-    scoreText: t.metricKind === 'donggukOfficial'
+    scoreText: t.isScore ? '환산점수 50% '+(t.s50||'-')+' / 70% '+(t.s70||'-')+' · '+cutoffSourceText(t) : t.metricKind === 'donggukOfficial'
       ? '\uB4F1\uB85D\uD3C9\uADE0 ' + (t.s50 || '\uBBF8\uACF5\uAC1C') + ' / \uB4F1\uB85D\uCD5C\uC800 ' + (t.s70 || '\uBBF8\uACF5\uAC1C')
       : '50% ' + (t.s50 || '\uBBF8\uACF5\uAC1C') + ' / 70% ' + (t.s70 || '\uBBF8\uACF5\uAC1C')
   };
@@ -2323,12 +2344,17 @@ function bindPickButtons() {
 }
 function selectedCompareSection() {
   if (!pickedItems.length) return '';
-  const rows = pickedItems.map(item => '<tr><td>' + esc(item.region || '-') + '</td><td><strong>' + esc(item.univ) + '</strong><br><span style="color:var(--text3)">' + esc(item.dept) + '</span></td><td>' + esc(item.type) + '</td><td>' + esc(item.name) + '</td><td>' + esc(item.scoreText) + '</td><td><span class="sn-status sn-status-' + esc(item.sntState) + '">' + esc(item.sntLabel) + '</span><br><span style="font-size:11px;color:var(--text3)">' + esc(item.sntRisk) + '</span></td></tr>').join('');
+  const rows = pickedItems.map(item => '<tr><td>' + esc(item.region || '-') + '</td><td><strong>' + esc(item.univ) + '</strong><br><span style="color:var(--text3)">' + esc(item.dept) + '</span></td><td>' + esc(item.type) + '</td><td>' + esc(item.name) + '</td><td>' + esc(pickedScoreText(item)) + '</td><td><span class="sn-status sn-status-' + esc(item.sntState) + '">' + esc(item.sntLabel) + '</span><br><span style="font-size:11px;color:var(--text3)">' + esc(item.sntRisk) + '</span></td></tr>').join('');
   return '<div class="compare-section"><div class="compare-section-head"><span style="font-size:16px">★</span><span class="compare-section-title">상담 후보 선택 비교</span><span class="compare-section-sub">직접 담은 전형 · ' + pickedItems.length.toLocaleString() + '개</span></div><div class="selected-compare-note">후보함에 담은 전형만 모아 본 표입니다. 자동 비교보다 실제 상담 후보 검토에 우선 사용하세요.</div><table class="cmp-table"><thead><tr><th>권역</th><th>대학·모집단위</th><th>유형</th><th>전형명</th><th>입결 지표</th><th>수능최저</th></tr></thead><tbody>' + rows + '</tbody></table></div>';
+}
+function pickedScoreText(item){
+ const matches=RAW.filter(r=>r.u===item.univ&&r.m===item.dept).flatMap(r=>buildJtypes(r,true,true)).filter(t=>t.type===item.type&&t.name===item.name);
+ const values=[...new Set(matches.map(t=>{const labels=admissionScoreLabels(t);return labels[0]+' '+(t.s50||'-')+' / '+labels[1]+' '+(t.s70||'-')+' · '+cutoffSourceText(t)}))];
+ return values.length===1?values[0]:(item.scoreText||'-')+' · 저장 당시 자료, 현재 원문 연결 재확인';
 }
 function printPicked() {
   if (!pickedItems.length) return;
-  const rows = pickedItems.map((item, i) => '<tr><td>' + (i + 1) + '</td><td>' + esc(item.univ) + '<br>' + esc(item.dept) + '</td><td>' + esc(item.type) + '<br>' + esc(item.name) + '</td><td>' + esc(item.scoreText) + '</td><td>' + esc(item.sntLabel) + '<br>' + esc(item.sntRisk) + '</td></tr>').join('');
+  const rows = pickedItems.map((item, i) => '<tr><td>' + (i + 1) + '</td><td>' + esc(item.univ) + '<br>' + esc(item.dept) + '</td><td>' + esc(item.type) + '<br>' + esc(item.name) + '</td><td>' + esc(pickedScoreText(item)) + '</td><td>' + esc(item.sntLabel) + '<br>' + esc(item.sntRisk) + '</td></tr>').join('');
   const previous = document.getElementById('printSheet');
   if (previous) previous.remove();
   const sheet = document.createElement('section');
@@ -2341,6 +2367,7 @@ function printPicked() {
 }
 // ── 카드 렌더 ──
 function renderCard(t, univ, dept, grades, isScore, region = '', category = '') {
+  isScore=Boolean(isScore||t.isScore);
   const snInfo = getSNInfo(univ, t.name, dept);
   const sn    = snInfo.sn;
   const snt   = checkSntStatus(sn, grades, snInfo);
@@ -2372,6 +2399,7 @@ function renderCard(t, univ, dept, grades, isScore, region = '', category = '') 
     }
   }
 
+  scoreHtml += '<span class="score-help">'+esc(cutoffSourceText(t))+'</span>';
   // note: 줄바꿈 처리 후 esc 적용 (순서 수정)
   let snHtml = '';
   if (sn) {
@@ -2434,7 +2462,7 @@ function thClass(col) {
 function getMin50(row, type) {
   if (row.su) return Infinity;
   const vals = row.jtypes
-    .filter(t => !type || t.type === type)
+    .filter(t => !t.isScore&&!t.metricUnverified&&t.metricKind!=='donggukOfficial'&&(!type || t.type === type))
     .map(t => parseFloat(t.s50))
     .filter(v => !isNaN(v));
   return vals.length ? Math.min(...vals) : Infinity;
@@ -2767,7 +2795,7 @@ function renderCompare() {
   if (kAdv.length) html += section('📘', '종합 공개 수치가 낮음', '유불리 판정 아님', kAdv);
   if (jAdv.length) html += section('📗', '교과 공개 수치가 낮음', '유불리 판정 아님', jAdv);
   if (same.length) html += section('⚖️', '공개 수치 유사', '차이 0.1 이내', same);
-  const excludedMetricCount = rows.reduce((sum, row) => sum + row.jtypes.filter(t => t.metricKind).length, 0);
+  const excludedMetricCount = rows.reduce((sum, row) => sum + row.jtypes.filter(t => t.isScore||t.metricUnverified||t.metricKind==='donggukOfficial').length, 0);
   const excludedMetricText = excludedMetricCount ? ' 지표가 달라 자동 비교에서 제외된 전형 ' + excludedMetricCount.toLocaleString() + '개.' : '';
   const metricNote = '<div class="compare-metric-note"><strong>수치 비교 주의</strong> 교과·종합은 산출 과목과 방식이 다를 수 있어, 유불리 판정이 아닌 공개 수치 차이만 표시합니다.' + excludedMetricText + '</div>';
   setHTML(DOM.viewCompare, '<div class="compare-wrap">' + metricNote + html + '</div>');

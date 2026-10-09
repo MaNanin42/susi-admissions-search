@@ -1,0 +1,5652 @@
+{
+  "reviewed": "2026-10-10",
+  "rules": [
+    {
+      "university": "가톨릭관동대학교",
+      "source": "경찰학부 (경찰행정학전공/해양경찰학전공)",
+      "target": "경찰학부",
+      "kind": "parent-unit-components",
+      "note": "원문에서 해당 학부·계열 전체에 배정한 인원. 뒤의 구성 전공 목록만 표기에서 분리하며 개별 전공으로 배분하지 않음.",
+      "sourceIds": [
+        "n070"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KOjlMSmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "가톨릭꽃동네대학교",
+      "source": "자율전공학부(사회복지학전공,상담심리학전공)",
+      "target": "자율전공학부",
+      "kind": "parent-unit-components",
+      "note": "원문에서 해당 학부·계열 전체에 배정한 인원. 뒤의 구성 전공 목록만 표기에서 분리하며 개별 전공으로 배분하지 않음.",
+      "sourceIds": [
+        "n078"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KMGE5OUpmJSY6Jko3ZlRm"
+      ]
+    },
+    {
+      "university": "경성대학교",
+      "source": "경제금융물류학부 경제금융학전공 물류학전공",
+      "target": "경제금융물류학부",
+      "kind": "parent-unit-components",
+      "note": "원문에서 해당 학부·계열 전체에 배정한 인원. 뒤의 구성 전공 목록만 표기에서 분리하며 개별 전공으로 배분하지 않음.",
+      "sourceIds": [
+        "n158"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KJjlKZiUmOiZKN2ZUZg=="
+      ]
+    },
+    {
+      "university": "경성대학교",
+      "source": "글로컬문화학부 문화기획학전공 문화콘텐츠학전공 문화서비스학전공",
+      "target": "글로컬문화학부",
+      "kind": "parent-unit-components",
+      "note": "원문에서 해당 학부·계열 전체에 배정한 인원. 뒤의 구성 전공 목록만 표기에서 분리하며 개별 전공으로 배분하지 않음.",
+      "sourceIds": [
+        "n158"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KJjlKZiUmOiZKN2ZUZg=="
+      ]
+    },
+    {
+      "university": "경성대학교",
+      "source": "영상애니메이션학부 영상학전공 애니메이션학전공",
+      "target": "영상애니메이션학부",
+      "kind": "parent-unit-components",
+      "note": "원문에서 해당 학부·계열 전체에 배정한 인원. 뒤의 구성 전공 목록만 표기에서 분리하며 개별 전공으로 배분하지 않음.",
+      "sourceIds": [
+        "n158"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KJjlKZiUmOiZKN2ZUZg=="
+      ]
+    },
+    {
+      "university": "경성대학교",
+      "source": "인문문화학부 국어국문학전공 [교직] 일어일문학전공 역사문화학전공 [교직]",
+      "target": "인문문화학부",
+      "kind": "parent-unit-components",
+      "note": "원문에서 해당 학부·계열 전체에 배정한 인원. 뒤의 구성 전공 목록만 표기에서 분리하며 개별 전공으로 배분하지 않음.",
+      "sourceIds": [
+        "n158"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KJjlKZiUmOiZKN2ZUZg=="
+      ]
+    },
+    {
+      "university": "국립순천대학교",
+      "source": "공학분야 ( 토목공학전공 ) ( 환경공학전공 ) ( 기계우주항공공학전공 ) ( 첨단신소재공학전공 ) ( 화학공학전공 ) ( 전기공학전공 ) ( 전자공학전공 ) ( 인공지능공학전공 ) ( 컴퓨터공학전공 ) ( 화학전공 ) ( 에너지응용공학전공 )",
+      "target": "공학분야",
+      "kind": "parent-unit-components",
+      "note": "원문에서 해당 학부·계열 전체에 배정한 인원. 뒤의 구성 전공 목록만 표기에서 분리하며 개별 전공으로 배분하지 않음.",
+      "sourceIds": [
+        "n127"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10990491.html"
+      ]
+    },
+    {
+      "university": "국립순천대학교",
+      "source": "사회과학분야 (경제학전공 ) ( 무역학전공 ) ( 경영학전공 ) ( 법학전공 ) ( 행정학전공 ) ( 회계학전공 ) ( 물류학전공 ) ( 사회복지학전공 )",
+      "target": "사회과학분야",
+      "kind": "parent-unit-components",
+      "note": "원문에서 해당 학부·계열 전체에 배정한 인원. 뒤의 구성 전공 목록만 표기에서 분리하며 개별 전공으로 배분하지 않음.",
+      "sourceIds": [
+        "n127"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10990491.html"
+      ]
+    },
+    {
+      "university": "국립순천대학교",
+      "source": "생명산업과학분야 ( 농생명과학전공 ) ( 산림자원학전공 ) ( 조경학전공 ) ( 동물자원과학전공 ★ ) ( 원예학전공 ) ( 식품공학전공 ★ ) ( 농업경제학전공 ) ( 의생명과학전공 ) ( 조리과학전공 ★ ) ( 바이오한약자원학전공 )",
+      "target": "생명산업과학분야",
+      "kind": "parent-unit-components",
+      "note": "원문에서 해당 학부·계열 전체에 배정한 인원. 뒤의 구성 전공 목록만 표기에서 분리하며 개별 전공으로 배분하지 않음.",
+      "sourceIds": [
+        "n127"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10990491.html"
+      ]
+    },
+    {
+      "university": "국립순천대학교",
+      "source": "예체능분야 ( 문예창작학전공 ) ( 사회체육학전공 ) ( 음악예술융합학전공 ) ( 사진미디어학전공 ) ( 영상디자인학전공 ) ( 만화애니메이션학전공 ) ( 패션디자인학전공 )",
+      "target": "예체능분야",
+      "kind": "parent-unit-components",
+      "note": "원문에서 해당 학부·계열 전체에 배정한 인원. 뒤의 구성 전공 목록만 표기에서 분리하며 개별 전공으로 배분하지 않음.",
+      "sourceIds": [
+        "n127"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10990491.html"
+      ]
+    },
+    {
+      "university": "국립순천대학교",
+      "source": "인문분야 (글로벌중국학전공 ) ( 일본어일본문화학전공 ★ ) ( 사학전공 ) ( 철학전공 )",
+      "target": "인문분야",
+      "kind": "parent-unit-components",
+      "note": "원문에서 해당 학부·계열 전체에 배정한 인원. 뒤의 구성 전공 목록만 표기에서 분리하며 개별 전공으로 배분하지 않음.",
+      "sourceIds": [
+        "n127"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10990491.html"
+      ]
+    },
+    {
+      "university": "대구대학교",
+      "source": "경영학부(경영학전공, 회계학전공)",
+      "target": "경영학부",
+      "kind": "parent-unit-components",
+      "note": "원문에서 해당 학부·계열 전체에 배정한 인원. 뒤의 구성 전공 목록만 표기에서 분리하며 개별 전공으로 배분하지 않음.",
+      "sourceIds": [
+        "n142"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10440821.html"
+      ]
+    },
+    {
+      "university": "대구대학교",
+      "source": "기계자동차공학부(기계공학전공, 미래자동차공학전공) 차세대반도체혁신융합대학사업 첨단산업인재양성부트캠프사업",
+      "target": "기계자동차공학부",
+      "kind": "parent-unit-components",
+      "note": "원문에서 해당 학부·계열 전체에 배정한 인원. 뒤의 구성 전공 목록만 표기에서 분리하며 개별 전공으로 배분하지 않음.",
+      "sourceIds": [
+        "n142"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10440821.html"
+      ]
+    },
+    {
+      "university": "대구대학교",
+      "source": "미디어커뮤니케이션학부(영상콘텐츠전공, 광고PR전공)",
+      "target": "미디어커뮤니케이션학부",
+      "kind": "parent-unit-components",
+      "note": "원문에서 해당 학부·계열 전체에 배정한 인원. 뒤의 구성 전공 목록만 표기에서 분리하며 개별 전공으로 배분하지 않음.",
+      "sourceIds": [
+        "n142"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10440821.html"
+      ]
+    },
+    {
+      "university": "대구대학교",
+      "source": "뷰티학부(헤어디자인전공, 메이크업피부전공)",
+      "target": "뷰티학부",
+      "kind": "parent-unit-components",
+      "note": "원문에서 해당 학부·계열 전체에 배정한 인원. 뒤의 구성 전공 목록만 표기에서 분리하며 개별 전공으로 배분하지 않음.",
+      "sourceIds": [
+        "n142"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10440821.html"
+      ]
+    },
+    {
+      "university": "대구대학교",
+      "source": "웹툰영상애니메이션학부(영상애니메이션전공, 웹툰전공)",
+      "target": "웹툰영상애니메이션학부",
+      "kind": "parent-unit-components",
+      "note": "원문에서 해당 학부·계열 전체에 배정한 인원. 뒤의 구성 전공 목록만 표기에서 분리하며 개별 전공으로 배분하지 않음.",
+      "sourceIds": [
+        "n142"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10440821.html"
+      ]
+    },
+    {
+      "university": "대구대학교",
+      "source": "호텔관광경영학부(관광항공경영전공, 호텔외식관광전공)",
+      "target": "호텔관광경영학부",
+      "kind": "parent-unit-components",
+      "note": "원문에서 해당 학부·계열 전체에 배정한 인원. 뒤의 구성 전공 목록만 표기에서 분리하며 개별 전공으로 배분하지 않음.",
+      "sourceIds": [
+        "n142"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10440821.html"
+      ]
+    },
+    {
+      "university": "대전대학교",
+      "source": "AI소프트웨어학부 (빅데이터전공, 인공지능전공)",
+      "target": "AI소프트웨어학부",
+      "kind": "parent-unit-components",
+      "note": "원문에서 해당 학부·계열 전체에 배정한 인원. 뒤의 구성 전공 목록만 표기에서 분리하며 개별 전공으로 배분하지 않음.",
+      "sourceIds": [
+        "n107"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10501131.html"
+      ]
+    },
+    {
+      "university": "대전대학교",
+      "source": "경영학부 (경영학전공, 회계학전공)",
+      "target": "경영학부",
+      "kind": "parent-unit-components",
+      "note": "원문에서 해당 학부·계열 전체에 배정한 인원. 뒤의 구성 전공 목록만 표기에서 분리하며 개별 전공으로 배분하지 않음.",
+      "sourceIds": [
+        "n107"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10501131.html"
+      ]
+    },
+    {
+      "university": "동신대학교",
+      "source": "미래에너지기술학부(이차전지전공, 신재생에너지전공)",
+      "target": "미래에너지기술학부",
+      "kind": "parent-unit-components",
+      "note": "원문에서 해당 학부·계열 전체에 배정한 인원. 뒤의 구성 전공 목록만 표기에서 분리하며 개별 전공으로 배분하지 않음.",
+      "sourceIds": [
+        "n123"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KOlclfCZyV2FWSmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "명지대학교",
+      "source": "기계시스템공학부<기계공학전공·로봇공학전공>",
+      "target": "기계시스템공학부",
+      "kind": "parent-unit-components",
+      "note": "원문에서 해당 학부·계열 전체에 배정한 인원. 뒤의 구성 전공 목록만 표기에서 분리하며 개별 전공으로 배분하지 않음.",
+      "sourceIds": [
+        "n012"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10650761.html"
+      ]
+    },
+    {
+      "university": "상지대학교",
+      "source": "보건계열 [제약바이오전공, 보건의료경영전공, 식품영양학전공 (교직) , 언어치료전공]",
+      "target": "보건계열",
+      "kind": "parent-unit-components",
+      "note": "원문에서 해당 학부·계열 전체에 배정한 인원. 뒤의 구성 전공 목록만 표기에서 분리하며 개별 전공으로 배분하지 않음.",
+      "sourceIds": [
+        "n073"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KJS9yVzgmSmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "서원대학교",
+      "source": "경영학부(경영학전공, 회계학전공, 무역학전공 [교직] )",
+      "target": "경영학부",
+      "kind": "parent-unit-components",
+      "note": "원문에서 해당 학부·계열 전체에 배정한 인원. 뒤의 구성 전공 목록만 표기에서 분리하며 개별 전공으로 배분하지 않음.",
+      "sourceIds": [
+        "n081"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10880591.html"
+      ]
+    },
+    {
+      "university": "서원대학교",
+      "source": "경찰행정학부(경찰행정전공, 범죄수사전공)",
+      "target": "경찰행정학부",
+      "kind": "parent-unit-components",
+      "note": "원문에서 해당 학부·계열 전체에 배정한 인원. 뒤의 구성 전공 목록만 표기에서 분리하며 개별 전공으로 배분하지 않음.",
+      "sourceIds": [
+        "n081"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10880591.html"
+      ]
+    },
+    {
+      "university": "서원대학교",
+      "source": "레저스포츠학부(스포츠지도전공, 스포츠산업전공)",
+      "target": "레저스포츠학부",
+      "kind": "parent-unit-components",
+      "note": "원문에서 해당 학부·계열 전체에 배정한 인원. 뒤의 구성 전공 목록만 표기에서 분리하며 개별 전공으로 배분하지 않음.",
+      "sourceIds": [
+        "n081"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10880591.html"
+      ]
+    },
+    {
+      "university": "서원대학교",
+      "source": "미디어콘텐츠학부(영상미디어전공, 멀티미디어전공)",
+      "target": "미디어콘텐츠학부",
+      "kind": "parent-unit-components",
+      "note": "원문에서 해당 학부·계열 전체에 배정한 인원. 뒤의 구성 전공 목록만 표기에서 분리하며 개별 전공으로 배분하지 않음.",
+      "sourceIds": [
+        "n081"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10880591.html"
+      ]
+    },
+    {
+      "university": "서원대학교",
+      "source": "호텔외식조리학부(호텔조리전공 [교직] , 베이커리디저트전공)",
+      "target": "호텔외식조리학부",
+      "kind": "parent-unit-components",
+      "note": "원문에서 해당 학부·계열 전체에 배정한 인원. 뒤의 구성 전공 목록만 표기에서 분리하며 개별 전공으로 배분하지 않음.",
+      "sourceIds": [
+        "n081"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10880591.html"
+      ]
+    },
+    {
+      "university": "세명대학교",
+      "source": "AI컴퓨터학부 [인공지능소프트웨어/컴퓨터시스템]",
+      "target": "AI컴퓨터학부",
+      "kind": "parent-unit-components",
+      "note": "원문에서 해당 학부·계열 전체에 배정한 인원. 뒤의 구성 전공 목록만 표기에서 분리하며 개별 전공으로 배분하지 않음.",
+      "sourceIds": [
+        "n082"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5Kclc6Yk1gJkpmJSY6Jko3ZlRm"
+      ]
+    },
+    {
+      "university": "세명대학교",
+      "source": "바이오제약산업학부 [제약산업/바이오의약]",
+      "target": "바이오제약산업학부",
+      "kind": "parent-unit-components",
+      "note": "원문에서 해당 학부·계열 전체에 배정한 인원. 뒤의 구성 전공 목록만 표기에서 분리하며 개별 전공으로 배분하지 않음.",
+      "sourceIds": [
+        "n082"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5Kclc6Yk1gJkpmJSY6Jko3ZlRm"
+      ]
+    },
+    {
+      "university": "세명대학교",
+      "source": "스마트IT학부 [인공지능응용학/정보통신학]",
+      "target": "스마트IT학부",
+      "kind": "parent-unit-components",
+      "note": "원문에서 해당 학부·계열 전체에 배정한 인원. 뒤의 구성 전공 목록만 표기에서 분리하며 개별 전공으로 배분하지 않음.",
+      "sourceIds": [
+        "n082"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5Kclc6Yk1gJkpmJSY6Jko3ZlRm"
+      ]
+    },
+    {
+      "university": "세명대학교",
+      "source": "외국어학부 [영미언어문화/중국언어문화/일본언어문화]",
+      "target": "외국어학부",
+      "kind": "parent-unit-components",
+      "note": "원문에서 해당 학부·계열 전체에 배정한 인원. 뒤의 구성 전공 목록만 표기에서 분리하며 개별 전공으로 배분하지 않음.",
+      "sourceIds": [
+        "n082"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5Kclc6Yk1gJkpmJSY6Jko3ZlRm"
+      ]
+    },
+    {
+      "university": "원광대학교",
+      "source": "공학1계열(건축공학전공, 건설환경공학전공, 도시공학전공)",
+      "target": "공학1계열",
+      "kind": "parent-unit-components",
+      "note": "원문에서 해당 학부·계열 전체에 배정한 인원. 뒤의 구성 전공 목록만 표기에서 분리하며 개별 전공으로 배분하지 않음.",
+      "sourceIds": [
+        "n118"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5Kclc4TjlXYU5KZiUmOiZKN2ZUZg=="
+      ]
+    },
+    {
+      "university": "원광대학교",
+      "source": "공학2계열(기계공학전공, 전기공학전공, 전자공학전공, 철도시스템공학전공, 화학공학전공)",
+      "target": "공학2계열",
+      "kind": "parent-unit-components",
+      "note": "원문에서 해당 학부·계열 전체에 배정한 인원. 뒤의 구성 전공 목록만 표기에서 분리하며 개별 전공으로 배분하지 않음.",
+      "sourceIds": [
+        "n118"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5Kclc4TjlXYU5KZiUmOiZKN2ZUZg=="
+      ]
+    },
+    {
+      "university": "원광대학교",
+      "source": "그린바이오계열(산림조경전공, 생명과학전공)",
+      "target": "그린바이오계열",
+      "kind": "parent-unit-components",
+      "note": "원문에서 해당 학부·계열 전체에 배정한 인원. 뒤의 구성 전공 목록만 표기에서 분리하며 개별 전공으로 배분하지 않음.",
+      "sourceIds": [
+        "n118"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5Kclc4TjlXYU5KZiUmOiZKN2ZUZg=="
+      ]
+    },
+    {
+      "university": "원광대학교",
+      "source": "디자인융합계열(패션디자인산업전공, 파인아트전공, 공예문화·주얼리디자인전공, 실내·산업디자인전공, 시각정보디자인전공)",
+      "target": "디자인융합계열",
+      "kind": "parent-unit-components",
+      "note": "원문에서 해당 학부·계열 전체에 배정한 인원. 뒤의 구성 전공 목록만 표기에서 분리하며 개별 전공으로 배분하지 않음.",
+      "sourceIds": [
+        "n118"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5Kclc4TjlXYU5KZiUmOiZKN2ZUZg=="
+      ]
+    },
+    {
+      "university": "원광대학교",
+      "source": "스마트농업계열(원예산업학전공, 식물생산과학전공, 생명환경학전공)",
+      "target": "스마트농업계열",
+      "kind": "parent-unit-components",
+      "note": "원문에서 해당 학부·계열 전체에 배정한 인원. 뒤의 구성 전공 목록만 표기에서 분리하며 개별 전공으로 배분하지 않음.",
+      "sourceIds": [
+        "n118"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5Kclc4TjlXYU5KZiUmOiZKN2ZUZg=="
+      ]
+    },
+    {
+      "university": "원광대학교",
+      "source": "의생명공학계열(의생명공학전공, 의생명소재공학전공, 의생명첨단바이오전공)",
+      "target": "의생명공학계열",
+      "kind": "parent-unit-components",
+      "note": "원문에서 해당 학부·계열 전체에 배정한 인원. 뒤의 구성 전공 목록만 표기에서 분리하며 개별 전공으로 배분하지 않음.",
+      "sourceIds": [
+        "n118"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5Kclc4TjlXYU5KZiUmOiZKN2ZUZg=="
+      ]
+    },
+    {
+      "university": "원광대학교",
+      "source": "창의문화융합계열(중국어통번역전공, 국어국문학전공, 글로컬역사전공, 영어영문학전공, 문예창작전공, 미디어커뮤니케이션광고PR전공)",
+      "target": "창의문화융합계열",
+      "kind": "parent-unit-components",
+      "note": "원문에서 해당 학부·계열 전체에 배정한 인원. 뒤의 구성 전공 목록만 표기에서 분리하며 개별 전공으로 배분하지 않음.",
+      "sourceIds": [
+        "n118"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5Kclc4TjlXYU5KZiUmOiZKN2ZUZg=="
+      ]
+    },
+    {
+      "university": "원광대학교",
+      "source": "푸드테크계열(식품산업전공, 식품안전전공)",
+      "target": "푸드테크계열",
+      "kind": "parent-unit-components",
+      "note": "원문에서 해당 학부·계열 전체에 배정한 인원. 뒤의 구성 전공 목록만 표기에서 분리하며 개별 전공으로 배분하지 않음.",
+      "sourceIds": [
+        "n118"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5Kclc4TjlXYU5KZiUmOiZKN2ZUZg=="
+      ]
+    },
+    {
+      "university": "전주대학교",
+      "source": "경영대학 [통합선발] (경영학과, 물류무역학과, 회계세무학과, IT금융학과, 금융보험학과, 부동산국토정보학과)",
+      "target": "경영대학",
+      "kind": "parent-unit-components",
+      "note": "원문에서 해당 학부·계열 전체에 배정한 인원. 뒤의 구성 전공 목록만 표기에서 분리하며 개별 전공으로 배분하지 않음.",
+      "sourceIds": [
+        "n121"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KOi9XYWAvSmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "전주대학교",
+      "source": "인문콘텐츠대학 [통합선발] (영어영문학과 [교직] , 일본언어문화학과 [교직] , 중국어중국학과, 역사콘텐츠학과, 웹툰만화콘텐츠학과, 한국어문학과 [교직] )",
+      "target": "인문콘텐츠대학",
+      "kind": "parent-unit-components",
+      "note": "원문에서 해당 학부·계열 전체에 배정한 인원. 뒤의 구성 전공 목록만 표기에서 분리하며 개별 전공으로 배분하지 않음.",
+      "sourceIds": [
+        "n121"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KOi9XYWAvSmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "한국공학대학교",
+      "source": "디자인공학부(산업디자인공학전공, 미디어디자인공학전공)",
+      "target": "디자인공학부",
+      "kind": "parent-unit-components",
+      "note": "원문에서 해당 학부·계열 전체에 배정한 인원. 뒤의 구성 전공 목록만 표기에서 분리하며 개별 전공으로 배분하지 않음.",
+      "sourceIds": [
+        "n063"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio30170741.html"
+      ]
+    },
+    {
+      "university": "한남대학교",
+      "source": "린튼국제학부(글로벌비즈니스/글로벌미디어·컬처)",
+      "target": "린튼국제학부",
+      "kind": "parent-unit-components",
+      "note": "원문에서 해당 학부·계열 전체에 배정한 인원. 뒤의 구성 전공 목록만 표기에서 분리하며 개별 전공으로 배분하지 않음.",
+      "sourceIds": [
+        "n113"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11560931.html"
+      ]
+    },
+    {
+      "university": "한남대학교",
+      "source": "법학부(법학/법무법학)",
+      "target": "법학부",
+      "kind": "parent-unit-components",
+      "note": "원문에서 해당 학부·계열 전체에 배정한 인원. 뒤의 구성 전공 목록만 표기에서 분리하며 개별 전공으로 배분하지 않음.",
+      "sourceIds": [
+        "n113"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11560931.html"
+      ]
+    },
+    {
+      "university": "호서대학교",
+      "source": "건축토목공학부(건축공학트랙, 토목공학트랙)",
+      "target": "건축토목공학부",
+      "kind": "parent-unit-components",
+      "note": "원문에서 해당 학부·계열 전체에 배정한 인원. 뒤의 구성 전공 목록만 표기에서 분리하며 개별 전공으로 배분하지 않음.",
+      "sourceIds": [
+        "n105"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KYWAmYXxKZiUmOiZKN2ZUZg=="
+      ]
+    },
+    {
+      "university": "호서대학교",
+      "source": "문화영상학부(영상미디어트랙, 문화콘텐츠기획트랙)",
+      "target": "문화영상학부",
+      "kind": "parent-unit-components",
+      "note": "원문에서 해당 학부·계열 전체에 배정한 인원. 뒤의 구성 전공 목록만 표기에서 분리하며 개별 전공으로 배분하지 않음.",
+      "sourceIds": [
+        "n105"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KYWAmYXxKZiUmOiZKN2ZUZg=="
+      ]
+    },
+    {
+      "university": "호서대학교",
+      "source": "빅데이터AI학부(빅데이터분석트랙, AI응용비즈니스트랙)",
+      "target": "빅데이터AI학부",
+      "kind": "parent-unit-components",
+      "note": "원문에서 해당 학부·계열 전체에 배정한 인원. 뒤의 구성 전공 목록만 표기에서 분리하며 개별 전공으로 배분하지 않음.",
+      "sourceIds": [
+        "n105"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KYWAmYXxKZiUmOiZKN2ZUZg=="
+      ]
+    },
+    {
+      "university": "호서대학교",
+      "source": "사회복지학부(사회복지학트랙, 노인복지학트랙)",
+      "target": "사회복지학부",
+      "kind": "parent-unit-components",
+      "note": "원문에서 해당 학부·계열 전체에 배정한 인원. 뒤의 구성 전공 목록만 표기에서 분리하며 개별 전공으로 배분하지 않음.",
+      "sourceIds": [
+        "n105"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KYWAmYXxKZiUmOiZKN2ZUZg=="
+      ]
+    },
+    {
+      "university": "국립경국대학교",
+      "source": "데이터과학전공",
+      "target": "IT융합공학부(데이터과학전공)",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n138"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KcldhVlc4SmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "국립경국대학교",
+      "source": "소프트웨어융합전공",
+      "target": "IT융합공학부(소프트웨어융합전공)",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n138"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KcldhVlc4SmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "국립경국대학교",
+      "source": "컴퓨터공학전공",
+      "target": "IT융합공학부(컴퓨터공학전공)",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n138"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KcldhVlc4SmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "국립경국대학교",
+      "source": "건설시스템공학전공 [교직]",
+      "target": "건설·환경·건축공학부(건설시스템공학전공)",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n138"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KcldhVlc4SmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "국립경국대학교",
+      "source": "건축공학전공",
+      "target": "건설·환경·건축공학부(건축공학전공)",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n138"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KcldhVlc4SmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "국립경국대학교",
+      "source": "환경공학전공",
+      "target": "건설·환경·건축공학부(환경공학전공)",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n138"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KcldhVlc4SmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "국립경국대학교",
+      "source": "경영학전공",
+      "target": "경영학부(경영학전공)",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n138"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KcldhVlc4SmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "국립경국대학교",
+      "source": "관광경영학전공",
+      "target": "경영학부(관광경영학전공)",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n138"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KcldhVlc4SmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "국립경국대학교",
+      "source": "무역학전공",
+      "target": "경영학부(무역학전공)",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n138"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KcldhVlc4SmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "국립경국대학교",
+      "source": "회계세무학전공",
+      "target": "경영학부(회계세무학전공)",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n138"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KcldhVlc4SmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "국립경국대학교",
+      "source": "공공수요인재대학",
+      "target": "공공수요인재대학(통합모집)",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n138"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KcldhVlc4SmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "국립경국대학교",
+      "source": "백신생명공학전공",
+      "target": "바이오생명공학부(백신생명공학전공)",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n138"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KcldhVlc4SmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "국립경국대학교",
+      "source": "생명과학전공",
+      "target": "바이오생명공학부(생명과학전공)",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n138"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KcldhVlc4SmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "국립경국대학교",
+      "source": "화학생명공학전공",
+      "target": "바이오생명공학부(화학생명공학전공)",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n138"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KcldhVlc4SmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "국립경국대학교",
+      "source": "경제학전공",
+      "target": "법·행정·경제학부(경제학전공)",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n138"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KcldhVlc4SmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "국립경국대학교",
+      "source": "법학전공",
+      "target": "법·행정·경제학부(법학전공)",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n138"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KcldhVlc4SmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "국립경국대학교",
+      "source": "행정학전공",
+      "target": "법·행정·경제학부(행정학전공)",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n138"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KcldhVlc4SmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "국립경국대학교",
+      "source": "산림과학전공",
+      "target": "스마트그린학부(산림과학전공)",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n138"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KcldhVlc4SmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "국립경국대학교",
+      "source": "스마트원예과학전공",
+      "target": "스마트그린학부(스마트원예과학전공)",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n138"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KcldhVlc4SmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "국립경국대학교",
+      "source": "식물의학전공",
+      "target": "스마트그린학부(식물의학전공)",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n138"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KcldhVlc4SmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "국립경국대학교",
+      "source": "식품생명공학전공 [교직]",
+      "target": "스마트그린학부(식품생명공학전공)",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n138"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KcldhVlc4SmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "국립경국대학교",
+      "source": "스마트모빌리티공학과 국립경국대,경북대,국립금오공대 공동학과",
+      "target": "스마트모빌리티공학과",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n138"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KcldhVlc4SmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "국립경국대학교",
+      "source": "K-컬처학전공",
+      "target": "인문·문화학부(K-컬처학전공)",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n138"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KcldhVlc4SmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "국립경국대학교",
+      "source": "문화유산학전공",
+      "target": "인문·문화학부(문화유산학전공)",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n138"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KcldhVlc4SmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "국립경국대학교",
+      "source": "미디어문화커뮤니케이션학전공",
+      "target": "인문·문화학부(미디어문화커뮤니케이션학전공)",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n138"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KcldhVlc4SmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "국립경국대학교",
+      "source": "사학전공 [교직]",
+      "target": "인문·문화학부(사학전공)",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n138"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KcldhVlc4SmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "국립경국대학교",
+      "source": "한국어문예콘텐츠학전공",
+      "target": "인문·문화학부(한국어문예콘텐츠학전공)",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n138"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KcldhVlc4SmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "국립경국대학교",
+      "source": "반도체신소재공학전공",
+      "target": "전기·신소재공학부(반도체신소재공학전공)",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n138"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KcldhVlc4SmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "국립경국대학교",
+      "source": "신소재에너지공학전공 [교직]",
+      "target": "전기·신소재공학부(신소재에너지공학전공)",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n138"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KcldhVlc4SmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "국립경국대학교",
+      "source": "전기에너지공학전공 [교직]",
+      "target": "전기·신소재공학부(전기에너지공학전공)",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n138"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KcldhVlc4SmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "국립경국대학교",
+      "source": "기계공학전공",
+      "target": "전자·기계공학부(기계공학전공)",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n138"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KcldhVlc4SmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "국립경국대학교",
+      "source": "디지털ICT공학전공",
+      "target": "전자·기계공학부(디지털ICT공학전공)",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n138"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KcldhVlc4SmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "국립경국대학교",
+      "source": "로봇공학전공 [교직]",
+      "target": "전자·기계공학부(로봇공학전공)",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n138"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KcldhVlc4SmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "국립경국대학교",
+      "source": "전자공학전공",
+      "target": "전자·기계공학부(전자공학전공)",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n138"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KcldhVlc4SmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "국립경국대학교",
+      "source": "패션라이프스타일학전공",
+      "target": "패션·예술·체육학부(패션라이프스타일학전공)",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n138"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KcldhVlc4SmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "국립한국해양대학교",
+      "source": "해양과학융합학부-해양생물공학전공/수산바이오공학전공",
+      "target": "해양과학융합학부(해양생물공학전공·수산바이오공학전공)",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n171"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KOmFNOUpmJSY6Jko3ZlRm"
+      ]
+    },
+    {
+      "university": "배재대학교",
+      "source": "경찰법학부(경찰학/법학)",
+      "target": "경찰법학부(경찰학, 법학)",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n109"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KOkxpSmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "상지대학교",
+      "source": "건설환경공학과 [건설공학트랙, 환경공학트랙]",
+      "target": "건설환경공학과",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n073"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KJS9yVzgmSmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "상지대학교",
+      "source": "문화콘텐츠학과 [공연영상콘텐츠트랙, 게임콘텐츠트랙, 융합문화기획트랙]",
+      "target": "문화콘텐츠학과",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n073"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KJS9yVzgmSmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "상지대학교",
+      "source": "스마트팜생명과학과 [동물생명공학트랙, 생명과학트랙, 스마트팜트랙]",
+      "target": "스마트팜생명과학과",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n073"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KJS9yVzgmSmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "서울신학대학교",
+      "source": "글로벌비즈니스학부 관광경영학과",
+      "target": "관광경영학과",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n050"
+      ],
+      "evidence": [
+        "http://ratio.uwayapply.com/Sl5KOjAmSmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "서울신학대학교",
+      "source": "글로벌비즈니스학부 글로벌경영학과",
+      "target": "글로벌경영학과",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n050"
+      ],
+      "evidence": [
+        "http://ratio.uwayapply.com/Sl5KOjAmSmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "서울신학대학교",
+      "source": "사범학부 기독교교육과 [교직]",
+      "target": "기독교교육과",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n050"
+      ],
+      "evidence": [
+        "http://ratio.uwayapply.com/Sl5KOjAmSmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "서울신학대학교",
+      "source": "IT융합학부 데이터사이언스학과",
+      "target": "데이터사이언스학과",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n050"
+      ],
+      "evidence": [
+        "http://ratio.uwayapply.com/Sl5KOjAmSmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "서울신학대학교",
+      "source": "휴먼서비스학부 사회복지학과",
+      "target": "사회복지학과",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n050"
+      ],
+      "evidence": [
+        "http://ratio.uwayapply.com/Sl5KOjAmSmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "서울신학대학교",
+      "source": "신학부 신학과",
+      "target": "신학과",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n050"
+      ],
+      "evidence": [
+        "http://ratio.uwayapply.com/Sl5KOjAmSmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "서울신학대학교",
+      "source": "휴먼서비스학부 아동보육학과",
+      "target": "아동보육학과",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n050"
+      ],
+      "evidence": [
+        "http://ratio.uwayapply.com/Sl5KOjAmSmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "서울신학대학교",
+      "source": "사범학부 유아교육과 [교직]",
+      "target": "유아교육과",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n050"
+      ],
+      "evidence": [
+        "http://ratio.uwayapply.com/Sl5KOjAmSmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "서울신학대학교",
+      "source": "아시아문화콘텐츠학부 일본어문화콘텐츠학과",
+      "target": "일본어문화콘텐츠학과",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n050"
+      ],
+      "evidence": [
+        "http://ratio.uwayapply.com/Sl5KOjAmSmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "서울신학대학교",
+      "source": "아시아문화콘텐츠학부 중국언어문화콘텐츠학과",
+      "target": "중국언어문화콘텐츠학과",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n050"
+      ],
+      "evidence": [
+        "http://ratio.uwayapply.com/Sl5KOjAmSmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "서울여자대학교",
+      "source": "심리·인지과학학부",
+      "target": "심리‧인지과학학부(AI뇌융합학습전공/응용심리전공)",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n021"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10860821.html"
+      ]
+    },
+    {
+      "university": "서울여자대학교",
+      "source": "언론영상학부",
+      "target": "언론영상학부(디지털영상전공/저널리즘전공/비즈니스커뮤니케이션전공)",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n021"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10860821.html"
+      ]
+    },
+    {
+      "university": "서울여자대학교",
+      "source": "지능정보보호학부",
+      "target": "지능정보보호학부(사이버보안전공/개인정보보호전공)",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n021"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10860821.html"
+      ]
+    },
+    {
+      "university": "성균관대학교",
+      "source": "전공예약 건설환경공학부",
+      "target": "건설환경공학부",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n024"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10920591.html"
+      ]
+    },
+    {
+      "university": "성균관대학교",
+      "source": "전공예약 국어국문학과",
+      "target": "국어국문학과",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n024"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10920591.html"
+      ]
+    },
+    {
+      "university": "성균관대학교",
+      "source": "전공예약 독어독문학과",
+      "target": "독어독문학과",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n024"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10920591.html"
+      ]
+    },
+    {
+      "university": "성균관대학교",
+      "source": "전공예약 러시아어문학과",
+      "target": "러시아어문학과",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n024"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10920591.html"
+      ]
+    },
+    {
+      "university": "성균관대학교",
+      "source": "전공예약 물리학과",
+      "target": "물리학과",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n024"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10920591.html"
+      ]
+    },
+    {
+      "university": "성균관대학교",
+      "source": "전공예약 사학과",
+      "target": "사학과",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n024"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10920591.html"
+      ]
+    },
+    {
+      "university": "성균관대학교",
+      "source": "전공예약 사회복지학과",
+      "target": "사회복지학과",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n024"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10920591.html"
+      ]
+    },
+    {
+      "university": "성균관대학교",
+      "source": "전공예약 사회학과",
+      "target": "사회학과",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n024"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10920591.html"
+      ]
+    },
+    {
+      "university": "성균관대학교",
+      "source": "전공예약 생명과학과",
+      "target": "생명과학과",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n024"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10920591.html"
+      ]
+    },
+    {
+      "university": "성균관대학교",
+      "source": "전공예약 수학과",
+      "target": "수학과",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n024"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10920591.html"
+      ]
+    },
+    {
+      "university": "성균관대학교",
+      "source": "전공예약 심리학과",
+      "target": "심리학과",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n024"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10920591.html"
+      ]
+    },
+    {
+      "university": "성균관대학교",
+      "source": "전공예약 아동·청소년학과",
+      "target": "아동청소년학과",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n024"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10920591.html"
+      ]
+    },
+    {
+      "university": "성균관대학교",
+      "source": "전공예약 유학·동양학과",
+      "target": "유학·동양학과",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n024"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10920591.html"
+      ]
+    },
+    {
+      "university": "성균관대학교",
+      "source": "전공예약 철학과",
+      "target": "철학과",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n024"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10920591.html"
+      ]
+    },
+    {
+      "university": "성균관대학교",
+      "source": "전공예약 통계학과",
+      "target": "통계학과",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n024"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10920591.html"
+      ]
+    },
+    {
+      "university": "성균관대학교",
+      "source": "전공예약 프랑스어문학과",
+      "target": "프랑스어문학과",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n024"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10920591.html"
+      ]
+    },
+    {
+      "university": "성균관대학교",
+      "source": "전공예약 한문학과",
+      "target": "한문학과",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n024"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10920591.html"
+      ]
+    },
+    {
+      "university": "성균관대학교",
+      "source": "전공예약 화학과",
+      "target": "화학과",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n024"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10920591.html"
+      ]
+    },
+    {
+      "university": "신한대학교",
+      "source": "경영대학(자율전공) - AI융합경영학과 - 글로벌무역학과 - 국제개발협력학과 - 글로벌관광경영학과",
+      "target": "경영대학(자율전공)",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n054"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11870871.html"
+      ]
+    },
+    {
+      "university": "신한대학교",
+      "source": "사회과학대학(자율전공) - 토지행정학과 - 경찰행정학과 - 행정학과 - 사회복지학과 - 상담심리학과",
+      "target": "사회과학대학(자율전공)",
+      "kind": "same-unit-label",
+      "note": "단과대·학부 접두어, 전공예약 또는 구성 전공 목록의 표기 차이를 대조. 개별 전공과 광역 모집의 인원은 혼용하지 않음.",
+      "sourceIds": [
+        "n054"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11870871.html"
+      ]
+    },
+    {
+      "university": "경성대학교",
+      "source": "건축학과(5년제) [건축학교육인증]",
+      "target": "건축학과",
+      "sourceIds": [
+        "n158"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KJjlKZiUmOiZKN2ZUZg=="
+      ],
+      "kind": "duration-label",
+      "note": "동일 대학·동일 모집단위의 5년제/6년제 안내 표기 유무를 대조. 건축공학과 등 다른 학과로 대체하지 않으며 복수 후보는 연결하지 않음."
+    },
+    {
+      "university": "경희대학교",
+      "source": "건축학과(5년제)",
+      "target": "건축학과",
+      "sourceIds": [
+        "n005"
+      ],
+      "evidence": [
+        "http://ratio.uwayapply.com/Sl5KOnw5SmYlJjomSjdmVGY="
+      ],
+      "kind": "duration-label",
+      "note": "동일 대학·동일 모집단위의 5년제/6년제 안내 표기 유무를 대조. 건축공학과 등 다른 학과로 대체하지 않으며 복수 후보는 연결하지 않음."
+    },
+    {
+      "university": "경희대학교",
+      "source": "약학과",
+      "target": "약학과(6년제)",
+      "sourceIds": [
+        "n005"
+      ],
+      "evidence": [
+        "http://ratio.uwayapply.com/Sl5KOnw5SmYlJjomSjdmVGY="
+      ],
+      "kind": "duration-label",
+      "note": "동일 대학·동일 모집단위의 5년제/6년제 안내 표기 유무를 대조. 건축공학과 등 다른 학과로 대체하지 않으며 복수 후보는 연결하지 않음."
+    },
+    {
+      "university": "계명대학교",
+      "source": "약학부(6년제)",
+      "target": "약학부",
+      "sourceIds": [
+        "n156"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KOk05SmYlJjomSjdmVGY="
+      ],
+      "kind": "duration-label",
+      "note": "동일 대학·동일 모집단위의 5년제/6년제 안내 표기 유무를 대조. 건축공학과 등 다른 학과로 대체하지 않으며 복수 후보는 연결하지 않음."
+    },
+    {
+      "university": "국립공주대학교",
+      "source": "건축학과(5년제)",
+      "target": "건축학과",
+      "sourceIds": [
+        "n093"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10281081.html"
+      ],
+      "kind": "duration-label",
+      "note": "동일 대학·동일 모집단위의 5년제/6년제 안내 표기 유무를 대조. 건축공학과 등 다른 학과로 대체하지 않으며 복수 후보는 연결하지 않음."
+    },
+    {
+      "university": "세종대학교",
+      "source": "건축학과",
+      "target": "건축학과(5년)",
+      "sourceIds": [
+        "n026"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10950721.html"
+      ],
+      "kind": "duration-label",
+      "note": "동일 대학·동일 모집단위의 5년제/6년제 안내 표기 유무를 대조. 건축공학과 등 다른 학과로 대체하지 않으며 복수 후보는 연결하지 않음."
+    },
+    {
+      "university": "제주대학교",
+      "source": "건축학과(5년)",
+      "target": "건축학과",
+      "sourceIds": [
+        "n173"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KOlc6L2AvSmYlJjomSjdmVGY="
+      ],
+      "kind": "duration-label",
+      "note": "동일 대학·동일 모집단위의 5년제/6년제 안내 표기 유무를 대조. 건축공학과 등 다른 학과로 대체하지 않으며 복수 후보는 연결하지 않음."
+    },
+    {
+      "university": "청주대학교",
+      "source": "건축학과 (5년제)",
+      "target": "건축학과",
+      "sourceIds": [
+        "n086"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KOi9yV2FgfExKZiUmOiZKN2ZUZg=="
+      ],
+      "kind": "duration-label",
+      "note": "동일 대학·동일 모집단위의 5년제/6년제 안내 표기 유무를 대조. 건축공학과 등 다른 학과로 대체하지 않으며 복수 후보는 연결하지 않음."
+    },
+    {
+      "university": "충남대학교",
+      "source": "건축학과(5년제)",
+      "target": "건축학과",
+      "sourceIds": [
+        "n111"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11400471.html"
+      ],
+      "kind": "duration-label",
+      "note": "동일 대학·동일 모집단위의 5년제/6년제 안내 표기 유무를 대조. 건축공학과 등 다른 학과로 대체하지 않으며 복수 후보는 연결하지 않음."
+    },
+    {
+      "university": "한양대학교",
+      "source": "건축학부",
+      "target": "건축학부(5년제)",
+      "sourceIds": [
+        "n038"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11640591.html"
+      ],
+      "kind": "duration-label",
+      "note": "동일 대학·동일 모집단위의 5년제/6년제 안내 표기 유무를 대조. 건축공학과 등 다른 학과로 대체하지 않으며 복수 후보는 연결하지 않음."
+    },
+    {
+      "university": "경일대학교",
+      "source": "스포츠융합학과",
+      "target": "스포츠과학부(스포츠융합학과)",
+      "kind": "individual-unit-parent-label",
+      "note": "2027 원문에서 인원·지원자 수가 따로 공개된 해당 학과·전공 행과 2028의 같은 학과·전공을 대조. 상위 학부·계열 명칭의 병기 여부만 다르며 학부 전체 수치를 하위 전공에 배분하지 않음.",
+      "sourceIds": [
+        "n181"
+      ],
+      "evidence": [
+        "https://ibsi.kiu.ac.kr/ipsi_rate/rate_susi_real_new_20260820.htm",
+        "https://use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876949&q_fileId=68fec7e8-c883-4f04-8d17-ab5a5a4ff4d7"
+      ]
+    },
+    {
+      "university": "경일대학교",
+      "source": "스포츠지도학과",
+      "target": "스포츠과학부(스포츠지도학과)",
+      "kind": "individual-unit-parent-label",
+      "note": "2027 원문에서 인원·지원자 수가 따로 공개된 해당 학과·전공 행과 2028의 같은 학과·전공을 대조. 상위 학부·계열 명칭의 병기 여부만 다르며 학부 전체 수치를 하위 전공에 배분하지 않음.",
+      "sourceIds": [
+        "n181"
+      ],
+      "evidence": [
+        "https://ibsi.kiu.ac.kr/ipsi_rate/rate_susi_real_new_20260820.htm",
+        "https://use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876949&q_fileId=68fec7e8-c883-4f04-8d17-ab5a5a4ff4d7"
+      ]
+    },
+    {
+      "university": "동국대학교",
+      "source": "불교문화콘텐츠전공",
+      "target": "불교학부(불교문화콘텐츠전공)",
+      "kind": "individual-unit-parent-label",
+      "note": "2027 원문에서 인원·지원자 수가 따로 공개된 해당 학과·전공 행과 2028의 같은 학과·전공을 대조. 상위 학부·계열 명칭의 병기 여부만 다르며 학부 전체 수치를 하위 전공에 배분하지 않음.",
+      "sourceIds": [
+        "n146"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10540761.html",
+        "https://ipsi.dongguk.ac.kr/cmmn/fileDown.do?fileSeq=2501"
+      ]
+    },
+    {
+      "university": "동명대학교",
+      "source": "문화예술학부 문화콘텐츠학과",
+      "target": "문화콘텐츠학과",
+      "kind": "individual-unit-parent-label",
+      "note": "2027 원문에서 인원·지원자 수가 따로 공개된 해당 학과·전공 행과 2028의 같은 학과·전공을 대조. 상위 학부·계열 명칭의 병기 여부만 다르며 학부 전체 수치를 하위 전공에 배분하지 않음.",
+      "sourceIds": [
+        "n160"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio30050681.html",
+        "https://use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876952&q_fileId=b955dc3b-6ec1-4fcd-b256-d6535fa60c22"
+      ]
+    },
+    {
+      "university": "부산대학교",
+      "source": "AX융합학부(스마트시티전공)",
+      "target": "스마트시티전공",
+      "kind": "individual-unit-parent-label",
+      "note": "2027 원문에서 인원·지원자 수가 따로 공개된 해당 학과·전공 행과 2028의 같은 학과·전공을 대조. 상위 학부·계열 명칭의 병기 여부만 다르며 학부 전체 수치를 하위 전공에 배분하지 않음.",
+      "sourceIds": [
+        "n167"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio12100661.html",
+        "https://go.pusan.ac.kr/_common/new_download_file.asp?menu=boardfile&file_no=4304"
+      ]
+    },
+    {
+      "university": "상명대학교",
+      "source": "스포츠무용학부 스포츠건강관리전공",
+      "target": "스포츠건강관리전공",
+      "kind": "individual-unit-parent-label",
+      "note": "2027 원문에서 인원·지원자 수가 따로 공개된 해당 학과·전공 행과 2028의 같은 학과·전공을 대조. 상위 학부·계열 명칭의 병기 여부만 다르며 학부 전체 수치를 하위 전공에 배분하지 않음.",
+      "sourceIds": [
+        "n014"
+      ],
+      "evidence": [
+        "http://ratio.uwayapply.com/Sl5KOk0mSmYlJjomSjdmVGY=",
+        "https://www.use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876415&q_fileId=02e4a85a-b542-4d12-be8d-a7d415c19da1"
+      ]
+    },
+    {
+      "university": "상명대학교",
+      "source": "미술학부 조형예술전공",
+      "target": "조형예술전공",
+      "kind": "individual-unit-parent-label",
+      "note": "2027 원문에서 인원·지원자 수가 따로 공개된 해당 학과·전공 행과 2028의 같은 학과·전공을 대조. 상위 학부·계열 명칭의 병기 여부만 다르며 학부 전체 수치를 하위 전공에 배분하지 않음.",
+      "sourceIds": [
+        "n014"
+      ],
+      "evidence": [
+        "http://ratio.uwayapply.com/Sl5KOk0mSmYlJjomSjdmVGY=",
+        "https://www.use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876415&q_fileId=02e4a85a-b542-4d12-be8d-a7d415c19da1"
+      ]
+    },
+    {
+      "university": "서울여자대학교",
+      "source": "데이터사이언스전공",
+      "target": "AI융합학부(데이터사이언스전공)",
+      "kind": "individual-unit-parent-label",
+      "note": "2027 원문에서 인원·지원자 수가 따로 공개된 해당 학과·전공 행과 2028의 같은 학과·전공을 대조. 상위 학부·계열 명칭의 병기 여부만 다르며 학부 전체 수치를 하위 전공에 배분하지 않음.",
+      "sourceIds": [
+        "n021"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10860821.html",
+        "https://www.use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876415&q_fileId=ac45ac55-979b-46ce-8caf-7d88b075e909"
+      ]
+    },
+    {
+      "university": "서울여자대학교",
+      "source": "소프트웨어전공",
+      "target": "AI융합학부(소프트웨어전공)",
+      "kind": "individual-unit-parent-label",
+      "note": "2027 원문에서 인원·지원자 수가 따로 공개된 해당 학과·전공 행과 2028의 같은 학과·전공을 대조. 상위 학부·계열 명칭의 병기 여부만 다르며 학부 전체 수치를 하위 전공에 배분하지 않음.",
+      "sourceIds": [
+        "n021"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10860821.html",
+        "https://www.use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876415&q_fileId=ac45ac55-979b-46ce-8caf-7d88b075e909"
+      ]
+    },
+    {
+      "university": "서울여자대학교",
+      "source": "인공지능전공",
+      "target": "AI융합학부(인공지능전공)",
+      "kind": "individual-unit-parent-label",
+      "note": "2027 원문에서 인원·지원자 수가 따로 공개된 해당 학과·전공 행과 2028의 같은 학과·전공을 대조. 상위 학부·계열 명칭의 병기 여부만 다르며 학부 전체 수치를 하위 전공에 배분하지 않음.",
+      "sourceIds": [
+        "n021"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10860821.html",
+        "https://www.use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876415&q_fileId=ac45ac55-979b-46ce-8caf-7d88b075e909"
+      ]
+    },
+    {
+      "university": "서울여자대학교",
+      "source": "AI융합콘텐츠전공",
+      "target": "글로벌ICT인문융합학부(AI융합콘텐츠전공)",
+      "kind": "individual-unit-parent-label",
+      "note": "2027 원문에서 인원·지원자 수가 따로 공개된 해당 학과·전공 행과 2028의 같은 학과·전공을 대조. 상위 학부·계열 명칭의 병기 여부만 다르며 학부 전체 수치를 하위 전공에 배분하지 않음.",
+      "sourceIds": [
+        "n021"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10860821.html",
+        "https://www.use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876415&q_fileId=ac45ac55-979b-46ce-8caf-7d88b075e909"
+      ]
+    },
+    {
+      "university": "서울여자대학교",
+      "source": "독일문화콘텐츠전공",
+      "target": "글로벌ICT인문융합학부(독일문화콘텐츠전공)",
+      "kind": "individual-unit-parent-label",
+      "note": "2027 원문에서 인원·지원자 수가 따로 공개된 해당 학과·전공 행과 2028의 같은 학과·전공을 대조. 상위 학부·계열 명칭의 병기 여부만 다르며 학부 전체 수치를 하위 전공에 배분하지 않음.",
+      "sourceIds": [
+        "n021"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10860821.html",
+        "https://www.use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876415&q_fileId=ac45ac55-979b-46ce-8caf-7d88b075e909"
+      ]
+    },
+    {
+      "university": "서울여자대학교",
+      "source": "프랑스문화콘텐츠전공",
+      "target": "글로벌ICT인문융합학부(프랑스문화콘텐츠전공)",
+      "kind": "individual-unit-parent-label",
+      "note": "2027 원문에서 인원·지원자 수가 따로 공개된 해당 학과·전공 행과 2028의 같은 학과·전공을 대조. 상위 학부·계열 명칭의 병기 여부만 다르며 학부 전체 수치를 하위 전공에 배분하지 않음.",
+      "sourceIds": [
+        "n021"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10860821.html",
+        "https://www.use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876415&q_fileId=ac45ac55-979b-46ce-8caf-7d88b075e909"
+      ]
+    },
+    {
+      "university": "서울여자대학교",
+      "source": "공예_컬렉터블디자인전공",
+      "target": "아트앤디자인스쿨(공예_컬렉터블디자인전공)",
+      "kind": "individual-unit-parent-label",
+      "note": "2027 원문에서 인원·지원자 수가 따로 공개된 해당 학과·전공 행과 2028의 같은 학과·전공을 대조. 상위 학부·계열 명칭의 병기 여부만 다르며 학부 전체 수치를 하위 전공에 배분하지 않음.",
+      "sourceIds": [
+        "n021"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10860821.html",
+        "https://www.use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876415&q_fileId=ac45ac55-979b-46ce-8caf-7d88b075e909"
+      ]
+    },
+    {
+      "university": "서울여자대학교",
+      "source": "시각디자인전공",
+      "target": "아트앤디자인스쿨(시각디자인전공)",
+      "kind": "individual-unit-parent-label",
+      "note": "2027 원문에서 인원·지원자 수가 따로 공개된 해당 학과·전공 행과 2028의 같은 학과·전공을 대조. 상위 학부·계열 명칭의 병기 여부만 다르며 학부 전체 수치를 하위 전공에 배분하지 않음.",
+      "sourceIds": [
+        "n021"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10860821.html",
+        "https://www.use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876415&q_fileId=ac45ac55-979b-46ce-8caf-7d88b075e909"
+      ]
+    },
+    {
+      "university": "서울여자대학교",
+      "source": "첨단미디어디자인전공",
+      "target": "아트앤디자인스쿨(첨단미디어디자인전공)",
+      "kind": "individual-unit-parent-label",
+      "note": "2027 원문에서 인원·지원자 수가 따로 공개된 해당 학과·전공 행과 2028의 같은 학과·전공을 대조. 상위 학부·계열 명칭의 병기 여부만 다르며 학부 전체 수치를 하위 전공에 배분하지 않음.",
+      "sourceIds": [
+        "n021"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10860821.html",
+        "https://www.use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876415&q_fileId=ac45ac55-979b-46ce-8caf-7d88b075e909"
+      ]
+    },
+    {
+      "university": "송원대학교",
+      "source": "국제자율학부(한국어교육과)",
+      "target": "한국어교육과",
+      "kind": "individual-unit-parent-label",
+      "note": "2027 원문에서 인원·지원자 수가 따로 공개된 해당 학과·전공 행과 2028의 같은 학과·전공을 대조. 상위 학부·계열 명칭의 병기 여부만 다르며 학부 전체 수치를 하위 전공에 배분하지 않음.",
+      "sourceIds": [
+        "n133"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KV2FOcldhJkpmJSY6Jko3ZlRm",
+        "https://iphak.songwon.ac.kr/sb/SE_Board.asp?action=downLoad&boardID=NEWS&SEQ=249&fileDownSEQ=1&pgKey=0"
+      ]
+    },
+    {
+      "university": "숙명여자대학교",
+      "source": "글로벌협력전공",
+      "target": "글로벌서비스학부(글로벌협력전공)",
+      "kind": "individual-unit-parent-label",
+      "note": "2027 원문에서 인원·지원자 수가 따로 공개된 해당 학과·전공 행과 2028의 같은 학과·전공을 대조. 상위 학부·계열 명칭의 병기 여부만 다르며 학부 전체 수치를 하위 전공에 배분하지 않음.",
+      "sourceIds": [
+        "n027"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10981501.html",
+        "https://www.use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876417&q_fileId=d30be2c2-d8dc-42fb-a389-f62d7717c9ee"
+      ]
+    },
+    {
+      "university": "숙명여자대학교",
+      "source": "앙트러프러너십전공",
+      "target": "글로벌서비스학부(앙트러프러너십전공)",
+      "kind": "individual-unit-parent-label",
+      "note": "2027 원문에서 인원·지원자 수가 따로 공개된 해당 학과·전공 행과 2028의 같은 학과·전공을 대조. 상위 학부·계열 명칭의 병기 여부만 다르며 학부 전체 수치를 하위 전공에 배분하지 않음.",
+      "sourceIds": [
+        "n027"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10981501.html",
+        "https://www.use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876417&q_fileId=d30be2c2-d8dc-42fb-a389-f62d7717c9ee"
+      ]
+    },
+    {
+      "university": "숙명여자대학교",
+      "source": "르꼬르동블루외식경영전공",
+      "target": "문화관광외식학부(르꼬르동블루외식경영전공)",
+      "kind": "individual-unit-parent-label",
+      "note": "2027 원문에서 인원·지원자 수가 따로 공개된 해당 학과·전공 행과 2028의 같은 학과·전공을 대조. 상위 학부·계열 명칭의 병기 여부만 다르며 학부 전체 수치를 하위 전공에 배분하지 않음.",
+      "sourceIds": [
+        "n027"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10981501.html",
+        "https://www.use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876417&q_fileId=d30be2c2-d8dc-42fb-a389-f62d7717c9ee"
+      ]
+    },
+    {
+      "university": "숙명여자대학교",
+      "source": "문화관광학전공",
+      "target": "문화관광외식학부(문화관광학전공)",
+      "kind": "individual-unit-parent-label",
+      "note": "2027 원문에서 인원·지원자 수가 따로 공개된 해당 학과·전공 행과 2028의 같은 학과·전공을 대조. 상위 학부·계열 명칭의 병기 여부만 다르며 학부 전체 수치를 하위 전공에 배분하지 않음.",
+      "sourceIds": [
+        "n027"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10981501.html",
+        "https://www.use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876417&q_fileId=d30be2c2-d8dc-42fb-a389-f62d7717c9ee"
+      ]
+    },
+    {
+      "university": "숙명여자대학교",
+      "source": "데이터사이언스전공",
+      "target": "소프트웨어학부(데이터사이언스전공)",
+      "kind": "individual-unit-parent-label",
+      "note": "2027 원문에서 인원·지원자 수가 따로 공개된 해당 학과·전공 행과 2028의 같은 학과·전공을 대조. 상위 학부·계열 명칭의 병기 여부만 다르며 학부 전체 수치를 하위 전공에 배분하지 않음.",
+      "sourceIds": [
+        "n027"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10981501.html",
+        "https://www.use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876417&q_fileId=d30be2c2-d8dc-42fb-a389-f62d7717c9ee"
+      ]
+    },
+    {
+      "university": "숙명여자대학교",
+      "source": "컴퓨터과학전공",
+      "target": "소프트웨어학부(컴퓨터과학전공)",
+      "kind": "individual-unit-parent-label",
+      "note": "2027 원문에서 인원·지원자 수가 따로 공개된 해당 학과·전공 행과 2028의 같은 학과·전공을 대조. 상위 학부·계열 명칭의 병기 여부만 다르며 학부 전체 수치를 하위 전공에 배분하지 않음.",
+      "sourceIds": [
+        "n027"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10981501.html",
+        "https://www.use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876417&q_fileId=d30be2c2-d8dc-42fb-a389-f62d7717c9ee"
+      ]
+    },
+    {
+      "university": "숙명여자대학교",
+      "source": "영어영문학전공",
+      "target": "영어영문학부(영어영문학전공)",
+      "kind": "individual-unit-parent-label",
+      "note": "2027 원문에서 인원·지원자 수가 따로 공개된 해당 학과·전공 행과 2028의 같은 학과·전공을 대조. 상위 학부·계열 명칭의 병기 여부만 다르며 학부 전체 수치를 하위 전공에 배분하지 않음.",
+      "sourceIds": [
+        "n027"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10981501.html",
+        "https://www.use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876417&q_fileId=d30be2c2-d8dc-42fb-a389-f62d7717c9ee"
+      ]
+    },
+    {
+      "university": "우송대학교",
+      "source": "철도건설시스템학부 글로벌철도학과",
+      "target": "글로벌철도학과",
+      "kind": "individual-unit-parent-label",
+      "note": "2027 원문에서 인원·지원자 수가 따로 공개된 해당 학과·전공 행과 2028의 같은 학과·전공을 대조. 상위 학부·계열 명칭의 병기 여부만 다르며 학부 전체 수치를 하위 전공에 배분하지 않음.",
+      "sourceIds": [
+        "n110"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KcldhJmFhTkpmJSY6Jko3ZlRm",
+        "https://www.use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876938&q_fileId=1bc0d105-6186-4f52-8728-67a2a347d2a4"
+      ]
+    },
+    {
+      "university": "이화여자대학교",
+      "source": "약학부 미래산업약학전공",
+      "target": "미래산업약학전공",
+      "kind": "individual-unit-parent-label",
+      "note": "2027 원문에서 인원·지원자 수가 따로 공개된 해당 학과·전공 행과 2028의 같은 학과·전공을 대조. 상위 학부·계열 명칭의 병기 여부만 다르며 학부 전체 수치를 하위 전공에 배분하지 않음.",
+      "sourceIds": [
+        "n030"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11202121.html",
+        "https://admission.ewha.ac.kr/upload/BBS0004/20260430100032838YL7.PDF"
+      ]
+    },
+    {
+      "university": "이화여자대학교",
+      "source": "약학부 약학전공",
+      "target": "약학전공",
+      "kind": "individual-unit-parent-label",
+      "note": "2027 원문에서 인원·지원자 수가 따로 공개된 해당 학과·전공 행과 2028의 같은 학과·전공을 대조. 상위 학부·계열 명칭의 병기 여부만 다르며 학부 전체 수치를 하위 전공에 배분하지 않음.",
+      "sourceIds": [
+        "n030"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11202121.html",
+        "https://admission.ewha.ac.kr/upload/BBS0004/20260430100032838YL7.PDF"
+      ]
+    },
+    {
+      "university": "이화여자대학교",
+      "source": "융합전자반도체공학부 전자전기공학전공",
+      "target": "전자전기공학전공",
+      "kind": "individual-unit-parent-label",
+      "note": "2027 원문에서 인원·지원자 수가 따로 공개된 해당 학과·전공 행과 2028의 같은 학과·전공을 대조. 상위 학부·계열 명칭의 병기 여부만 다르며 학부 전체 수치를 하위 전공에 배분하지 않음.",
+      "sourceIds": [
+        "n030"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11202121.html",
+        "https://admission.ewha.ac.kr/upload/BBS0004/20260430100032838YL7.PDF"
+      ]
+    },
+    {
+      "university": "이화여자대학교",
+      "source": "융합전자반도체공학부 지능형반도체공학전공",
+      "target": "지능형반도체공학전공",
+      "kind": "individual-unit-parent-label",
+      "note": "2027 원문에서 인원·지원자 수가 따로 공개된 해당 학과·전공 행과 2028의 같은 학과·전공을 대조. 상위 학부·계열 명칭의 병기 여부만 다르며 학부 전체 수치를 하위 전공에 배분하지 않음.",
+      "sourceIds": [
+        "n030"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11202121.html",
+        "https://admission.ewha.ac.kr/upload/BBS0004/20260430100032838YL7.PDF"
+      ]
+    },
+    {
+      "university": "인천대학교",
+      "source": "동북아국제통상물류학부 동북아국제통상전공",
+      "target": "동북아국제통상전공",
+      "kind": "individual-unit-parent-label",
+      "note": "2027 원문에서 인원·지원자 수가 따로 공개된 해당 학과·전공 행과 2028의 같은 학과·전공을 대조. 상위 학부·계열 명칭의 병기 여부만 다르며 학부 전체 수치를 하위 전공에 배분하지 않음.",
+      "sourceIds": [
+        "n042"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11230791.html",
+        "https://use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876433&q_fileId=f2c597f3-ec47-496f-8278-7341c4a6e163"
+      ]
+    },
+    {
+      "university": "인천대학교",
+      "source": "동북아국제통상물류학부 스마트물류공학전공",
+      "target": "스마트물류공학전공",
+      "kind": "individual-unit-parent-label",
+      "note": "2027 원문에서 인원·지원자 수가 따로 공개된 해당 학과·전공 행과 2028의 같은 학과·전공을 대조. 상위 학부·계열 명칭의 병기 여부만 다르며 학부 전체 수치를 하위 전공에 배분하지 않음.",
+      "sourceIds": [
+        "n042"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11230791.html",
+        "https://use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876433&q_fileId=f2c597f3-ec47-496f-8278-7341c4a6e163"
+      ]
+    },
+    {
+      "university": "인하대학교",
+      "source": "화공에너지공학부(이차전지공학전공)",
+      "target": "이차전지공학전공",
+      "kind": "individual-unit-parent-label",
+      "note": "2027 원문에서 인원·지원자 수가 따로 공개된 해당 학과·전공 행과 2028의 같은 학과·전공을 대조. 상위 학부·계열 명칭의 병기 여부만 다르며 학부 전체 수치를 하위 전공에 배분하지 않음.",
+      "sourceIds": [
+        "n043"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KOHxXJUpmJSY6Jko3ZlRm",
+        "https://use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876433&q_fileId=5b884140-e638-4389-bb96-f6aa543c8171"
+      ]
+    },
+    {
+      "university": "인하대학교",
+      "source": "화공에너지공학부(화학공학전공)",
+      "target": "화학공학전공",
+      "kind": "individual-unit-parent-label",
+      "note": "2027 원문에서 인원·지원자 수가 따로 공개된 해당 학과·전공 행과 2028의 같은 학과·전공을 대조. 상위 학부·계열 명칭의 병기 여부만 다르며 학부 전체 수치를 하위 전공에 배분하지 않음.",
+      "sourceIds": [
+        "n043"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KOHxXJUpmJSY6Jko3ZlRm",
+        "https://use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876433&q_fileId=5b884140-e638-4389-bb96-f6aa543c8171"
+      ]
+    },
+    {
+      "university": "전북대학교",
+      "source": "고고문화인류학과",
+      "target": "인문계열(고고문화인류학과)",
+      "kind": "individual-unit-parent-label",
+      "note": "2027 원문에서 인원·지원자 수가 따로 공개된 해당 학과·전공 행과 2028의 같은 학과·전공을 대조. 상위 학부·계열 명칭의 병기 여부만 다르며 학부 전체 수치를 하위 전공에 배분하지 않음.",
+      "sourceIds": [
+        "n119"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KOldCL0pmJSY6Jko3ZlRm",
+        "https://use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876929&q_fileId=740ae2d8-a30d-4180-857b-22402636dc6e"
+      ]
+    },
+    {
+      "university": "전북대학교",
+      "source": "국어국문학과",
+      "target": "인문계열(국어국문학과)",
+      "kind": "individual-unit-parent-label",
+      "note": "2027 원문에서 인원·지원자 수가 따로 공개된 해당 학과·전공 행과 2028의 같은 학과·전공을 대조. 상위 학부·계열 명칭의 병기 여부만 다르며 학부 전체 수치를 하위 전공에 배분하지 않음.",
+      "sourceIds": [
+        "n119"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KOldCL0pmJSY6Jko3ZlRm",
+        "https://use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876929&q_fileId=740ae2d8-a30d-4180-857b-22402636dc6e"
+      ]
+    },
+    {
+      "university": "전북대학교",
+      "source": "독일학과",
+      "target": "인문계열(독일학과)",
+      "kind": "individual-unit-parent-label",
+      "note": "2027 원문에서 인원·지원자 수가 따로 공개된 해당 학과·전공 행과 2028의 같은 학과·전공을 대조. 상위 학부·계열 명칭의 병기 여부만 다르며 학부 전체 수치를 하위 전공에 배분하지 않음.",
+      "sourceIds": [
+        "n119"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KOldCL0pmJSY6Jko3ZlRm",
+        "https://use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876929&q_fileId=740ae2d8-a30d-4180-857b-22402636dc6e"
+      ]
+    },
+    {
+      "university": "전북대학교",
+      "source": "문헌정보학과",
+      "target": "인문계열(문헌정보학과)",
+      "kind": "individual-unit-parent-label",
+      "note": "2027 원문에서 인원·지원자 수가 따로 공개된 해당 학과·전공 행과 2028의 같은 학과·전공을 대조. 상위 학부·계열 명칭의 병기 여부만 다르며 학부 전체 수치를 하위 전공에 배분하지 않음.",
+      "sourceIds": [
+        "n119"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KOldCL0pmJSY6Jko3ZlRm",
+        "https://use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876929&q_fileId=740ae2d8-a30d-4180-857b-22402636dc6e"
+      ]
+    },
+    {
+      "university": "전북대학교",
+      "source": "사학과",
+      "target": "인문계열(사학과)",
+      "kind": "individual-unit-parent-label",
+      "note": "2027 원문에서 인원·지원자 수가 따로 공개된 해당 학과·전공 행과 2028의 같은 학과·전공을 대조. 상위 학부·계열 명칭의 병기 여부만 다르며 학부 전체 수치를 하위 전공에 배분하지 않음.",
+      "sourceIds": [
+        "n119"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KOldCL0pmJSY6Jko3ZlRm",
+        "https://use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876929&q_fileId=740ae2d8-a30d-4180-857b-22402636dc6e"
+      ]
+    },
+    {
+      "university": "전북대학교",
+      "source": "스페인·중남미학과",
+      "target": "인문계열(스페인중남미학과)",
+      "kind": "individual-unit-parent-label",
+      "note": "2027 원문에서 인원·지원자 수가 따로 공개된 해당 학과·전공 행과 2028의 같은 학과·전공을 대조. 상위 학부·계열 명칭의 병기 여부만 다르며 학부 전체 수치를 하위 전공에 배분하지 않음.",
+      "sourceIds": [
+        "n119"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KOldCL0pmJSY6Jko3ZlRm",
+        "https://use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876929&q_fileId=740ae2d8-a30d-4180-857b-22402636dc6e"
+      ]
+    },
+    {
+      "university": "전북대학교",
+      "source": "영어영문학과",
+      "target": "인문계열(영어영문학과)",
+      "kind": "individual-unit-parent-label",
+      "note": "2027 원문에서 인원·지원자 수가 따로 공개된 해당 학과·전공 행과 2028의 같은 학과·전공을 대조. 상위 학부·계열 명칭의 병기 여부만 다르며 학부 전체 수치를 하위 전공에 배분하지 않음.",
+      "sourceIds": [
+        "n119"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KOldCL0pmJSY6Jko3ZlRm",
+        "https://use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876929&q_fileId=740ae2d8-a30d-4180-857b-22402636dc6e"
+      ]
+    },
+    {
+      "university": "전북대학교",
+      "source": "일본학과",
+      "target": "인문계열(일본학과)",
+      "kind": "individual-unit-parent-label",
+      "note": "2027 원문에서 인원·지원자 수가 따로 공개된 해당 학과·전공 행과 2028의 같은 학과·전공을 대조. 상위 학부·계열 명칭의 병기 여부만 다르며 학부 전체 수치를 하위 전공에 배분하지 않음.",
+      "sourceIds": [
+        "n119"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KOldCL0pmJSY6Jko3ZlRm",
+        "https://use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876929&q_fileId=740ae2d8-a30d-4180-857b-22402636dc6e"
+      ]
+    },
+    {
+      "university": "전북대학교",
+      "source": "중어중문학과",
+      "target": "인문계열(중어중문학과)",
+      "kind": "individual-unit-parent-label",
+      "note": "2027 원문에서 인원·지원자 수가 따로 공개된 해당 학과·전공 행과 2028의 같은 학과·전공을 대조. 상위 학부·계열 명칭의 병기 여부만 다르며 학부 전체 수치를 하위 전공에 배분하지 않음.",
+      "sourceIds": [
+        "n119"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KOldCL0pmJSY6Jko3ZlRm",
+        "https://use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876929&q_fileId=740ae2d8-a30d-4180-857b-22402636dc6e"
+      ]
+    },
+    {
+      "university": "전북대학교",
+      "source": "철학과",
+      "target": "인문계열(철학과)",
+      "kind": "individual-unit-parent-label",
+      "note": "2027 원문에서 인원·지원자 수가 따로 공개된 해당 학과·전공 행과 2028의 같은 학과·전공을 대조. 상위 학부·계열 명칭의 병기 여부만 다르며 학부 전체 수치를 하위 전공에 배분하지 않음.",
+      "sourceIds": [
+        "n119"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KOldCL0pmJSY6Jko3ZlRm",
+        "https://use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876929&q_fileId=740ae2d8-a30d-4180-857b-22402636dc6e"
+      ]
+    },
+    {
+      "university": "전북대학교",
+      "source": "프랑스·아프리카학과",
+      "target": "인문계열(프랑스·아프리카학과)",
+      "kind": "individual-unit-parent-label",
+      "note": "2027 원문에서 인원·지원자 수가 따로 공개된 해당 학과·전공 행과 2028의 같은 학과·전공을 대조. 상위 학부·계열 명칭의 병기 여부만 다르며 학부 전체 수치를 하위 전공에 배분하지 않음.",
+      "sourceIds": [
+        "n119"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KOldCL0pmJSY6Jko3ZlRm",
+        "https://use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876929&q_fileId=740ae2d8-a30d-4180-857b-22402636dc6e"
+      ]
+    },
+    {
+      "university": "평택대학교",
+      "source": "AI융합학부(미디어디자인학과)",
+      "target": "미디어디자인학과",
+      "kind": "individual-unit-parent-label",
+      "note": "2027 원문에서 인원·지원자 수가 따로 공개된 해당 학과·전공 행과 2028의 같은 학과·전공을 대조. 상위 학부·계열 명칭의 병기 여부만 다르며 학부 전체 수치를 하위 전공에 배분하지 않음.",
+      "sourceIds": [
+        "n061"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KOjBpSmYlJjomSjdmVGY=",
+        "https://www.use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876520&q_fileId=5b4652b9-d26c-4fc3-8b98-0941a31bf685"
+      ]
+    },
+    {
+      "university": "평택대학교",
+      "source": "AI융합학부(스마트모빌리티학과)",
+      "target": "스마트모빌리티학과",
+      "kind": "individual-unit-parent-label",
+      "note": "2027 원문에서 인원·지원자 수가 따로 공개된 해당 학과·전공 행과 2028의 같은 학과·전공을 대조. 상위 학부·계열 명칭의 병기 여부만 다르며 학부 전체 수치를 하위 전공에 배분하지 않음.",
+      "sourceIds": [
+        "n061"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KOjBpSmYlJjomSjdmVGY=",
+        "https://www.use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876520&q_fileId=5b4652b9-d26c-4fc3-8b98-0941a31bf685"
+      ]
+    },
+    {
+      "university": "평택대학교",
+      "source": "AI융합학부(정보통신학과)",
+      "target": "정보통신학과",
+      "kind": "individual-unit-parent-label",
+      "note": "2027 원문에서 인원·지원자 수가 따로 공개된 해당 학과·전공 행과 2028의 같은 학과·전공을 대조. 상위 학부·계열 명칭의 병기 여부만 다르며 학부 전체 수치를 하위 전공에 배분하지 않음.",
+      "sourceIds": [
+        "n061"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KOjBpSmYlJjomSjdmVGY=",
+        "https://www.use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876520&q_fileId=5b4652b9-d26c-4fc3-8b98-0941a31bf685"
+      ]
+    },
+    {
+      "university": "평택대학교",
+      "source": "AI융합학부(지능형반도체학과)",
+      "target": "지능형반도체학과",
+      "kind": "individual-unit-parent-label",
+      "note": "2027 원문에서 인원·지원자 수가 따로 공개된 해당 학과·전공 행과 2028의 같은 학과·전공을 대조. 상위 학부·계열 명칭의 병기 여부만 다르며 학부 전체 수치를 하위 전공에 배분하지 않음.",
+      "sourceIds": [
+        "n061"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KOjBpSmYlJjomSjdmVGY=",
+        "https://www.use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876520&q_fileId=5b4652b9-d26c-4fc3-8b98-0941a31bf685"
+      ]
+    },
+    {
+      "university": "성결대학교",
+      "source": "한국어문화학과",
+      "target": "국어국문학과",
+      "kind": "official-major-name-review",
+      "note": "입학처 2026-07-21 공식 학과 명칭 변경표 대조. 2028 사전 계획의 구명칭과 2027 최종 경쟁률의 변경 명칭 연결. 항공경영·화장품 등 신설 학과는 제외.",
+      "sourceIds": [
+        "n052"
+      ],
+      "evidence": [
+        "https://ipsi.sungkyul.ac.kr/10000006?mode=view&bbs_seq=7217&categorycode=9",
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10900771.html"
+      ]
+    },
+    {
+      "university": "성결대학교",
+      "source": "영미언어문화학과",
+      "target": "영어영문학과",
+      "kind": "official-major-name-review",
+      "note": "입학처 2026-07-21 공식 학과 명칭 변경표 대조. 2028 사전 계획의 구명칭과 2027 최종 경쟁률의 변경 명칭 연결. 항공경영·화장품 등 신설 학과는 제외.",
+      "sourceIds": [
+        "n052"
+      ],
+      "evidence": [
+        "https://ipsi.sungkyul.ac.kr/10000006?mode=view&bbs_seq=7217&categorycode=9",
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10900771.html"
+      ]
+    },
+    {
+      "university": "성결대학교",
+      "source": "중국어문화학과",
+      "target": "중어중문학과",
+      "kind": "official-major-name-review",
+      "note": "입학처 2026-07-21 공식 학과 명칭 변경표 대조. 2028 사전 계획의 구명칭과 2027 최종 경쟁률의 변경 명칭 연결. 항공경영·화장품 등 신설 학과는 제외.",
+      "sourceIds": [
+        "n052"
+      ],
+      "evidence": [
+        "https://ipsi.sungkyul.ac.kr/10000006?mode=view&bbs_seq=7217&categorycode=9",
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10900771.html"
+      ]
+    },
+    {
+      "university": "성결대학교",
+      "source": "스마트관광항공학부(관광학전공)",
+      "target": "관광학과",
+      "kind": "official-major-name-review",
+      "note": "입학처 2026-07-21 공식 학과 명칭 변경표 대조. 2028 사전 계획의 구명칭과 2027 최종 경쟁률의 변경 명칭 연결. 항공경영·화장품 등 신설 학과는 제외.",
+      "sourceIds": [
+        "n052"
+      ],
+      "evidence": [
+        "https://ipsi.sungkyul.ac.kr/10000006?mode=view&bbs_seq=7217&categorycode=9",
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10900771.html"
+      ]
+    },
+    {
+      "university": "성결대학교",
+      "source": "국제교류·개발협력학과",
+      "target": "국제개발협력학과",
+      "kind": "official-major-name-review",
+      "note": "입학처 2026-07-21 공식 학과 명칭 변경표 대조. 2028 사전 계획의 구명칭과 2027 최종 경쟁률의 변경 명칭 연결. 항공경영·화장품 등 신설 학과는 제외.",
+      "sourceIds": [
+        "n052"
+      ],
+      "evidence": [
+        "https://ipsi.sungkyul.ac.kr/10000006?mode=view&bbs_seq=7217&categorycode=9",
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10900771.html"
+      ]
+    },
+    {
+      "university": "성결대학교",
+      "source": "컴퓨터AI공학과",
+      "target": "컴퓨터공학과",
+      "kind": "official-major-name-review",
+      "note": "입학처 2026-07-21 공식 학과 명칭 변경표 대조. 2028 사전 계획의 구명칭과 2027 최종 경쟁률의 변경 명칭 연결. 항공경영·화장품 등 신설 학과는 제외.",
+      "sourceIds": [
+        "n052"
+      ],
+      "evidence": [
+        "https://ipsi.sungkyul.ac.kr/10000006?mode=view&bbs_seq=7217&categorycode=9",
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10900771.html"
+      ]
+    },
+    {
+      "university": "성결대학교",
+      "source": "ICT공학과",
+      "target": "정보통신공학과",
+      "kind": "official-major-name-review",
+      "note": "입학처 2026-07-21 공식 학과 명칭 변경표 대조. 2028 사전 계획의 구명칭과 2027 최종 경쟁률의 변경 명칭 연결. 항공경영·화장품 등 신설 학과는 제외.",
+      "sourceIds": [
+        "n052"
+      ],
+      "evidence": [
+        "https://ipsi.sungkyul.ac.kr/10000006?mode=view&bbs_seq=7217&categorycode=9",
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10900771.html"
+      ]
+    },
+    {
+      "university": "성결대학교",
+      "source": "산업시스템공학과",
+      "target": "산업경영공학과",
+      "kind": "official-major-name-review",
+      "note": "입학처 2026-07-21 공식 학과 명칭 변경표 대조. 2028 사전 계획의 구명칭과 2027 최종 경쟁률의 변경 명칭 연결. 항공경영·화장품 등 신설 학과는 제외.",
+      "sourceIds": [
+        "n052"
+      ],
+      "evidence": [
+        "https://ipsi.sungkyul.ac.kr/10000006?mode=view&bbs_seq=7217&categorycode=9",
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10900771.html"
+      ]
+    },
+    {
+      "university": "성결대학교",
+      "source": "스마트도시공학과",
+      "target": "도시디자인정보공학과",
+      "kind": "official-major-name-review",
+      "note": "입학처 2026-07-21 공식 학과 명칭 변경표 대조. 2028 사전 계획의 구명칭과 2027 최종 경쟁률의 변경 명칭 연결. 항공경영·화장품 등 신설 학과는 제외.",
+      "sourceIds": [
+        "n052"
+      ],
+      "evidence": [
+        "https://ipsi.sungkyul.ac.kr/10000006?mode=view&bbs_seq=7217&categorycode=9",
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10900771.html"
+      ]
+    },
+    {
+      "university": "성결대학교",
+      "source": "SK자율전공학부",
+      "target": "자율전공학부",
+      "kind": "official-major-name-review",
+      "note": "입학처 2026-07-21 공식 학과 명칭 변경표 대조. 2028 사전 계획의 구명칭과 2027 최종 경쟁률의 변경 명칭 연결. 항공경영·화장품 등 신설 학과는 제외.",
+      "sourceIds": [
+        "n052"
+      ],
+      "evidence": [
+        "https://ipsi.sungkyul.ac.kr/10000006?mode=view&bbs_seq=7217&categorycode=9",
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10900771.html"
+      ]
+    },
+    {
+      "university": "국립군산대학교",
+      "source": "간호학과[교직]",
+      "target": "간호학부",
+      "kind": "official-major-name-review",
+      "note": "2028 시행계획 7·8쪽 모집단위표의 해당 학부와 2027 같은 학과 모집 행 대조. 복수 학과가 통합된 법행정경찰학부·첨단에너지대학·컴퓨터소프트웨어특성화대학은 제외.",
+      "sourceIds": [
+        "n115"
+      ],
+      "evidence": [
+        "https://www.use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876920&q_fileId=f2c6db9a-869b-47a8-bd19-51b7c95e5b2c",
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10350611.html"
+      ]
+    },
+    {
+      "university": "국립군산대학교",
+      "source": "건축공학과",
+      "target": "건축공학부",
+      "kind": "official-major-name-review",
+      "note": "2028 시행계획 7·8쪽 모집단위표의 해당 학부와 2027 같은 학과 모집 행 대조. 복수 학과가 통합된 법행정경찰학부·첨단에너지대학·컴퓨터소프트웨어특성화대학은 제외.",
+      "sourceIds": [
+        "n115"
+      ],
+      "evidence": [
+        "https://www.use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876920&q_fileId=f2c6db9a-869b-47a8-bd19-51b7c95e5b2c",
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10350611.html"
+      ]
+    },
+    {
+      "university": "국립군산대학교",
+      "source": "경영학과",
+      "target": "경영학부",
+      "kind": "official-major-name-review",
+      "note": "2028 시행계획 7·8쪽 모집단위표의 해당 학부와 2027 같은 학과 모집 행 대조. 복수 학과가 통합된 법행정경찰학부·첨단에너지대학·컴퓨터소프트웨어특성화대학은 제외.",
+      "sourceIds": [
+        "n115"
+      ],
+      "evidence": [
+        "https://www.use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876920&q_fileId=f2c6db9a-869b-47a8-bd19-51b7c95e5b2c",
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10350611.html"
+      ]
+    },
+    {
+      "university": "국립군산대학교",
+      "source": "공간디자인융합기술학과",
+      "target": "공간디자인융합기술학부",
+      "kind": "official-major-name-review",
+      "note": "2028 시행계획 7·8쪽 모집단위표의 해당 학부와 2027 같은 학과 모집 행 대조. 복수 학과가 통합된 법행정경찰학부·첨단에너지대학·컴퓨터소프트웨어특성화대학은 제외.",
+      "sourceIds": [
+        "n115"
+      ],
+      "evidence": [
+        "https://www.use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876920&q_fileId=f2c6db9a-869b-47a8-bd19-51b7c95e5b2c",
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10350611.html"
+      ]
+    },
+    {
+      "university": "국립군산대학교",
+      "source": "미디어문화학과",
+      "target": "미디어문화학부",
+      "kind": "official-major-name-review",
+      "note": "2028 시행계획 7·8쪽 모집단위표의 해당 학부와 2027 같은 학과 모집 행 대조. 복수 학과가 통합된 법행정경찰학부·첨단에너지대학·컴퓨터소프트웨어특성화대학은 제외.",
+      "sourceIds": [
+        "n115"
+      ],
+      "evidence": [
+        "https://www.use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876920&q_fileId=f2c6db9a-869b-47a8-bd19-51b7c95e5b2c",
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10350611.html"
+      ]
+    },
+    {
+      "university": "국립군산대학교",
+      "source": "아동학과",
+      "target": "아동학부",
+      "kind": "official-major-name-review",
+      "note": "2028 시행계획 7·8쪽 모집단위표의 해당 학부와 2027 같은 학과 모집 행 대조. 복수 학과가 통합된 법행정경찰학부·첨단에너지대학·컴퓨터소프트웨어특성화대학은 제외.",
+      "sourceIds": [
+        "n115"
+      ],
+      "evidence": [
+        "https://www.use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876920&q_fileId=f2c6db9a-869b-47a8-bd19-51b7c95e5b2c",
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10350611.html"
+      ]
+    },
+    {
+      "university": "국립군산대학교",
+      "source": "의류학과",
+      "target": "의류학부",
+      "kind": "official-major-name-review",
+      "note": "2028 시행계획 7·8쪽 모집단위표의 해당 학부와 2027 같은 학과 모집 행 대조. 복수 학과가 통합된 법행정경찰학부·첨단에너지대학·컴퓨터소프트웨어특성화대학은 제외.",
+      "sourceIds": [
+        "n115"
+      ],
+      "evidence": [
+        "https://www.use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876920&q_fileId=f2c6db9a-869b-47a8-bd19-51b7c95e5b2c",
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10350611.html"
+      ]
+    },
+    {
+      "university": "국립군산대학교",
+      "source": "해양경찰학과",
+      "target": "해양경찰학부",
+      "kind": "official-major-name-review",
+      "note": "2028 시행계획 7·8쪽 모집단위표의 해당 학부와 2027 같은 학과 모집 행 대조. 복수 학과가 통합된 법행정경찰학부·첨단에너지대학·컴퓨터소프트웨어특성화대학은 제외.",
+      "sourceIds": [
+        "n115"
+      ],
+      "evidence": [
+        "https://www.use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876920&q_fileId=f2c6db9a-869b-47a8-bd19-51b7c95e5b2c",
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10350611.html"
+      ]
+    },
+    {
+      "university": "이화여자대학교",
+      "source": "사회과교육과 역사교육전공",
+      "target": "역사교육전공",
+      "kind": "official-major-name-review",
+      "note": "2027 모집 행의 상위 사회과교육과 명칭과 개별 전공 표기를 분리. 개별 전공의 공개 수치만 연결.",
+      "sourceIds": [
+        "n030"
+      ],
+      "evidence": [
+        "https://admission.ewha.ac.kr/upload/BBS0004/20260430100032838YL7.PDF",
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11202121.html"
+      ]
+    },
+    {
+      "university": "이화여자대학교",
+      "source": "사회과교육과 사회교육전공",
+      "target": "사회교육전공",
+      "kind": "official-major-name-review",
+      "note": "2027 모집 행의 상위 사회과교육과 명칭과 개별 전공 표기를 분리. 개별 전공의 공개 수치만 연결.",
+      "sourceIds": [
+        "n030"
+      ],
+      "evidence": [
+        "https://admission.ewha.ac.kr/upload/BBS0004/20260430100032838YL7.PDF",
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11202121.html"
+      ]
+    },
+    {
+      "university": "이화여자대학교",
+      "source": "사회과교육과 지리교육전공",
+      "target": "지리교육전공",
+      "kind": "official-major-name-review",
+      "note": "2027 모집 행의 상위 사회과교육과 명칭과 개별 전공 표기를 분리. 개별 전공의 공개 수치만 연결.",
+      "sourceIds": [
+        "n030"
+      ],
+      "evidence": [
+        "https://admission.ewha.ac.kr/upload/BBS0004/20260430100032838YL7.PDF",
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11202121.html"
+      ]
+    },
+    {
+      "university": "국립목포대학교",
+      "source": "반도체공학과 ◆",
+      "target": "반도체공학과",
+      "kind": "official-major-name-review",
+      "note": "원문 모집단위명 뒤의 안내 기호만 제거. 학과명과 모집 범위는 동일.",
+      "sourceIds": [
+        "n125"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10690271.html"
+      ]
+    },
+    {
+      "university": "국립목포대학교",
+      "source": "식품영양학과 ★",
+      "target": "식품영양학과",
+      "kind": "official-major-name-review",
+      "note": "원문 모집단위명 뒤의 안내 기호만 제거. 학과명과 모집 범위는 동일.",
+      "sourceIds": [
+        "n125"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10690271.html"
+      ]
+    },
+    {
+      "university": "국립목포대학교",
+      "source": "전기공학과 ◆",
+      "target": "전기공학과",
+      "kind": "official-major-name-review",
+      "note": "원문 모집단위명 뒤의 안내 기호만 제거. 학과명과 모집 범위는 동일.",
+      "sourceIds": [
+        "n125"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10690271.html"
+      ]
+    },
+    {
+      "university": "국립목포대학교",
+      "source": "체육학과 ★",
+      "target": "체육학과",
+      "kind": "official-major-name-review",
+      "note": "원문 모집단위명 뒤의 안내 기호만 제거. 학과명과 모집 범위는 동일.",
+      "sourceIds": [
+        "n125"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10690271.html"
+      ]
+    },
+    {
+      "university": "건양대학교",
+      "source": "ND산업디자인학부 (비실기,시각,산업,웹툰/애니메이션 등)",
+      "target": "ND산업디자인학부",
+      "kind": "source-unit-label-annotation",
+      "note": "2027 원문의 학과·학부 전체 행을 대조. 뒤의 구성 전공 목록·인증·교육 안내만 표기에서 분리하고 개별 전공 수치를 합산하거나 배분하지 않음.",
+      "sourceIds": [
+        "n090"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10100811.html"
+      ]
+    },
+    {
+      "university": "건양대학교",
+      "source": "국방XR학부 (영상,미디어,AR,VR,가상현실 등)",
+      "target": "국방XR학부",
+      "kind": "source-unit-label-annotation",
+      "note": "2027 원문의 학과·학부 전체 행을 대조. 뒤의 구성 전공 목록·인증·교육 안내만 표기에서 분리하고 개별 전공 수치를 합산하거나 배분하지 않음.",
+      "sourceIds": [
+        "n090"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10100811.html"
+      ]
+    },
+    {
+      "university": "경동대학교",
+      "source": "유아교육과 [사범계]",
+      "target": "유아교육과",
+      "kind": "source-unit-label-annotation",
+      "note": "2027 원문의 학과·학부 전체 행을 대조. 뒤의 구성 전공 목록·인증·교육 안내만 표기에서 분리하고 개별 전공 수치를 합산하거나 배분하지 않음.",
+      "sourceIds": [
+        "n072"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KRCVXOlY5SmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "경성대학교",
+      "source": "약학과(6년제) [약학교육인증]",
+      "target": "약학과",
+      "kind": "source-unit-label-annotation",
+      "note": "2027 원문의 학과·학부 전체 행을 대조. 뒤의 구성 전공 목록·인증·교육 안내만 표기에서 분리하고 개별 전공 수치를 합산하거나 배분하지 않음.",
+      "sourceIds": [
+        "n158"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KJjlKZiUmOiZKN2ZUZg=="
+      ]
+    },
+    {
+      "university": "광주대학교",
+      "source": "사회복지학부(사회복지학, 가족복지학, 노인ㆍ장애인복지학)",
+      "target": "사회복지학부",
+      "kind": "source-unit-label-annotation",
+      "note": "2027 원문의 학과·학부 전체 행을 대조. 뒤의 구성 전공 목록·인증·교육 안내만 표기에서 분리하고 개별 전공 수치를 합산하거나 배분하지 않음.",
+      "sourceIds": [
+        "n130"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KOi9yVzhOckpmJSY6Jko3ZlRm"
+      ]
+    },
+    {
+      "university": "광주대학교",
+      "source": "스포츠과학부(축구, 운동과학)",
+      "target": "스포츠과학부",
+      "kind": "source-unit-label-annotation",
+      "note": "2027 원문의 학과·학부 전체 행을 대조. 뒤의 구성 전공 목록·인증·교육 안내만 표기에서 분리하고 개별 전공 수치를 합산하거나 배분하지 않음.",
+      "sourceIds": [
+        "n130"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KOi9yVzhOckpmJSY6Jko3ZlRm"
+      ]
+    },
+    {
+      "university": "극동대학교",
+      "source": "글로벌융합학부(경영서비스, 과학기술, K컬처)",
+      "target": "글로벌융합학부",
+      "kind": "source-unit-label-annotation",
+      "note": "2027 원문의 학과·학부 전체 행을 대조. 뒤의 구성 전공 목록·인증·교육 안내만 표기에서 분리하고 개별 전공 수치를 합산하거나 배분하지 않음.",
+      "sourceIds": [
+        "n080"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KOlY5SmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "극동대학교",
+      "source": "사회복지학부(사회복지, 재활상담치료, 안경광학, 상담복지)",
+      "target": "사회복지학부",
+      "kind": "source-unit-label-annotation",
+      "note": "2027 원문의 학과·학부 전체 행을 대조. 뒤의 구성 전공 목록·인증·교육 안내만 표기에서 분리하고 개별 전공 수치를 합산하거나 배분하지 않음.",
+      "sourceIds": [
+        "n080"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KOlY5SmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "극동대학교",
+      "source": "항공운항학과(고정익, 회전익)",
+      "target": "항공운항학과",
+      "kind": "source-unit-label-annotation",
+      "note": "2027 원문의 학과·학부 전체 행을 대조. 뒤의 구성 전공 목록·인증·교육 안내만 표기에서 분리하고 개별 전공 수치를 합산하거나 배분하지 않음.",
+      "sourceIds": [
+        "n080"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KOlY5SmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "나사렛대학교",
+      "source": "AI융합학부(AI빅데이터소프트웨어전공, AI사물인터넷보안전공)",
+      "target": "AI융합학부",
+      "kind": "source-unit-label-annotation",
+      "note": "2027 원문의 학과·학부 전체 행을 대조. 뒤의 구성 전공 목록·인증·교육 안내만 표기에서 분리하고 개별 전공 수치를 합산하거나 배분하지 않음.",
+      "sourceIds": [
+        "n095"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KOld9YTlKZiUmOiZKN2ZUZg=="
+      ]
+    },
+    {
+      "university": "나사렛대학교",
+      "source": "기독교학부(신학전공, 기독교상담교육학전공)",
+      "target": "기독교학부",
+      "kind": "source-unit-label-annotation",
+      "note": "2027 원문의 학과·학부 전체 행을 대조. 뒤의 구성 전공 목록·인증·교육 안내만 표기에서 분리하고 개별 전공 수치를 합산하거나 배분하지 않음.",
+      "sourceIds": [
+        "n095"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KOld9YTlKZiUmOiZKN2ZUZg=="
+      ]
+    },
+    {
+      "university": "나사렛대학교",
+      "source": "방송시각영상디자인학부(방송미디어전공, 시각영상디자인전공)",
+      "target": "방송시각영상디자인학부",
+      "kind": "source-unit-label-annotation",
+      "note": "2027 원문의 학과·학부 전체 행을 대조. 뒤의 구성 전공 목록·인증·교육 안내만 표기에서 분리하고 개별 전공 수치를 합산하거나 배분하지 않음.",
+      "sourceIds": [
+        "n095"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KOld9YTlKZiUmOiZKN2ZUZg=="
+      ]
+    },
+    {
+      "university": "나사렛대학교",
+      "source": "사회복지학부(사회복지전공, 청소년복지전공, 노인복지전공)",
+      "target": "사회복지학부",
+      "kind": "source-unit-label-annotation",
+      "note": "2027 원문의 학과·학부 전체 행을 대조. 뒤의 구성 전공 목록·인증·교육 안내만 표기에서 분리하고 개별 전공 수치를 합산하거나 배분하지 않음.",
+      "sourceIds": [
+        "n095"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KOld9YTlKZiUmOiZKN2ZUZg=="
+      ]
+    },
+    {
+      "university": "대전대학교",
+      "source": "법행정학부 (법학전공, 행정학전공)",
+      "target": "법·행정학부",
+      "kind": "source-unit-label-annotation",
+      "note": "2027 원문의 학과·학부 전체 행을 대조. 뒤의 구성 전공 목록·인증·교육 안내만 표기에서 분리하고 개별 전공 수치를 합산하거나 배분하지 않음.",
+      "sourceIds": [
+        "n107"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10501131.html"
+      ]
+    },
+    {
+      "university": "동국대학교",
+      "source": "경영대학(광역화)",
+      "target": "경영대학",
+      "kind": "source-unit-label-annotation",
+      "note": "2027 원문의 학과·학부 전체 행을 대조. 뒤의 구성 전공 목록·인증·교육 안내만 표기에서 분리하고 개별 전공 수치를 합산하거나 배분하지 않음.",
+      "sourceIds": [
+        "n010"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10550541.html"
+      ]
+    },
+    {
+      "university": "동국대학교",
+      "source": "글로컬인재학부(자유전공학부)",
+      "target": "글로컬인재학부",
+      "kind": "source-unit-label-annotation",
+      "note": "2027 원문의 학과·학부 전체 행을 대조. 뒤의 구성 전공 목록·인증·교육 안내만 표기에서 분리하고 개별 전공 수치를 합산하거나 배분하지 않음.",
+      "sourceIds": [
+        "n146"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10540761.html"
+      ]
+    },
+    {
+      "university": "동국대학교",
+      "source": "바이오시스템대학(광역화)",
+      "target": "바이오시스템대학",
+      "kind": "source-unit-label-annotation",
+      "note": "2027 원문의 학과·학부 전체 행을 대조. 뒤의 구성 전공 목록·인증·교육 안내만 표기에서 분리하고 개별 전공 수치를 합산하거나 배분하지 않음.",
+      "sourceIds": [
+        "n010"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10550541.html"
+      ]
+    },
+    {
+      "university": "동국대학교",
+      "source": "열린전공학부(인문)[광역화]",
+      "target": "열린전공학부(인문)",
+      "kind": "source-unit-label-annotation",
+      "note": "2027 원문의 학과·학부 전체 행을 대조. 뒤의 구성 전공 목록·인증·교육 안내만 표기에서 분리하고 개별 전공 수치를 합산하거나 배분하지 않음.",
+      "sourceIds": [
+        "n010"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10550541.html"
+      ]
+    },
+    {
+      "university": "동국대학교",
+      "source": "열린전공학부(자연)[광역화]",
+      "target": "열린전공학부(자연)",
+      "kind": "source-unit-label-annotation",
+      "note": "2027 원문의 학과·학부 전체 행을 대조. 뒤의 구성 전공 목록·인증·교육 안내만 표기에서 분리하고 개별 전공 수치를 합산하거나 배분하지 않음.",
+      "sourceIds": [
+        "n010"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10550541.html"
+      ]
+    },
+    {
+      "university": "동서대학교",
+      "source": "계열4 (건축) [5년제 인증]",
+      "target": "계열4(건축)",
+      "kind": "source-unit-label-annotation",
+      "note": "2027 원문의 학과·학부 전체 행을 대조. 뒤의 구성 전공 목록·인증·교육 안내만 표기에서 분리하고 개별 전공 수치를 합산하거나 배분하지 않음.",
+      "sourceIds": [
+        "n161"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10570791.html"
+      ]
+    },
+    {
+      "university": "동신대학교",
+      "source": "간호학과 [교육평가원인증], [교직]",
+      "target": "간호학과",
+      "kind": "source-unit-label-annotation",
+      "note": "2027 원문의 학과·학부 전체 행을 대조. 뒤의 구성 전공 목록·인증·교육 안내만 표기에서 분리하고 개별 전공 수치를 합산하거나 배분하지 않음.",
+      "sourceIds": [
+        "n123"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KOlclfCZyV2FWSmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "동신대학교",
+      "source": "보건행정학과 [교육평가원인증]",
+      "target": "보건행정학과",
+      "kind": "source-unit-label-annotation",
+      "note": "2027 원문의 학과·학부 전체 행을 대조. 뒤의 구성 전공 목록·인증·교육 안내만 표기에서 분리하고 개별 전공 수치를 합산하거나 배분하지 않음.",
+      "sourceIds": [
+        "n123"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KOlclfCZyV2FWSmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "동신대학교",
+      "source": "응급구조학과 [대한심폐소생협회교육기관]",
+      "target": "응급구조학과",
+      "kind": "source-unit-label-annotation",
+      "note": "2027 원문의 학과·학부 전체 행을 대조. 뒤의 구성 전공 목록·인증·교육 안내만 표기에서 분리하고 개별 전공 수치를 합산하거나 배분하지 않음.",
+      "sourceIds": [
+        "n123"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KOlclfCZyV2FWSmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "동신대학교",
+      "source": "한의예과 [교육평가원인증]",
+      "target": "한의예과",
+      "kind": "source-unit-label-annotation",
+      "note": "2027 원문의 학과·학부 전체 행을 대조. 뒤의 구성 전공 목록·인증·교육 안내만 표기에서 분리하고 개별 전공 수치를 합산하거나 배분하지 않음.",
+      "sourceIds": [
+        "n123"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KOlclfCZyV2FWSmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "배재대학교",
+      "source": "경찰법학부(경찰학/법학)",
+      "target": "경찰법학부",
+      "kind": "source-unit-label-annotation",
+      "note": "2027 원문의 학과·학부 전체 행을 대조. 뒤의 구성 전공 목록·인증·교육 안내만 표기에서 분리하고 개별 전공 수치를 합산하거나 배분하지 않음.",
+      "sourceIds": [
+        "n109"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KOkxpSmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "서원대학교",
+      "source": "디자인학과 (시각,산업)",
+      "target": "디자인학과",
+      "kind": "source-unit-label-annotation",
+      "note": "2027 원문의 학과·학부 전체 행을 대조. 뒤의 구성 전공 목록·인증·교육 안내만 표기에서 분리하고 개별 전공 수치를 합산하거나 배분하지 않음.",
+      "sourceIds": [
+        "n081"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10880591.html"
+      ]
+    },
+    {
+      "university": "서원대학교",
+      "source": "항공관광학과 (승무원 양성)",
+      "target": "항공관광학과",
+      "kind": "source-unit-label-annotation",
+      "note": "2027 원문의 학과·학부 전체 행을 대조. 뒤의 구성 전공 목록·인증·교육 안내만 표기에서 분리하고 개별 전공 수치를 합산하거나 배분하지 않음.",
+      "sourceIds": [
+        "n081"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10880591.html"
+      ]
+    },
+    {
+      "university": "선문대학교",
+      "source": "무도경호학과 [실기]",
+      "target": "무도경호학과",
+      "kind": "source-unit-label-annotation",
+      "note": "2027 원문의 학과·학부 전체 행을 대조. 뒤의 구성 전공 목록·인증·교육 안내만 표기에서 분리하고 개별 전공 수치를 합산하거나 배분하지 않음.",
+      "sourceIds": [
+        "n099"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KV2FhTVc6JkpmJSY6Jko3ZlRm"
+      ]
+    },
+    {
+      "university": "선문대학교",
+      "source": "스포츠과학과 [실기]",
+      "target": "스포츠과학과",
+      "kind": "source-unit-label-annotation",
+      "note": "2027 원문의 학과·학부 전체 행을 대조. 뒤의 구성 전공 목록·인증·교육 안내만 표기에서 분리하고 개별 전공 수치를 합산하거나 배분하지 않음.",
+      "sourceIds": [
+        "n099"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KV2FhTVc6JkpmJSY6Jko3ZlRm"
+      ]
+    },
+    {
+      "university": "선문대학교",
+      "source": "태권도학과 [실기]",
+      "target": "태권도학과",
+      "kind": "source-unit-label-annotation",
+      "note": "2027 원문의 학과·학부 전체 행을 대조. 뒤의 구성 전공 목록·인증·교육 안내만 표기에서 분리하고 개별 전공 수치를 합산하거나 배분하지 않음.",
+      "sourceIds": [
+        "n099"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KV2FhTVc6JkpmJSY6Jko3ZlRm"
+      ]
+    },
+    {
+      "university": "선문대학교",
+      "source": "피트니스재활학과 [실기]",
+      "target": "피트니스재활학과",
+      "kind": "source-unit-label-annotation",
+      "note": "2027 원문의 학과·학부 전체 행을 대조. 뒤의 구성 전공 목록·인증·교육 안내만 표기에서 분리하고 개별 전공 수치를 합산하거나 배분하지 않음.",
+      "sourceIds": [
+        "n099"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KV2FhTVc6JkpmJSY6Jko3ZlRm"
+      ]
+    },
+    {
+      "university": "신라대학교",
+      "source": "건축학과 ( 4년제 , 5년제 )",
+      "target": "건축학과",
+      "kind": "source-unit-label-annotation",
+      "note": "2027 원문의 학과·학부 전체 행을 대조. 뒤의 구성 전공 목록·인증·교육 안내만 표기에서 분리하고 개별 전공 수치를 합산하거나 배분하지 않음.",
+      "sourceIds": [
+        "n169"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11020621.html"
+      ]
+    },
+    {
+      "university": "원광대학교",
+      "source": "경영계열(경영학전공)",
+      "target": "경영계열",
+      "kind": "source-unit-label-annotation",
+      "note": "2027 원문의 학과·학부 전체 행을 대조. 뒤의 구성 전공 목록·인증·교육 안내만 표기에서 분리하고 개별 전공 수치를 합산하거나 배분하지 않음.",
+      "sourceIds": [
+        "n118"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5Kclc4TjlXYU5KZiUmOiZKN2ZUZg=="
+      ]
+    },
+    {
+      "university": "원광대학교",
+      "source": "경영계열(경영학전공, 글로컬경영전공)",
+      "target": "경영계열",
+      "kind": "source-unit-label-annotation",
+      "note": "2027 원문의 학과·학부 전체 행을 대조. 뒤의 구성 전공 목록·인증·교육 안내만 표기에서 분리하고 개별 전공 수치를 합산하거나 배분하지 않음.",
+      "sourceIds": [
+        "n118"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5Kclc4TjlXYU5KZiUmOiZKN2ZUZg=="
+      ]
+    },
+    {
+      "university": "원광대학교",
+      "source": "경제금융ㆍ회계세무계열(회계세무학전공, 경제금융학전공)",
+      "target": "경제금융·회계세무계열",
+      "kind": "source-unit-label-annotation",
+      "note": "2027 원문의 학과·학부 전체 행을 대조. 뒤의 구성 전공 목록·인증·교육 안내만 표기에서 분리하고 개별 전공 수치를 합산하거나 배분하지 않음.",
+      "sourceIds": [
+        "n118"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5Kclc4TjlXYU5KZiUmOiZKN2ZUZg=="
+      ]
+    },
+    {
+      "university": "원광대학교",
+      "source": "경찰ㆍ공공행정계열(경찰행정학전공, 교정보호학전공, 행정공공기관학전공)",
+      "target": "경찰·공공행정계열",
+      "kind": "source-unit-label-annotation",
+      "note": "2027 원문의 학과·학부 전체 행을 대조. 뒤의 구성 전공 목록·인증·교육 안내만 표기에서 분리하고 개별 전공 수치를 합산하거나 배분하지 않음.",
+      "sourceIds": [
+        "n118"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5Kclc4TjlXYU5KZiUmOiZKN2ZUZg=="
+      ]
+    },
+    {
+      "university": "원광대학교",
+      "source": "소방행정ㆍ방재계열(소방행정학전공, 소방방재학전공)",
+      "target": "소방행정·방재계열",
+      "kind": "source-unit-label-annotation",
+      "note": "2027 원문의 학과·학부 전체 행을 대조. 뒤의 구성 전공 목록·인증·교육 안내만 표기에서 분리하고 개별 전공 수치를 합산하거나 배분하지 않음.",
+      "sourceIds": [
+        "n118"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5Kclc4TjlXYU5KZiUmOiZKN2ZUZg=="
+      ]
+    },
+    {
+      "university": "원광대학교",
+      "source": "외식조리과(2년제)",
+      "target": "외식조리과",
+      "kind": "source-unit-label-annotation",
+      "note": "2027 원문의 학과·학부 전체 행을 대조. 뒤의 구성 전공 목록·인증·교육 안내만 표기에서 분리하고 개별 전공 수치를 합산하거나 배분하지 않음.",
+      "sourceIds": [
+        "n118"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5Kclc4TjlXYU5KZiUmOiZKN2ZUZg=="
+      ]
+    },
+    {
+      "university": "중부대학교",
+      "source": "동물보건학과 [동물보건사 양성기관 평가인증]",
+      "target": "동물보건학과",
+      "kind": "source-unit-label-annotation",
+      "note": "2027 원문의 학과·학부 전체 행을 대조. 뒤의 구성 전공 목록·인증·교육 안내만 표기에서 분리하고 개별 전공 수치를 합산하거나 배분하지 않음.",
+      "sourceIds": [
+        "n101"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11311031.html"
+      ]
+    },
+    {
+      "university": "중부대학교",
+      "source": "항공서비스학전공 [승무원양성]",
+      "target": "항공서비스학전공",
+      "kind": "source-unit-label-annotation",
+      "note": "2027 원문의 학과·학부 전체 행을 대조. 뒤의 구성 전공 목록·인증·교육 안내만 표기에서 분리하고 개별 전공 수치를 합산하거나 배분하지 않음.",
+      "sourceIds": [
+        "n101"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11311031.html"
+      ]
+    },
+    {
+      "university": "중부대학교",
+      "source": "항공운항서비스학전공 [승무원양성]",
+      "target": "항공운항서비스학전공",
+      "kind": "source-unit-label-annotation",
+      "note": "2027 원문의 학과·학부 전체 행을 대조. 뒤의 구성 전공 목록·인증·교육 안내만 표기에서 분리하고 개별 전공 수치를 합산하거나 배분하지 않음.",
+      "sourceIds": [
+        "n101"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11311031.html"
+      ]
+    },
+    {
+      "university": "중원대학교",
+      "source": "종교문화학부(종교문화유산학과 한국어교육문화학과 )",
+      "target": "종교문화학부",
+      "kind": "source-unit-label-annotation",
+      "note": "2027 원문의 학과·학부 전체 행을 대조. 뒤의 구성 전공 목록·인증·교육 안내만 표기에서 분리하고 개별 전공 수치를 합산하거나 배분하지 않음.",
+      "sourceIds": [
+        "n084"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11920301.html"
+      ]
+    },
+    {
+      "university": "충남대학교",
+      "source": "국제학부(국제학)",
+      "target": "국제학부",
+      "kind": "source-unit-label-annotation",
+      "note": "2027 원문의 학과·학부 전체 행을 대조. 뒤의 구성 전공 목록·인증·교육 안내만 표기에서 분리하고 개별 전공 수치를 합산하거나 배분하지 않음.",
+      "sourceIds": [
+        "n111"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11400471.html"
+      ]
+    },
+    {
+      "university": "한림대학교",
+      "source": "글로벌학부(글로벌비즈니스)",
+      "target": "글로벌학부",
+      "kind": "source-unit-label-annotation",
+      "note": "2027 원문의 학과·학부 전체 행을 대조. 뒤의 구성 전공 목록·인증·교육 안내만 표기에서 분리하고 개별 전공 수치를 합산하거나 배분하지 않음.",
+      "sourceIds": [
+        "n077"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KTWJDQzh8SmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "한서대학교",
+      "source": "뮤직프로덕션학과(실기)",
+      "target": "뮤직프로덕션학과",
+      "kind": "source-unit-label-annotation",
+      "note": "2027 원문의 학과·학부 전체 행을 대조. 뒤의 구성 전공 목록·인증·교육 안내만 표기에서 분리하고 개별 전공 수치를 합산하거나 배분하지 않음.",
+      "sourceIds": [
+        "n104"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11600881.html"
+      ]
+    },
+    {
+      "university": "가톨릭관동대학교",
+      "source": "AI소프트웨어융합학부 (컴퓨터소프트웨어전공/AI융합전공)",
+      "target": "AI·소프트웨어융합학부",
+      "kind": "source-unit-label-annotation",
+      "note": "2027 원문의 학과·학부 전체 행을 대조. 뒤의 구성 전공 목록·인증·교육 안내만 표기에서 분리하고 개별 전공 수치를 합산하거나 배분하지 않음.",
+      "sourceIds": [
+        "n070"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KOjlMSmYlJjomSjdmVGY="
+      ]
+    },
+    {
+      "university": "단국대학교",
+      "source": "퇴계혁신칼리지(인문계열광역)",
+      "target": "인문계열광역",
+      "kind": "source-unit-label-annotation",
+      "note": "공식 경쟁률의 개별 모집단위 행 대조. 대학·교직·자율전공 유형 부가 표기 또는 동일 전공의 상위 소속 표기만 정리. 여러 모집단위 합계는 나누어 연결하지 않음.",
+      "sourceIds": [
+        "n047"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10420521.html",
+        "https://ipsi.dankook.ac.kr/bbs/filedown.php?bbsid=juk_ipca&file_seq=6715"
+      ]
+    },
+    {
+      "university": "단국대학교",
+      "source": "퇴계혁신칼리지(사회계열광역)",
+      "target": "사회계열광역",
+      "kind": "source-unit-label-annotation",
+      "note": "공식 경쟁률의 개별 모집단위 행 대조. 대학·교직·자율전공 유형 부가 표기 또는 동일 전공의 상위 소속 표기만 정리. 여러 모집단위 합계는 나누어 연결하지 않음.",
+      "sourceIds": [
+        "n047"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10420521.html",
+        "https://ipsi.dankook.ac.kr/bbs/filedown.php?bbsid=juk_ipca&file_seq=6715"
+      ]
+    },
+    {
+      "university": "단국대학교",
+      "source": "퇴계혁신칼리지(공학계열광역)",
+      "target": "공학계열광역",
+      "kind": "source-unit-label-annotation",
+      "note": "공식 경쟁률의 개별 모집단위 행 대조. 대학·교직·자율전공 유형 부가 표기 또는 동일 전공의 상위 소속 표기만 정리. 여러 모집단위 합계는 나누어 연결하지 않음.",
+      "sourceIds": [
+        "n047"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10420521.html",
+        "https://ipsi.dankook.ac.kr/bbs/filedown.php?bbsid=juk_ipca&file_seq=6715"
+      ]
+    },
+    {
+      "university": "단국대학교",
+      "source": "퇴계혁신칼리지(SW융합계열광역)",
+      "target": "SW융합계열광역",
+      "kind": "source-unit-label-annotation",
+      "note": "공식 경쟁률의 개별 모집단위 행 대조. 대학·교직·자율전공 유형 부가 표기 또는 동일 전공의 상위 소속 표기만 정리. 여러 모집단위 합계는 나누어 연결하지 않음.",
+      "sourceIds": [
+        "n047"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10420521.html",
+        "https://ipsi.dankook.ac.kr/bbs/filedown.php?bbsid=juk_ipca&file_seq=6715"
+      ]
+    },
+    {
+      "university": "단국대학교",
+      "source": "율곡혁신칼리지(인문사회계열광역)",
+      "target": "인문사회계열광역",
+      "kind": "source-unit-label-annotation",
+      "note": "공식 경쟁률의 개별 모집단위 행 대조. 대학·교직·자율전공 유형 부가 표기 또는 동일 전공의 상위 소속 표기만 정리. 여러 모집단위 합계는 나누어 연결하지 않음.",
+      "sourceIds": [
+        "n047"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10420521.html",
+        "https://ipsi.dankook.ac.kr/bbs/filedown.php?bbsid=juk_ipca&file_seq=6715"
+      ]
+    },
+    {
+      "university": "단국대학교",
+      "source": "율곡혁신칼리지(자연공학계열광역)",
+      "target": "자연공학계열광역",
+      "kind": "source-unit-label-annotation",
+      "note": "공식 경쟁률의 개별 모집단위 행 대조. 대학·교직·자율전공 유형 부가 표기 또는 동일 전공의 상위 소속 표기만 정리. 여러 모집단위 합계는 나누어 연결하지 않음.",
+      "sourceIds": [
+        "n047"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10420521.html",
+        "https://ipsi.dankook.ac.kr/bbs/filedown.php?bbsid=juk_ipca&file_seq=6715"
+      ]
+    },
+    {
+      "university": "조선대학교",
+      "source": "에이지테크 AI·SW학부(컴퓨터공학전공)",
+      "target": "AI·SW학부(컴퓨터공학전공)",
+      "kind": "source-unit-label-annotation",
+      "note": "공식 경쟁률의 개별 모집단위 행 대조. 대학·교직·자율전공 유형 부가 표기 또는 동일 전공의 상위 소속 표기만 정리. 여러 모집단위 합계는 나누어 연결하지 않음.",
+      "sourceIds": [
+        "n135"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11300581.html",
+        "https://www.use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876929&q_fileId=1d2e6f4f-55a2-46f0-ac06-2f5c4bc408ad"
+      ]
+    },
+    {
+      "university": "조선대학교",
+      "source": "에이지테크 AI·SW학부(정보통신공학전공)",
+      "target": "AI·SW학부(정보통신공학전공)",
+      "kind": "source-unit-label-annotation",
+      "note": "공식 경쟁률의 개별 모집단위 행 대조. 대학·교직·자율전공 유형 부가 표기 또는 동일 전공의 상위 소속 표기만 정리. 여러 모집단위 합계는 나누어 연결하지 않음.",
+      "sourceIds": [
+        "n135"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11300581.html",
+        "https://www.use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876929&q_fileId=1d2e6f4f-55a2-46f0-ac06-2f5c4bc408ad"
+      ]
+    },
+    {
+      "university": "조선대학교",
+      "source": "에이지테크 신소재공학과",
+      "target": "신소재공학과",
+      "kind": "source-unit-label-annotation",
+      "note": "공식 경쟁률의 개별 모집단위 행 대조. 대학·교직·자율전공 유형 부가 표기 또는 동일 전공의 상위 소속 표기만 정리. 여러 모집단위 합계는 나누어 연결하지 않음.",
+      "sourceIds": [
+        "n135"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11300581.html",
+        "https://www.use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876929&q_fileId=1d2e6f4f-55a2-46f0-ac06-2f5c4bc408ad"
+      ]
+    },
+    {
+      "university": "조선대학교",
+      "source": "에이지테크 산업공학과",
+      "target": "산업공학과",
+      "kind": "source-unit-label-annotation",
+      "note": "공식 경쟁률의 개별 모집단위 행 대조. 대학·교직·자율전공 유형 부가 표기 또는 동일 전공의 상위 소속 표기만 정리. 여러 모집단위 합계는 나누어 연결하지 않음.",
+      "sourceIds": [
+        "n135"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11300581.html",
+        "https://www.use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876929&q_fileId=1d2e6f4f-55a2-46f0-ac06-2f5c4bc408ad"
+      ]
+    },
+    {
+      "university": "조선대학교",
+      "source": "에이지테크 전자공학과",
+      "target": "전자공학과",
+      "kind": "source-unit-label-annotation",
+      "note": "공식 경쟁률의 개별 모집단위 행 대조. 대학·교직·자율전공 유형 부가 표기 또는 동일 전공의 상위 소속 표기만 정리. 여러 모집단위 합계는 나누어 연결하지 않음.",
+      "sourceIds": [
+        "n135"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11300581.html",
+        "https://www.use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876929&q_fileId=1d2e6f4f-55a2-46f0-ac06-2f5c4bc408ad"
+      ]
+    },
+    {
+      "university": "국립순천대학교",
+      "source": "식품영양학과 ★",
+      "target": "식품영양학과",
+      "kind": "source-unit-label-annotation",
+      "note": "공식 경쟁률의 개별 모집단위 행 대조. 대학·교직·자율전공 유형 부가 표기 또는 동일 전공의 상위 소속 표기만 정리. 여러 모집단위 합계는 나누어 연결하지 않음.",
+      "sourceIds": [
+        "n127"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10990491.html",
+        "https://www.scnu.ac.kr/common/nttFileDownload.do?fileKey=00da11bed821dc254ee3977a932c4f62"
+      ]
+    },
+    {
+      "university": "국립순천대학교",
+      "source": "융합바이오시스템기계공학과 ★",
+      "target": "융합바이오시스템기계공학과",
+      "kind": "source-unit-label-annotation",
+      "note": "공식 경쟁률의 개별 모집단위 행 대조. 대학·교직·자율전공 유형 부가 표기 또는 동일 전공의 상위 소속 표기만 정리. 여러 모집단위 합계는 나누어 연결하지 않음.",
+      "sourceIds": [
+        "n127"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10990491.html",
+        "https://www.scnu.ac.kr/common/nttFileDownload.do?fileKey=00da11bed821dc254ee3977a932c4f62"
+      ]
+    },
+    {
+      "university": "성균관대학교",
+      "source": "사범대학 수학교육과",
+      "target": "수학교육과",
+      "kind": "source-unit-label-annotation",
+      "note": "공식 경쟁률의 개별 모집단위 행 대조. 대학·교직·자율전공 유형 부가 표기 또는 동일 전공의 상위 소속 표기만 정리. 여러 모집단위 합계는 나누어 연결하지 않음.",
+      "sourceIds": [
+        "n024"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10920591.html",
+        "https://use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876415&q_fileId=a51ff7b3-d2eb-471f-919c-a899cbef95ce"
+      ]
+    },
+    {
+      "university": "성균관대학교",
+      "source": "사범대학 컴퓨터교육과",
+      "target": "컴퓨터교육과",
+      "kind": "source-unit-label-annotation",
+      "note": "공식 경쟁률의 개별 모집단위 행 대조. 대학·교직·자율전공 유형 부가 표기 또는 동일 전공의 상위 소속 표기만 정리. 여러 모집단위 합계는 나누어 연결하지 않음.",
+      "sourceIds": [
+        "n024"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10920591.html",
+        "https://use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876415&q_fileId=a51ff7b3-d2eb-471f-919c-a899cbef95ce"
+      ]
+    },
+    {
+      "university": "성균관대학교",
+      "source": "사범대학 한문교육과",
+      "target": "한문교육과",
+      "kind": "source-unit-label-annotation",
+      "note": "공식 경쟁률의 개별 모집단위 행 대조. 대학·교직·자율전공 유형 부가 표기 또는 동일 전공의 상위 소속 표기만 정리. 여러 모집단위 합계는 나누어 연결하지 않음.",
+      "sourceIds": [
+        "n024"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10920591.html",
+        "https://use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876415&q_fileId=a51ff7b3-d2eb-471f-919c-a899cbef95ce"
+      ]
+    },
+    {
+      "university": "덕성여자대학교",
+      "source": "미래인재대학(가상현실융합학과)",
+      "target": "가상현실융합학과",
+      "kind": "source-unit-label-annotation",
+      "note": "공식 경쟁률의 개별 모집단위 행 대조. 대학·교직·자율전공 유형 부가 표기 또는 동일 전공의 상위 소속 표기만 정리. 여러 모집단위 합계는 나누어 연결하지 않음.",
+      "sourceIds": [
+        "n009"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10530631.html",
+        "https://use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876413&q_fileId=41a2f1fc-c084-4df9-94b5-b377941e3d11"
+      ]
+    },
+    {
+      "university": "덕성여자대학교",
+      "source": "미래인재대학(데이터사이언스학과)",
+      "target": "데이터사이언스학과",
+      "kind": "source-unit-label-annotation",
+      "note": "공식 경쟁률의 개별 모집단위 행 대조. 대학·교직·자율전공 유형 부가 표기 또는 동일 전공의 상위 소속 표기만 정리. 여러 모집단위 합계는 나누어 연결하지 않음.",
+      "sourceIds": [
+        "n009"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10530631.html",
+        "https://use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876413&q_fileId=41a2f1fc-c084-4df9-94b5-b377941e3d11"
+      ]
+    },
+    {
+      "university": "국립공주대학교",
+      "source": "인문사회과학대학자율전공학부 - 유형Ⅱ",
+      "target": "인문사회과학대학자율전공학부",
+      "kind": "source-unit-label-annotation",
+      "note": "공식 경쟁률의 개별 모집단위 행 대조. 대학·교직·자율전공 유형 부가 표기 또는 동일 전공의 상위 소속 표기만 정리. 여러 모집단위 합계는 나누어 연결하지 않음.",
+      "sourceIds": [
+        "n093"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10281081.html",
+        "https://ipsi.kongju.ac.kr/attach/633a9f82ec4d7c0448bfded0c918acbd/9a9db098b587ee18b321c826f3707a49"
+      ]
+    },
+    {
+      "university": "국립공주대학교",
+      "source": "자연과학대학자율전공학부 - 유형Ⅱ",
+      "target": "자연과학대학자율전공학부",
+      "kind": "source-unit-label-annotation",
+      "note": "공식 경쟁률의 개별 모집단위 행 대조. 대학·교직·자율전공 유형 부가 표기 또는 동일 전공의 상위 소속 표기만 정리. 여러 모집단위 합계는 나누어 연결하지 않음.",
+      "sourceIds": [
+        "n093"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10281081.html",
+        "https://ipsi.kongju.ac.kr/attach/633a9f82ec4d7c0448bfded0c918acbd/9a9db098b587ee18b321c826f3707a49"
+      ]
+    },
+    {
+      "university": "국립공주대학교",
+      "source": "산업과학대학자율전공학부 - 유형Ⅱ",
+      "target": "산업과학대학자율전공학부",
+      "kind": "source-unit-label-annotation",
+      "note": "공식 경쟁률의 개별 모집단위 행 대조. 대학·교직·자율전공 유형 부가 표기 또는 동일 전공의 상위 소속 표기만 정리. 여러 모집단위 합계는 나누어 연결하지 않음.",
+      "sourceIds": [
+        "n093"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10281081.html",
+        "https://ipsi.kongju.ac.kr/attach/633a9f82ec4d7c0448bfded0c918acbd/9a9db098b587ee18b321c826f3707a49"
+      ]
+    },
+    {
+      "university": "국립공주대학교",
+      "source": "천안공과대학자율전공학부 - 유형Ⅱ",
+      "target": "천안공과대학자율전공학부",
+      "kind": "source-unit-label-annotation",
+      "note": "공식 경쟁률의 개별 모집단위 행 대조. 대학·교직·자율전공 유형 부가 표기 또는 동일 전공의 상위 소속 표기만 정리. 여러 모집단위 합계는 나누어 연결하지 않음.",
+      "sourceIds": [
+        "n093"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10281081.html",
+        "https://ipsi.kongju.ac.kr/attach/633a9f82ec4d7c0448bfded0c918acbd/9a9db098b587ee18b321c826f3707a49"
+      ]
+    },
+    {
+      "university": "충남대학교",
+      "source": "건축학과(5년제)",
+      "target": "건축학과(5)",
+      "kind": "source-unit-label-annotation",
+      "note": "공식 경쟁률의 개별 모집단위 행 대조. 대학·교직·자율전공 유형 부가 표기 또는 동일 전공의 상위 소속 표기만 정리. 여러 모집단위 합계는 나누어 연결하지 않음.",
+      "sourceIds": [
+        "n111"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11400471.html"
+      ]
+    },
+    {
+      "university": "숙명여자대학교",
+      "source": "테슬(TESL)전공",
+      "target": "영어영문학부(테슬(TESL)전공)",
+      "kind": "source-unit-label-annotation",
+      "note": "공식 경쟁률의 개별 모집단위 행 대조. 대학·교직·자율전공 유형 부가 표기 또는 동일 전공의 상위 소속 표기만 정리. 여러 모집단위 합계는 나누어 연결하지 않음.",
+      "sourceIds": [
+        "n027"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10981501.html",
+        "https://www.use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876417&q_fileId=d30be2c2-d8dc-42fb-a389-f62d7717c9ee"
+      ]
+    },
+    {
+      "university": "국립부경대학교",
+      "source": "토목공학과",
+      "target": "지속가능공학부(토목공학전공)",
+      "kind": "verified-name-change",
+      "note": "대학 제출 2027 어디가 전년 대비 모집단위 명칭 변경표로 개별 전공의 학과 전환을 확인. 각 개별 학과 경쟁률만 연결하며 통합 학부 인원을 분할하지 않음.",
+      "sourceIds": [
+        "n164"
+      ],
+      "evidence": [
+        "https://www.adiga.kr/ucp/uvt/uni/univDetailSelection.do?menuId=PCUVTINF2000&searchSyr=2027&unvCd=0000013"
+      ]
+    },
+    {
+      "university": "국립부경대학교",
+      "source": "생태공학과",
+      "target": "지속가능공학부(생태공학전공)",
+      "kind": "verified-name-change",
+      "note": "대학 제출 2027 어디가 전년 대비 모집단위 명칭 변경표로 개별 전공의 학과 전환을 확인. 각 개별 학과 경쟁률만 연결하며 통합 학부 인원을 분할하지 않음.",
+      "sourceIds": [
+        "n164"
+      ],
+      "evidence": [
+        "https://www.adiga.kr/ucp/uvt/uni/univDetailSelection.do?menuId=PCUVTINF2000&searchSyr=2027&unvCd=0000013"
+      ]
+    },
+    {
+      "university": "국립부경대학교",
+      "source": "환경공학과",
+      "target": "지구환경시스템과학부(환경공학전공)",
+      "kind": "verified-name-change",
+      "note": "대학 제출 2027 어디가 전년 대비 모집단위 명칭 변경표로 개별 전공의 학과 전환을 확인. 각 개별 학과 경쟁률만 연결하며 통합 학부 인원을 분할하지 않음.",
+      "sourceIds": [
+        "n164"
+      ],
+      "evidence": [
+        "https://www.adiga.kr/ucp/uvt/uni/univDetailSelection.do?menuId=PCUVTINF2000&searchSyr=2027&unvCd=0000013"
+      ]
+    },
+    {
+      "university": "국립부경대학교",
+      "source": "해양학과",
+      "target": "지구환경시스템과학부(해양학전공)",
+      "kind": "verified-name-change",
+      "note": "대학 제출 2027 어디가 전년 대비 모집단위 명칭 변경표로 개별 전공의 학과 전환을 확인. 각 개별 학과 경쟁률만 연결하며 통합 학부 인원을 분할하지 않음.",
+      "sourceIds": [
+        "n164"
+      ],
+      "evidence": [
+        "https://www.adiga.kr/ucp/uvt/uni/univDetailSelection.do?menuId=PCUVTINF2000&searchSyr=2027&unvCd=0000013"
+      ]
+    },
+    {
+      "university": "국립부경대학교",
+      "source": "지질환경과학과",
+      "target": "지구환경시스템과학부(환경지질과학전공)",
+      "kind": "verified-name-change",
+      "note": "대학 제출 2027 어디가 전년 대비 모집단위 명칭 변경표로 개별 전공의 학과 전환을 확인. 각 개별 학과 경쟁률만 연결하며 통합 학부 인원을 분할하지 않음.",
+      "sourceIds": [
+        "n164"
+      ],
+      "evidence": [
+        "https://www.adiga.kr/ucp/uvt/uni/univDetailSelection.do?menuId=PCUVTINF2000&searchSyr=2027&unvCd=0000013"
+      ]
+    },
+    {
+      "university": "국립부경대학교",
+      "source": "지속가능대기환경학과",
+      "target": "지구환경시스템과학부(환경대기과학전공)",
+      "kind": "verified-name-change",
+      "note": "대학 제출 2027 어디가 전년 대비 모집단위 명칭 변경표로 개별 전공의 학과 전환을 확인. 각 개별 학과 경쟁률만 연결하며 통합 학부 인원을 분할하지 않음.",
+      "sourceIds": [
+        "n164"
+      ],
+      "evidence": [
+        "https://www.adiga.kr/ucp/uvt/uni/univDetailSelection.do?menuId=PCUVTINF2000&searchSyr=2027&unvCd=0000013"
+      ]
+    },
+    {
+      "university": "국립부경대학교",
+      "source": "위성정보융합공학과",
+      "target": "지구환경시스템과학부(위성정보융합공학전공)",
+      "kind": "verified-name-change",
+      "note": "대학 제출 2027 어디가 전년 대비 모집단위 명칭 변경표로 개별 전공의 학과 전환을 확인. 각 개별 학과 경쟁률만 연결하며 통합 학부 인원을 분할하지 않음.",
+      "sourceIds": [
+        "n164"
+      ],
+      "evidence": [
+        "https://www.adiga.kr/ucp/uvt/uni/univDetailSelection.do?menuId=PCUVTINF2000&searchSyr=2027&unvCd=0000013"
+      ]
+    },
+    {
+      "university": "국립부경대학교",
+      "source": "위성정보융합공학과",
+      "target": "지구환경시스템과학부(위성정보융합전공)",
+      "kind": "verified-name-change",
+      "note": "대학 제출 2027 어디가 전년 대비 모집단위 명칭 변경표로 개별 전공의 학과 전환을 확인. 각 개별 학과 경쟁률만 연결하며 통합 학부 인원을 분할하지 않음.",
+      "sourceIds": [
+        "n164"
+      ],
+      "evidence": [
+        "https://www.adiga.kr/ucp/uvt/uni/univDetailSelection.do?menuId=PCUVTINF2000&searchSyr=2027&unvCd=0000013"
+      ]
+    },
+    {
+      "university": "국립부경대학교",
+      "source": "해양스포츠학과",
+      "target": "스마트헬스케어학부(해양스포츠전공)",
+      "kind": "verified-name-change",
+      "note": "대학 제출 2027 어디가 전년 대비 모집단위 명칭 변경표로 개별 전공의 학과 전환을 확인. 각 개별 학과 경쟁률만 연결하며 통합 학부 인원을 분할하지 않음.",
+      "sourceIds": [
+        "n164"
+      ],
+      "evidence": [
+        "https://www.adiga.kr/ucp/uvt/uni/univDetailSelection.do?menuId=PCUVTINF2000&searchSyr=2027&unvCd=0000013"
+      ]
+    },
+    {
+      "university": "국립부경대학교",
+      "source": "건축학과＜5년＞",
+      "target": "조형학부(건축학전공)",
+      "kind": "verified-name-change",
+      "note": "대학 제출 2027 어디가 전년 대비 모집단위 명칭 변경표로 개별 전공의 학과 전환을 확인. 각 개별 학과 경쟁률만 연결하며 통합 학부 인원을 분할하지 않음.",
+      "sourceIds": [
+        "n164"
+      ],
+      "evidence": [
+        "https://www.adiga.kr/ucp/uvt/uni/univDetailSelection.do?menuId=PCUVTINF2000&searchSyr=2027&unvCd=0000013"
+      ]
+    },
+    {
+      "university": "국립부경대학교",
+      "source": "시각디자인학과",
+      "target": "조형학부(시각디자인전공)",
+      "kind": "verified-name-change",
+      "note": "대학 제출 2027 어디가 전년 대비 모집단위 명칭 변경표로 개별 전공의 학과 전환을 확인. 각 개별 학과 경쟁률만 연결하며 통합 학부 인원을 분할하지 않음.",
+      "sourceIds": [
+        "n164"
+      ],
+      "evidence": [
+        "https://www.adiga.kr/ucp/uvt/uni/univDetailSelection.do?menuId=PCUVTINF2000&searchSyr=2027&unvCd=0000013"
+      ]
+    },
+    {
+      "university": "국립부경대학교",
+      "source": "공업디자인학과",
+      "target": "조형학부(공업디자인전공)",
+      "kind": "verified-name-change",
+      "note": "대학 제출 2027 어디가 전년 대비 모집단위 명칭 변경표로 개별 전공의 학과 전환을 확인. 각 개별 학과 경쟁률만 연결하며 통합 학부 인원을 분할하지 않음.",
+      "sourceIds": [
+        "n164"
+      ],
+      "evidence": [
+        "https://www.adiga.kr/ucp/uvt/uni/univDetailSelection.do?menuId=PCUVTINF2000&searchSyr=2027&unvCd=0000013"
+      ]
+    },
+    {
+      "university": "부산대학교",
+      "source": "AI컴퓨터공학부(컴퓨터공학전공)",
+      "target": "정보컴퓨터공학부(컴퓨터공학전공)",
+      "kind": "verified-name-change",
+      "note": "부산대학교 입학정보 공식 2027 학과 소개의 정보컴퓨터공학부→AI컴퓨터공학부 명칭 변경 안내. 동일 개별 전공에 한정하며 AI컴퓨팅자율전공 등 신설 전공은 제외.",
+      "sourceIds": [
+        "n167"
+      ],
+      "evidence": [
+        "https://www.youtube.com/watch?v=Ni0rBfF5f8w"
+      ]
+    },
+    {
+      "university": "부산대학교",
+      "source": "AI컴퓨터공학부(인공지능전공)",
+      "target": "정보컴퓨터공학부(인공지능전공)",
+      "kind": "verified-name-change",
+      "note": "부산대학교 입학정보 공식 2027 학과 소개의 정보컴퓨터공학부→AI컴퓨터공학부 명칭 변경 안내. 동일 개별 전공에 한정하며 AI컴퓨팅자율전공 등 신설 전공은 제외.",
+      "sourceIds": [
+        "n167"
+      ],
+      "evidence": [
+        "https://www.youtube.com/watch?v=Ni0rBfF5f8w"
+      ]
+    },
+    {
+      "university": "안양대학교",
+      "source": "데이터사이언스학과",
+      "target": "통계데이터사이언스학과",
+      "kind": "verified-name-change",
+      "note": "2027 수시모집요강 3쪽 모집단위 변경표의 통계데이터사이언스학과→데이터사이언스학과. 주간과 야간을 각각 유지.",
+      "sourceIds": [
+        "n056"
+      ],
+      "evidence": [
+        "https://enter.anyang.ac.kr/files/enter/content/202605/5b07304494cc77a2ea7c8ab8ed0ab46a.pdf"
+      ]
+    },
+    {
+      "university": "안양대학교",
+      "source": "데이터사이언스학과(야간)",
+      "target": "통계데이터사이언스학과(야간)",
+      "kind": "verified-name-change",
+      "note": "2027 수시모집요강 3쪽 모집단위 변경표의 통계데이터사이언스학과→데이터사이언스학과. 주간과 야간을 각각 유지.",
+      "sourceIds": [
+        "n056"
+      ],
+      "evidence": [
+        "https://enter.anyang.ac.kr/files/enter/content/202605/5b07304494cc77a2ea7c8ab8ed0ab46a.pdf"
+      ]
+    },
+    {
+      "university": "평택대학교",
+      "source": "AI융합자율전공",
+      "target": "IT공학자율전공",
+      "kind": "verified-name-change",
+      "note": "대학 제출 2027 어디가 전년 대비 모집단위 명칭 변경표 확인. 개별 모집단위만 연결하고 통합·분리된 모집인원을 임의 배분하지 않음.",
+      "sourceIds": [
+        "n061"
+      ],
+      "evidence": [
+        "https://www.adiga.kr/ucp/uvt/uni/univDetailSelection.do?menuId=PCUVTINF2000&searchSyr=2027&unvCd=0000186"
+      ]
+    },
+    {
+      "university": "평택대학교",
+      "source": "AI소프트웨어학과",
+      "target": "융합소프트웨어학과",
+      "kind": "verified-name-change",
+      "note": "대학 제출 2027 어디가 전년 대비 모집단위 명칭 변경표 확인. 개별 모집단위만 연결하고 통합·분리된 모집인원을 임의 배분하지 않음.",
+      "sourceIds": [
+        "n061"
+      ],
+      "evidence": [
+        "https://www.adiga.kr/ucp/uvt/uni/univDetailSelection.do?menuId=PCUVTINF2000&searchSyr=2027&unvCd=0000186"
+      ]
+    },
+    {
+      "university": "평택대학교",
+      "source": "AI콘텐츠학과",
+      "target": "스마트콘텐츠학과",
+      "kind": "verified-name-change",
+      "note": "대학 제출 2027 어디가 전년 대비 모집단위 명칭 변경표 확인. 개별 모집단위만 연결하고 통합·분리된 모집인원을 임의 배분하지 않음.",
+      "sourceIds": [
+        "n061"
+      ],
+      "evidence": [
+        "https://www.adiga.kr/ucp/uvt/uni/univDetailSelection.do?menuId=PCUVTINF2000&searchSyr=2027&unvCd=0000186"
+      ]
+    },
+    {
+      "university": "평택대학교",
+      "source": "빅데이터정보학과",
+      "target": "데이터정보학과",
+      "kind": "verified-name-change",
+      "note": "대학 제출 2027 어디가 전년 대비 모집단위 명칭 변경표 확인. 개별 모집단위만 연결하고 통합·분리된 모집인원을 임의 배분하지 않음.",
+      "sourceIds": [
+        "n061"
+      ],
+      "evidence": [
+        "https://www.adiga.kr/ucp/uvt/uni/univDetailSelection.do?menuId=PCUVTINF2000&searchSyr=2027&unvCd=0000186"
+      ]
+    },
+    {
+      "university": "평택대학교",
+      "source": "AI융합학부(환경융합학과)",
+      "target": "ICT환경융합학과",
+      "kind": "verified-name-change",
+      "note": "대학 제출 2027 어디가 전년 대비 모집단위 명칭 변경표 확인. 개별 모집단위만 연결하고 통합·분리된 모집인원을 임의 배분하지 않음.",
+      "sourceIds": [
+        "n061"
+      ],
+      "evidence": [
+        "https://www.adiga.kr/ucp/uvt/uni/univDetailSelection.do?menuId=PCUVTINF2000&searchSyr=2027&unvCd=0000186"
+      ]
+    },
+    {
+      "university": "평택대학교",
+      "source": "패션디자인학과",
+      "target": "패션디자인및브랜딩학과",
+      "kind": "verified-name-change",
+      "note": "대학 제출 2027 어디가 전년 대비 모집단위 명칭 변경표 확인. 개별 모집단위만 연결하고 통합·분리된 모집인원을 임의 배분하지 않음.",
+      "sourceIds": [
+        "n061"
+      ],
+      "evidence": [
+        "https://www.adiga.kr/ucp/uvt/uni/univDetailSelection.do?menuId=PCUVTINF2000&searchSyr=2027&unvCd=0000186"
+      ]
+    },
+    {
+      "university": "서울과학기술대학교",
+      "source": "ICT융합공학과",
+      "target": "스마트ICT융합공학과",
+      "kind": "verified-name-change",
+      "note": "대학 제출 2027 어디가 전년 대비 모집단위 명칭 변경표 확인. 개별 모집단위만 연결하고 통합·분리된 모집인원을 임의 배분하지 않음.",
+      "sourceIds": [
+        "n017"
+      ],
+      "evidence": [
+        "https://www.adiga.kr/ucp/uvt/uni/univDetailSelection.do?menuId=PCUVTINF2000&searchSyr=2027&unvCd=0000036"
+      ]
+    },
+    {
+      "university": "서울과학기술대학교",
+      "source": "산업디자인학과",
+      "target": "디자인학과(산업디자인전공)",
+      "kind": "verified-name-change",
+      "note": "대학 제출 2027 어디가 전년 대비 모집단위 명칭 변경표 확인. 개별 모집단위만 연결하고 통합·분리된 모집인원을 임의 배분하지 않음.",
+      "sourceIds": [
+        "n017"
+      ],
+      "evidence": [
+        "https://www.adiga.kr/ucp/uvt/uni/univDetailSelection.do?menuId=PCUVTINF2000&searchSyr=2027&unvCd=0000036"
+      ]
+    },
+    {
+      "university": "서울과학기술대학교",
+      "source": "시각디자인학과",
+      "target": "디자인학과(시각디자인전공)",
+      "kind": "verified-name-change",
+      "note": "대학 제출 2027 어디가 전년 대비 모집단위 명칭 변경표 확인. 개별 모집단위만 연결하고 통합·분리된 모집인원을 임의 배분하지 않음.",
+      "sourceIds": [
+        "n017"
+      ],
+      "evidence": [
+        "https://www.adiga.kr/ucp/uvt/uni/univDetailSelection.do?menuId=PCUVTINF2000&searchSyr=2027&unvCd=0000036"
+      ]
+    },
+    {
+      "university": "서울과학기술대학교",
+      "source": "산업공학부(ITM전공)_자연",
+      "target": "산업공학과(ITM전공)",
+      "kind": "verified-name-change",
+      "note": "대학 제출 2027 어디가 전년 대비 모집단위 명칭 변경표 확인. 개별 모집단위만 연결하고 통합·분리된 모집인원을 임의 배분하지 않음.",
+      "sourceIds": [
+        "n017"
+      ],
+      "evidence": [
+        "https://www.adiga.kr/ucp/uvt/uni/univDetailSelection.do?menuId=PCUVTINF2000&searchSyr=2027&unvCd=0000036"
+      ]
+    },
+    {
+      "university": "서울과학기술대학교",
+      "source": "산업공학부(산업정보시스템전공)_자연",
+      "target": "산업공학과(산업정보시스템전공)",
+      "kind": "verified-name-change",
+      "note": "대학 제출 2027 어디가 전년 대비 모집단위 명칭 변경표 확인. 개별 모집단위만 연결하고 통합·분리된 모집인원을 임의 배분하지 않음.",
+      "sourceIds": [
+        "n017"
+      ],
+      "evidence": [
+        "https://www.adiga.kr/ucp/uvt/uni/univDetailSelection.do?menuId=PCUVTINF2000&searchSyr=2027&unvCd=0000036"
+      ]
+    },
+    {
+      "university": "서울과학기술대학교",
+      "source": "미래에너지학과",
+      "target": "미래에너지융합학과",
+      "kind": "verified-name-change",
+      "note": "대학 제출 2027 어디가 전년 대비 모집단위 명칭 변경표 확인. 개별 모집단위만 연결하고 통합·분리된 모집인원을 임의 배분하지 않음.",
+      "sourceIds": [
+        "n017"
+      ],
+      "evidence": [
+        "https://www.adiga.kr/ucp/uvt/uni/univDetailSelection.do?menuId=PCUVTINF2000&searchSyr=2027&unvCd=0000036"
+      ]
+    },
+    {
+      "university": "아주대학교",
+      "source": "첨단스마트산업공학과",
+      "target": "산업공학과",
+      "kind": "verified-name-change",
+      "note": "대학 제출 2027 어디가 전년 대비 모집단위 명칭 변경표 확인. 개별 모집단위만 연결하고 통합·분리된 모집인원을 임의 배분하지 않음.",
+      "sourceIds": [
+        "n055"
+      ],
+      "evidence": [
+        "https://www.adiga.kr/ucp/uvt/uni/univDetailSelection.do?menuId=PCUVTINF2000&searchSyr=2027&unvCd=0000146"
+      ]
+    },
+    {
+      "university": "남서울대학교",
+      "source": "인공지능소프트웨어학과",
+      "target": "컴퓨터소프트웨어학과",
+      "kind": "verified-name-change",
+      "note": "남서울대학교 공식 홈페이지 학과 목록에 구 명칭과 새 명칭을 병기한 사실 확인. 개별 학과 명칭 변경만 연결.",
+      "sourceIds": [
+        "n096"
+      ],
+      "evidence": [
+        "https://nsu.ac.kr/?m1=home%25"
+      ]
+    },
+    {
+      "university": "남서울대학교",
+      "source": "AI 융합미디어학과",
+      "target": "멀티미디어학과",
+      "kind": "verified-name-change",
+      "note": "남서울대학교 공식 홈페이지 학과 목록에 구 명칭과 새 명칭을 병기한 사실 확인. 개별 학과 명칭 변경만 연결.",
+      "sourceIds": [
+        "n096"
+      ],
+      "evidence": [
+        "https://nsu.ac.kr/?m1=home%25"
+      ]
+    },
+    {
+      "university": "한경국립대학교",
+      "source": "AI반도체융합학과",
+      "target": "AI반도체융합전공",
+      "sourceIds": [
+        "n062"
+      ],
+      "kind": "verified-name-change",
+      "note": "2027 모집요강 PDF 5쪽 학부·전공의 단과대학·학과 체제 전환 및 8~9쪽 학과별 캠퍼스 대조. 동일 명칭 개별 전공만 연결하며 광역학부·개편 전 소프트웨어 전공은 제외.",
+      "evidence": [
+        "https://ipsi.hknu.ac.kr/upload_data/mojib/20260601140951_33.pdf",
+        "https://www.hknu.ac.kr/bbs/hkne/203/98918/artclView.do"
+      ]
+    },
+    {
+      "university": "한경국립대학교",
+      "source": "ICT로봇공학과",
+      "target": "ICT로봇공학전공",
+      "sourceIds": [
+        "n062"
+      ],
+      "kind": "verified-name-change",
+      "note": "2027 모집요강 PDF 5쪽 학부·전공의 단과대학·학과 체제 전환 및 8~9쪽 학과별 캠퍼스 대조. 동일 명칭 개별 전공만 연결하며 광역학부·개편 전 소프트웨어 전공은 제외.",
+      "evidence": [
+        "https://ipsi.hknu.ac.kr/upload_data/mojib/20260601140951_33.pdf",
+        "https://www.hknu.ac.kr/bbs/hkne/203/98918/artclView.do"
+      ]
+    },
+    {
+      "university": "한경국립대학교",
+      "source": "건축공학과",
+      "target": "건축공학전공",
+      "sourceIds": [
+        "n062"
+      ],
+      "kind": "verified-name-change",
+      "note": "2027 모집요강 PDF 5쪽 학부·전공의 단과대학·학과 체제 전환 및 8~9쪽 학과별 캠퍼스 대조. 동일 명칭 개별 전공만 연결하며 광역학부·개편 전 소프트웨어 전공은 제외.",
+      "evidence": [
+        "https://ipsi.hknu.ac.kr/upload_data/mojib/20260601140951_33.pdf",
+        "https://www.hknu.ac.kr/bbs/hkne/203/98918/artclView.do"
+      ]
+    },
+    {
+      "university": "한경국립대학교",
+      "source": "건축학과(5년제)",
+      "target": "건축학전공",
+      "sourceIds": [
+        "n062"
+      ],
+      "kind": "verified-name-change",
+      "note": "2027 모집요강 PDF 5쪽 학부·전공의 단과대학·학과 체제 전환 및 8~9쪽 학과별 캠퍼스 대조. 동일 명칭 개별 전공만 연결하며 광역학부·개편 전 소프트웨어 전공은 제외.",
+      "evidence": [
+        "https://ipsi.hknu.ac.kr/upload_data/mojib/20260601140951_33.pdf",
+        "https://www.hknu.ac.kr/bbs/hkne/203/98918/artclView.do"
+      ]
+    },
+    {
+      "university": "한경국립대학교",
+      "source": "건축학과(5년제)",
+      "target": "건축학전공(5년제)",
+      "sourceIds": [
+        "n062"
+      ],
+      "kind": "verified-name-change",
+      "note": "2027 모집요강 PDF 5쪽 학부·전공의 단과대학·학과 체제 전환 및 8~9쪽 학과별 캠퍼스 대조. 동일 명칭 개별 전공만 연결하며 광역학부·개편 전 소프트웨어 전공은 제외.",
+      "evidence": [
+        "https://ipsi.hknu.ac.kr/upload_data/mojib/20260601140951_33.pdf",
+        "https://www.hknu.ac.kr/bbs/hkne/203/98918/artclView.do"
+      ]
+    },
+    {
+      "university": "한경국립대학교",
+      "source": "경영학과",
+      "target": "경영학전공",
+      "sourceIds": [
+        "n062"
+      ],
+      "kind": "verified-name-change",
+      "note": "2027 모집요강 PDF 5쪽 학부·전공의 단과대학·학과 체제 전환 및 8~9쪽 학과별 캠퍼스 대조. 동일 명칭 개별 전공만 연결하며 광역학부·개편 전 소프트웨어 전공은 제외.",
+      "evidence": [
+        "https://ipsi.hknu.ac.kr/upload_data/mojib/20260601140951_33.pdf",
+        "https://www.hknu.ac.kr/bbs/hkne/203/98918/artclView.do"
+      ]
+    },
+    {
+      "university": "한경국립대학교",
+      "source": "귀금속보석공예학과",
+      "target": "귀금속보석공예전공",
+      "sourceIds": [
+        "n062"
+      ],
+      "kind": "verified-name-change",
+      "note": "2027 모집요강 PDF 5쪽 학부·전공의 단과대학·학과 체제 전환 및 8~9쪽 학과별 캠퍼스 대조. 동일 명칭 개별 전공만 연결하며 광역학부·개편 전 소프트웨어 전공은 제외.",
+      "evidence": [
+        "https://ipsi.hknu.ac.kr/upload_data/mojib/20260601140951_33.pdf",
+        "https://www.hknu.ac.kr/bbs/hkne/203/98918/artclView.do"
+      ]
+    },
+    {
+      "university": "한경국립대학교",
+      "source": "기계공학과",
+      "target": "기계공학전공",
+      "sourceIds": [
+        "n062"
+      ],
+      "kind": "verified-name-change",
+      "note": "2027 모집요강 PDF 5쪽 학부·전공의 단과대학·학과 체제 전환 및 8~9쪽 학과별 캠퍼스 대조. 동일 명칭 개별 전공만 연결하며 광역학부·개편 전 소프트웨어 전공은 제외.",
+      "evidence": [
+        "https://ipsi.hknu.ac.kr/upload_data/mojib/20260601140951_33.pdf",
+        "https://www.hknu.ac.kr/bbs/hkne/203/98918/artclView.do"
+      ]
+    },
+    {
+      "university": "한경국립대학교",
+      "source": "동물생명과학과",
+      "target": "동물생명과학전공",
+      "sourceIds": [
+        "n062"
+      ],
+      "kind": "verified-name-change",
+      "note": "2027 모집요강 PDF 5쪽 학부·전공의 단과대학·학과 체제 전환 및 8~9쪽 학과별 캠퍼스 대조. 동일 명칭 개별 전공만 연결하며 광역학부·개편 전 소프트웨어 전공은 제외.",
+      "evidence": [
+        "https://ipsi.hknu.ac.kr/upload_data/mojib/20260601140951_33.pdf",
+        "https://www.hknu.ac.kr/bbs/hkne/203/98918/artclView.do"
+      ]
+    },
+    {
+      "university": "한경국립대학교",
+      "source": "동물응용과학과",
+      "target": "동물응용과학전공",
+      "sourceIds": [
+        "n062"
+      ],
+      "kind": "verified-name-change",
+      "note": "2027 모집요강 PDF 5쪽 학부·전공의 단과대학·학과 체제 전환 및 8~9쪽 학과별 캠퍼스 대조. 동일 명칭 개별 전공만 연결하며 광역학부·개편 전 소프트웨어 전공은 제외.",
+      "evidence": [
+        "https://ipsi.hknu.ac.kr/upload_data/mojib/20260601140951_33.pdf",
+        "https://www.hknu.ac.kr/bbs/hkne/203/98918/artclView.do"
+      ]
+    },
+    {
+      "university": "한경국립대학교",
+      "source": "문예창작미디어콘텐츠홍보학과",
+      "target": "문예창작미디어콘텐츠홍보전공",
+      "sourceIds": [
+        "n062"
+      ],
+      "kind": "verified-name-change",
+      "note": "2027 모집요강 PDF 5쪽 학부·전공의 단과대학·학과 체제 전환 및 8~9쪽 학과별 캠퍼스 대조. 동일 명칭 개별 전공만 연결하며 광역학부·개편 전 소프트웨어 전공은 제외.",
+      "evidence": [
+        "https://ipsi.hknu.ac.kr/upload_data/mojib/20260601140951_33.pdf",
+        "https://www.hknu.ac.kr/bbs/hkne/203/98918/artclView.do"
+      ]
+    },
+    {
+      "university": "한경국립대학교",
+      "source": "법학과",
+      "target": "법학전공",
+      "sourceIds": [
+        "n062"
+      ],
+      "kind": "verified-name-change",
+      "note": "2027 모집요강 PDF 5쪽 학부·전공의 단과대학·학과 체제 전환 및 8~9쪽 학과별 캠퍼스 대조. 동일 명칭 개별 전공만 연결하며 광역학부·개편 전 소프트웨어 전공은 제외.",
+      "evidence": [
+        "https://ipsi.hknu.ac.kr/upload_data/mojib/20260601140951_33.pdf",
+        "https://www.hknu.ac.kr/bbs/hkne/203/98918/artclView.do"
+      ]
+    },
+    {
+      "university": "한경국립대학교",
+      "source": "복지상담학과",
+      "target": "복지상담학전공",
+      "sourceIds": [
+        "n062"
+      ],
+      "kind": "verified-name-change",
+      "note": "2027 모집요강 PDF 5쪽 학부·전공의 단과대학·학과 체제 전환 및 8~9쪽 학과별 캠퍼스 대조. 동일 명칭 개별 전공만 연결하며 광역학부·개편 전 소프트웨어 전공은 제외.",
+      "evidence": [
+        "https://ipsi.hknu.ac.kr/upload_data/mojib/20260601140951_33.pdf",
+        "https://www.hknu.ac.kr/bbs/hkne/203/98918/artclView.do"
+      ]
+    },
+    {
+      "university": "한경국립대학교",
+      "source": "사회복지학과",
+      "target": "사회복지학전공",
+      "sourceIds": [
+        "n062"
+      ],
+      "kind": "verified-name-change",
+      "note": "2027 모집요강 PDF 5쪽 학부·전공의 단과대학·학과 체제 전환 및 8~9쪽 학과별 캠퍼스 대조. 동일 명칭 개별 전공만 연결하며 광역학부·개편 전 소프트웨어 전공은 제외.",
+      "evidence": [
+        "https://ipsi.hknu.ac.kr/upload_data/mojib/20260601140951_33.pdf",
+        "https://www.hknu.ac.kr/bbs/hkne/203/98918/artclView.do"
+      ]
+    },
+    {
+      "university": "한경국립대학교",
+      "source": "시각미디어디자인학과",
+      "target": "시각미디어디자인전공",
+      "sourceIds": [
+        "n062"
+      ],
+      "kind": "verified-name-change",
+      "note": "2027 모집요강 PDF 5쪽 학부·전공의 단과대학·학과 체제 전환 및 8~9쪽 학과별 캠퍼스 대조. 동일 명칭 개별 전공만 연결하며 광역학부·개편 전 소프트웨어 전공은 제외.",
+      "evidence": [
+        "https://ipsi.hknu.ac.kr/upload_data/mojib/20260601140951_33.pdf",
+        "https://www.hknu.ac.kr/bbs/hkne/203/98918/artclView.do"
+      ]
+    },
+    {
+      "university": "한경국립대학교",
+      "source": "식물생명환경학과",
+      "target": "식물생명환경전공",
+      "sourceIds": [
+        "n062"
+      ],
+      "kind": "verified-name-change",
+      "note": "2027 모집요강 PDF 5쪽 학부·전공의 단과대학·학과 체제 전환 및 8~9쪽 학과별 캠퍼스 대조. 동일 명칭 개별 전공만 연결하며 광역학부·개편 전 소프트웨어 전공은 제외.",
+      "evidence": [
+        "https://ipsi.hknu.ac.kr/upload_data/mojib/20260601140951_33.pdf",
+        "https://www.hknu.ac.kr/bbs/hkne/203/98918/artclView.do"
+      ]
+    },
+    {
+      "university": "한경국립대학교",
+      "source": "식품생명공학과",
+      "target": "식품생명공학전공",
+      "sourceIds": [
+        "n062"
+      ],
+      "kind": "verified-name-change",
+      "note": "2027 모집요강 PDF 5쪽 학부·전공의 단과대학·학과 체제 전환 및 8~9쪽 학과별 캠퍼스 대조. 동일 명칭 개별 전공만 연결하며 광역학부·개편 전 소프트웨어 전공은 제외.",
+      "evidence": [
+        "https://ipsi.hknu.ac.kr/upload_data/mojib/20260601140951_33.pdf",
+        "https://www.hknu.ac.kr/bbs/hkne/203/98918/artclView.do"
+      ]
+    },
+    {
+      "university": "한경국립대학교",
+      "source": "식품영양학과",
+      "target": "식품영양학전공",
+      "sourceIds": [
+        "n062"
+      ],
+      "kind": "verified-name-change",
+      "note": "2027 모집요강 PDF 5쪽 학부·전공의 단과대학·학과 체제 전환 및 8~9쪽 학과별 캠퍼스 대조. 동일 명칭 개별 전공만 연결하며 광역학부·개편 전 소프트웨어 전공은 제외.",
+      "evidence": [
+        "https://ipsi.hknu.ac.kr/upload_data/mojib/20260601140951_33.pdf",
+        "https://www.hknu.ac.kr/bbs/hkne/203/98918/artclView.do"
+      ]
+    },
+    {
+      "university": "한경국립대학교",
+      "source": "안전공학과",
+      "target": "안전공학전공",
+      "sourceIds": [
+        "n062"
+      ],
+      "kind": "verified-name-change",
+      "note": "2027 모집요강 PDF 5쪽 학부·전공의 단과대학·학과 체제 전환 및 8~9쪽 학과별 캠퍼스 대조. 동일 명칭 개별 전공만 연결하며 광역학부·개편 전 소프트웨어 전공은 제외.",
+      "evidence": [
+        "https://ipsi.hknu.ac.kr/upload_data/mojib/20260601140951_33.pdf",
+        "https://www.hknu.ac.kr/bbs/hkne/203/98918/artclView.do"
+      ]
+    },
+    {
+      "university": "한경국립대학교",
+      "source": "영미언어문화학과",
+      "target": "영미언어문화전공",
+      "sourceIds": [
+        "n062"
+      ],
+      "kind": "verified-name-change",
+      "note": "2027 모집요강 PDF 5쪽 학부·전공의 단과대학·학과 체제 전환 및 8~9쪽 학과별 캠퍼스 대조. 동일 명칭 개별 전공만 연결하며 광역학부·개편 전 소프트웨어 전공은 제외.",
+      "evidence": [
+        "https://ipsi.hknu.ac.kr/upload_data/mojib/20260601140951_33.pdf",
+        "https://www.hknu.ac.kr/bbs/hkne/203/98918/artclView.do"
+      ]
+    },
+    {
+      "university": "한경국립대학교",
+      "source": "원예생명공학과",
+      "target": "원예생명공학전공",
+      "sourceIds": [
+        "n062"
+      ],
+      "kind": "verified-name-change",
+      "note": "2027 모집요강 PDF 5쪽 학부·전공의 단과대학·학과 체제 전환 및 8~9쪽 학과별 캠퍼스 대조. 동일 명칭 개별 전공만 연결하며 광역학부·개편 전 소프트웨어 전공은 제외.",
+      "evidence": [
+        "https://ipsi.hknu.ac.kr/upload_data/mojib/20260601140951_33.pdf",
+        "https://www.hknu.ac.kr/bbs/hkne/203/98918/artclView.do"
+      ]
+    },
+    {
+      "university": "한경국립대학교",
+      "source": "응용생명공학과",
+      "target": "응용생명공학전공",
+      "sourceIds": [
+        "n062"
+      ],
+      "kind": "verified-name-change",
+      "note": "2027 모집요강 PDF 5쪽 학부·전공의 단과대학·학과 체제 전환 및 8~9쪽 학과별 캠퍼스 대조. 동일 명칭 개별 전공만 연결하며 광역학부·개편 전 소프트웨어 전공은 제외.",
+      "evidence": [
+        "https://ipsi.hknu.ac.kr/upload_data/mojib/20260601140951_33.pdf",
+        "https://www.hknu.ac.kr/bbs/hkne/203/98918/artclView.do"
+      ]
+    },
+    {
+      "university": "한경국립대학교",
+      "source": "응용수학과",
+      "target": "응용수학전공",
+      "sourceIds": [
+        "n062"
+      ],
+      "kind": "verified-name-change",
+      "note": "2027 모집요강 PDF 5쪽 학부·전공의 단과대학·학과 체제 전환 및 8~9쪽 학과별 캠퍼스 대조. 동일 명칭 개별 전공만 연결하며 광역학부·개편 전 소프트웨어 전공은 제외.",
+      "evidence": [
+        "https://ipsi.hknu.ac.kr/upload_data/mojib/20260601140951_33.pdf",
+        "https://www.hknu.ac.kr/bbs/hkne/203/98918/artclView.do"
+      ]
+    },
+    {
+      "university": "한경국립대학교",
+      "source": "의료재활공학과",
+      "target": "의료재활공학전공",
+      "sourceIds": [
+        "n062"
+      ],
+      "kind": "verified-name-change",
+      "note": "2027 모집요강 PDF 5쪽 학부·전공의 단과대학·학과 체제 전환 및 8~9쪽 학과별 캠퍼스 대조. 동일 명칭 개별 전공만 연결하며 광역학부·개편 전 소프트웨어 전공은 제외.",
+      "evidence": [
+        "https://ipsi.hknu.ac.kr/upload_data/mojib/20260601140951_33.pdf",
+        "https://www.hknu.ac.kr/bbs/hkne/203/98918/artclView.do"
+      ]
+    },
+    {
+      "university": "한경국립대학교",
+      "source": "의류산업학과",
+      "target": "의류산업학전공",
+      "sourceIds": [
+        "n062"
+      ],
+      "kind": "verified-name-change",
+      "note": "2027 모집요강 PDF 5쪽 학부·전공의 단과대학·학과 체제 전환 및 8~9쪽 학과별 캠퍼스 대조. 동일 명칭 개별 전공만 연결하며 광역학부·개편 전 소프트웨어 전공은 제외.",
+      "evidence": [
+        "https://ipsi.hknu.ac.kr/upload_data/mojib/20260601140951_33.pdf",
+        "https://www.hknu.ac.kr/bbs/hkne/203/98918/artclView.do"
+      ]
+    },
+    {
+      "university": "한경국립대학교",
+      "source": "전기공학과",
+      "target": "전기공학전공",
+      "sourceIds": [
+        "n062"
+      ],
+      "kind": "verified-name-change",
+      "note": "2027 모집요강 PDF 5쪽 학부·전공의 단과대학·학과 체제 전환 및 8~9쪽 학과별 캠퍼스 대조. 동일 명칭 개별 전공만 연결하며 광역학부·개편 전 소프트웨어 전공은 제외.",
+      "evidence": [
+        "https://ipsi.hknu.ac.kr/upload_data/mojib/20260601140951_33.pdf",
+        "https://www.hknu.ac.kr/bbs/hkne/203/98918/artclView.do"
+      ]
+    },
+    {
+      "university": "한경국립대학교",
+      "source": "전자공학과",
+      "target": "전자공학전공",
+      "sourceIds": [
+        "n062"
+      ],
+      "kind": "verified-name-change",
+      "note": "2027 모집요강 PDF 5쪽 학부·전공의 단과대학·학과 체제 전환 및 8~9쪽 학과별 캠퍼스 대조. 동일 명칭 개별 전공만 연결하며 광역학부·개편 전 소프트웨어 전공은 제외.",
+      "evidence": [
+        "https://ipsi.hknu.ac.kr/upload_data/mojib/20260601140951_33.pdf",
+        "https://www.hknu.ac.kr/bbs/hkne/203/98918/artclView.do"
+      ]
+    },
+    {
+      "university": "한경국립대학교",
+      "source": "제품공간디자인학과",
+      "target": "제품공간디자인전공",
+      "sourceIds": [
+        "n062"
+      ],
+      "kind": "verified-name-change",
+      "note": "2027 모집요강 PDF 5쪽 학부·전공의 단과대학·학과 체제 전환 및 8~9쪽 학과별 캠퍼스 대조. 동일 명칭 개별 전공만 연결하며 광역학부·개편 전 소프트웨어 전공은 제외.",
+      "evidence": [
+        "https://ipsi.hknu.ac.kr/upload_data/mojib/20260601140951_33.pdf",
+        "https://www.hknu.ac.kr/bbs/hkne/203/98918/artclView.do"
+      ]
+    },
+    {
+      "university": "한경국립대학교",
+      "source": "조경학과",
+      "target": "조경학전공",
+      "sourceIds": [
+        "n062"
+      ],
+      "kind": "verified-name-change",
+      "note": "2027 모집요강 PDF 5쪽 학부·전공의 단과대학·학과 체제 전환 및 8~9쪽 학과별 캠퍼스 대조. 동일 명칭 개별 전공만 연결하며 광역학부·개편 전 소프트웨어 전공은 제외.",
+      "evidence": [
+        "https://ipsi.hknu.ac.kr/upload_data/mojib/20260601140951_33.pdf",
+        "https://www.hknu.ac.kr/bbs/hkne/203/98918/artclView.do"
+      ]
+    },
+    {
+      "university": "한경국립대학교",
+      "source": "지역자원시스템공학과",
+      "target": "지역자원시스템공학전공",
+      "sourceIds": [
+        "n062"
+      ],
+      "kind": "verified-name-change",
+      "note": "2027 모집요강 PDF 5쪽 학부·전공의 단과대학·학과 체제 전환 및 8~9쪽 학과별 캠퍼스 대조. 동일 명칭 개별 전공만 연결하며 광역학부·개편 전 소프트웨어 전공은 제외.",
+      "evidence": [
+        "https://ipsi.hknu.ac.kr/upload_data/mojib/20260601140951_33.pdf",
+        "https://www.hknu.ac.kr/bbs/hkne/203/98918/artclView.do"
+      ]
+    },
+    {
+      "university": "한경국립대학교",
+      "source": "컴퓨터공학과",
+      "target": "컴퓨터공학전공",
+      "sourceIds": [
+        "n062"
+      ],
+      "kind": "verified-name-change",
+      "note": "2027 모집요강 PDF 5쪽 학부·전공의 단과대학·학과 체제 전환 및 8~9쪽 학과별 캠퍼스 대조. 동일 명칭 개별 전공만 연결하며 광역학부·개편 전 소프트웨어 전공은 제외.",
+      "evidence": [
+        "https://ipsi.hknu.ac.kr/upload_data/mojib/20260601140951_33.pdf",
+        "https://www.hknu.ac.kr/bbs/hkne/203/98918/artclView.do"
+      ]
+    },
+    {
+      "university": "한경국립대학교",
+      "source": "토목공학과",
+      "target": "토목공학전공",
+      "sourceIds": [
+        "n062"
+      ],
+      "kind": "verified-name-change",
+      "note": "2027 모집요강 PDF 5쪽 학부·전공의 단과대학·학과 체제 전환 및 8~9쪽 학과별 캠퍼스 대조. 동일 명칭 개별 전공만 연결하며 광역학부·개편 전 소프트웨어 전공은 제외.",
+      "evidence": [
+        "https://ipsi.hknu.ac.kr/upload_data/mojib/20260601140951_33.pdf",
+        "https://www.hknu.ac.kr/bbs/hkne/203/98918/artclView.do"
+      ]
+    },
+    {
+      "university": "한경국립대학교",
+      "source": "행정학과",
+      "target": "행정학전공",
+      "sourceIds": [
+        "n062"
+      ],
+      "kind": "verified-name-change",
+      "note": "2027 모집요강 PDF 5쪽 학부·전공의 단과대학·학과 체제 전환 및 8~9쪽 학과별 캠퍼스 대조. 동일 명칭 개별 전공만 연결하며 광역학부·개편 전 소프트웨어 전공은 제외.",
+      "evidence": [
+        "https://ipsi.hknu.ac.kr/upload_data/mojib/20260601140951_33.pdf",
+        "https://www.hknu.ac.kr/bbs/hkne/203/98918/artclView.do"
+      ]
+    },
+    {
+      "university": "한경국립대학교",
+      "source": "화학공학과",
+      "target": "화학공학전공",
+      "sourceIds": [
+        "n062"
+      ],
+      "kind": "verified-name-change",
+      "note": "2027 모집요강 PDF 5쪽 학부·전공의 단과대학·학과 체제 전환 및 8~9쪽 학과별 캠퍼스 대조. 동일 명칭 개별 전공만 연결하며 광역학부·개편 전 소프트웨어 전공은 제외.",
+      "evidence": [
+        "https://ipsi.hknu.ac.kr/upload_data/mojib/20260601140951_33.pdf",
+        "https://www.hknu.ac.kr/bbs/hkne/203/98918/artclView.do"
+      ]
+    },
+    {
+      "university": "한경국립대학교",
+      "source": "환경공학과",
+      "target": "환경공학전공",
+      "sourceIds": [
+        "n062"
+      ],
+      "kind": "verified-name-change",
+      "note": "2027 모집요강 PDF 5쪽 학부·전공의 단과대학·학과 체제 전환 및 8~9쪽 학과별 캠퍼스 대조. 동일 명칭 개별 전공만 연결하며 광역학부·개편 전 소프트웨어 전공은 제외.",
+      "evidence": [
+        "https://ipsi.hknu.ac.kr/upload_data/mojib/20260601140951_33.pdf",
+        "https://www.hknu.ac.kr/bbs/hkne/203/98918/artclView.do"
+      ]
+    },
+    {
+      "university": "경운대학교",
+      "source": "AI소프트웨어학부",
+      "target": "소프트웨어학부",
+      "sourceIds": [
+        "n180"
+      ],
+      "kind": "verified-name-change",
+      "note": "대학 제공 2027 전년대비 학과명 변경표 확인.",
+      "evidence": [
+        "https://www.adiga.kr/ucp/uvt/uni/univDetailSelection.do?menuId=PCUVTINF2000&searchSyr=2027&unvCd=0000244"
+      ]
+    },
+    {
+      "university": "경운대학교",
+      "source": "산업안전시스템학과",
+      "target": "재난안전학과",
+      "sourceIds": [
+        "n180"
+      ],
+      "kind": "verified-name-change",
+      "note": "대학 제공 2027 전년대비 학과명 변경표 확인.",
+      "evidence": [
+        "https://www.adiga.kr/ucp/uvt/uni/univDetailSelection.do?menuId=PCUVTINF2000&searchSyr=2027&unvCd=0000244"
+      ]
+    },
+    {
+      "university": "청주대학교",
+      "source": "경제금융학과",
+      "target": "경제통상학과",
+      "sourceIds": [
+        "n086"
+      ],
+      "kind": "verified-name-change",
+      "note": "2027 학사구조 개편의 학과 명칭 변경 및 실제 2027 최종 지원현황 명칭 대조. 폐지된 환경공학과 제외.",
+      "evidence": [
+        "https://rule.cju.ac.kr/lmxsrv/bbs/bbsview.srv?depth=0&seq_bbs=101"
+      ]
+    },
+    {
+      "university": "호남대학교",
+      "source": "반려동물보건산업학과",
+      "target": "반려동물산업학과",
+      "sourceIds": [
+        "n136"
+      ],
+      "kind": "verified-name-change",
+      "note": "학과 공식 2026-06-22 게시물에서 2027 반려동물산업학과→반려동물보건산업학과 변경 확인.",
+      "evidence": [
+        "https://pets.honam.ac.kr/DepartmentNews/2"
+      ]
+    },
+    {
+      "university": "서울과학기술대학교",
+      "source": "산업공학부(ITM전공)_자연",
+      "target": "산업공학과(ITM전공)_자연",
+      "sourceIds": [
+        "n017"
+      ],
+      "kind": "verified-name-change",
+      "note": "2027 전년대비 학과명 변경표의 산업공학과→산업공학부. 동일 전공·자연계 구분 유지.",
+      "evidence": [
+        "https://www.adiga.kr/ucp/uvt/uni/univDetailSelection.do?menuId=PCUVTINF2000&searchSyr=2027&unvCd=0000036"
+      ]
+    },
+    {
+      "university": "서울과학기술대학교",
+      "source": "산업공학부(산업정보시스템전공)_자연",
+      "target": "산업공학과(산업정보시스템전공)_자연",
+      "sourceIds": [
+        "n017"
+      ],
+      "kind": "verified-name-change",
+      "note": "2027 전년대비 학과명 변경표의 산업공학과→산업공학부. 동일 전공·자연계 구분 유지.",
+      "evidence": [
+        "https://www.adiga.kr/ucp/uvt/uni/univDetailSelection.do?menuId=PCUVTINF2000&searchSyr=2027&unvCd=0000036"
+      ]
+    },
+    {
+      "university": "신한대학교",
+      "source": "기후환경·에너지공학과",
+      "target": "에너지공학과",
+      "sourceIds": [
+        "n054"
+      ],
+      "kind": "verified-name-change",
+      "note": "대입정보포털 2027 전형평가기준 주요 변경사항의 에너지공학과 → 기후환경·에너지공학과 명칭 변경 대조.",
+      "evidence": [
+        "https://www.adiga.kr/ucp/uvt/uni/univDetailSelection.do?menuId=PCUVTINF2000&searchSyr=2027&unvCd=0002800"
+      ]
+    },
+    {
+      "university": "전북대학교",
+      "source": "사회과교육계열",
+      "target": "사회과교육학부",
+      "sourceIds": [
+        "n119"
+      ],
+      "kind": "verified-name-change",
+      "note": "2027 전년대비 주요 변경사항에서 사회과교육학부 → 사회과교육계열 모집단위명칭 변경 확인.",
+      "evidence": [
+        "https://www.adiga.kr/ucp/uvt/uni/univDetailSelection.do?menuId=PCUVTINF2000&searchSyr=2027&unvCd=0000025"
+      ]
+    },
+    {
+      "university": "국립한국교통대학교",
+      "source": "AI소프트웨어학과",
+      "target": "컴퓨터소프트웨어학과",
+      "sourceIds": [
+        "n089"
+      ],
+      "kind": "verified-name-change",
+      "note": "동일 공식 학과 홈페이지가 컴퓨터소프트웨어학과와 AI소프트웨어학과를 병기함. 2027 실제 지원현황의 AI소프트웨어학과 명칭을 유지하여 연결.",
+      "evidence": [
+        "https://aicc.ut.ac.kr/sw.do"
+      ]
+    },
+    {
+      "university": "국립한국교통대학교",
+      "source": "생명공학과",
+      "target": "생명공학전공",
+      "sourceIds": [
+        "n089"
+      ],
+      "kind": "verified-name-change",
+      "note": "2027 식품생명학부의 개별 전공이 같은 이름의 학과로 분리됨을 공식 변경표로 확인. 학부 통합값이 아닌 개별 학과 지원현황만 연결.",
+      "evidence": [
+        "https://www.adiga.kr/ucp/uvt/uni/univDetailSelection.do?menuId=PCUVTINF2000&searchSyr=2027&unvCd=0000034"
+      ]
+    },
+    {
+      "university": "국립한국교통대학교",
+      "source": "식품공학과",
+      "target": "식품공학전공",
+      "sourceIds": [
+        "n089"
+      ],
+      "kind": "verified-name-change",
+      "note": "2027 식품생명학부의 개별 전공이 같은 이름의 학과로 분리됨을 공식 변경표로 확인. 학부 통합값이 아닌 개별 학과 지원현황만 연결.",
+      "evidence": [
+        "https://www.adiga.kr/ucp/uvt/uni/univDetailSelection.do?menuId=PCUVTINF2000&searchSyr=2027&unvCd=0000034"
+      ]
+    },
+    {
+      "university": "국립한국교통대학교",
+      "source": "식품영양학과",
+      "target": "식품영양학전공",
+      "sourceIds": [
+        "n089"
+      ],
+      "kind": "verified-name-change",
+      "note": "2027 식품생명학부의 개별 전공이 같은 이름의 학과로 분리됨을 공식 변경표로 확인. 학부 통합값이 아닌 개별 학과 지원현황만 연결.",
+      "evidence": [
+        "https://www.adiga.kr/ucp/uvt/uni/univDetailSelection.do?menuId=PCUVTINF2000&searchSyr=2027&unvCd=0000034"
+      ]
+    },
+    {
+      "university": "우송대학교",
+      "source": "테크노미디어융합학부 글로벌미디어AI영상학과",
+      "target": "테크노미디어융합학부(글로벌미디어영상학과)",
+      "sourceIds": [
+        "n110"
+      ],
+      "kind": "verified-name-change",
+      "note": "2027 모집요강 PDF 5쪽 명칭변경표를 육안 대조. 글로벌미디어영상학과 → 글로벌미디어AI영상학과.",
+      "evidence": [
+        "https://ent.wsu.ac.kr/site/ent/popup/2027susi.pdf"
+      ]
+    },
+    {
+      "university": "한국외국어대학교",
+      "source": "AI데이터융합학부",
+      "target": "[글로벌]AI데이터융합학부",
+      "sourceIds": [
+        "n035"
+      ],
+      "kind": "source-label",
+      "note": "대괄호 서울·글로벌은 캠퍼스 표기. 공식 2027 모집요강 PDF 19~20쪽을 대조해 동일 모집단위만 연결.",
+      "evidence": [
+        "https://adms.hufs.ac.kr/ajaxfile/FileCpnt/fileView.do?gbn=b02&SITE_NO=2&BOARD_SEQ=6&BBS_SEQ=83"
+      ]
+    },
+    {
+      "university": "한국외국어대학교",
+      "source": "Finance & AI융합학부",
+      "target": "[글로벌]Finance&AI융합학부",
+      "sourceIds": [
+        "n035"
+      ],
+      "kind": "source-label",
+      "note": "대괄호 서울·글로벌은 캠퍼스 표기. 공식 2027 모집요강 PDF 19~20쪽을 대조해 동일 모집단위만 연결.",
+      "evidence": [
+        "https://adms.hufs.ac.kr/ajaxfile/FileCpnt/fileView.do?gbn=b02&SITE_NO=2&BOARD_SEQ=6&BBS_SEQ=83"
+      ]
+    },
+    {
+      "university": "한국외국어대학교",
+      "source": "Language & AI융합학부",
+      "target": "[서울]Language&AI융합학부",
+      "sourceIds": [
+        "n035"
+      ],
+      "kind": "source-label",
+      "note": "대괄호 서울·글로벌은 캠퍼스 표기. 공식 2027 모집요강 PDF 19~20쪽을 대조해 동일 모집단위만 연결.",
+      "evidence": [
+        "https://adms.hufs.ac.kr/ajaxfile/FileCpnt/fileView.do?gbn=b02&SITE_NO=2&BOARD_SEQ=6&BBS_SEQ=83"
+      ]
+    },
+    {
+      "university": "한국외국어대학교",
+      "source": "Social Science & AI융합학부",
+      "target": "[서울]SocialScience&AI융합학부",
+      "sourceIds": [
+        "n035"
+      ],
+      "kind": "source-label",
+      "note": "대괄호 서울·글로벌은 캠퍼스 표기. 공식 2027 모집요강 PDF 19~20쪽을 대조해 동일 모집단위만 연결.",
+      "evidence": [
+        "https://adms.hufs.ac.kr/ajaxfile/FileCpnt/fileView.do?gbn=b02&SITE_NO=2&BOARD_SEQ=6&BBS_SEQ=83"
+      ]
+    },
+    {
+      "university": "한국외국어대학교",
+      "source": "컴퓨터공학부",
+      "target": "[글로벌]컴퓨터공학부",
+      "sourceIds": [
+        "n035"
+      ],
+      "kind": "source-label",
+      "note": "대괄호 서울·글로벌은 캠퍼스 표기. 공식 2027 모집요강 PDF 19~20쪽을 대조해 동일 모집단위만 연결.",
+      "evidence": [
+        "https://adms.hufs.ac.kr/ajaxfile/FileCpnt/fileView.do?gbn=b02&SITE_NO=2&BOARD_SEQ=6&BBS_SEQ=83"
+      ]
+    },
+    {
+      "university": "한국외국어대학교",
+      "source": "자유전공학부(서울)",
+      "target": "[서울]자유전공학부(서울)",
+      "sourceIds": [
+        "n035"
+      ],
+      "kind": "source-label",
+      "note": "대괄호 서울·글로벌은 캠퍼스 표기. 공식 2027 모집요강 PDF 19~20쪽을 대조해 동일 모집단위만 연결.",
+      "evidence": [
+        "https://adms.hufs.ac.kr/ajaxfile/FileCpnt/fileView.do?gbn=b02&SITE_NO=2&BOARD_SEQ=6&BBS_SEQ=83"
+      ]
+    },
+    {
+      "university": "한국외국어대학교",
+      "source": "자유전공학부(글로벌)",
+      "target": "[글로벌]자유전공학부(글로벌)",
+      "sourceIds": [
+        "n035"
+      ],
+      "kind": "source-label",
+      "note": "대괄호 서울·글로벌은 캠퍼스 표기. 공식 2027 모집요강 PDF 19~20쪽을 대조해 동일 모집단위만 연결.",
+      "evidence": [
+        "https://adms.hufs.ac.kr/ajaxfile/FileCpnt/fileView.do?gbn=b02&SITE_NO=2&BOARD_SEQ=6&BBS_SEQ=83"
+      ]
+    },
+    {
+      "university": "한국외국어대학교",
+      "source": "AI융합대학(글로벌)[통합모집]",
+      "target": "[글로벌]AI융합대학[통합모집]",
+      "sourceIds": [
+        "n035"
+      ],
+      "kind": "source-label",
+      "note": "대괄호 서울·글로벌은 캠퍼스 표기. 공식 2027 모집요강 PDF 19~20쪽을 대조해 동일 모집단위만 연결.",
+      "evidence": [
+        "https://adms.hufs.ac.kr/ajaxfile/FileCpnt/fileView.do?gbn=b02&SITE_NO=2&BOARD_SEQ=6&BBS_SEQ=83"
+      ]
+    },
+    {
+      "university": "한국공학대학교",
+      "source": "IT반도체융합 자율전공",
+      "target": "IT반도체융합대학자율전공",
+      "sourceIds": [
+        "n063"
+      ],
+      "kind": "verified-name-change",
+      "evidence": [
+        "https://iphak.tukorea.ac.kr/bbs/filedown.php?bbsid=notice&file_seq=2007&save_file_nm=notice_20260430172445_6617.pdf"
+      ],
+      "note": "2028 시행계획 PDF 2·4·5쪽. 단과대 자율전공 및 경영 자율전공의 동일 모집 범위를 대조. SW→AI융합 명칭 변경은 2쪽 변경표 확인. 개별 학과에 단과대 통합 실적을 배분하지 않음."
+    },
+    {
+      "university": "한국공학대학교",
+      "source": "스마트기계융합 자율전공",
+      "target": "스마트기계융합대학자율전공",
+      "sourceIds": [
+        "n063"
+      ],
+      "kind": "verified-name-change",
+      "evidence": [
+        "https://iphak.tukorea.ac.kr/bbs/filedown.php?bbsid=notice&file_seq=2007&save_file_nm=notice_20260430172445_6617.pdf"
+      ],
+      "note": "2028 시행계획 PDF 2·4·5쪽. 단과대 자율전공 및 경영 자율전공의 동일 모집 범위를 대조. SW→AI융합 명칭 변경은 2쪽 변경표 확인. 개별 학과에 단과대 통합 실적을 배분하지 않음."
+    },
+    {
+      "university": "한국공학대학교",
+      "source": "첨단융합 자율전공",
+      "target": "첨단융합대학자율전공",
+      "sourceIds": [
+        "n063"
+      ],
+      "kind": "verified-name-change",
+      "evidence": [
+        "https://iphak.tukorea.ac.kr/bbs/filedown.php?bbsid=notice&file_seq=2007&save_file_nm=notice_20260430172445_6617.pdf"
+      ],
+      "note": "2028 시행계획 PDF 2·4·5쪽. 단과대 자율전공 및 경영 자율전공의 동일 모집 범위를 대조. SW→AI융합 명칭 변경은 2쪽 변경표 확인. 개별 학과에 단과대 통합 실적을 배분하지 않음."
+    },
+    {
+      "university": "한국공학대학교",
+      "source": "경영학부 경영 자율전공",
+      "target": "경영학부자율전공",
+      "sourceIds": [
+        "n063"
+      ],
+      "kind": "verified-name-change",
+      "evidence": [
+        "https://iphak.tukorea.ac.kr/bbs/filedown.php?bbsid=notice&file_seq=2007&save_file_nm=notice_20260430172445_6617.pdf"
+      ],
+      "note": "2028 시행계획 PDF 2·4·5쪽. 단과대 자율전공 및 경영 자율전공의 동일 모집 범위를 대조. SW→AI융합 명칭 변경은 2쪽 변경표 확인. 개별 학과에 단과대 통합 실적을 배분하지 않음."
+    },
+    {
+      "university": "한국공학대학교",
+      "source": "AI융합 자율전공",
+      "target": "SW자율전공",
+      "sourceIds": [
+        "n063"
+      ],
+      "kind": "verified-name-change",
+      "evidence": [
+        "https://iphak.tukorea.ac.kr/bbs/filedown.php?bbsid=notice&file_seq=2007&save_file_nm=notice_20260430172445_6617.pdf"
+      ],
+      "note": "2028 시행계획 PDF 2·4·5쪽. 단과대 자율전공 및 경영 자율전공의 동일 모집 범위를 대조. SW→AI융합 명칭 변경은 2쪽 변경표 확인. 개별 학과에 단과대 통합 실적을 배분하지 않음."
+    },
+    {
+      "university": "강원대학교",
+      "source": "바이오시스템공학과",
+      "target": "스마트팜융합바이오시스템공학과",
+      "sourceIds": [
+        "n071"
+      ],
+      "kind": "verified-name-change",
+      "evidence": [
+        "https://www.adiga.kr/ucp/uvt/uni/univDetailSelection.do?menuId=PCUVTINF2000&searchSyr=2027&unvCd=0000003"
+      ],
+      "note": "2027 전년대비 변경표의 명칭 변경 확인."
+    },
+    {
+      "university": "국립군산대학교",
+      "source": "사회복지학과",
+      "target": "사회복지학부",
+      "sourceIds": [
+        "n115"
+      ],
+      "kind": "verified-name-change",
+      "evidence": [
+        "https://www.adiga.kr/ucp/uvt/uni/univDetailSelection.do?menuId=PCUVTINF2000&searchSyr=2027&unvCd=0000009"
+      ],
+      "note": "2027 모집단위 명칭변경 표 확인. 분리된 법행정경찰학부는 제외."
+    },
+    {
+      "university": "남서울대학교",
+      "source": "공간정보공학과",
+      "target": "드론공간정보공학과",
+      "sourceIds": [
+        "n096"
+      ],
+      "kind": "verified-name-change",
+      "evidence": [
+        "https://consult.mncapro.com/solution/nsuipsi/common/pdf/2027susi.pdf"
+      ],
+      "note": "2027 수시모집요강 PDF 3쪽 학과명 변경표 확인."
+    },
+    {
+      "university": "한국외국어대학교",
+      "source": "몽골학과",
+      "target": "몽골어과",
+      "sourceIds": [
+        "n035"
+      ],
+      "kind": "verified-unit-label",
+      "evidence": [
+        "https://www.hufs.ac.kr/hufs/11226/subview.do"
+      ],
+      "note": "공식 학과소개에 2026년부터 몽골어과→몽골학과 명칭 및 일부 교육과정 개편 명시."
+    },
+    {
+      "university": "고려대학교",
+      "source": "간호학과",
+      "target": "간호대학",
+      "sourceIds": [
+        "n006"
+      ],
+      "kind": "verified-unit-label",
+      "evidence": [
+        "https://use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876413&q_fileId=e825ff89-f4e0-443d-8fd6-9f08f4a04c60"
+      ],
+      "note": "2028 시행계획 PDF 9쪽 단과대학과 모집단위 표 및 대학 학부 편제 대조. 해당 단과대학의 단일 학부 모집단위 표기 차이. 공과대학 등 여러 학과 묶음은 제외."
+    },
+    {
+      "university": "고려대학교",
+      "source": "경영학과",
+      "target": "경영대학",
+      "sourceIds": [
+        "n006"
+      ],
+      "kind": "verified-unit-label",
+      "evidence": [
+        "https://use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876413&q_fileId=e825ff89-f4e0-443d-8fd6-9f08f4a04c60"
+      ],
+      "note": "2028 시행계획 PDF 9쪽 단과대학과 모집단위 표 및 대학 학부 편제 대조. 해당 단과대학의 단일 학부 모집단위 표기 차이. 공과대학 등 여러 학과 묶음은 제외."
+    },
+    {
+      "university": "한성대학교",
+      "source": "상상력인재학부",
+      "target": "상상력인재학부 자율전공",
+      "sourceIds": [
+        "n037"
+      ],
+      "kind": "verified-unit-label",
+      "evidence": [
+        "https://www.adiga.kr/ucp/uvt/uni/univDetailSelection.do?menuId=PCUVTINF2000&searchSyr=2027&unvCd=0000200"
+      ],
+      "note": "2027 공식 전형평가기준에 상상력인재학부(자율전공)를 병기하며, 2028 시행계획 PDF 2쪽의 동일 자율전공 모집단위를 대조."
+    },
+    {
+      "university": "서울여자대학교",
+      "source": "소프트웨어전공",
+      "target": "소프트웨어학과",
+      "sourceIds": [
+        "n021"
+      ],
+      "kind": "verified-unit-label",
+      "evidence": [
+        "https://www.adiga.kr/ucp/uvt/uni/univDetailSelection.do?menuId=PCUVTINF2000&searchSyr=2027&unvCd=0000126"
+      ],
+      "note": "2027 전년대비 개편표에서 기존 학과가 AI융합학부의 동일 이름 전공으로 편제됨을 확인. 개별 전공 공개값만 연결."
+    },
+    {
+      "university": "서울여자대학교",
+      "source": "데이터사이언스전공",
+      "target": "데이터사이언스학과",
+      "sourceIds": [
+        "n021"
+      ],
+      "kind": "verified-unit-label",
+      "evidence": [
+        "https://www.adiga.kr/ucp/uvt/uni/univDetailSelection.do?menuId=PCUVTINF2000&searchSyr=2027&unvCd=0000126"
+      ],
+      "note": "2027 전년대비 개편표에서 기존 학과가 AI융합학부의 동일 이름 전공으로 편제됨을 확인. 개별 전공 공개값만 연결."
+    },
+    {
+      "university": "한양대학교",
+      "source": "바이오신약융합학부(바이오나노공학전공)",
+      "target": "바이오나노공학전공",
+      "sourceIds": [
+        "n067"
+      ],
+      "kind": "verified-unit-label",
+      "evidence": [
+        "https://goerica.hanyang.ac.kr/upload/BBS0004/202608250953389WKAUX.PDF"
+      ],
+      "note": "ERICA 2028 시행계획 PDF 6~7쪽 개별 전공 편제와 2027 개별 전공 행을 대조. 학부 전체 모집 수치와 구분."
+    },
+    {
+      "university": "한양대학교",
+      "source": "차세대반도체융합공학부(반도체·디스플레이공학전공)",
+      "target": "반도체·디스플레이공학전공",
+      "sourceIds": [
+        "n067"
+      ],
+      "kind": "verified-unit-label",
+      "evidence": [
+        "https://goerica.hanyang.ac.kr/upload/BBS0004/202608250953389WKAUX.PDF"
+      ],
+      "note": "ERICA 2028 시행계획 PDF 6~7쪽 개별 전공 편제와 2027 개별 전공 행을 대조. 학부 전체 모집 수치와 구분."
+    },
+    {
+      "university": "한양대학교",
+      "source": "차세대반도체융합공학부(신소재·반도체공학전공)",
+      "target": "신소재·반도체공학전공",
+      "sourceIds": [
+        "n067"
+      ],
+      "kind": "verified-unit-label",
+      "evidence": [
+        "https://goerica.hanyang.ac.kr/upload/BBS0004/202608250953389WKAUX.PDF"
+      ],
+      "note": "ERICA 2028 시행계획 PDF 6~7쪽 개별 전공 편제와 2027 개별 전공 행을 대조. 학부 전체 모집 수치와 구분."
+    },
+    {
+      "university": "한신대학교",
+      "source": "디지털영상문화콘텐츠학",
+      "target": "문화콘텐츠계열디지털영상문화콘텐츠학",
+      "sourceIds": [
+        "n066"
+      ],
+      "kind": "verified-unit-label",
+      "evidence": [
+        "https://www.use.go.kr/component/file/ND_fileDownload.do?q_fileSn=876526&q_fileId=17ace9c8-13a5-48c9-bb9f-4a1e70c47219"
+      ],
+      "note": "2028 시행계획 PDF 5쪽 문화콘텐츠계열 소속 개별 전공과 2027 개별 전공 행 대조. 상위 계열 전체 모집값 제외."
+    },
+    {
+      "university": "배재대학교",
+      "source": "AI소프트웨어공학부(컴퓨터공학)",
+      "target": "소프트웨어공학부(컴퓨터공학)",
+      "sourceIds": [
+        "n109"
+      ],
+      "kind": "verified-unit-label",
+      "evidence": [
+        "https://enter.pcu.ac.kr/images/site/kor/pdf/summary_2024.pdf",
+        "https://www2.pcu.ac.kr/attach/88481ce968d28c6da036d4e1db4938bb/9a9db098b587ee18b321c826f3707a49",
+        "https://ratio.uwayapply.com/Sl5KOkxpSmYlJjomSjdmVGY="
+      ],
+      "note": "공식 요람 PDF 139쪽의 AI소프트웨어공학부→소프트웨어공학부 전공별 계승 관계, 2028 시행계획 PDF 5쪽 전공 편제 및 2027 최종 지원현황의 개별 전공을 대조. 전공별 수치만 연결하며 신설 인공지능전공과 학부 전체 수치는 제외."
+    },
+    {
+      "university": "배재대학교",
+      "source": "AI소프트웨어공학부(소프트웨어학)",
+      "target": "소프트웨어공학부(소프트웨어학)",
+      "sourceIds": [
+        "n109"
+      ],
+      "kind": "verified-unit-label",
+      "evidence": [
+        "https://enter.pcu.ac.kr/images/site/kor/pdf/summary_2024.pdf",
+        "https://www2.pcu.ac.kr/attach/88481ce968d28c6da036d4e1db4938bb/9a9db098b587ee18b321c826f3707a49",
+        "https://ratio.uwayapply.com/Sl5KOkxpSmYlJjomSjdmVGY="
+      ],
+      "note": "공식 요람 PDF 139쪽의 AI소프트웨어공학부→소프트웨어공학부 전공별 계승 관계, 2028 시행계획 PDF 5쪽 전공 편제 및 2027 최종 지원현황의 개별 전공을 대조. 전공별 수치만 연결하며 신설 인공지능전공과 학부 전체 수치는 제외."
+    },
+    {
+      "university": "배재대학교",
+      "source": "AI소프트웨어공학부(정보보안학)",
+      "target": "소프트웨어공학부(정보보안학)",
+      "sourceIds": [
+        "n109"
+      ],
+      "kind": "verified-unit-label",
+      "evidence": [
+        "https://enter.pcu.ac.kr/images/site/kor/pdf/summary_2024.pdf",
+        "https://www2.pcu.ac.kr/attach/88481ce968d28c6da036d4e1db4938bb/9a9db098b587ee18b321c826f3707a49",
+        "https://ratio.uwayapply.com/Sl5KOkxpSmYlJjomSjdmVGY="
+      ],
+      "note": "공식 요람 PDF 139쪽의 AI소프트웨어공학부→소프트웨어공학부 전공별 계승 관계, 2028 시행계획 PDF 5쪽 전공 편제 및 2027 최종 지원현황의 개별 전공을 대조. 전공별 수치만 연결하며 신설 인공지능전공과 학부 전체 수치는 제외."
+    },
+    {
+      "university": "배재대학교",
+      "source": "AI소프트웨어공학부(게임공학)",
+      "target": "소프트웨어공학부(게임공학)",
+      "sourceIds": [
+        "n109"
+      ],
+      "kind": "verified-unit-label",
+      "evidence": [
+        "https://enter.pcu.ac.kr/images/site/kor/pdf/summary_2024.pdf",
+        "https://www2.pcu.ac.kr/attach/88481ce968d28c6da036d4e1db4938bb/9a9db098b587ee18b321c826f3707a49",
+        "https://ratio.uwayapply.com/Sl5KOkxpSmYlJjomSjdmVGY="
+      ],
+      "note": "공식 요람 PDF 139쪽의 AI소프트웨어공학부→소프트웨어공학부 전공별 계승 관계, 2028 시행계획 PDF 5쪽 전공 편제 및 2027 최종 지원현황의 개별 전공을 대조. 전공별 수치만 연결하며 신설 인공지능전공과 학부 전체 수치는 제외."
+    },
+    {
+      "university": "덕성여자대학교",
+      "source": "미래인재대학(자유전공학부)",
+      "target": "자유전공학부",
+      "sourceIds": [
+        "n009"
+      ],
+      "kind": "verified-unit-label",
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10530631.html"
+      ],
+      "note": "2026-10-10 공개 최종 경쟁률 원문의 개별 모집단위와 소속 학부·인증·장학·전공 안내 표기를 대조. 명시된 동일 모집단위 전체의 값만 연결하며 구성 학과에 배분하지 않음."
+    },
+    {
+      "university": "한림대학교",
+      "source": "자유전공학부 전 모집단위(의학과, 간호학과 제외)",
+      "target": "자유전공학부",
+      "sourceIds": [
+        "n077"
+      ],
+      "kind": "verified-unit-label",
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KTWJDQzh8SmYlJjomSjdmVGY="
+      ],
+      "note": "2026-10-10 공개 최종 경쟁률 원문의 개별 모집단위와 소속 학부·인증·장학·전공 안내 표기를 대조. 명시된 동일 모집단위 전체의 값만 연결하며 구성 학과에 배분하지 않음."
+    },
+    {
+      "university": "순천향대학교",
+      "source": "의약바이오스쿨",
+      "target": "의약바이오스쿨(바이오의약전공/바이오인포매틱스전공/AI의료생명공학전공)",
+      "sourceIds": [
+        "n100"
+      ],
+      "kind": "verified-unit-label",
+      "evidence": [
+        "http://ratio.uwayapply.com/Sl5KfEwmSmYlJjomSjdmVGY="
+      ],
+      "note": "2026-10-10 공개 최종 경쟁률 원문의 개별 모집단위와 소속 학부·인증·장학·전공 안내 표기를 대조. 명시된 동일 모집단위 전체의 값만 연결하며 구성 학과에 배분하지 않음."
+    },
+    {
+      "university": "순천향대학교",
+      "source": "헬스케어서비스스쿨",
+      "target": "헬스케어서비스스쿨(스포츠의학전공/스마트헬스라이프전공)",
+      "sourceIds": [
+        "n100"
+      ],
+      "kind": "verified-unit-label",
+      "evidence": [
+        "http://ratio.uwayapply.com/Sl5KfEwmSmYlJjomSjdmVGY="
+      ],
+      "note": "2026-10-10 공개 최종 경쟁률 원문의 개별 모집단위와 소속 학부·인증·장학·전공 안내 표기를 대조. 명시된 동일 모집단위 전체의 값만 연결하며 구성 학과에 배분하지 않음."
+    },
+    {
+      "university": "용인대학교",
+      "source": "AI융합학부-AI,빅데이터",
+      "target": "AI융합학부",
+      "sourceIds": [
+        "n057"
+      ],
+      "kind": "verified-unit-label",
+      "evidence": [
+        "http://ratio.uwayapply.com/Sl5KVyVyV2FiSmYlJjomSjdmVGY="
+      ],
+      "note": "2026-10-10 공개 최종 경쟁률 원문의 개별 모집단위와 소속 학부·인증·장학·전공 안내 표기를 대조. 명시된 동일 모집단위 전체의 값만 연결하며 구성 학과에 배분하지 않음."
+    },
+    {
+      "university": "전주대학교",
+      "source": "보건관리학과",
+      "target": "보건관리학과(보건교육인증평가)",
+      "sourceIds": [
+        "n121"
+      ],
+      "kind": "verified-unit-label",
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KOi9XYWAvSmYlJjomSjdmVGY="
+      ],
+      "note": "2026-10-10 공개 최종 경쟁률 원문의 개별 모집단위와 소속 학부·인증·장학·전공 안내 표기를 대조. 명시된 동일 모집단위 전체의 값만 연결하며 구성 학과에 배분하지 않음."
+    },
+    {
+      "university": "한림대학교",
+      "source": "자연과학대학 자율전공(화학과, 환경생명공학과, 언어병리학, 청각학, 체육학과)",
+      "target": "자연과학대학",
+      "sourceIds": [
+        "n077"
+      ],
+      "kind": "verified-unit-label",
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KTWJDQzh8SmYlJjomSjdmVGY="
+      ],
+      "note": "2026-10-10 공개 최종 경쟁률 원문의 개별 모집단위와 소속 학부·인증·장학·전공 안내 표기를 대조. 명시된 동일 모집단위 전체의 값만 연결하며 구성 학과에 배분하지 않음."
+    },
+    {
+      "university": "경일대학교",
+      "source": "건축토목공학과 기초공학인재육성장학금(4년 전액)",
+      "target": "건축토목공학과",
+      "sourceIds": [
+        "n181"
+      ],
+      "kind": "verified-unit-label",
+      "evidence": [
+        "https://ibsi.kiu.ac.kr/ipsi_rate/rate_susi_real_new_20260820.htm"
+      ],
+      "note": "2026-10-10 공개 최종 경쟁률 원문의 개별 모집단위와 소속 학부·인증·장학·전공 안내 표기를 대조. 명시된 동일 모집단위 전체의 값만 연결하며 구성 학과에 배분하지 않음."
+    },
+    {
+      "university": "덕성여자대학교",
+      "source": "미래인재대학(AI신약학과)",
+      "target": "AI신약학과",
+      "sourceIds": [
+        "n009"
+      ],
+      "kind": "verified-unit-label",
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10530631.html"
+      ],
+      "note": "2026-10-10 공개 최종 경쟁률 원문의 개별 모집단위와 소속 학부·인증·장학·전공 안내 표기를 대조. 명시된 동일 모집단위 전체의 값만 연결하며 구성 학과에 배분하지 않음."
+    },
+    {
+      "university": "덕성여자대학교",
+      "source": "글로벌융합대학(유아교육과)",
+      "target": "유아교육과",
+      "sourceIds": [
+        "n009"
+      ],
+      "kind": "verified-unit-label",
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10530631.html"
+      ],
+      "note": "2026-10-10 공개 최종 경쟁률 원문의 개별 모집단위와 소속 학부·인증·장학·전공 안내 표기를 대조. 명시된 동일 모집단위 전체의 값만 연결하며 구성 학과에 배분하지 않음."
+    },
+    {
+      "university": "동국대학교",
+      "source": "불교학전공 [교직]",
+      "target": "불교학부(불교학전공)",
+      "sourceIds": [
+        "n146"
+      ],
+      "kind": "verified-unit-label",
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10540761.html"
+      ],
+      "note": "2026-10-10 공개 최종 경쟁률 원문의 개별 모집단위와 소속 학부·인증·장학·전공 안내 표기를 대조. 명시된 동일 모집단위 전체의 값만 연결하며 구성 학과에 배분하지 않음."
+    },
+    {
+      "university": "세명대학교",
+      "source": "바이오식품영양학부 【교직】 [식품영양학 (교직) /건강기능식품학]",
+      "target": "바이오식품영양학부",
+      "sourceIds": [
+        "n082"
+      ],
+      "kind": "verified-unit-label",
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5Kclc6Yk1gJkpmJSY6Jko3ZlRm"
+      ],
+      "note": "2026-10-10 공개 최종 경쟁률 원문의 개별 모집단위와 소속 학부·인증·장학·전공 안내 표기를 대조. 명시된 동일 모집단위 전체의 값만 연결하며 구성 학과에 배분하지 않음."
+    },
+    {
+      "university": "전주대학교",
+      "source": "간호학과 [교직]",
+      "target": "간호학과(간호학교육인증평가)",
+      "sourceIds": [
+        "n121"
+      ],
+      "kind": "verified-unit-label",
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KOi9XYWAvSmYlJjomSjdmVGY="
+      ],
+      "note": "2026-10-10 공개 최종 경쟁률 원문의 개별 모집단위와 소속 학부·인증·장학·전공 안내 표기를 대조. 명시된 동일 모집단위 전체의 값만 연결하며 구성 학과에 배분하지 않음."
+    },
+    {
+      "university": "전주대학교",
+      "source": "건축학과(5년제)",
+      "target": "건축학과(5년제)건축학교육인증",
+      "sourceIds": [
+        "n121"
+      ],
+      "kind": "verified-unit-label",
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KOi9XYWAvSmYlJjomSjdmVGY="
+      ],
+      "note": "2026-10-10 공개 최종 경쟁률 원문의 개별 모집단위와 소속 학부·인증·장학·전공 안내 표기를 대조. 명시된 동일 모집단위 전체의 값만 연결하며 구성 학과에 배분하지 않음."
+    },
+    {
+      "university": "경남대학교",
+      "source": "스포츠과학부 스포츠재활학전공 [취업연계] [앵커]",
+      "target": "스포츠재활학전공",
+      "sourceIds": [
+        "n150"
+      ],
+      "kind": "verified-unit-label",
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10130591.html"
+      ],
+      "note": "2026-10-10 공개 최종 경쟁률 원문의 개별 모집단위와 소속 학부·인증·장학·전공 안내 표기를 대조. 명시된 동일 모집단위 전체의 값만 연결하며 구성 학과에 배분하지 않음."
+    },
+    {
+      "university": "동의대학교",
+      "source": "공과대학자유전공학부(자유전공Ⅱ) [신설]",
+      "target": "공과대학자유전공학부",
+      "sourceIds": [
+        "n163"
+      ],
+      "kind": "verified-unit-label",
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KOmBWSmYlJjomSjdmVGY="
+      ],
+      "note": "2026-10-10 공개 최종 경쟁률 원문의 개별 모집단위와 소속 학부·인증·장학·전공 안내 표기를 대조. 명시된 동일 모집단위 전체의 값만 연결하며 구성 학과에 배분하지 않음."
+    },
+    {
+      "university": "동의대학교",
+      "source": "상경대학자유전공학부(자유전공Ⅱ) [신설]",
+      "target": "상경대학자유전공학부",
+      "sourceIds": [
+        "n163"
+      ],
+      "kind": "verified-unit-label",
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KOmBWSmYlJjomSjdmVGY="
+      ],
+      "note": "2026-10-10 공개 최종 경쟁률 원문의 개별 모집단위와 소속 학부·인증·장학·전공 안내 표기를 대조. 명시된 동일 모집단위 전체의 값만 연결하며 구성 학과에 배분하지 않음."
+    },
+    {
+      "university": "동의대학교",
+      "source": "인문사회과학대학자유전공학부(자유전공Ⅱ) [신설]",
+      "target": "인문사회과학대학자유전공학부",
+      "sourceIds": [
+        "n163"
+      ],
+      "kind": "verified-unit-label",
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KOmBWSmYlJjomSjdmVGY="
+      ],
+      "note": "2026-10-10 공개 최종 경쟁률 원문의 개별 모집단위와 소속 학부·인증·장학·전공 안내 표기를 대조. 명시된 동일 모집단위 전체의 값만 연결하며 구성 학과에 배분하지 않음."
+    },
+    {
+      "university": "세명대학교",
+      "source": "시각·영상디자인학과 [실기 100%]",
+      "target": "시각·영상디자인학과",
+      "sourceIds": [
+        "n082"
+      ],
+      "kind": "verified-unit-label",
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5Kclc6Yk1gJkpmJSY6Jko3ZlRm"
+      ],
+      "note": "2026-10-10 공개 최종 경쟁률 원문의 개별 모집단위와 소속 학부·인증·장학·전공 안내 표기를 대조. 명시된 동일 모집단위 전체의 값만 연결하며 구성 학과에 배분하지 않음."
+    },
+    {
+      "university": "세명대학교",
+      "source": "실내디자인학과 [교과 100%]",
+      "target": "실내디자인학과",
+      "sourceIds": [
+        "n082"
+      ],
+      "kind": "verified-unit-label",
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5Kclc6Yk1gJkpmJSY6Jko3ZlRm"
+      ],
+      "note": "2026-10-10 공개 최종 경쟁률 원문의 개별 모집단위와 소속 학부·인증·장학·전공 안내 표기를 대조. 명시된 동일 모집단위 전체의 값만 연결하며 구성 학과에 배분하지 않음."
+    },
+    {
+      "university": "세명대학교",
+      "source": "아트&산업디자인학과 [실기 100%]",
+      "target": "아트&산업디자인학과",
+      "sourceIds": [
+        "n082"
+      ],
+      "kind": "verified-unit-label",
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5Kclc6Yk1gJkpmJSY6Jko3ZlRm"
+      ],
+      "note": "2026-10-10 공개 최종 경쟁률 원문의 개별 모집단위와 소속 학부·인증·장학·전공 안내 표기를 대조. 명시된 동일 모집단위 전체의 값만 연결하며 구성 학과에 배분하지 않음."
+    },
+    {
+      "university": "세명대학교",
+      "source": "영화웹툰애니메이션학과 [실기 100%]",
+      "target": "영화웹툰애니메이션학과",
+      "sourceIds": [
+        "n082"
+      ],
+      "kind": "verified-unit-label",
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5Kclc6Yk1gJkpmJSY6Jko3ZlRm"
+      ],
+      "note": "2026-10-10 공개 최종 경쟁률 원문의 개별 모집단위와 소속 학부·인증·장학·전공 안내 표기를 대조. 명시된 동일 모집단위 전체의 값만 연결하며 구성 학과에 배분하지 않음."
+    },
+    {
+      "university": "세명대학교",
+      "source": "패션디자인학과 [실기 100%]",
+      "target": "패션디자인학과",
+      "sourceIds": [
+        "n082"
+      ],
+      "kind": "verified-unit-label",
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5Kclc6Yk1gJkpmJSY6Jko3ZlRm"
+      ],
+      "note": "2026-10-10 공개 최종 경쟁률 원문의 개별 모집단위와 소속 학부·인증·장학·전공 안내 표기를 대조. 명시된 동일 모집단위 전체의 값만 연결하며 구성 학과에 배분하지 않음."
+    },
+    {
+      "university": "수원대학교",
+      "source": "아트앤엔터테인먼트학부 디지털콘텐츠",
+      "target": "디지털콘텐츠",
+      "sourceIds": [
+        "n053"
+      ],
+      "kind": "verified-unit-label",
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10970461.html"
+      ],
+      "note": "2026-10-10 공개 최종 경쟁률 원문의 개별 모집단위와 소속 학부·인증·장학·전공 안내 표기를 대조. 명시된 동일 모집단위 전체의 값만 연결하며 구성 학과에 배분하지 않음."
+    },
+    {
+      "university": "수원대학교",
+      "source": "아트앤엔터테인먼트학부 연기예술",
+      "target": "연기예술",
+      "sourceIds": [
+        "n053"
+      ],
+      "kind": "verified-unit-label",
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10970461.html"
+      ],
+      "note": "2026-10-10 공개 최종 경쟁률 원문의 개별 모집단위와 소속 학부·인증·장학·전공 안내 표기를 대조. 명시된 동일 모집단위 전체의 값만 연결하며 구성 학과에 배분하지 않음."
+    },
+    {
+      "university": "수원대학교",
+      "source": "아트앤엔터테인먼트학부 영화예술",
+      "target": "영화예술",
+      "sourceIds": [
+        "n053"
+      ],
+      "kind": "verified-unit-label",
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10970461.html"
+      ],
+      "note": "2026-10-10 공개 최종 경쟁률 원문의 개별 모집단위와 소속 학부·인증·장학·전공 안내 표기를 대조. 명시된 동일 모집단위 전체의 값만 연결하며 구성 학과에 배분하지 않음."
+    },
+    {
+      "university": "우석대학교",
+      "source": "수소테크 자율전공학부 수소에너지공학과 경영학부 AI모빌리티공학부",
+      "target": "수소테크자율전공학부",
+      "sourceIds": [
+        "n117"
+      ],
+      "kind": "verified-unit-label",
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11150621.html"
+      ],
+      "note": "2026-10-10 공개 최종 경쟁률 원문의 개별 모집단위와 소속 학부·인증·장학·전공 안내 표기를 대조. 명시된 동일 모집단위 전체의 값만 연결하며 구성 학과에 배분하지 않음."
+    },
+    {
+      "university": "우석대학교",
+      "source": "휴먼테크 자율전공학부(전주) 경찰행정학과 군사학과 소방방재학과 심리학과 식품영양학과 아동사회복지학부 조리제과제빵학부 조경학과",
+      "target": "휴먼테크자율전공학부(전주)",
+      "sourceIds": [
+        "n117"
+      ],
+      "kind": "verified-unit-label",
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11150621.html"
+      ],
+      "note": "2026-10-10 공개 최종 경쟁률 원문의 개별 모집단위와 소속 학부·인증·장학·전공 안내 표기를 대조. 명시된 동일 모집단위 전체의 값만 연결하며 구성 학과에 배분하지 않음."
+    },
+    {
+      "university": "우석대학교",
+      "source": "휴먼테크 자율전공학부(진천) 건축학부 경찰범죄심리학과 군사안보학과 글로벌디자인문화경영학부 문예창작학과 바이오융합학과",
+      "target": "휴먼테크자율전공학부(진천)",
+      "sourceIds": [
+        "n117"
+      ],
+      "kind": "verified-unit-label",
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11150621.html"
+      ],
+      "note": "2026-10-10 공개 최종 경쟁률 원문의 개별 모집단위와 소속 학부·인증·장학·전공 안내 표기를 대조. 명시된 동일 모집단위 전체의 값만 연결하며 구성 학과에 배분하지 않음."
+    },
+    {
+      "university": "한신대학교",
+      "source": "신학",
+      "target": "신학·인문융합계열신학",
+      "sourceIds": [
+        "n066"
+      ],
+      "kind": "verified-unit-label",
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11630451.html"
+      ],
+      "note": "2026-10-10 공개 최종 경쟁률 원문의 개별 모집단위와 소속 학부·인증·장학·전공 안내 표기를 대조. 명시된 동일 모집단위 전체의 값만 연결하며 구성 학과에 배분하지 않음."
+    },
+    {
+      "university": "한양대학교",
+      "source": "바이오신약융합학부(학부 모집)",
+      "target": "바이오신약융합학부",
+      "sourceIds": [
+        "n067"
+      ],
+      "kind": "verified-unit-label",
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11650731.html"
+      ],
+      "note": "2026-10-10 공개 최종 경쟁률 원문의 개별 모집단위와 소속 학부·인증·장학·전공 안내 표기를 대조. 명시된 동일 모집단위 전체의 값만 연결하며 구성 학과에 배분하지 않음."
+    },
+    {
+      "university": "부산대학교",
+      "source": "AI컴퓨터공학부(인터랙티브컴퓨팅전공)",
+      "target": "정보컴퓨터공학부(디자인테크놀로지전공)",
+      "kind": "reviewed-major-correspondence",
+      "note": "2027 수시 모집요강 인쇄 2쪽(PDF 10쪽)의 학사구조 개편표에서 전후 대응을 확인. 표시된 기존 명칭에 2027 변경 모집단위의 실적을 연결하며 통합·분리 모집단위는 제외.",
+      "sourceIds": [
+        "n167"
+      ],
+      "evidence": [
+        "https://go.pusan.ac.kr/down/mojib/RF(0)_260611154120.pdf"
+      ]
+    },
+    {
+      "university": "부산대학교",
+      "source": "산업공학부",
+      "target": "산업공학과",
+      "kind": "reviewed-major-correspondence",
+      "note": "2027 수시 모집요강 인쇄 2쪽(PDF 10쪽)의 학사구조 개편표에서 전후 대응을 확인. 표시된 기존 명칭에 2027 변경 모집단위의 실적을 연결하며 통합·분리 모집단위는 제외.",
+      "sourceIds": [
+        "n167"
+      ],
+      "evidence": [
+        "https://go.pusan.ac.kr/down/mojib/RF(0)_260611154120.pdf"
+      ]
+    },
+    {
+      "university": "국립창원대학교",
+      "source": "건설시스템공학과",
+      "target": "스마트그린공학부(건설시스템공학전공)",
+      "kind": "reviewed-major-correspondence",
+      "note": "2027 수시 모집요강 주요 변경사항의 학과명칭변경 표에서 대응 확인. 명칭 변경 후 모집단위의 2027 실적이며 모집인원 증감을 동일하다고 가정하지 않음.",
+      "sourceIds": [
+        "n154"
+      ],
+      "evidence": [
+        "https://www.changwon.ac.kr/common/nttPdfView.do?fileKey=1b57c98c59cd660a11c2d4ad28e16630"
+      ]
+    },
+    {
+      "university": "국립창원대학교",
+      "source": "환경에너지공학과",
+      "target": "스마트그린공학부(환경에너지공학전공)",
+      "kind": "reviewed-major-correspondence",
+      "note": "2027 수시 모집요강 주요 변경사항의 학과명칭변경 표에서 대응 확인. 명칭 변경 후 모집단위의 2027 실적이며 모집인원 증감을 동일하다고 가정하지 않음.",
+      "sourceIds": [
+        "n154"
+      ],
+      "evidence": [
+        "https://www.changwon.ac.kr/common/nttPdfView.do?fileKey=1b57c98c59cd660a11c2d4ad28e16630"
+      ]
+    },
+    {
+      "university": "국립창원대학교",
+      "source": "환경에너지공학과",
+      "target": "스마트그린공학부환경에너지공학전공",
+      "kind": "reviewed-major-correspondence",
+      "note": "2027 수시 모집요강 주요 변경사항의 학과명칭변경 표에서 대응 확인. 명칭 변경 후 모집단위의 2027 실적이며 모집인원 증감을 동일하다고 가정하지 않음.",
+      "sourceIds": [
+        "n154"
+      ],
+      "evidence": [
+        "https://www.changwon.ac.kr/common/nttPdfView.do?fileKey=1b57c98c59cd660a11c2d4ad28e16630"
+      ]
+    },
+    {
+      "university": "국립창원대학교",
+      "source": "스마트제조융합공학과 [첨단]",
+      "target": "기계공학부(스마트제조융합전공)",
+      "kind": "reviewed-major-correspondence",
+      "note": "2027 수시 모집요강 주요 변경사항의 학과명칭변경 표에서 대응 확인. 명칭 변경 후 모집단위의 2027 실적이며 모집인원 증감을 동일하다고 가정하지 않음.",
+      "sourceIds": [
+        "n154"
+      ],
+      "evidence": [
+        "https://www.changwon.ac.kr/common/nttPdfView.do?fileKey=1b57c98c59cd660a11c2d4ad28e16630"
+      ]
+    },
+    {
+      "university": "국립창원대학교",
+      "source": "첨단지능정보공학과 (구. 정보통신공학과)[첨단]",
+      "target": "정보통신공학과",
+      "kind": "reviewed-major-correspondence",
+      "note": "2027 최종 경쟁률 원문에 구 정보통신공학과라고 명시된 학과. 변경 후 모집단위의 원문 실적을 연결.",
+      "sourceIds": [
+        "n154"
+      ],
+      "evidence": [
+        "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11350621.html"
+      ]
+    },
+    {
+      "university": "선문대학교",
+      "source": "디자인학부(방송콘텐츠디자인전공) [실기]",
+      "target": "디자인학부(방송콘텐츠디자인전공)",
+      "kind": "reviewed-major-correspondence",
+      "note": "원문의 실기·교과 반영비율 안내를 학과명에서 분리. 같은 전형과 모집단위의 공개 수치만 연결하며 원문 학과명과 안내를 보존.",
+      "sourceIds": [
+        "n099"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KV2FhTVc6JkpmJSY6Jko3ZlRm"
+      ]
+    },
+    {
+      "university": "선문대학교",
+      "source": "디자인학부(시각디자인전공) [실기]",
+      "target": "디자인학부(시각디자인전공)",
+      "kind": "reviewed-major-correspondence",
+      "note": "원문의 실기·교과 반영비율 안내를 학과명에서 분리. 같은 전형과 모집단위의 공개 수치만 연결하며 원문 학과명과 안내를 보존.",
+      "sourceIds": [
+        "n099"
+      ],
+      "evidence": [
+        "https://ratio.uwayapply.com/Sl5KV2FhTVc6JkpmJSY6Jko3ZlRm"
+      ]
+    },
+    {
+      "university": "가톨릭관동대학교",
+      "source": "생명과학전공",
+      "target": "의생명과학전공",
+      "kind": "reviewed-major-correspondence",
+      "note": "2027 수시 모집요강 주요 변경사항에서 의생명과학전공→생명과학전공 명칭 변경 확인. 변경 후 모집단위의 2027 실적.",
+      "sourceIds": [
+        "n070"
+      ],
+      "evidence": [
+        "https://www.cku.ac.kr/bbs/iphak/1059/151303/download.do"
+      ]
+    }
+  ]
+}

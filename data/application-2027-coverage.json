@@ -1,0 +1,3151 @@
+{
+  "reviewed": "2026-10-09",
+  "totals": {
+    "pagesReviewed": 186,
+    "sourcePagesCollected": 174,
+    "universitiesCollected": 167,
+    "recordsCollected": 28362,
+    "validatedTrackTotals": 1899,
+    "admissionRowsLinked": 18537,
+    "admissionUniversitiesLinked": 160,
+    "contractRowsLinked": 37,
+    "contractUniversitiesLinked": 13
+  },
+  "universities": [
+    {
+      "university": "가야대학교",
+      "collectedRows": 17,
+      "linkedRows": 18,
+      "targetRows": 19,
+      "sourcePages": 1
+    },
+    {
+      "university": "가천대학교",
+      "collectedRows": 309,
+      "linkedRows": 178,
+      "targetRows": 193,
+      "sourcePages": 1
+    },
+    {
+      "university": "가톨릭관동대학교",
+      "collectedRows": 116,
+      "linkedRows": 78,
+      "targetRows": 103,
+      "sourcePages": 1
+    },
+    {
+      "university": "가톨릭꽃동네대학교",
+      "collectedRows": 12,
+      "linkedRows": 6,
+      "targetRows": 7,
+      "sourcePages": 1
+    },
+    {
+      "university": "가톨릭대학교",
+      "collectedRows": 218,
+      "linkedRows": 188,
+      "targetRows": 194,
+      "sourcePages": 1
+    },
+    {
+      "university": "감리교신학대학교",
+      "collectedRows": 7,
+      "linkedRows": 2,
+      "targetRows": 4,
+      "sourcePages": 1
+    },
+    {
+      "university": "강남대학교",
+      "collectedRows": 102,
+      "linkedRows": 52,
+      "targetRows": 72,
+      "sourcePages": 1
+    },
+    {
+      "university": "강릉원주대학교",
+      "collectedRows": 0,
+      "linkedRows": 0,
+      "targetRows": 15,
+      "sourcePages": 0
+    },
+    {
+      "university": "강서대학교",
+      "collectedRows": 27,
+      "linkedRows": 9,
+      "targetRows": 12,
+      "sourcePages": 1
+    },
+    {
+      "university": "강원대학교",
+      "collectedRows": 939,
+      "linkedRows": 717,
+      "targetRows": 746,
+      "sourcePages": 1
+    },
+    {
+      "university": "건국대학교",
+      "collectedRows": 346,
+      "linkedRows": 229,
+      "targetRows": 289,
+      "sourcePages": 2
+    },
+    {
+      "university": "건양대학교",
+      "collectedRows": 127,
+      "linkedRows": 78,
+      "targetRows": 97,
+      "sourcePages": 1
+    },
+    {
+      "university": "경기대학교",
+      "collectedRows": 221,
+      "linkedRows": 154,
+      "targetRows": 163,
+      "sourcePages": 1
+    },
+    {
+      "university": "경남대학교",
+      "collectedRows": 200,
+      "linkedRows": 118,
+      "targetRows": 150,
+      "sourcePages": 1
+    },
+    {
+      "university": "경동대학교",
+      "collectedRows": 37,
+      "linkedRows": 28,
+      "targetRows": 34,
+      "sourcePages": 1
+    },
+    {
+      "university": "경북대학교",
+      "collectedRows": 709,
+      "linkedRows": 496,
+      "targetRows": 528,
+      "sourcePages": 1
+    },
+    {
+      "university": "경상국립대학교",
+      "collectedRows": 545,
+      "linkedRows": 350,
+      "targetRows": 391,
+      "sourcePages": 1
+    },
+    {
+      "university": "경성대학교",
+      "collectedRows": 319,
+      "linkedRows": 187,
+      "targetRows": 224,
+      "sourcePages": 1
+    },
+    {
+      "university": "경운대학교",
+      "collectedRows": 70,
+      "linkedRows": 39,
+      "targetRows": 64,
+      "sourcePages": 1
+    },
+    {
+      "university": "경인교육대학교",
+      "collectedRows": 7,
+      "linkedRows": 3,
+      "targetRows": 4,
+      "sourcePages": 1
+    },
+    {
+      "university": "경일대학교",
+      "collectedRows": 82,
+      "linkedRows": 55,
+      "targetRows": 81,
+      "sourcePages": 1
+    },
+    {
+      "university": "경희대학교",
+      "collectedRows": 402,
+      "linkedRows": 324,
+      "targetRows": 399,
+      "sourcePages": 1
+    },
+    {
+      "university": "계명대학교",
+      "collectedRows": 529,
+      "linkedRows": 388,
+      "targetRows": 417,
+      "sourcePages": 1
+    },
+    {
+      "university": "고려대학교",
+      "collectedRows": 484,
+      "linkedRows": 431,
+      "targetRows": 450,
+      "sourcePages": 2
+    },
+    {
+      "university": "고신대학교",
+      "collectedRows": 92,
+      "linkedRows": 47,
+      "targetRows": 59,
+      "sourcePages": 1
+    },
+    {
+      "university": "광신대학교",
+      "collectedRows": 0,
+      "linkedRows": 0,
+      "targetRows": 7,
+      "sourcePages": 0
+    },
+    {
+      "university": "광운대학교",
+      "collectedRows": 130,
+      "linkedRows": 84,
+      "targetRows": 93,
+      "sourcePages": 1
+    },
+    {
+      "university": "광주가톨릭대학교",
+      "collectedRows": 0,
+      "linkedRows": 0,
+      "targetRows": 1,
+      "sourcePages": 0
+    },
+    {
+      "university": "광주교육대학교",
+      "collectedRows": 11,
+      "linkedRows": 4,
+      "targetRows": 9,
+      "sourcePages": 1
+    },
+    {
+      "university": "광주대학교",
+      "collectedRows": 48,
+      "linkedRows": 42,
+      "targetRows": 87,
+      "sourcePages": 1
+    },
+    {
+      "university": "광주여자대학교",
+      "collectedRows": 38,
+      "linkedRows": 27,
+      "targetRows": 36,
+      "sourcePages": 1
+    },
+    {
+      "university": "국립경국대학교",
+      "collectedRows": 165,
+      "linkedRows": 115,
+      "targetRows": 133,
+      "sourcePages": 1
+    },
+    {
+      "university": "국립공주대학교",
+      "collectedRows": 380,
+      "linkedRows": 206,
+      "targetRows": 215,
+      "sourcePages": 1
+    },
+    {
+      "university": "국립군산대학교",
+      "collectedRows": 226,
+      "linkedRows": 121,
+      "targetRows": 135,
+      "sourcePages": 1
+    },
+    {
+      "university": "국립금오공과대학교",
+      "collectedRows": 118,
+      "linkedRows": 41,
+      "targetRows": 45,
+      "sourcePages": 1
+    },
+    {
+      "university": "국립목포대학교",
+      "collectedRows": 140,
+      "linkedRows": 112,
+      "targetRows": 132,
+      "sourcePages": 1
+    },
+    {
+      "university": "국립목포해양대학교",
+      "collectedRows": 96,
+      "linkedRows": 51,
+      "targetRows": 60,
+      "sourcePages": 1
+    },
+    {
+      "university": "국립부경대학교",
+      "collectedRows": 451,
+      "linkedRows": 348,
+      "targetRows": 372,
+      "sourcePages": 1
+    },
+    {
+      "university": "국립순천대학교",
+      "collectedRows": 119,
+      "linkedRows": 74,
+      "targetRows": 85,
+      "sourcePages": 1
+    },
+    {
+      "university": "국립창원대학교",
+      "collectedRows": 290,
+      "linkedRows": 124,
+      "targetRows": 142,
+      "sourcePages": 1
+    },
+    {
+      "university": "국립한국교통대학교",
+      "collectedRows": 313,
+      "linkedRows": 210,
+      "targetRows": 224,
+      "sourcePages": 1
+    },
+    {
+      "university": "국립한국해양대학교",
+      "collectedRows": 223,
+      "linkedRows": 162,
+      "targetRows": 184,
+      "sourcePages": 1
+    },
+    {
+      "university": "국립한밭대학교",
+      "collectedRows": 195,
+      "linkedRows": 140,
+      "targetRows": 148,
+      "sourcePages": 1
+    },
+    {
+      "university": "국민대학교",
+      "collectedRows": 241,
+      "linkedRows": 164,
+      "targetRows": 175,
+      "sourcePages": 1
+    },
+    {
+      "university": "극동대학교",
+      "collectedRows": 25,
+      "linkedRows": 10,
+      "targetRows": 30,
+      "sourcePages": 1
+    },
+    {
+      "university": "금강대학교",
+      "collectedRows": 6,
+      "linkedRows": 4,
+      "targetRows": 4,
+      "sourcePages": 1
+    },
+    {
+      "university": "김천대학교",
+      "collectedRows": 42,
+      "linkedRows": 28,
+      "targetRows": 39,
+      "sourcePages": 1
+    },
+    {
+      "university": "나사렛대학교",
+      "collectedRows": 78,
+      "linkedRows": 36,
+      "targetRows": 40,
+      "sourcePages": 1
+    },
+    {
+      "university": "남부대학교",
+      "collectedRows": 35,
+      "linkedRows": 6,
+      "targetRows": 29,
+      "sourcePages": 1
+    },
+    {
+      "university": "남서울대학교",
+      "collectedRows": 230,
+      "linkedRows": 182,
+      "targetRows": 187,
+      "sourcePages": 1
+    },
+    {
+      "university": "단국대학교",
+      "collectedRows": 581,
+      "linkedRows": 368,
+      "targetRows": 385,
+      "sourcePages": 1
+    },
+    {
+      "university": "대구가톨릭대학교",
+      "collectedRows": 273,
+      "linkedRows": 162,
+      "targetRows": 184,
+      "sourcePages": 1
+    },
+    {
+      "university": "대구교육대학교",
+      "collectedRows": 6,
+      "linkedRows": 0,
+      "targetRows": 3,
+      "sourcePages": 1
+    },
+    {
+      "university": "대구대학교",
+      "collectedRows": 274,
+      "linkedRows": 204,
+      "targetRows": 254,
+      "sourcePages": 1
+    },
+    {
+      "university": "대구예술대학교",
+      "collectedRows": 11,
+      "linkedRows": 0,
+      "targetRows": 0,
+      "sourcePages": 1
+    },
+    {
+      "university": "대구한의대학교",
+      "collectedRows": 88,
+      "linkedRows": 64,
+      "targetRows": 80,
+      "sourcePages": 1
+    },
+    {
+      "university": "대신대학교",
+      "collectedRows": 0,
+      "linkedRows": 0,
+      "targetRows": 8,
+      "sourcePages": 1
+    },
+    {
+      "university": "대전대학교",
+      "collectedRows": 116,
+      "linkedRows": 65,
+      "targetRows": 102,
+      "sourcePages": 1
+    },
+    {
+      "university": "대전신학대학교",
+      "collectedRows": 0,
+      "linkedRows": 0,
+      "targetRows": 1,
+      "sourcePages": 0
+    },
+    {
+      "university": "대진대학교",
+      "collectedRows": 180,
+      "linkedRows": 92,
+      "targetRows": 147,
+      "sourcePages": 1
+    },
+    {
+      "university": "덕성여자대학교",
+      "collectedRows": 35,
+      "linkedRows": 18,
+      "targetRows": 31,
+      "sourcePages": 1
+    },
+    {
+      "university": "동국대학교",
+      "collectedRows": 363,
+      "linkedRows": 242,
+      "targetRows": 276,
+      "sourcePages": 2
+    },
+    {
+      "university": "동덕여자대학교",
+      "collectedRows": 122,
+      "linkedRows": 84,
+      "targetRows": 84,
+      "sourcePages": 1
+    },
+    {
+      "university": "동명대학교",
+      "collectedRows": 203,
+      "linkedRows": 92,
+      "targetRows": 134,
+      "sourcePages": 1
+    },
+    {
+      "university": "동서대학교",
+      "collectedRows": 155,
+      "linkedRows": 120,
+      "targetRows": 129,
+      "sourcePages": 1
+    },
+    {
+      "university": "동신대학교",
+      "collectedRows": 72,
+      "linkedRows": 50,
+      "targetRows": 70,
+      "sourcePages": 1
+    },
+    {
+      "university": "동아대학교",
+      "collectedRows": 412,
+      "linkedRows": 258,
+      "targetRows": 288,
+      "sourcePages": 1
+    },
+    {
+      "university": "동양대학교",
+      "collectedRows": 82,
+      "linkedRows": 58,
+      "targetRows": 69,
+      "sourcePages": 1
+    },
+    {
+      "university": "동의대학교",
+      "collectedRows": 348,
+      "linkedRows": 238,
+      "targetRows": 260,
+      "sourcePages": 1
+    },
+    {
+      "university": "루터대학교",
+      "collectedRows": 6,
+      "linkedRows": 0,
+      "targetRows": 3,
+      "sourcePages": 1
+    },
+    {
+      "university": "명지대학교",
+      "collectedRows": 290,
+      "linkedRows": 176,
+      "targetRows": 187,
+      "sourcePages": 1
+    },
+    {
+      "university": "목원대학교",
+      "collectedRows": 97,
+      "linkedRows": 78,
+      "targetRows": 111,
+      "sourcePages": 1
+    },
+    {
+      "university": "목포가톨릭대학교",
+      "collectedRows": 8,
+      "linkedRows": 3,
+      "targetRows": 4,
+      "sourcePages": 1
+    },
+    {
+      "university": "배재대학교",
+      "collectedRows": 102,
+      "linkedRows": 78,
+      "targetRows": 90,
+      "sourcePages": 1
+    },
+    {
+      "university": "백석대학교",
+      "collectedRows": 173,
+      "linkedRows": 76,
+      "targetRows": 91,
+      "sourcePages": 1
+    },
+    {
+      "university": "부산가톨릭대학교",
+      "collectedRows": 80,
+      "linkedRows": 62,
+      "targetRows": 71,
+      "sourcePages": 1
+    },
+    {
+      "university": "부산대학교",
+      "collectedRows": 623,
+      "linkedRows": 353,
+      "targetRows": 491,
+      "sourcePages": 1
+    },
+    {
+      "university": "부산외국어대학교",
+      "collectedRows": 22,
+      "linkedRows": 14,
+      "targetRows": 22,
+      "sourcePages": 1
+    },
+    {
+      "university": "부산장신대학교",
+      "collectedRows": 0,
+      "linkedRows": 0,
+      "targetRows": 5,
+      "sourcePages": 0
+    },
+    {
+      "university": "삼육대학교",
+      "collectedRows": 141,
+      "linkedRows": 75,
+      "targetRows": 82,
+      "sourcePages": 1
+    },
+    {
+      "university": "상명대학교",
+      "collectedRows": 252,
+      "linkedRows": 181,
+      "targetRows": 183,
+      "sourcePages": 2
+    },
+    {
+      "university": "상지대학교",
+      "collectedRows": 142,
+      "linkedRows": 88,
+      "targetRows": 100,
+      "sourcePages": 1
+    },
+    {
+      "university": "서강대학교",
+      "collectedRows": 87,
+      "linkedRows": 71,
+      "targetRows": 88,
+      "sourcePages": 1
+    },
+    {
+      "university": "서경대학교",
+      "collectedRows": 84,
+      "linkedRows": 14,
+      "targetRows": 37,
+      "sourcePages": 1
+    },
+    {
+      "university": "서울과학기술대학교",
+      "collectedRows": 165,
+      "linkedRows": 92,
+      "targetRows": 99,
+      "sourcePages": 1
+    },
+    {
+      "university": "서울교육대학교",
+      "collectedRows": 8,
+      "linkedRows": 3,
+      "targetRows": 3,
+      "sourcePages": 1
+    },
+    {
+      "university": "서울기독대학교",
+      "collectedRows": 11,
+      "linkedRows": 3,
+      "targetRows": 8,
+      "sourcePages": 1
+    },
+    {
+      "university": "서울대학교",
+      "collectedRows": 209,
+      "linkedRows": 196,
+      "targetRows": 210,
+      "sourcePages": 2
+    },
+    {
+      "university": "서울시립대학교",
+      "collectedRows": 160,
+      "linkedRows": 156,
+      "targetRows": 167,
+      "sourcePages": 1
+    },
+    {
+      "university": "서울신학대학교",
+      "collectedRows": 69,
+      "linkedRows": 33,
+      "targetRows": 40,
+      "sourcePages": 1
+    },
+    {
+      "university": "서울여자대학교",
+      "collectedRows": 167,
+      "linkedRows": 127,
+      "targetRows": 135,
+      "sourcePages": 1
+    },
+    {
+      "university": "서울장신대학교",
+      "collectedRows": 6,
+      "linkedRows": 0,
+      "targetRows": 3,
+      "sourcePages": 1
+    },
+    {
+      "university": "서울한영대학교",
+      "collectedRows": 7,
+      "linkedRows": 5,
+      "targetRows": 5,
+      "sourcePages": 1
+    },
+    {
+      "university": "서원대학교",
+      "collectedRows": 85,
+      "linkedRows": 70,
+      "targetRows": 84,
+      "sourcePages": 1
+    },
+    {
+      "university": "선문대학교",
+      "collectedRows": 141,
+      "linkedRows": 128,
+      "targetRows": 136,
+      "sourcePages": 1
+    },
+    {
+      "university": "성결대학교",
+      "collectedRows": 120,
+      "linkedRows": 66,
+      "targetRows": 90,
+      "sourcePages": 1
+    },
+    {
+      "university": "성공회대학교",
+      "collectedRows": 45,
+      "linkedRows": 25,
+      "targetRows": 27,
+      "sourcePages": 1
+    },
+    {
+      "university": "성균관대학교",
+      "collectedRows": 175,
+      "linkedRows": 140,
+      "targetRows": 162,
+      "sourcePages": 1
+    },
+    {
+      "university": "성신여자대학교",
+      "collectedRows": 154,
+      "linkedRows": 105,
+      "targetRows": 110,
+      "sourcePages": 1
+    },
+    {
+      "university": "세명대학교",
+      "collectedRows": 111,
+      "linkedRows": 78,
+      "targetRows": 92,
+      "sourcePages": 1
+    },
+    {
+      "university": "세종대학교",
+      "collectedRows": 168,
+      "linkedRows": 122,
+      "targetRows": 133,
+      "sourcePages": 1
+    },
+    {
+      "university": "세한대학교",
+      "collectedRows": 0,
+      "linkedRows": 0,
+      "targetRows": 14,
+      "sourcePages": 1
+    },
+    {
+      "university": "송원대학교",
+      "collectedRows": 32,
+      "linkedRows": 21,
+      "targetRows": 27,
+      "sourcePages": 1
+    },
+    {
+      "university": "수원대학교",
+      "collectedRows": 155,
+      "linkedRows": 121,
+      "targetRows": 131,
+      "sourcePages": 1
+    },
+    {
+      "university": "숙명여자대학교",
+      "collectedRows": 218,
+      "linkedRows": 152,
+      "targetRows": 156,
+      "sourcePages": 1
+    },
+    {
+      "university": "순천향대학교",
+      "collectedRows": 226,
+      "linkedRows": 142,
+      "targetRows": 158,
+      "sourcePages": 1
+    },
+    {
+      "university": "숭실대학교",
+      "collectedRows": 216,
+      "linkedRows": 184,
+      "targetRows": 199,
+      "sourcePages": 1
+    },
+    {
+      "university": "신경주대학교",
+      "collectedRows": 18,
+      "linkedRows": 12,
+      "targetRows": 17,
+      "sourcePages": 1
+    },
+    {
+      "university": "신라대학교",
+      "collectedRows": 194,
+      "linkedRows": 66,
+      "targetRows": 115,
+      "sourcePages": 1
+    },
+    {
+      "university": "신한대학교",
+      "collectedRows": 122,
+      "linkedRows": 82,
+      "targetRows": 90,
+      "sourcePages": 1
+    },
+    {
+      "university": "아신대학교",
+      "collectedRows": 0,
+      "linkedRows": 0,
+      "targetRows": 3,
+      "sourcePages": 0
+    },
+    {
+      "university": "아주대학교",
+      "collectedRows": 147,
+      "linkedRows": 121,
+      "targetRows": 165,
+      "sourcePages": 1
+    },
+    {
+      "university": "안양대학교",
+      "collectedRows": 141,
+      "linkedRows": 101,
+      "targetRows": 136,
+      "sourcePages": 1
+    },
+    {
+      "university": "연세대학교",
+      "collectedRows": 393,
+      "linkedRows": 294,
+      "targetRows": 331,
+      "sourcePages": 2
+    },
+    {
+      "university": "영남대학교",
+      "collectedRows": 408,
+      "linkedRows": 265,
+      "targetRows": 293,
+      "sourcePages": 1
+    },
+    {
+      "university": "영산대학교",
+      "collectedRows": 72,
+      "linkedRows": 39,
+      "targetRows": 64,
+      "sourcePages": 1
+    },
+    {
+      "university": "예수대학교",
+      "collectedRows": 4,
+      "linkedRows": 1,
+      "targetRows": 3,
+      "sourcePages": 1
+    },
+    {
+      "university": "용인대학교",
+      "collectedRows": 145,
+      "linkedRows": 63,
+      "targetRows": 66,
+      "sourcePages": 1
+    },
+    {
+      "university": "우석대학교",
+      "collectedRows": 146,
+      "linkedRows": 43,
+      "targetRows": 59,
+      "sourcePages": 1
+    },
+    {
+      "university": "우송대학교",
+      "collectedRows": 202,
+      "linkedRows": 186,
+      "targetRows": 213,
+      "sourcePages": 1
+    },
+    {
+      "university": "울산대학교",
+      "collectedRows": 131,
+      "linkedRows": 65,
+      "targetRows": 76,
+      "sourcePages": 1
+    },
+    {
+      "university": "원광대학교",
+      "collectedRows": 276,
+      "linkedRows": 107,
+      "targetRows": 135,
+      "sourcePages": 1
+    },
+    {
+      "university": "위덕대학교",
+      "collectedRows": 0,
+      "linkedRows": 0,
+      "targetRows": 27,
+      "sourcePages": 1
+    },
+    {
+      "university": "유원대학교",
+      "collectedRows": 61,
+      "linkedRows": 27,
+      "targetRows": 49,
+      "sourcePages": 1
+    },
+    {
+      "university": "을지대학교",
+      "collectedRows": 125,
+      "linkedRows": 89,
+      "targetRows": 107,
+      "sourcePages": 1
+    },
+    {
+      "university": "이화여자대학교",
+      "collectedRows": 257,
+      "linkedRows": 220,
+      "targetRows": 235,
+      "sourcePages": 1
+    },
+    {
+      "university": "인제대학교",
+      "collectedRows": 103,
+      "linkedRows": 47,
+      "targetRows": 72,
+      "sourcePages": 1
+    },
+    {
+      "university": "인천가톨릭대학교",
+      "collectedRows": 16,
+      "linkedRows": 5,
+      "targetRows": 6,
+      "sourcePages": 1
+    },
+    {
+      "university": "인천대학교",
+      "collectedRows": 313,
+      "linkedRows": 195,
+      "targetRows": 203,
+      "sourcePages": 1
+    },
+    {
+      "university": "인하대학교",
+      "collectedRows": 351,
+      "linkedRows": 252,
+      "targetRows": 258,
+      "sourcePages": 1
+    },
+    {
+      "university": "장로회신학대학교",
+      "collectedRows": 21,
+      "linkedRows": 6,
+      "targetRows": 6,
+      "sourcePages": 1
+    },
+    {
+      "university": "전남대학교",
+      "collectedRows": 648,
+      "linkedRows": 363,
+      "targetRows": 412,
+      "sourcePages": 1
+    },
+    {
+      "university": "전북대학교",
+      "collectedRows": 291,
+      "linkedRows": 131,
+      "targetRows": 142,
+      "sourcePages": 1
+    },
+    {
+      "university": "전주대학교",
+      "collectedRows": 152,
+      "linkedRows": 107,
+      "targetRows": 132,
+      "sourcePages": 1
+    },
+    {
+      "university": "제주국제대학교",
+      "collectedRows": 0,
+      "linkedRows": 0,
+      "targetRows": 20,
+      "sourcePages": 0
+    },
+    {
+      "university": "제주대학교",
+      "collectedRows": 482,
+      "linkedRows": 302,
+      "targetRows": 306,
+      "sourcePages": 1
+    },
+    {
+      "university": "조선대학교",
+      "collectedRows": 314,
+      "linkedRows": 151,
+      "targetRows": 254,
+      "sourcePages": 1
+    },
+    {
+      "university": "중부대학교",
+      "collectedRows": 78,
+      "linkedRows": 57,
+      "targetRows": 92,
+      "sourcePages": 1
+    },
+    {
+      "university": "중앙대학교",
+      "collectedRows": 354,
+      "linkedRows": 210,
+      "targetRows": 271,
+      "sourcePages": 1
+    },
+    {
+      "university": "중원대학교",
+      "collectedRows": 49,
+      "linkedRows": 22,
+      "targetRows": 42,
+      "sourcePages": 1
+    },
+    {
+      "university": "진주교육대학교",
+      "collectedRows": 8,
+      "linkedRows": 3,
+      "targetRows": 3,
+      "sourcePages": 1
+    },
+    {
+      "university": "차의과학대학교",
+      "collectedRows": 17,
+      "linkedRows": 8,
+      "targetRows": 17,
+      "sourcePages": 1
+    },
+    {
+      "university": "창신대학교",
+      "collectedRows": 47,
+      "linkedRows": 59,
+      "targetRows": 77,
+      "sourcePages": 1
+    },
+    {
+      "university": "청운대학교",
+      "collectedRows": 50,
+      "linkedRows": 32,
+      "targetRows": 37,
+      "sourcePages": 1
+    },
+    {
+      "university": "청주교육대학교",
+      "collectedRows": 7,
+      "linkedRows": 3,
+      "targetRows": 4,
+      "sourcePages": 1
+    },
+    {
+      "university": "청주대학교",
+      "collectedRows": 217,
+      "linkedRows": 193,
+      "targetRows": 244,
+      "sourcePages": 1
+    },
+    {
+      "university": "초당대학교",
+      "collectedRows": 15,
+      "linkedRows": 4,
+      "targetRows": 17,
+      "sourcePages": 1
+    },
+    {
+      "university": "총신대학교",
+      "collectedRows": 43,
+      "linkedRows": 17,
+      "targetRows": 17,
+      "sourcePages": 1
+    },
+    {
+      "university": "추계예술대학교",
+      "collectedRows": 3,
+      "linkedRows": 1,
+      "targetRows": 1,
+      "sourcePages": 1
+    },
+    {
+      "university": "충남대학교",
+      "collectedRows": 731,
+      "linkedRows": 391,
+      "targetRows": 444,
+      "sourcePages": 1
+    },
+    {
+      "university": "충북대학교",
+      "collectedRows": 605,
+      "linkedRows": 378,
+      "targetRows": 386,
+      "sourcePages": 1
+    },
+    {
+      "university": "칼빈대학교",
+      "collectedRows": 11,
+      "linkedRows": 3,
+      "targetRows": 4,
+      "sourcePages": 1
+    },
+    {
+      "university": "평택대학교",
+      "collectedRows": 82,
+      "linkedRows": 66,
+      "targetRows": 80,
+      "sourcePages": 1
+    },
+    {
+      "university": "한경국립대학교",
+      "collectedRows": 207,
+      "linkedRows": 61,
+      "targetRows": 72,
+      "sourcePages": 1
+    },
+    {
+      "university": "한국공학대학교",
+      "collectedRows": 116,
+      "linkedRows": 91,
+      "targetRows": 101,
+      "sourcePages": 1
+    },
+    {
+      "university": "한국교원대학교",
+      "collectedRows": 60,
+      "linkedRows": 56,
+      "targetRows": 73,
+      "sourcePages": 1
+    },
+    {
+      "university": "한국기술교육대학교",
+      "collectedRows": 136,
+      "linkedRows": 88,
+      "targetRows": 88,
+      "sourcePages": 1
+    },
+    {
+      "university": "한국성서대학교",
+      "collectedRows": 19,
+      "linkedRows": 7,
+      "targetRows": 9,
+      "sourcePages": 1
+    },
+    {
+      "university": "한국외국어대학교",
+      "collectedRows": 315,
+      "linkedRows": 290,
+      "targetRows": 340,
+      "sourcePages": 1
+    },
+    {
+      "university": "한국체육대학교",
+      "collectedRows": 127,
+      "linkedRows": 8,
+      "targetRows": 13,
+      "sourcePages": 1
+    },
+    {
+      "university": "한국침례신학대학교",
+      "collectedRows": 1,
+      "linkedRows": 0,
+      "targetRows": 0,
+      "sourcePages": 1
+    },
+    {
+      "university": "한국항공대학교",
+      "collectedRows": 30,
+      "linkedRows": 26,
+      "targetRows": 50,
+      "sourcePages": 1
+    },
+    {
+      "university": "한남대학교",
+      "collectedRows": 230,
+      "linkedRows": 190,
+      "targetRows": 207,
+      "sourcePages": 1
+    },
+    {
+      "university": "한동대학교",
+      "collectedRows": 13,
+      "linkedRows": 0,
+      "targetRows": 0,
+      "sourcePages": 1
+    },
+    {
+      "university": "한라대학교",
+      "collectedRows": 85,
+      "linkedRows": 62,
+      "targetRows": 76,
+      "sourcePages": 1
+    },
+    {
+      "university": "한림대학교",
+      "collectedRows": 175,
+      "linkedRows": 120,
+      "targetRows": 138,
+      "sourcePages": 1
+    },
+    {
+      "university": "한서대학교",
+      "collectedRows": 119,
+      "linkedRows": 86,
+      "targetRows": 103,
+      "sourcePages": 1
+    },
+    {
+      "university": "한성대학교",
+      "collectedRows": 68,
+      "linkedRows": 45,
+      "targetRows": 65,
+      "sourcePages": 1
+    },
+    {
+      "university": "한세대학교",
+      "collectedRows": 29,
+      "linkedRows": 22,
+      "targetRows": 35,
+      "sourcePages": 1
+    },
+    {
+      "university": "한신대학교",
+      "collectedRows": 101,
+      "linkedRows": 79,
+      "targetRows": 97,
+      "sourcePages": 1
+    },
+    {
+      "university": "한양대학교",
+      "collectedRows": 390,
+      "linkedRows": 248,
+      "targetRows": 331,
+      "sourcePages": 2
+    },
+    {
+      "university": "한일장신대학교",
+      "collectedRows": 14,
+      "linkedRows": 0,
+      "targetRows": 13,
+      "sourcePages": 1
+    },
+    {
+      "university": "협성대학교",
+      "collectedRows": 170,
+      "linkedRows": 131,
+      "targetRows": 138,
+      "sourcePages": 1
+    },
+    {
+      "university": "호남대학교",
+      "collectedRows": 35,
+      "linkedRows": 25,
+      "targetRows": 81,
+      "sourcePages": 1
+    },
+    {
+      "university": "호남신학대학교",
+      "collectedRows": 0,
+      "linkedRows": 0,
+      "targetRows": 6,
+      "sourcePages": 0
+    },
+    {
+      "university": "호서대학교",
+      "collectedRows": 205,
+      "linkedRows": 133,
+      "targetRows": 155,
+      "sourcePages": 1
+    },
+    {
+      "university": "호원대학교",
+      "collectedRows": 0,
+      "linkedRows": 0,
+      "targetRows": 29,
+      "sourcePages": 0
+    },
+    {
+      "university": "홍익대학교",
+      "collectedRows": 245,
+      "linkedRows": 142,
+      "targetRows": 157,
+      "sourcePages": 2
+    },
+    {
+      "university": "화성의과학대학교",
+      "collectedRows": 29,
+      "linkedRows": 21,
+      "targetRows": 26,
+      "sourcePages": 1
+    }
+  ],
+  "sources": [
+    {
+      "name": "가톨릭대",
+      "university": "가톨릭대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10030381.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 218,
+      "validatedTables": 11,
+      "excludedTables": 3
+    },
+    {
+      "name": "감리교신대",
+      "university": "감리교신학대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KJjBNSmYlJjomSjdmVGY=",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 7,
+      "validatedTables": 1,
+      "excludedTables": 0
+    },
+    {
+      "name": "강서대",
+      "university": "강서대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10360791.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 27,
+      "validatedTables": 5,
+      "excludedTables": 1
+    },
+    {
+      "name": "건국대",
+      "university": "건국대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10080381.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 192,
+      "validatedTables": 9,
+      "excludedTables": 1
+    },
+    {
+      "name": "경희대",
+      "university": "경희대학교",
+      "url": "http://ratio.uwayapply.com/Sl5KOnw5SmYlJjomSjdmVGY=",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 402,
+      "validatedTables": 18,
+      "excludedTables": 2
+    },
+    {
+      "name": "고려대",
+      "university": "고려대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KOGB9YTlKZiUmOiZKN2ZUZg==",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 327,
+      "validatedTables": 9,
+      "excludedTables": 1
+    },
+    {
+      "name": "광운대",
+      "university": "광운대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KTjlKZiUmOiZKN2ZUZg==",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 130,
+      "validatedTables": 10,
+      "excludedTables": 1
+    },
+    {
+      "name": "국민대",
+      "university": "국민대학교",
+      "url": "http://ratio.uwayapply.com/Sl5KVyVNOWFhOUpmJSY6Jko3ZlRm",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 241,
+      "validatedTables": 18,
+      "excludedTables": 2
+    },
+    {
+      "name": "덕성여대",
+      "university": "덕성여자대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10530631.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 35,
+      "validatedTables": 11,
+      "excludedTables": 1
+    },
+    {
+      "name": "동국대",
+      "university": "동국대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10550541.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 229,
+      "validatedTables": 13,
+      "excludedTables": 2
+    },
+    {
+      "name": "동덕여대",
+      "university": "동덕여자대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KOTpWcldhVkpmJSY6Jko3ZlRm",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 122,
+      "validatedTables": 7,
+      "excludedTables": 0
+    },
+    {
+      "name": "명지대",
+      "university": "명지대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10650761.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 290,
+      "validatedTables": 13,
+      "excludedTables": 1
+    },
+    {
+      "name": "삼육대",
+      "university": "삼육대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10760741.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 141,
+      "validatedTables": 16,
+      "excludedTables": 0
+    },
+    {
+      "name": "상명대",
+      "university": "상명대학교",
+      "url": "http://ratio.uwayapply.com/Sl5KOk0mSmYlJjomSjdmVGY=",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 139,
+      "validatedTables": 8,
+      "excludedTables": 1
+    },
+    {
+      "name": "서강대",
+      "university": "서강대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio12050481.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 87,
+      "validatedTables": 6,
+      "excludedTables": 1
+    },
+    {
+      "name": "서경대",
+      "university": "서경대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10810661.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 84,
+      "validatedTables": 12,
+      "excludedTables": 0
+    },
+    {
+      "name": "서울과학기술대",
+      "university": "서울과학기술대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KMDpXJkpmJSY6Jko3ZlRm",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 165,
+      "validatedTables": 10,
+      "excludedTables": 2
+    },
+    {
+      "name": "서울교대",
+      "university": "서울교육대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KYDpXJkpmJSY6Jko3ZlRm",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 8,
+      "validatedTables": 1,
+      "excludedTables": 0
+    },
+    {
+      "name": "서울기독대",
+      "university": "서울기독대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10520591.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 11,
+      "validatedTables": 5,
+      "excludedTables": 4
+    },
+    {
+      "name": "서울시립대",
+      "university": "서울시립대학교",
+      "url": "http://ratio.uwayapply.com/Sl5KJmE6SmYlJjomSjdmVGY=",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 160,
+      "validatedTables": 7,
+      "excludedTables": 0
+    },
+    {
+      "name": "서울여대",
+      "university": "서울여자대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10860821.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 167,
+      "validatedTables": 12,
+      "excludedTables": 1
+    },
+    {
+      "name": "서울한영대",
+      "university": "서울한영대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11660441.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 7,
+      "validatedTables": 3,
+      "excludedTables": 3
+    },
+    {
+      "name": "성공회대",
+      "university": "성공회대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10910511.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 45,
+      "validatedTables": 9,
+      "excludedTables": 0
+    },
+    {
+      "name": "성균관대",
+      "university": "성균관대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10920591.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 175,
+      "validatedTables": 12,
+      "excludedTables": 0
+    },
+    {
+      "name": "성신여대",
+      "university": "성신여자대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10930201.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 154,
+      "validatedTables": 6,
+      "excludedTables": 1
+    },
+    {
+      "name": "세종대",
+      "university": "세종대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10950721.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 168,
+      "validatedTables": 14,
+      "excludedTables": 0
+    },
+    {
+      "name": "숙명여대",
+      "university": "숙명여자대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10981501.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 218,
+      "validatedTables": 9,
+      "excludedTables": 1
+    },
+    {
+      "name": "숭실대",
+      "university": "숭실대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11010851.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 216,
+      "validatedTables": 11,
+      "excludedTables": 2
+    },
+    {
+      "name": "연세대",
+      "university": "연세대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11080811.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 252,
+      "validatedTables": 8,
+      "excludedTables": 1
+    },
+    {
+      "name": "이화여대",
+      "university": "이화여자대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11202121.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 257,
+      "validatedTables": 8,
+      "excludedTables": 0
+    },
+    {
+      "name": "장로회신대",
+      "university": "장로회신학대학교",
+      "url": "http://ratio.uwayapply.com/Sl5KJjBMaUpmJSY6Jko3ZlRm",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 21,
+      "validatedTables": 6,
+      "excludedTables": 6
+    },
+    {
+      "name": "중앙대",
+      "university": "중앙대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KOjhMSmYlJjomSjdmVGY=",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 354,
+      "validatedTables": 12,
+      "excludedTables": 1
+    },
+    {
+      "name": "총신대",
+      "university": "총신대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KVyV8JnJXYXxMSmYlJjomSjdmVGY=",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 43,
+      "validatedTables": 8,
+      "excludedTables": 6
+    },
+    {
+      "name": "추계예대",
+      "university": "추계예술대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KYGJyOnxMSmYlJjomSjdmVGY=",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 3,
+      "validatedTables": 2,
+      "excludedTables": 4
+    },
+    {
+      "name": "한국외대",
+      "university": "한국외국어대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KJmg6fEpmJSY6Jko3ZlRm",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 315,
+      "validatedTables": 6,
+      "excludedTables": 0
+    },
+    {
+      "name": "한국체대",
+      "university": "한국체육대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11530431.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 127,
+      "validatedTables": 8,
+      "excludedTables": 0
+    },
+    {
+      "name": "한성대",
+      "university": "한성대학교",
+      "url": "http://ratio.uwayapply.com/Sl5Kclc6Jlc4fEpmJSY6Jko3ZlRm",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 68,
+      "validatedTables": 9,
+      "excludedTables": 0
+    },
+    {
+      "name": "한양대",
+      "university": "한양대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11640591.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 258,
+      "validatedTables": 13,
+      "excludedTables": 0
+    },
+    {
+      "name": "홍익대",
+      "university": "홍익대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11720891.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 163,
+      "validatedTables": 11,
+      "excludedTables": 0
+    },
+    {
+      "name": "경인교대",
+      "university": "경인교육대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio20060251.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 7,
+      "validatedTables": 1,
+      "excludedTables": 0
+    },
+    {
+      "name": "인천가톨릭대",
+      "university": "인천가톨릭대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11220011.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 16,
+      "validatedTables": 10,
+      "excludedTables": 0
+    },
+    {
+      "name": "인천대",
+      "university": "인천대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11230791.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 313,
+      "validatedTables": 10,
+      "excludedTables": 0
+    },
+    {
+      "name": "인하대",
+      "university": "인하대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KOHxXJUpmJSY6Jko3ZlRm",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 351,
+      "validatedTables": 14,
+      "excludedTables": 1
+    },
+    {
+      "name": "가천대",
+      "university": "가천대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10190711.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 309,
+      "validatedTables": 14,
+      "excludedTables": 0
+    },
+    {
+      "name": "강남대",
+      "university": "강남대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KTThXclc4OUpmJSY6Jko3ZlRm",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 102,
+      "validatedTables": 11,
+      "excludedTables": 0
+    },
+    {
+      "name": "경기대",
+      "university": "경기대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KJXJyV2FiOUpmJSY6Jko3ZlRm",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 221,
+      "validatedTables": 14,
+      "excludedTables": 0
+    },
+    {
+      "name": "단국대",
+      "university": "단국대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10420521.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 581,
+      "validatedTables": 29,
+      "excludedTables": 0
+    },
+    {
+      "name": "대진대",
+      "university": "대진대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KVyUvYDhWSmYlJjomSjdmVGY=",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 180,
+      "validatedTables": 12,
+      "excludedTables": 1
+    },
+    {
+      "name": "루터대",
+      "university": "루터대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KOjBDSmYlJjomSjdmVGY=",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 6,
+      "validatedTables": 6,
+      "excludedTables": 1
+    },
+    {
+      "name": "서울신대",
+      "university": "서울신학대학교",
+      "url": "http://ratio.uwayapply.com/Sl5KOjAmSmYlJjomSjdmVGY=",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 69,
+      "validatedTables": 11,
+      "excludedTables": 5
+    },
+    {
+      "name": "서울장신대",
+      "university": "서울장신대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KVyUmclc4L0M6YWAmSmYlJjomSjdmVGY=",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 6,
+      "validatedTables": 3,
+      "excludedTables": 4
+    },
+    {
+      "name": "성결대",
+      "university": "성결대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10900771.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 120,
+      "validatedTables": 13,
+      "excludedTables": 0
+    },
+    {
+      "name": "수원대",
+      "university": "수원대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10970461.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 155,
+      "validatedTables": 10,
+      "excludedTables": 0
+    },
+    {
+      "name": "신한대",
+      "university": "신한대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11870871.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 122,
+      "validatedTables": 12,
+      "excludedTables": 0
+    },
+    {
+      "name": "아주대",
+      "university": "아주대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11040711.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 147,
+      "validatedTables": 10,
+      "excludedTables": 1
+    },
+    {
+      "name": "안양대",
+      "university": "안양대학교",
+      "url": "https://ratio.uwayapply.com/Sl5Kclc4Ylc4SmYlJjomSjdmVGY=",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 141,
+      "validatedTables": 11,
+      "excludedTables": 0
+    },
+    {
+      "name": "용인대",
+      "university": "용인대학교",
+      "url": "http://ratio.uwayapply.com/Sl5KVyVyV2FiSmYlJjomSjdmVGY=",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 145,
+      "validatedTables": 8,
+      "excludedTables": 0
+    },
+    {
+      "name": "을지대",
+      "university": "을지대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11190711.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 125,
+      "validatedTables": 12,
+      "excludedTables": 2
+    },
+    {
+      "name": "차의과학대",
+      "university": "차의과학대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KOHxMSmYlJjomSjdmVGY=",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 17,
+      "validatedTables": 6,
+      "excludedTables": 0
+    },
+    {
+      "name": "칼빈대",
+      "university": "칼빈대학교",
+      "url": "http://ratio.uwayapply.com/Sl5KVyVEQzhMSmYlJjomSjdmVGY=",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 11,
+      "validatedTables": 7,
+      "excludedTables": 4
+    },
+    {
+      "name": "평택대",
+      "university": "평택대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KOjBpSmYlJjomSjdmVGY=",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 82,
+      "validatedTables": 7,
+      "excludedTables": 3
+    },
+    {
+      "name": "한경국립대",
+      "university": "한경국립대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio30161171.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 207,
+      "validatedTables": 14,
+      "excludedTables": 1
+    },
+    {
+      "name": "한국공학대",
+      "university": "한국공학대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio30170741.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 116,
+      "validatedTables": 9,
+      "excludedTables": 0
+    },
+    {
+      "name": "한국항공대",
+      "university": "한국항공대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11540991.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 30,
+      "validatedTables": 5,
+      "excludedTables": 0
+    },
+    {
+      "name": "한세대",
+      "university": "한세대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KJWAmVzh8SmYlJjomSjdmVGY=",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 29,
+      "validatedTables": 7,
+      "excludedTables": 2
+    },
+    {
+      "name": "한신대",
+      "university": "한신대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11630451.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 101,
+      "validatedTables": 10,
+      "excludedTables": 0
+    },
+    {
+      "name": "한양대(ERICA)",
+      "university": "한양대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11650731.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 132,
+      "validatedTables": 13,
+      "excludedTables": 1
+    },
+    {
+      "name": "협성대",
+      "university": "협성대학교",
+      "url": "https://ratio.uwayapply.com/Sl5Kclc6Jmk6YnxKZiUmOiZKN2ZUZg==",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 170,
+      "validatedTables": 11,
+      "excludedTables": 1
+    },
+    {
+      "name": "화성의과학대",
+      "university": "화성의과학대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11880441.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 29,
+      "validatedTables": 6,
+      "excludedTables": 0
+    },
+    {
+      "name": "가톨릭관동대",
+      "university": "가톨릭관동대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KOjlMSmYlJjomSjdmVGY=",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 116,
+      "validatedTables": 18,
+      "excludedTables": 3
+    },
+    {
+      "name": "강원대(강릉원주)",
+      "university": "강원대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KV2FOclc4OUpmJSY6Jko3ZlRm",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 939,
+      "validatedTables": 47,
+      "excludedTables": 3
+    },
+    {
+      "name": "경동대",
+      "university": "경동대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KRCVXOlY5SmYlJjomSjdmVGY=",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 37,
+      "validatedTables": 4,
+      "excludedTables": 3
+    },
+    {
+      "name": "상지대",
+      "university": "상지대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KJS9yVzgmSmYlJjomSjdmVGY=",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 142,
+      "validatedTables": 13,
+      "excludedTables": 0
+    },
+    {
+      "name": "연세대(미래)",
+      "university": "연세대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KZiVgJldhYkpmJSY6Jko3ZlRm",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 141,
+      "validatedTables": 14,
+      "excludedTables": 2
+    },
+    {
+      "name": "춘천교대",
+      "university": "춘천교육대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio20110331.html",
+      "status": "no_validated_department_table",
+      "reason": "학과별 표 형식·합계 추가 검증 필요",
+      "records": 0,
+      "validatedTables": 0,
+      "excludedTables": 0
+    },
+    {
+      "name": "한라대",
+      "university": "한라대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KOENDOHxKZiUmOiZKN2ZUZg==",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 85,
+      "validatedTables": 9,
+      "excludedTables": 3
+    },
+    {
+      "name": "한림대",
+      "university": "한림대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KTWJDQzh8SmYlJjomSjdmVGY=",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 175,
+      "validatedTables": 19,
+      "excludedTables": 2
+    },
+    {
+      "name": "가톨릭꽃동네대",
+      "university": "가톨릭꽃동네대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KMGE5OUpmJSY6Jko3ZlRm",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 12,
+      "validatedTables": 10,
+      "excludedTables": 1
+    },
+    {
+      "name": "건국대(글로컬)",
+      "university": "건국대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10091341.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 154,
+      "validatedTables": 19,
+      "excludedTables": 1
+    },
+    {
+      "name": "극동대",
+      "university": "극동대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KOlY5SmYlJjomSjdmVGY=",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 25,
+      "validatedTables": 7,
+      "excludedTables": 3
+    },
+    {
+      "name": "서원대",
+      "university": "서원대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10880591.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 85,
+      "validatedTables": 8,
+      "excludedTables": 3
+    },
+    {
+      "name": "세명대",
+      "university": "세명대학교",
+      "url": "https://ratio.uwayapply.com/Sl5Kclc6Yk1gJkpmJSY6Jko3ZlRm",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 111,
+      "validatedTables": 8,
+      "excludedTables": 3
+    },
+    {
+      "name": "유원대",
+      "university": "유원대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11120571.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 61,
+      "validatedTables": 12,
+      "excludedTables": 1
+    },
+    {
+      "name": "중원대",
+      "university": "중원대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11920301.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 49,
+      "validatedTables": 14,
+      "excludedTables": 3
+    },
+    {
+      "name": "청주교대",
+      "university": "청주교육대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio20100341.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 7,
+      "validatedTables": 1,
+      "excludedTables": 0
+    },
+    {
+      "name": "청주대",
+      "university": "청주대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KOi9yV2FgfExKZiUmOiZKN2ZUZg==",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 217,
+      "validatedTables": 11,
+      "excludedTables": 4
+    },
+    {
+      "name": "충북대",
+      "university": "충북대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11411051.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 605,
+      "validatedTables": 19,
+      "excludedTables": 0
+    },
+    {
+      "name": "한국교원대",
+      "university": "한국교원대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11480401.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 60,
+      "validatedTables": 4,
+      "excludedTables": 0
+    },
+    {
+      "name": "한국교통대",
+      "university": "국립한국교통대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio30150631.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 313,
+      "validatedTables": 14,
+      "excludedTables": 3
+    },
+    {
+      "name": "건양대",
+      "university": "건양대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10100811.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 127,
+      "validatedTables": 12,
+      "excludedTables": 1
+    },
+    {
+      "name": "고려대(세종)",
+      "university": "고려대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KcldhL2AmOzhgfWE5SmYlJjomSjdmVGY=",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 157,
+      "validatedTables": 12,
+      "excludedTables": 0
+    },
+    {
+      "name": "공주교대",
+      "university": "공주교육대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KYDY6L3JXYTlKZiUmOiZKN2ZUZg==",
+      "status": "no_validated_department_table",
+      "reason": "학과별 표 형식·합계 추가 검증 필요",
+      "records": 0,
+      "validatedTables": 0,
+      "excludedTables": 0
+    },
+    {
+      "name": "공주대",
+      "university": "국립공주대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10281081.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 380,
+      "validatedTables": 14,
+      "excludedTables": 1
+    },
+    {
+      "name": "금강대",
+      "university": "금강대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KOnJySmYlJjomSjdmVGY=",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 6,
+      "validatedTables": 3,
+      "excludedTables": 0
+    },
+    {
+      "name": "나사렛대",
+      "university": "나사렛대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KOld9YTlKZiUmOiZKN2ZUZg==",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 78,
+      "validatedTables": 7,
+      "excludedTables": 4
+    },
+    {
+      "name": "남서울대",
+      "university": "남서울대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KQzphYCZNOFdKZiUmOiZKN2ZUZg==",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 230,
+      "validatedTables": 9,
+      "excludedTables": 5
+    },
+    {
+      "name": "백석대",
+      "university": "백석대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KOkJKZiUmOiZKN2ZUZg==",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 173,
+      "validatedTables": 12,
+      "excludedTables": 5
+    },
+    {
+      "name": "상명대(천안)",
+      "university": "상명대학교",
+      "url": "http://ratio.uwayapply.com/Sl5KZjpNJkpmJSY6Jko3ZlRm",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 113,
+      "validatedTables": 8,
+      "excludedTables": 2
+    },
+    {
+      "name": "선문대",
+      "university": "선문대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KV2FhTVc6JkpmJSY6Jko3ZlRm",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 141,
+      "validatedTables": 10,
+      "excludedTables": 2
+    },
+    {
+      "name": "순천향대",
+      "university": "순천향대학교",
+      "url": "http://ratio.uwayapply.com/Sl5KfEwmSmYlJjomSjdmVGY=",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 226,
+      "validatedTables": 22,
+      "excludedTables": 5
+    },
+    {
+      "name": "중부대",
+      "university": "중부대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11311031.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 78,
+      "validatedTables": 8,
+      "excludedTables": 5
+    },
+    {
+      "name": "청운대",
+      "university": "청운대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KV2FhTnJXOnxMSmYlJjomSjdmVGY=",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 50,
+      "validatedTables": 6,
+      "excludedTables": 6
+    },
+    {
+      "name": "한국기술교대",
+      "university": "한국기술교육대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KfExgMDhgfWE5SmYlJjomSjdmVGY=",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 136,
+      "validatedTables": 10,
+      "excludedTables": 0
+    },
+    {
+      "name": "한서대",
+      "university": "한서대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11600881.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 119,
+      "validatedTables": 11,
+      "excludedTables": 2
+    },
+    {
+      "name": "호서대",
+      "university": "호서대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KYWAmYXxKZiUmOiZKN2ZUZg==",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 205,
+      "validatedTables": 14,
+      "excludedTables": 1
+    },
+    {
+      "name": "홍익대(세종)",
+      "university": "홍익대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11720892.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 82,
+      "validatedTables": 9,
+      "excludedTables": 0
+    },
+    {
+      "name": "대전대",
+      "university": "대전대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10501131.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 116,
+      "validatedTables": 9,
+      "excludedTables": 3
+    },
+    {
+      "name": "목원대",
+      "university": "목원대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10670761.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 97,
+      "validatedTables": 8,
+      "excludedTables": 5
+    },
+    {
+      "name": "배재대",
+      "university": "배재대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KOkxpSmYlJjomSjdmVGY=",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 102,
+      "validatedTables": 11,
+      "excludedTables": 6
+    },
+    {
+      "name": "우송대",
+      "university": "우송대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KcldhJmFhTkpmJSY6Jko3ZlRm",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 202,
+      "validatedTables": 10,
+      "excludedTables": 3
+    },
+    {
+      "name": "충남대",
+      "university": "충남대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11400471.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 731,
+      "validatedTables": 27,
+      "excludedTables": 0
+    },
+    {
+      "name": "한국침례신대",
+      "university": "한국침례신학대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KJjowQjlKZiUmOiZKN2ZUZg==",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 1,
+      "validatedTables": 1,
+      "excludedTables": 2
+    },
+    {
+      "name": "한남대",
+      "university": "한남대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11560931.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 230,
+      "validatedTables": 12,
+      "excludedTables": 5
+    },
+    {
+      "name": "한밭대",
+      "university": "국립한밭대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio30040971.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 195,
+      "validatedTables": 13,
+      "excludedTables": 3
+    },
+    {
+      "name": "군산대",
+      "university": "국립군산대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10350611.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 226,
+      "validatedTables": 13,
+      "excludedTables": 0
+    },
+    {
+      "name": "예수대",
+      "university": "예수대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KOmlNSmYlJjomSjdmVGY=",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 4,
+      "validatedTables": 4,
+      "excludedTables": 0
+    },
+    {
+      "name": "우석대",
+      "university": "우석대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11150621.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 146,
+      "validatedTables": 15,
+      "excludedTables": 0
+    },
+    {
+      "name": "원광대",
+      "university": "원광대학교",
+      "url": "https://ratio.uwayapply.com/Sl5Kclc4TjlXYU5KZiUmOiZKN2ZUZg==",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 276,
+      "validatedTables": 22,
+      "excludedTables": 0
+    },
+    {
+      "name": "전북대",
+      "university": "전북대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KOldCL0pmJSY6Jko3ZlRm",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 291,
+      "validatedTables": 25,
+      "excludedTables": 0
+    },
+    {
+      "name": "전주교대",
+      "university": "전주교육대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KYDpXL0pmJSY6Jko3ZlRm",
+      "status": "no_validated_department_table",
+      "reason": "학과별 표 형식·합계 추가 검증 필요",
+      "records": 0,
+      "validatedTables": 0,
+      "excludedTables": 0
+    },
+    {
+      "name": "전주대",
+      "university": "전주대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KOi9XYWAvSmYlJjomSjdmVGY=",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 152,
+      "validatedTables": 9,
+      "excludedTables": 4
+    },
+    {
+      "name": "한일장신대",
+      "university": "한일장신대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KQyVXOHxKZiUmOiZKN2ZUZg==",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 14,
+      "validatedTables": 6,
+      "excludedTables": 1
+    },
+    {
+      "name": "동신대",
+      "university": "동신대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KOlclfCZyV2FWSmYlJjomSjdmVGY=",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 72,
+      "validatedTables": 11,
+      "excludedTables": 2
+    },
+    {
+      "name": "목포가톨릭대",
+      "university": "목포가톨릭대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KOkxNSmYlJjomSjdmVGY=",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 8,
+      "validatedTables": 7,
+      "excludedTables": 0
+    },
+    {
+      "name": "목포대",
+      "university": "국립목포대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10690271.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 140,
+      "validatedTables": 13,
+      "excludedTables": 1
+    },
+    {
+      "name": "목포해양대",
+      "university": "국립목포해양대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10700541.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 96,
+      "validatedTables": 11,
+      "excludedTables": 0
+    },
+    {
+      "name": "순천대",
+      "university": "국립순천대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10990491.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 119,
+      "validatedTables": 15,
+      "excludedTables": 0
+    },
+    {
+      "name": "초당대",
+      "university": "초당대학교",
+      "url": "https://ratio.uwayapply.com/Sl5Kclc4VmF8TEpmJSY6Jko3ZlRm",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 15,
+      "validatedTables": 4,
+      "excludedTables": 2
+    },
+    {
+      "name": "광주교대",
+      "university": "광주교육대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KYDY6L3JXOE45SmYlJjomSjdmVGY=",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 11,
+      "validatedTables": 11,
+      "excludedTables": 0
+    },
+    {
+      "name": "광주대",
+      "university": "광주대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KOi9yVzhOckpmJSY6Jko3ZlRm",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 48,
+      "validatedTables": 5,
+      "excludedTables": 2
+    },
+    {
+      "name": "광주여대",
+      "university": "광주여자대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KOk45SmYlJjomSjdmVGY=",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 38,
+      "validatedTables": 6,
+      "excludedTables": 0
+    },
+    {
+      "name": "남부대",
+      "university": "남부대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KOkJNOFdKZiUmOiZKN2ZUZg==",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 35,
+      "validatedTables": 9,
+      "excludedTables": 0
+    },
+    {
+      "name": "송원대",
+      "university": "송원대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KV2FOcldhJkpmJSY6Jko3ZlRm",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 32,
+      "validatedTables": 4,
+      "excludedTables": 0
+    },
+    {
+      "name": "전남대",
+      "university": "전남대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KOlcvSmYlJjomSjdmVGY=",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 648,
+      "validatedTables": 23,
+      "excludedTables": 1
+    },
+    {
+      "name": "조선대",
+      "university": "조선대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11300581.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 314,
+      "validatedTables": 16,
+      "excludedTables": 0
+    },
+    {
+      "name": "호남대",
+      "university": "호남대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11690691.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 35,
+      "validatedTables": 5,
+      "excludedTables": 0
+    },
+    {
+      "name": "가야대",
+      "university": "가야대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10010711.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 17,
+      "validatedTables": 7,
+      "excludedTables": 0
+    },
+    {
+      "name": "경국대",
+      "university": "국립경국대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KcldhVlc4SmYlJjomSjdmVGY=",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 165,
+      "validatedTables": 12,
+      "excludedTables": 0
+    },
+    {
+      "name": "금오공대",
+      "university": "국립금오공과대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KfGFNOjlKZiUmOiZKN2ZUZg==",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 118,
+      "validatedTables": 8,
+      "excludedTables": 0
+    },
+    {
+      "name": "김천대",
+      "university": "김천대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio40330621.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 42,
+      "validatedTables": 9,
+      "excludedTables": 0
+    },
+    {
+      "name": "대구가톨릭대",
+      "university": "대구가톨릭대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10461101.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 273,
+      "validatedTables": 17,
+      "excludedTables": 0
+    },
+    {
+      "name": "대구대",
+      "university": "대구대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10440821.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 274,
+      "validatedTables": 16,
+      "excludedTables": 5
+    },
+    {
+      "name": "대구예대",
+      "university": "대구예술대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KOjgwSmYlJjomSjdmVGY=",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 11,
+      "validatedTables": 6,
+      "excludedTables": 0
+    },
+    {
+      "name": "대구한의대",
+      "university": "대구한의대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10160691.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 88,
+      "validatedTables": 10,
+      "excludedTables": 1
+    },
+    {
+      "name": "대신대",
+      "university": "대신대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10480261.html",
+      "status": "final_unverified",
+      "reason": "최종 마감 확인 추가 검증 필요",
+      "records": 0,
+      "validatedTables": 0,
+      "excludedTables": 0
+    },
+    {
+      "name": "동국대(WISE)",
+      "university": "동국대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10540761.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 134,
+      "validatedTables": 19,
+      "excludedTables": 1
+    },
+    {
+      "name": "신경주대",
+      "university": "신경주대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KOi9yV2FgYnJXJSZKZiUmOiZKN2ZUZg==",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 18,
+      "validatedTables": 3,
+      "excludedTables": 0
+    },
+    {
+      "name": "영남대",
+      "university": "영남대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KOmJKZiUmOiZKN2ZUZg==",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 408,
+      "validatedTables": 16,
+      "excludedTables": 0
+    },
+    {
+      "name": "한동대",
+      "university": "한동대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11570811.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 13,
+      "validatedTables": 1,
+      "excludedTables": 0
+    },
+    {
+      "name": "경남대",
+      "university": "경남대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10130591.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 200,
+      "validatedTables": 11,
+      "excludedTables": 3
+    },
+    {
+      "name": "경상국립대",
+      "university": "경상국립대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10171011.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 545,
+      "validatedTables": 22,
+      "excludedTables": 0
+    },
+    {
+      "name": "인제대",
+      "university": "인제대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KYC9XJUpmJSY6Jko3ZlRm",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 103,
+      "validatedTables": 13,
+      "excludedTables": 0
+    },
+    {
+      "name": "진주교대",
+      "university": "진주교육대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KYDpMSmYlJjomSjdmVGY=",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 8,
+      "validatedTables": 8,
+      "excludedTables": 0
+    },
+    {
+      "name": "창원대(창원)",
+      "university": "국립창원대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11350621.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 290,
+      "validatedTables": 16,
+      "excludedTables": 0
+    },
+    {
+      "name": "경북대",
+      "university": "경북대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KOlc5SmYlJjomSjdmVGY=",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 709,
+      "validatedTables": 21,
+      "excludedTables": 0
+    },
+    {
+      "name": "계명대",
+      "university": "계명대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KOk05SmYlJjomSjdmVGY=",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 529,
+      "validatedTables": 15,
+      "excludedTables": 1
+    },
+    {
+      "name": "대구교대",
+      "university": "대구교육대학교",
+      "url": "http://ratio.uwayapply.com/Sl5KYDpXVkpmJSY6Jko3ZlRm",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 6,
+      "validatedTables": 6,
+      "excludedTables": 3
+    },
+    {
+      "name": "경성대",
+      "university": "경성대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KJjlKZiUmOiZKN2ZUZg==",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 319,
+      "validatedTables": 12,
+      "excludedTables": 0
+    },
+    {
+      "name": "고신대",
+      "university": "고신대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KVyUmYTlKZiUmOiZKN2ZUZg==",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 92,
+      "validatedTables": 20,
+      "excludedTables": 2
+    },
+    {
+      "name": "동명대",
+      "university": "동명대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio30050681.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 203,
+      "validatedTables": 14,
+      "excludedTables": 0
+    },
+    {
+      "name": "동서대",
+      "university": "동서대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10570791.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 155,
+      "validatedTables": 11,
+      "excludedTables": 3
+    },
+    {
+      "name": "동아대",
+      "university": "동아대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10591481.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 412,
+      "validatedTables": 20,
+      "excludedTables": 0
+    },
+    {
+      "name": "동의대",
+      "university": "동의대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KOmBWSmYlJjomSjdmVGY=",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 348,
+      "validatedTables": 12,
+      "excludedTables": 3
+    },
+    {
+      "name": "부경대",
+      "university": "국립부경대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10720401.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 451,
+      "validatedTables": 12,
+      "excludedTables": 1
+    },
+    {
+      "name": "부산가톨릭대",
+      "university": "부산가톨릭대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10730551.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 80,
+      "validatedTables": 8,
+      "excludedTables": 0
+    },
+    {
+      "name": "부산교대",
+      "university": "부산교육대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio20040281.html",
+      "status": "no_validated_department_table",
+      "reason": "학과별 표 형식·합계 추가 검증 필요",
+      "records": 0,
+      "validatedTables": 0,
+      "excludedTables": 0
+    },
+    {
+      "name": "부산대",
+      "university": "부산대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio12100661.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 623,
+      "validatedTables": 18,
+      "excludedTables": 0
+    },
+    {
+      "name": "부산외대",
+      "university": "부산외국어대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10750521.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 22,
+      "validatedTables": 13,
+      "excludedTables": 4
+    },
+    {
+      "name": "신라대",
+      "university": "신라대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11020621.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 194,
+      "validatedTables": 14,
+      "excludedTables": 1
+    },
+    {
+      "name": "영산대",
+      "university": "영산대학교",
+      "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio30100311.html",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 72,
+      "validatedTables": 6,
+      "excludedTables": 3
+    },
+    {
+      "name": "한국해양대",
+      "university": "국립한국해양대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KOmFNOUpmJSY6Jko3ZlRm",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 223,
+      "validatedTables": 10,
+      "excludedTables": 1
+    },
+    {
+      "name": "울산대",
+      "university": "울산대학교",
+      "url": "http://ratio.uwayapply.com/Sl5KVzgmQzpKZiUmOiZKN2ZUZg==",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 131,
+      "validatedTables": 19,
+      "excludedTables": 0
+    },
+    {
+      "name": "제주대",
+      "university": "제주대학교",
+      "url": "https://ratio.uwayapply.com/Sl5KOlc6L2AvSmYlJjomSjdmVGY=",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 482,
+      "validatedTables": 18,
+      "excludedTables": 0
+    },
+    {
+      "name": "서울대",
+      "university": "서울대학교",
+      "url": "https://admission.snu.ac.kr/undergraduate/notice?md=v&bbsidx=175130",
+      "status": "final_unverified",
+      "reason": "이전 접수 안내 페이지 · 별도 최종 PDF 확보 완료",
+      "records": 0,
+      "validatedTables": 0,
+      "excludedTables": 0
+    },
+    {
+      "name": "한국성서대",
+      "university": "한국성서대학교",
+      "url": "https://ipsi.bible.ac.kr/summary/Summarys.aspx",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 19,
+      "validatedTables": 8,
+      "excludedTables": 0
+    },
+    {
+      "name": "아신대",
+      "university": null,
+      "url": "https://www.acts.ac.kr/admission/design/admission08.asp?&left=occa4&cry=2027&crs=susi&mode=view",
+      "status": "university_unresolved",
+      "reason": "자체 사이트 자료 위치 추가 확인 필요",
+      "records": 0,
+      "validatedTables": 0,
+      "excludedTables": 0
+    },
+    {
+      "name": "예원예대",
+      "university": null,
+      "url": "https://admission.yewon.ac.kr/main/?menu=293",
+      "status": "university_unresolved",
+      "reason": "자체 사이트 자료 위치 추가 확인 필요",
+      "records": 0,
+      "validatedTables": 0,
+      "excludedTables": 0
+    },
+    {
+      "name": "호원대",
+      "university": null,
+      "url": "https://intra.howon.ac.kr/IPSI/WEB_SUSI/_acceptrate/index.html?smenu=rate&v=2cf2baa2b3aa9a0b31c2d7f436d64b9a71767467b1a421106514d4431dba51a1",
+      "status": "university_unresolved",
+      "reason": "자체 사이트 자료 위치 추가 확인 필요",
+      "records": 0,
+      "validatedTables": 0,
+      "excludedTables": 0
+    },
+    {
+      "name": "세한대",
+      "university": "세한대학교",
+      "url": "https://apply.sehan.ac.kr/apply/",
+      "status": "year_or_season_unverified",
+      "reason": "학년도·수시 구분 추가 확인 필요",
+      "records": 0,
+      "validatedTables": 0,
+      "excludedTables": 0
+    },
+    {
+      "name": "경운대",
+      "university": "경운대학교",
+      "url": "https://www.ikw.ac.kr/ipsi/board/detail.tc?mn=2412&viewType=sub&mngNo=183&pageIndex=1&boardName=EARLYDECISIONSUPPORT&boardNo=333867&boardCategory=&pageSeq=1607&preview=&previewTempl=&searchCondition=1",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 70,
+      "validatedTables": 12,
+      "excludedTables": 0
+    },
+    {
+      "name": "경일대",
+      "university": "경일대학교",
+      "url": "https://ibsi.kiu.ac.kr/ipsi_rate/rate_susi_real_new_20260820.htm",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 82,
+      "validatedTables": 9,
+      "excludedTables": 4
+    },
+    {
+      "name": "동양대",
+      "university": "동양대학교",
+      "url": "https://haksa.dyu.ac.kr/manager/m_ibsi/ib_inweon/m_susi_inweon.jsp?nyeondo=2027",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 82,
+      "validatedTables": 11,
+      "excludedTables": 0
+    },
+    {
+      "name": "위덕대",
+      "university": "위덕대학교",
+      "url": "https://portal.uu.ac.kr/ext/competition.jsp",
+      "status": "final_unverified",
+      "reason": "최종 마감 확인 추가 검증 필요",
+      "records": 0,
+      "validatedTables": 0,
+      "excludedTables": 0
+    },
+    {
+      "name": "창신대",
+      "university": "창신대학교",
+      "url": "https://ipsi.cs.ac.kr/ratio/2027/1.do",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 47,
+      "validatedTables": 7,
+      "excludedTables": 0
+    },
+    {
+      "name": "창원대(거창)",
+      "university": null,
+      "url": "https://www.gc.ac.kr/ipsi/2021/sub06/sub01.asp",
+      "status": "encoding_unverified",
+      "reason": "문자 인코딩 추가 확인 필요",
+      "records": 0,
+      "validatedTables": 0,
+      "excludedTables": 0
+    },
+    {
+      "name": "서울대",
+      "university": "서울대학교",
+      "url": "https://admission.snu.ac.kr/webdata/admission/files/2027S_SNUrate.pdf",
+      "status": "collected",
+      "reason": "검증 자료 수록",
+      "records": 209,
+      "validatedTables": 3,
+      "excludedTables": 0
+    }
+  ],
+  "linkReviewed": "2026-10-10",
+  "linkTarget90": {
+    "targetRate": 90,
+    "denominator": 21720,
+    "before": 18463,
+    "added": 74,
+    "linked": 18537,
+    "rate": 85.34530386740332,
+    "targetRows": 19548,
+    "shortfall": 1011,
+    "unlinked": 3183,
+    "reasons": {
+      "category": 115,
+      "track": 1438,
+      "major/no-source": 1596,
+      "campus": 33,
+      "duplicate": 1
+    },
+    "followupAdded": 19
+  }
+}
