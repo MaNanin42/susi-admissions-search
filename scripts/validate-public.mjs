@@ -329,6 +329,7 @@ const admission2028Allowed = new Set([
   'README.md',
   'data/nationwide.json',
   'data/recommended-courses.json',
+  'data/highschool-context.json',
   'scripts/course-ui.js',
   'courses.html',
   'src/courses.template.html',

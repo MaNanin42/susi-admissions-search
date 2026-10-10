@@ -480,6 +480,28 @@ test('research campus proofs reject unreviewed IDs and wrong source campus',()=>
  assert.equal(linkApplications([target],{...fixture,records:[{...source,campus:'의왕'}]})[0].application2027,undefined);
  assert.equal(linkApplications([target],{...fixture,records:[{...source,campus:''}]})[0].application2027,undefined);
 });
+test('highschool context preserves campus, historical year and aggregate scope', () => {
+ const contextData=JSON.parse(fs.readFileSync(path.join(root,'data','highschool-context.json'),'utf8'));
+ const c={HIGHSCHOOL_CONTEXT:contextData};vm.createContext(c);vm.runInContext(realUi,c);
+ assert.equal(c.highschoolContext({uni:'한양대학교',campus:'서울'}),null);
+ assert.equal(c.highschoolContext({uni:'한양대학교',campus:'본교'}),null);
+ assert.equal(c.highschoolContext({uni:'연세대학교',campus:'미래캠퍼스'}),null);
+ assert.equal(c.highschoolContext({uni:'연세대학교',campus:'서울·국제(학년·전공별)'}).year,2024);
+ assert.equal(c.highschoolContext({uni:'한양대학교',campus:'ERICA캠퍼스'}).tracks[0].total,533);
+ const cau=c.highschoolContext({uni:'중앙대학교',campus:'서울'});
+ assert.deepEqual(Array.from(cau.tracks,t=>t.groups[0][1]),[89,41]);
+ assert.equal(c.highschoolContext({uni:'고려대학교',campus:'서울'}),null);
+ assert.equal(c.highschoolContext({uni:'건국대학교',campus:'글로컬캠퍼스'}),null);
+ assert.equal(c.highschoolContext({uni:'건국대학교',campus:'서울'}).tracks[0].summary,'일반고 80% 이상');
+ assert.equal(c.highschoolContext({uni:'서울대학교'}).population,'최초합격자');
+ for(const t of c.highschoolContext({uni:'서울대학교'}).tracks){assert.equal(t.counts.reduce((sum,g)=>sum+g[1],0),t.total);t.groups.forEach((g,i)=>assert.ok(Math.abs(g[1]-t.counts[i][1]*100/t.total)<=0.051))}
+ assert.equal(c.highschoolContext({uni:'세종대학교'}).tracks[1].groups[0][1],82.4);
+ for(const u of contextData.universities){assert.ok(u.pdfPage>0||u.pageLabel);assert.equal(new URL(u.source).protocol,'https:');for(const t of u.tracks)for(const [name,pct] of t.groups){assert.ok(name);assert.ok(pct>=0&&pct<=100)}}
+ assert.ok(html.includes('const HIGHSCHOOL_CONTEXT='+JSON.stringify(contextData)));
+ assert.ok(realUi.includes('dialog.showModal()'));
+ assert.ok(!realUi.includes('출신 고교 구성 자료 미확인'));
+ assert.ok(!realUi.includes("detailRow([['공식 근거'"));
+});
 console.log(`PASS ${checks} integrated 2028 checks`);
 
 fs.writeFileSync(path.join(root, 'data', 'verification.json'), `${JSON.stringify({

@@ -23,6 +23,7 @@ dataset.records=applicationLinker.linkApplications(dataset.records,applicationDa
 dataset.meta.application2027={linked:dataset.records.filter(r=>r.application2027).length,universities:new Set(dataset.records.filter(r=>r.application2027).map(r=>r.uni)).size,collectedUniversities:applicationData.coverage.universitiesCollected,scope:applicationData.scope,reviewed:applicationData.reviewed};
 const gradeUi = fs.readFileSync(path.join(root, 'scripts', 'grade-ui.js'), 'utf8').replace(/\r\n/g, '\n');
 const realUi = fs.readFileSync(path.join(root, 'scripts', 'real-ui.js'), 'utf8').replace(/\r\n/g, '\n');
+const highschoolContext = JSON.parse(fs.readFileSync(path.join(root, 'data', 'highschool-context.json'), 'utf8'));
 
 if (dataset.records.length !== 22751) throw new Error(`2028 record count changed: ${dataset.records.length}`);
 if (dataset.meta.current2028Candidates !== 21720) throw new Error('2028 active denominator changed');
@@ -33,6 +34,7 @@ const contractData=JSON.parse(fs.readFileSync(path.join(root,'..','contracts-202
 const identities=contractData.records.filter(r=>r.status==='plan2028').map(r=>({uni:r.uni,major:r.major}));
 const courseUi=fs.readFileSync(path.join(root,'scripts','course-ui.js'),'utf8').replace(/\r\n/g,'\n');
 const payload = [
+  `const HIGHSCHOOL_CONTEXT=${JSON.stringify(highschoolContext).replace(/</g,'\\u003c')};`,
   `const CONTRACT_IDENTITIES=${JSON.stringify(identities)};`,
   '/* REAL_DATA_START */',
   `const DATA=${JSON.stringify(dataset.records)};`,

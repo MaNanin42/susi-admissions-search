@@ -1,3 +1,19 @@
+function highschoolContext(d){
+ if(typeof HIGHSCHOOL_CONTEXT==='undefined')return null;
+ return HIGHSCHOOL_CONTEXT.universities.find(u=>u.uni===d.uni&&(!u.campuses||u.campuses.includes(d.campus)))||null;
+}
+function highschoolButton(d){
+ const u=highschoolContext(d);if(!u)return null;
+ const button=node('button','고교 구성','school-context-button');button.type='button';button.setAttribute('aria-label',d.uni+' 고교 구성');
+ button.addEventListener('click',()=>{
+  const dialog=node('dialog','','school-context-dialog');dialog.setAttribute('aria-labelledby','school-context-title');
+  const title=node('h2',u.scope+' 고교 구성');title.id='school-context-title';
+  dialog.append(title,node('p',u.year+'학년도 · '+u.population+' · 전형 전체 통계'));
+  for(const t of u.tracks){dialog.append(node('h3',t.name),node('p',t.summary||t.groups.map(([name,pct])=>name+' '+pct+'%').join(' / ')))}
+  const close=node('button','닫기');close.type='button';close.addEventListener('click',()=>dialog.close());dialog.append(close);
+  dialog.addEventListener('close',()=>{dialog.remove();button.focus()},{once:true});document.body.append(dialog);dialog.showModal();
+ });return button;
+}
 function isSeparateContract(d){
  if(typeof CONTRACT_IDENTITIES==='undefined')return false;
  return CONTRACT_IDENTITIES.some(c=>c.uni===d.uni&&c.major===d.major&&(!c.campus||c.campus===d.campus));
@@ -138,7 +154,7 @@ function createResultsTable(){
 }
 function createResultRow(d){
  const key=encodeURIComponent(d.id),row=node('tr','','result');row.id='result-row-'+key;row.dataset.resultId=d.id;row.dataset.component='admission-result-row';
- [d.uni,d.major,campusLabel(d),d.category+' · '+d.track].forEach((text,i)=>{const cell=node('td',text,i<2?'result-name':'');cell.id='result-'+key+'-'+resultColumns[i][0];cell.dataset.component='result-'+resultColumns[i][0];cell.setAttribute('headers','result-column-'+resultColumns[i][0]);row.append(cell)});
+ [d.uni,d.major,campusLabel(d),d.category+' · '+d.track].forEach((text,i)=>{const cell=node('td',text,i<2?'result-name':'');cell.id='result-'+key+'-'+resultColumns[i][0];cell.dataset.component='result-'+resultColumns[i][0];cell.setAttribute('headers','result-column-'+resultColumns[i][0]);if(i===0){const schoolButton=highschoolButton(d);if(schoolButton)cell.append(schoolButton)}row.append(cell)});
  const cut=rawCut2026(d),basis=cutBasis2026(d),cutCell=node('td',cut===null?'-':cut.toFixed(2),'history-cell');cutCell.setAttribute('headers','result-column-cut2026');cutCell.title=basis?basis.note:cut===null?(d.year===2025?'2025 입결만 연결되어 있습니다. 2026 동일 전형 입결은 미연결입니다.':'2026 동일 캠퍼스·학과·전형 입결 미연결'):(d.baseline2026?'2026 입결 현황 자료 연결 · ':'')+'2026학년도 입결 · 대학별 반영교과 차이 있음 · 2028 합격 예측값 아님';if(basis){cutCell.classList.add('separate-cut');cutCell.append(node('small',basis.label,'cut-basis'))}if(pointSource2026(d)){cutCell.textContent=pointDisplay2026(d);cutCell.append(node('small','원문 등급컷 '+(cut??'-')+' · 참고','cut-basis'));cutCell.title='환산점수 자료 · 공통 내신 범위·숫자 정렬 제외'}if(d.cutoffCurrent&&!currentSource2026(d)&&cut!==null)cutCell.append(node('small','기준 미확인','cut-basis'));row.append(cutCell);
  const detailRow=node('tr','','detail-row');detailRow.hidden=true;detailRow.id='detail-'+key;detailRow.dataset.component='admission-result-detail';
  for(const [column,value] of [['recruitment2027',countText(recruitment2027(d))],['ratio2027',showRatio(d)],['recruitment2028',countText(recruitment2028(d))]]){const cell=node('td',value,'history-cell');cell.setAttribute('headers','result-column-'+column);cell.title=column==='recruitment2028'?'2028학년도 시행계획 · 최종 모집요강에서 변경 가능':d.application2027?'2027학년도 수시 최종 마감 · '+d.application2027.track:'2027 동일 모집단위·전형 최종 자료 미연결';if(column==='ratio2027'&&d.application2027?.linkCategoryChanged)cell.append(node('small','전형 유형 변경','footnote'));row.append(cell)}
@@ -174,29 +190,22 @@ function render(page=0){
  if(p.browseMode!=='all'&&group.rows.length<MAX_CANDIDATES)$('results').append(node('p',group.rows.length?'조건에 맞는 후보가 '+group.rows.length+'개여서 해당 후보만 표시합니다.':'현재 조건에 맞는 후보가 없습니다.','footnote'));
  sortResults(group.rows).forEach((d,i)=>{
   const {row:a,detailRow:detailRowElement,disclosure,candidateCell,key}=createResultRow(d);
-  const table=node('table','','candidate-detail'),caption=node('caption',d.uni+' '+d.major+' 전형 상세');caption.className='sr-only';table.append(caption);const cols=node('colgroup','');[15,35,15,35].forEach(width=>{const col=node('col','');col.style.width=width+'%';cols.append(col)});table.append(cols);const body=node('tbody','');
-  function detailRow(entries){const row=node('tr','');entries.forEach(([label,value])=>{const th=node('th',label);th.scope='row';const td=node('td',value);if(entries.length===1)td.colSpan=3;row.append(th,td)});body.append(row);return row}
+  const table=node('section','','candidate-facts-section');table.setAttribute('aria-label',d.uni+' '+d.major+' 전형 상세');const body=node('dl','','candidate-facts');
+  function detailRow(entries){let item;entries.forEach(([label,value])=>{item=node('div','',entries.length===1?'fact fact-wide':'fact');item.append(node('dt',label),node('dd',value));body.insertBefore(item,entries.length>1?body.querySelector('.fact-wide'):null)});return item}
   detailRow([['입결 학년도',historicalYear(d)==null?'자료 없음':historicalYear(d)+'학년도'],['2028 확인',d.official?'시행계획 대조 완료':'추가조사 필요']]);
-  if(d.baseline2026)detailRow([['2026 입결 연결',d.baseline2026.source+' / '+d.baseline2026.university+' · '+d.baseline2026.major+' · '+d.baseline2026.track+' ('+d.baseline2026.category+') / 첫 탭 원본 '+d.baseline2026.baselineRows.join('·')+'번째 행']]);
-  if(d.historyTrackLabels?.length)detailRow([['입결 원문 전형명',d.historyTrackLabels.join(' · ')+' (표기 차이 대조)']]);
-  if(d.historyUniversityLabels?.length)detailRow([['입결 당시 대학명',d.historyUniversityLabels.join(' · ')+' (공식 대학 통합 대조)']]);
-  if(d.historyMajorLabels?.length)detailRow([['입결 원문 모집단위',d.historyMajorLabels.join(' · ')+' (표기 차이 대조)']]);
-  detailRow([['입결의 출신 고교','미공개·미확인 · 지원자격으로 출신 고교 유형을 추정하지 않음']]);
   detailRow([['2026 70% 컷',cutDisplay2026(d)],['2027 최종 경쟁률',showRatio(d)]]);
-  const cs=currentSource2026(d);if(cs){const cr=detailRow([['2026 입결 지표','등급컷 50% '+(cs.grade50??'-')+' / 70% '+(cs.grade70??'-')+' · 환산컷 50% '+(cs.point50??'-')+' / 70% '+(cs.point70??'-')+' · 만점 '+(cs.perfectScore??'미공개')+' · '+(pointSource2026(d)?'점수자료: 공통 내신 범위·숫자 정렬 제외':'등급자료')]]);cr.querySelector('td').append(link(' cutoff 현재 원문',cs.source));}
-  const basis=cutBasis2026(d);if(basis){const basisRow=detailRow([['입결 반영 기준',basis.note]]);basisRow.querySelector('td').append(link(' 2026 반영방법 근거',basis.url));}
+  const cs=currentSource2026(d);if(cs){const cr=detailRow([['2026 입결 지표','등급컷 50% '+(cs.grade50??'-')+' / 70% '+(cs.grade70??'-')+' · 환산컷 50% '+(cs.point50??'-')+' / 70% '+(cs.point70??'-')+' · 만점 '+(cs.perfectScore??'미공개')+' · '+(pointSource2026(d)?'점수자료: 공통 내신 범위·숫자 정렬 제외':'등급자료')]]);}
+  const basis=cutBasis2026(d);if(basis){const basisRow=detailRow([['입결 반영 기준',basis.note]]);}
   detailRow([['2027 수시 모집인원',countText(recruitment2027(d))],['2028 모집예정 인원',countText(recruitment2028(d))+' (시행계획)']]);
-  if(d.application2027){const h=d.application2027,source=detailRow([['2027 지원현황',h.track+' · 모집 '+h.recruitment+'명 / 지원 '+h.applicants+'명 · 확인 '+h.reviewed]]),cell=source.querySelector('td');cell.append(link(' 최종 마감 원문',h.source));if(h.aggregation)cell.append(node('div','기업별 모집·지원인원 합산 · 경쟁률 = 총 지원인원 ÷ 총 모집인원'));if(h.linkNote){cell.append(node('div',h.linkNote));cell.append(link(' 전형명 대응 근거 (PDF '+h.linkEvidencePage+'쪽)',h.linkEvidence))}if(h.linkMajorNote){cell.append(node('div','원문 모집단위: '+h.major+' · '+h.linkMajorNote))}if(h.linkCampusNote){cell.append(node('div','2027 확인 캠퍼스: '+h.linkCampus2027+' · '+h.linkCampusNote));cell.append(link(' 캠퍼스 확인 근거 (PDF '+h.linkCampusEvidencePage+'쪽)',h.linkCampusEvidence))}}
+  if(d.application2027){const h=d.application2027;detailRow([['2027 지원현황',h.track+' · 모집 '+h.recruitment+'명 / 지원 '+h.applicants+'명']])}
   detailRow([['관심 분야',d.details.filter(x=>p.details.includes(x)).join(' · ')||d.field],['지원자격 연결',qualificationLabel(d,p)]]);
   detailRow([['면접',d.interview===null?'미검수':d.interview?'있음':'없음'],['수능최저',minimum(d,p)]]);
   detailRow([['2028 전형방법',d.official?d.official.method:'추가조사 필요 · 현재 모집 여부와 전형방법 미확정']]);
   detailRow([['지원 전 확인',d.official?d.official.eligibility+' · 최종 모집요강 확인':'과거 입결 참고용 · 2028 모집단위·전형 유지 여부 및 지원자격 추가조사 필요']]);
-  if(d.official?.assessment){const assessment=detailRow([['서류 평가요소',d.official.assessment]]);assessment.querySelector('td').append(link(' 평가요소 원문 (11쪽)',d.official.assessmentSource.url+'#page=11'))}
-  if(d.universityPlan){const context=detailRow([['대학 공통 변경사항',d.universityPlan.note]]);context.querySelector('td').append(link(' 2028 변경사항 원문',d.universityPlan.url))}
+  if(d.official?.assessment){const assessment=detailRow([['서류 평가요소',d.official.assessment]]);}
+  if(d.universityPlan){const context=detailRow([['대학 공통 변경사항',d.universityPlan.note]]);}
   if(d.unitStatus2028)detailRow([['모집단위 변경',d.unitStatus2028.label+' · '+d.unitStatus2028.note]]);
   if(rawCut2026(d)===null)detailRow([['과거 입결','2026 동일 모집단위·전형 70% 컷 미연결 · 다른 연도나 전형 값으로 대체하지 않음']]);
-  const sourceRow=detailRow([['공식 근거',d.official?'':'2028 공식 자료 미확인']]);
-  if(d.official)appendOfficialSource(sourceRow.querySelector('td'),d);
   table.append(body);disclosure.append(table);
   const pickButton=node('button','');pickButton.type='button';pickButton.dataset.pickId=d.id;pickButton.id='candidate-pick-'+key;pickButton.dataset.component='candidate-button';pickButton.addEventListener('click',()=>toggleCandidate(d.id));candidateCell.append(pickButton);
   if(d.uni==='경희대학교'&&d.track==='네오르네상스전형')disclosure.append(node('p','2028 네오르네상스전형은 면접형·서류형으로 분리되었습니다. 과거 통합 전형의 입결을 어느 한 유형에 옮기지 않았습니다.'));
@@ -216,12 +225,6 @@ const minimumStateLabels={all:'전체',none:'최저 없음',pass:'입력 기준 
 function officialSourceUrl(d){
  try{const url=new URL(d.official?.url);return ['https:','http:'].includes(url.protocol)?url.href:null}catch{return null}
 }
-function appendOfficialSource(container,d){
- const url=officialSourceUrl(d);
- if(url)container.append(link('공식 자료 열기',url));
- else container.append(node('span','공식 링크 확인 필요'));
- container.append(node('div','근거: '+(d.official.pages||'쪽수 미기재'),'source-meta'),node('div','검토일: '+(d.official.reviewed||'미기재'),'source-meta'));
-}
 function toggleCandidate(id){
  if(pickedCandidates.has(id))pickedCandidates.delete(id);
  else{const d=DATA.find(d=>d.id===id&&!d.legacyDisposition2028);if(d)pickedCandidates.set(id,d)}
@@ -230,14 +233,14 @@ function toggleCandidate(id){
 function comparisonTable(printing=false){
  const table=node('table','','picked-table');table.append(node('caption','2028 상담 후보 비교 · '+pickedCandidates.size+'개'));
  const head=node('thead',''),headRow=node('tr','');
- for(const title of ['대학·모집단위 / 전형','입결·모집인원','면접·수능최저','전형방법·공식 근거',...(printing?[]:['관리'])]){const th=node('th',title);th.scope='col';headRow.append(th)}
+ for(const title of ['대학·모집단위 / 전형','입결·모집인원','면접·수능최저','전형방법',...(printing?[]:['관리'])]){const th=node('th',title);th.scope='col';headRow.append(th)}
  head.append(headRow);table.append(head);const body=node('tbody','');
  for(const d of pickedCandidates.values()){
   const row=node('tr',''),identity=node('th','');identity.scope='row';identity.append(node('strong',d.uni+' · '+d.major),node('div',d.campus+' / '+d.category+' · '+d.track),node('div',currentCandidateIds.has(d.id)?'현재 탐색 조건 일치':'현재 탐색 조건 밖 · 담은 후보 유지','source-meta'));
-  const figures=node('td','');figures.append(node('div','2026 70% 컷: '+cutDisplay2026(d)),node('div','2027 수시 모집: '+countText(recruitment2027(d))),node('div','2027 최종 경쟁률: '+showRatio(d)),node('div','2028 모집계획: '+countText(recruitment2028(d))));const basis=cutBasis2026(d);if(basis)figures.append(node('div',basis.note,'source-meta'));if(d.application2027)figures.append(link('2027 최종 마감 원문',d.application2027.source));
+  const figures=node('td','');figures.append(node('div','2026 70% 컷: '+cutDisplay2026(d)),node('div','2027 수시 모집: '+countText(recruitment2027(d))),node('div','2027 최종 경쟁률: '+showRatio(d)),node('div','2028 모집계획: '+countText(recruitment2028(d))));const basis=cutBasis2026(d);if(basis)figures.append(node('div',basis.note,'source-meta'));
   const exam=node('td','');exam.append(node('div','면접: '+(d.interview===null?'미검수':d.interview?'있음':'없음')),node('div',minimum(d,currentProfile)));
   const method=node('td','');method.append(node('div',d.official?.method||'2028 전형방법 미확인'));
-  if(d.official)appendOfficialSource(method,d);else method.append(node('div','추가조사 필요 · 과거 입결 참고','source-meta'));
+  if(!printing){const schoolButton=highschoolButton(d);if(schoolButton)identity.append(schoolButton)}
   row.append(identity,figures,exam,method);
   if(!printing){const cell=node('td',''),remove=node('button','제외');remove.type='button';remove.setAttribute('aria-label',d.uni+' '+d.major+' '+d.track+' 후보 제외');remove.addEventListener('click',()=>{toggleCandidate(d.id);$('pickedCount').focus()});cell.append(remove);row.append(cell)}
   body.append(row);
