@@ -206,7 +206,7 @@ test('course data preserves public fields and does not invent a missing-subject 
  assert.equal(courses.rows.length,914);assert.equal(new Set(courses.rows.map(r=>r.university)).size,44);assert.equal(courses.policies.length,45);
  const allowed=new Set(['university','campus','major_group','core_subjects','recommended_subjects','quantitative_criteria','evaluation_method','sourceId','sourcePage','subjectClassification','year']);
  assert.ok(courses.rows.every(r=>Object.keys(r).every(k=>allowed.has(k))&&r.university&&r.major_group));
- assert.ok(html.includes('미입력 과목을 미이수로 판정하지 않으며'));
+ assert.ok(!html.includes('<summary>자료·조건 안내</summary>'));
  assert.ok(!html.includes('usePastCut'));
  const courseHtml=fs.readFileSync(path.join(root,'courses.html'),'utf8');
  assert.ok(courseHtml.includes('id="courseCoverage"'));

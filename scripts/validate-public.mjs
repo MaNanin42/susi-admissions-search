@@ -37,7 +37,7 @@ check(html.includes('const UNIVERSITY_CAMPUS_LABELS'), 'campus display mapping m
 check(html.includes('const ADMISSIONS_OFFICE_LINKS'), 'verified admissions-office links missing');
 check(html.includes('const PROGRAM_TAGS'), 'verified program tags missing');
 check(html.includes('const CONTRACT_PROGRAM_DETAILS'), 'contract program details missing');
-check(html.includes('id="programTypeFilter"') && html.includes('id="programTypeHelp"'), 'program type filter missing');
+check(html.includes('id="programTypeFilter"') && !html.includes('id="programTypeHelp"'), 'program type filter missing');
 check(html.includes('data-contract-id="${esc(detail.id)}"'), 'contract badge navigation missing');
 check(html.includes('id="contractProgramSearch"') && html.includes('id="contractTypeFilter"'), 'contract directory filters missing');
 check(html.includes('function openContractProgram(id)'), 'contract detail navigation logic missing');
