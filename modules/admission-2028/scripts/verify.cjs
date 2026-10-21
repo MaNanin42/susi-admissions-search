@@ -18,6 +18,27 @@ const gradeUi = fs.readFileSync(path.join(root, 'scripts', 'grade-ui.js'), 'utf8
 let checks = 0;
 const test = (name, fn) => { fn(); checks += 1; console.log(`PASS ${name}`); };
 
+test('template DOM references survive removal of optional help text', () => {
+ const template=fs.readFileSync(path.join(root,'src','index.template.html'),'utf8');
+ const ids=new Set([...template.matchAll(/id="([^"]+)"/g)].map(m=>m[1]));
+ const code=template.slice(template.indexOf('<script>'))+'\n'+realUi+'\n'+gradeUi;
+ const refs=[...code.matchAll(/\$\s*\(\s*['"]([^'"]+)['"]\s*\)/g)].map(m=>m[1]);
+ assert.deepEqual([...new Set(refs)].filter(id=>!ids.has(id)),[],'UI refers to removed element');
+ assert.ok(template.includes('<option value="general">일반고</option>'));
+ const idrefs=[...template.matchAll(/aria-describedby="([^"]+)"/g)].flatMap(m=>m[1].split(/\s+/));
+ assert.deepEqual(idrefs.filter(id=>!ids.has(id)),[],'description points to removed help');
+});
+test('search matches multiple keywords across university major track and campus', () => {
+ const source=realUi.slice(realUi.indexOf('function programQueryMatches'),realUi.indexOf('function candidates'));
+ const context={};vm.createContext(context);vm.runInContext(source,context);
+ const row={uni:'계명대학교',major:'사회복지학과',track:'지역전형',campus:'본교 대구'};
+ assert.equal(context.programQueryMatches(row,'  계명   사회복지  '),true);
+ assert.equal(context.programQueryMatches(row,'대구 지역'),true);
+ assert.equal(context.programQueryMatches(row,'계명 간호'),false);
+ assert.equal(context.programQueryMatches({major:'AI공학과'},'ai'),true);
+ assert.equal(context.programQueryMatches(row,''),true);
+});
+
 test('current 2028 denominator and research boundary', () => {
   const active = data.records.filter(record => !record.legacyDisposition2028);
   const verified = active.filter(record => record.official);

@@ -27,7 +27,7 @@ check(html.includes('id="workspace-search"') && html.includes('id="workspace-adm
 check(html.includes('function switchWorkspace(workspace)'), 'top workspace switching logic missing');
 check(html.includes('data-src="modules/admission-2028/index.html"'), '2028 module relative path missing');
 check(
-  html.includes('data-version="12.0.0-cutoff-20261010"')
+  html.includes('data-version="12.0.0-searchfix-20261021"')
     && html.includes("if (!frame.getAttribute('src'))")
     && html.includes('frame.setAttribute(\'src\', `${frame.dataset.src}?v=${version}`)'),
   '2028 module versioned lazy-load state preservation missing',
