@@ -4,7 +4,7 @@ const {linkApplications}=require('../../scripts/link-application-2027.cjs');
 db.records=linkApplications(db.records,JSON.parse(fs.readFileSync(path.join(root,'..','..','data','application-2027.json'),'utf8')));
 const known=db.records.filter(r=>r.status==='plan2028');
 assert.equal(new Set(db.records.map(r=>r.id)).size,db.records.length);
-assert.equal(known.length,54);assert.equal(new Set(known.map(r=>r.uni)).size,21);
+assert.equal(known.length,59);assert.equal(new Set(known.map(r=>r.uni)).size,26);
 for(const [uni,total] of [['한국공학대학교',120],['경일대학교',140],['한양대학교 ERICA',150],['가천대학교',260],['동의대학교',75],['순천향대학교',130],['유원대학교',120],['한국기술교육대학교',40]])assert.equal(known.filter(r=>r.uni===uni&&r.kind==='early').reduce((n,r)=>n+r.quota,0),total,uni+' 2028 plan total');
 for(const r of db.records){assert.ok(typeof r.region==='string'&&r.region.length);assert.ok(r.sourceIds.length);r.sourceIds.forEach(k=>assert.ok(db.sources[k]));assert.equal(r.schoolTypeEvidence,'unknown');if(r.status==='plan2028'){assert.equal(r.year,2028);assert.ok(r.sourceIds.every(k=>db.sources[k].year===2028));assert.ok((Number.isInteger(r.quota)&&r.quota>0)||(r.quota===null&&r.sourceIds.includes('jnu')&&r.quotaNote.includes('전체 90명')))}else{assert.equal(r.quota,null);assert.equal(r.graduateEligible,null)}r.history.forEach(h=>{assert.ok(h.year<2028);assert.equal(h.schoolType,'unknown')});}
 assert.equal(known.filter(r=>r.uni==='선문대학교').reduce((n,r)=>n+r.quota,0),90);
@@ -13,7 +13,7 @@ assert.equal(known.filter(r=>r.uni==='전남대학교'&&r.quota===null).length,4
 const c={DB:db,URL,document:{},Set};vm.createContext(c);vm.runInContext(ui.replace(/init\(\);\s*$/,''),c);
 const base={query:'',field:'',region:'',kind:'',work:'',evaluation:'',resultSchool:'',graduate:true,noMinimum:false,references:false,dorm:false};
 const search=p=>db.records.filter(r=>c.matches(r,{...base,...p}));
-assert.equal(search({}).length,53);assert.equal(search({evaluation:'sincerity'}).length,4);assert.ok(search({evaluation:'interview'}).every(r=>r.interviewWeight>=50));assert.equal(search({region:'부산'}).length,3);assert.equal(search({resultSchool:'general'}).length,0);assert.equal(search({resultSchool:'science'}).length,0);assert.equal(search({kind:'worker'}).length,0);assert.equal(search({kind:'worker',graduate:false}).length,1);assert.equal(search({work:'no'}).length,22);assert.equal(search({graduate:false,references:true}).length,62);assert.equal(search({dorm:true}).length,53);assert.equal(vm.runInContext("safeUrl('javascript:alert(1)')",c),null);
+assert.equal(search({}).length,58);assert.equal(search({evaluation:'sincerity'}).length,4);assert.ok(search({evaluation:'interview'}).every(r=>r.interviewWeight>=50));assert.equal(search({region:'부산'}).length,3);assert.equal(search({resultSchool:'general'}).length,0);assert.equal(search({resultSchool:'science'}).length,0);assert.equal(search({kind:'worker'}).length,0);assert.equal(search({kind:'worker',graduate:false}).length,1);assert.equal(search({work:'no'}).length,27);assert.equal(search({graduate:false,references:true}).length,60);assert.equal(search({dorm:true}).length,58);assert.equal(vm.runInContext("safeUrl('javascript:alert(1)')",c),null);
 assert.ok(html.includes(ui));assert.ok(html.includes("connect-src 'none'"));assert.ok(!/localStorage|sessionStorage|indexedDB|sendBeacon|fetch\(|XMLHttpRequest|WebSocket/.test(html));new vm.Script(html.match(/<script>([\s\S]*?)<\/script>/)[1]);
 const updatedQuotas={'contract-004':20,'contract-006':20,'contract-009':32,'contract-015':23,'contract-025':40,'contract-027':20,'c28-044':40};
 for(const [id,total] of Object.entries(updatedQuotas)){
@@ -23,7 +23,15 @@ for(const [id,total] of Object.entries(updatedQuotas)){
  assert.ok(row.termSourceIds.every(key=>db.sources[key]));
 }
 assert.equal(c.quotaLabel(search({query:'UNIST'})[0]),'40명 내외');
-assert.equal(search({kind:'military'})[0].uni,'아주대학교');
+assert.deepEqual(search({kind:'military'}).map(r=>r.uni).sort(),['아주대학교','영남대학교']);
+for(const [alias,id] of [['KAIST','contract-026'],['DGIST','contract-019'],['외식산업학부','c28-037'],['관광학부','c28-036']]){
+ assert.deepEqual(search({query:alias}).map(r=>r.id),[id]);
+}
+const cau=search({query:'산업보안학과'})[0];
+assert.equal(cau.quota,7);
+assert.equal(cau.official.admissionsSeason,'정시 나군');
+assert.equal(c.currentApplications(cau).length,0);
+assert.deepEqual(db.records.filter(r=>r.status==='reference2027').map(r=>r.id),['contract-018']);
 assert.equal(c.minimumLabel(known.find(r=>r.id==='contract-009')),'적용');
 const histories=db.records.flatMap(r=>r.history);
 const ssu=db.records.find(r=>r.id==='contract-007');
@@ -63,4 +71,4 @@ assert.equal(c.currentApplications(db.records.find(r=>r.uni==='유원대학교'&
 const sch=c.currentApplications(db.records.find(r=>r.uni==='순천향대학교'))[0];
 assert.equal(sch.recruitment,130);assert.equal(sch.applicants,254);assert.equal(sch.ratio,1.95);assert.equal(sch.sourceRow,72);
 assert.ok(db.records.filter(r=>r.uni==='선문대학교'||r.uni==='동의대학교').every(r=>!c.currentApplications(r).length));
-console.log('PASS contracts: 54 current / 8 reference, 8 early-program quota totals, qualification/work/school-type filters, sources, privacy and syntax');
+console.log('PASS contracts: 59 current / 1 reference, 8 early-program quota totals, qualification/work/school-type filters, sources, privacy and syntax');
