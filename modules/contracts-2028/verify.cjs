@@ -4,7 +4,7 @@ const {linkApplications}=require('../../scripts/link-application-2027.cjs');
 db.records=linkApplications(db.records,JSON.parse(fs.readFileSync(path.join(root,'..','..','data','application-2027.json'),'utf8')));
 const known=db.records.filter(r=>r.status==='plan2028');
 assert.equal(new Set(db.records.map(r=>r.id)).size,db.records.length);
-assert.equal(known.length,47);assert.equal(new Set(known.map(r=>r.uni)).size,15);
+assert.equal(known.length,54);assert.equal(new Set(known.map(r=>r.uni)).size,21);
 for(const [uni,total] of [['한국공학대학교',120],['경일대학교',140],['한양대학교 ERICA',150],['가천대학교',260],['동의대학교',75],['순천향대학교',130],['유원대학교',120],['한국기술교육대학교',40]])assert.equal(known.filter(r=>r.uni===uni&&r.kind==='early').reduce((n,r)=>n+r.quota,0),total,uni+' 2028 plan total');
 for(const r of db.records){assert.ok(typeof r.region==='string'&&r.region.length);assert.ok(r.sourceIds.length);r.sourceIds.forEach(k=>assert.ok(db.sources[k]));assert.equal(r.schoolTypeEvidence,'unknown');if(r.status==='plan2028'){assert.equal(r.year,2028);assert.ok(r.sourceIds.every(k=>db.sources[k].year===2028));assert.ok((Number.isInteger(r.quota)&&r.quota>0)||(r.quota===null&&r.sourceIds.includes('jnu')&&r.quotaNote.includes('전체 90명')))}else{assert.equal(r.quota,null);assert.equal(r.graduateEligible,null)}r.history.forEach(h=>{assert.ok(h.year<2028);assert.equal(h.schoolType,'unknown')});}
 assert.equal(known.filter(r=>r.uni==='선문대학교').reduce((n,r)=>n+r.quota,0),90);
@@ -13,8 +13,18 @@ assert.equal(known.filter(r=>r.uni==='전남대학교'&&r.quota===null).length,4
 const c={DB:db,URL,document:{},Set};vm.createContext(c);vm.runInContext(ui.replace(/init\(\);\s*$/,''),c);
 const base={query:'',field:'',region:'',kind:'',work:'',evaluation:'',resultSchool:'',graduate:true,noMinimum:false,references:false,dorm:false};
 const search=p=>db.records.filter(r=>c.matches(r,{...base,...p}));
-assert.equal(search({}).length,46);assert.equal(search({evaluation:'sincerity'}).length,4);assert.ok(search({evaluation:'interview'}).every(r=>r.interviewWeight>=50));assert.equal(search({region:'부산'}).length,3);assert.equal(search({resultSchool:'general'}).length,0);assert.equal(search({resultSchool:'science'}).length,0);assert.equal(search({kind:'worker'}).length,0);assert.equal(search({kind:'worker',graduate:false}).length,1);assert.equal(search({work:'no'}).length,16);assert.equal(search({graduate:false,references:true}).length,61);assert.equal(search({dorm:true}).length,46);assert.equal(vm.runInContext("safeUrl('javascript:alert(1)')",c),null);
+assert.equal(search({}).length,53);assert.equal(search({evaluation:'sincerity'}).length,4);assert.ok(search({evaluation:'interview'}).every(r=>r.interviewWeight>=50));assert.equal(search({region:'부산'}).length,3);assert.equal(search({resultSchool:'general'}).length,0);assert.equal(search({resultSchool:'science'}).length,0);assert.equal(search({kind:'worker'}).length,0);assert.equal(search({kind:'worker',graduate:false}).length,1);assert.equal(search({work:'no'}).length,22);assert.equal(search({graduate:false,references:true}).length,62);assert.equal(search({dorm:true}).length,53);assert.equal(vm.runInContext("safeUrl('javascript:alert(1)')",c),null);
 assert.ok(html.includes(ui));assert.ok(html.includes("connect-src 'none'"));assert.ok(!/localStorage|sessionStorage|indexedDB|sendBeacon|fetch\(|XMLHttpRequest|WebSocket/.test(html));new vm.Script(html.match(/<script>([\s\S]*?)<\/script>/)[1]);
+const updatedQuotas={'contract-004':20,'contract-006':20,'contract-009':32,'contract-015':23,'contract-025':40,'contract-027':20,'c28-044':40};
+for(const [id,total] of Object.entries(updatedQuotas)){
+ const row=known.find(r=>r.id===id);
+ assert.equal(row.tracks?.reduce((sum,t)=>sum+t.quota,0)??row.quota,total,id+' 수시 모집');
+ if(row.tracks)assert.equal(row.tracks[0].quota,row.quota);
+ assert.ok(row.termSourceIds.every(key=>db.sources[key]));
+}
+assert.equal(c.quotaLabel(search({query:'UNIST'})[0]),'40명 내외');
+assert.equal(search({kind:'military'})[0].uni,'아주대학교');
+assert.equal(c.minimumLabel(known.find(r=>r.id==='contract-009')),'적용');
 const histories=db.records.flatMap(r=>r.history);
 const ssu=db.records.find(r=>r.id==='contract-007');
 assert.equal(ssu.quota,8);assert.equal(ssu.history[0].cut70,2.55);assert.equal(ssu.history[0].competitionRatio,15.8);assert.match(ssu.method,/3배수/);
@@ -32,8 +42,8 @@ assert.equal(order('quota',1),'a,m,b,z');assert.equal(order('quota',-1),'b,m,a,z
 assert.equal(order('competition',1),'a,b,m,z');assert.equal(order('competition',-1),'b,a,m,z');
 assert.equal(order('history',1),'b,a,m,z');assert.equal(order('history',-1),'a,b,m,z');
 assert.equal(order('uni',1),'a,b,m,z');assert.equal(order('uni',-1),'z,m,b,a');
-assert.equal(db.records.filter(r=>c.currentApplications(r).length).length,37);
-assert.equal(new Set(db.records.filter(r=>c.currentApplications(r).length).map(r=>r.uni)).size,13);
+assert.equal(db.records.filter(r=>c.currentApplications(r).length).length,41);
+assert.equal(new Set(db.records.filter(r=>c.currentApplications(r).length).map(r=>r.uni)).size,16);
 assert.ok(db.records.filter(r=>r.application2027).every(r=>r.application2027.year===2027&&r.application2027.status==='final'));
 assert.equal(ssu.application2027.ratio,18.38);assert.equal(ssu.application2027.recruitment,8);assert.equal(ssu.history[0].competitionRatio,15.8);
 assert.equal(c.history2026({history:[{year:2025,cut70:1},{year:2026,gradeMean:2}]}).length,0);
@@ -53,4 +63,4 @@ assert.equal(c.currentApplications(db.records.find(r=>r.uni==='유원대학교'&
 const sch=c.currentApplications(db.records.find(r=>r.uni==='순천향대학교'))[0];
 assert.equal(sch.recruitment,130);assert.equal(sch.applicants,254);assert.equal(sch.ratio,1.95);assert.equal(sch.sourceRow,72);
 assert.ok(db.records.filter(r=>r.uni==='선문대학교'||r.uni==='동의대학교').every(r=>!c.currentApplications(r).length));
-console.log('PASS contracts: 47 current / 14 reference, 8 early-program quota totals, qualification/work/school-type filters, sources, privacy and syntax');
+console.log('PASS contracts: 54 current / 8 reference, 8 early-program quota totals, qualification/work/school-type filters, sources, privacy and syntax');

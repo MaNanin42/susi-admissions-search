@@ -1,13 +1,13 @@
 const $=id=>document.getElementById(id);
 const selected=new Set();let activeRows=[],detailId=null,sortKey='uni',sortDirection=1;
-const kinds={early:'조기취업형',employment:'기업 채용조건형',worker:'재직자 재교육형',reference:'2027 참고자료'};
+const kinds={early:'조기취업형',employment:'기업 채용조건형',military:'군 협약형',worker:'재직자 재교육형',reference:'2027 참고자료'};
 const node=(tag,text,cls)=>{const e=document.createElement(tag);e.textContent=text;if(cls)e.className=cls;return e};
 const safeUrl=value=>{try{const u=new URL(value);return ['https:','http:'].includes(u.protocol)?u.href:null}catch{return null}};
 function sourceLink(key){const s=DB.sources[key],url=safeUrl(s.url),wrap=node('div','');if(url){const a=node('a',s.title);a.href=url;a.target='_blank';a.rel='noopener noreferrer';wrap.append(a)}else wrap.append(node('span',s.title));wrap.append(node('small','근거: '+(Array.isArray(s.pages)?'PDF '+s.pages.join('·')+'쪽':s.pages)+' · 검토: '+s.reviewed),node('small',s.access));return wrap}
 function readFilters(){return Object.fromEntries(['query','field','region','kind','work','evaluation','resultSchool'].map(k=>[k,$(k).value]).concat(['graduate','noMinimum','references','dorm'].map(k=>[k,$(k).checked])))}
 function matches(r,p){
  const q=p.query.trim().toLocaleLowerCase();
- return (!q||[r.uni,r.major,r.partners,r.field].join(' ').toLocaleLowerCase().includes(q))
+ return (!q||[r.uni,r.major,r.partners,r.field,...(r.aliases||[])].join(' ').toLocaleLowerCase().includes(q))
   &&(!p.field||r.field===p.field)&&(!p.region||r.region===p.region)&&(!p.kind||r.kind===p.kind)
   &&(p.references||r.status==='plan2028')&&(!p.graduate||r.graduateEligible===true)
   &&(p.work!=='no'||r.workStudy!==true)
@@ -27,13 +27,15 @@ function currentApplications(r){return (r.application2027Options||(r.application
 function applicationCell(r,key){const cell=node('td','','competition-cell'),items=currentApplications(r);if(!items.length){cell.textContent='-';cell.title='2027 동일 모집단위·전형 최종 자료 미연결';return cell}for(const h of items){const item=node('div','','history-item'),a=node('a',key==='ratio'?h.ratio.toFixed(h.ratioPrecision??2)+':1':h.recruitment+'명');a.href=h.source;a.target='_blank';a.rel='noopener noreferrer';a.title=h.track+' · 모집 '+h.recruitment+'명 / 지원 '+h.applicants+'명';item.append(a);if(items.length>1)item.prepend(node('small',h.quotaGroup||h.track));if(h.aggregation)item.append(node('small','기업별 합산'));cell.append(item)}return cell}
 function competitionCell(r){return applicationCell(r,'ratio')}
 function planQuota(r){return r.status==='plan2028'&&Number.isInteger(r.quota)?r.quota:null}
+function quotaLabel(r){const n=planQuota(r);return n===null?'-':n+'명'+(r.quotaApprox?' 내외':'')}
+function minimumLabel(r){if(r.minimum==='required')return '적용';return r.minimum==='none'?'없음':'원문 확인'}
 function methodView(text){const wrap=node('span','','method-lines');String(text).split(/\s*→\s*/).forEach((part,i)=>{const line=node('span',part.trim());if(i)line.className='next-stage';wrap.append(line)});return wrap}
 function button(label,fn){const b=node('button',label);b.type='button';b.addEventListener('click',fn);return b}
 function table(rows,printing=false){
  const t=node('table',''),head=node('thead',''),hr=node('tr','');
  ['대학·모집단위','2028 전형·모집계획','2026 70% 컷','2027 수시 모집','2027 최종 경쟁률','계약조건·확인할 점',...(printing?[]:['관리'])].forEach(v=>hr.append(node('th',v)));head.append(hr);t.append(head);const body=node('tbody','');
  for(const r of rows){const tr=node('tr',''),name=node('th','');name.scope='row';name.append(node('div',r.uni),node('div',r.major),node('span',kinds[r.kind],'tag'),node('small',r.region));
-  const exam=node('td','');exam.append(node('span',r.status==='plan2028'?'2028 시행계획 확인':'2028 모집 미확인','tag'+(r.status==='plan2028'?'':' warn')),methodView(r.method),node('p','2028 모집계획: '+(planQuota(r)===null?'-':planQuota(r)+'명')+(r.tracks?.length>1?' · 대표 전형 '+r.track:'')),node('small',r.minimum==='none'?'수능최저 없음':'수능최저 원문 확인'),node('small',r.quotaNote||''));
+  const exam=node('td','');exam.append(node('span',r.status==='plan2028'?'2028 시행계획 확인':'2028 모집 미확인','tag'+(r.status==='plan2028'?'':' warn')),methodView(r.method),node('p','2028 모집계획: '+quotaLabel(r)+(r.tracks?.length>1?' · 대표 전형 '+r.track:'')),node('small','수능최저 '+(r.minimumText||minimumLabel(r))),node('small',r.quotaNote||''));
   const terms=node('td','');terms.append(node('p',r.eligibility),node('small',r.attendance));if(printing){terms.append(node('p',r.obligations));r.sourceIds.forEach(k=>terms.append(sourceLink(k)));if($('dorm').checked)terms.append(node('p',r.dormitory));}
   else{terms.append(button('상세·입결·근거',()=>showDetail(r.id)));if($('dorm').checked)terms.append(node('small','주거 확인: '+r.dormitory));}
   tr.append(name,exam,historyCell(r),applicationCell(r,'recruitment'),competitionCell(r),terms);if(!printing){const manage=node('td',''),b=button(selected.has(r.id)?'후보 제외':'후보 담기',()=>toggle(r.id));b.dataset.pick=r.id;b.setAttribute('aria-pressed',String(selected.has(r.id)));manage.append(b);tr.append(manage)}body.append(tr);
@@ -43,7 +45,7 @@ function table(rows,printing=false){
 function latestHistory(r,predicate){return [...r.history].filter(predicate).sort((a,b)=>b.year-a.year)[0]}
 function sortValue(r,key){
  if(key==='kind')return kinds[r.kind];
- if(key==='minimum')return r.minimum==='none'?'없음':'원문 확인';
+ if(key==='minimum')return minimumLabel(r);
  if(key==='history'){const h=history2026(r)[0];return h&&!historyPoints(h)&&(!h.cutoffCurrent||h.cutoffCurrent.status==='matched')?h.cut70:null}
  if(key==='competition')return currentApplications(r)[0]?.ratio??null;
  if(key==='recruitment2027')return currentApplications(r)[0]?.recruitment??null;
@@ -68,7 +70,7 @@ function setSort(key){
 }
 function catalog(rows){
  const t=node('table','','catalog'),head=node('thead',''),tr=node('tr','');[['대학','uni'],['학과','major'],['유형','kind'],['지역','region'],['2028 모집계획','quota'],['평가방법 (대표 전형)','method'],['수능최저','minimum'],['2026 70% 컷','history'],['2027 모집','recruitment2027'],['2027 경쟁률','competition'],['상세',null],['후보','picked']].forEach(([label,key])=>{const th=node('th','');th.scope='col';if(key){const active=sortKey===key,b=button('',()=>setSort(key));b.className='sort-button';b.dataset.sort=key;b.append(node('span',label));const arrow=node('span',active?(sortDirection===1?'▲':'▼'):'↕','sort-arrow');arrow.setAttribute('aria-hidden','true');b.append(arrow);const next=(active?sortDirection===1:key==='picked')?'내림차순':'오름차순';b.setAttribute('aria-label',label+' '+next+' 정렬');b.title=label+' 정렬'+(['competition','recruitment2027'].includes(key)?' · 첫 표시 전형 기준(정원내·외 병기 시 정원내)':'')+(key==='history'?' · 2026 70% 컷':key==='competition'?' · 2027 최종 경쟁률':key==='method'?' · 평가방법 문구순':'');th.setAttribute('aria-sort',active?(sortDirection===1?'ascending':'descending'):'none');th.append(b)}else th.textContent=label;tr.append(th)});head.append(tr);t.append(head);const body=node('tbody','');
- for(const r of rows){const row=node('tr','');row.dataset.rowId=r.id;const uni=node('td',r.uni),name=node('th',r.major);name.scope='row';if(r.status!=='plan2028')name.append(node('span','2028 미확인','tag warn'));const kind=node('td','');kind.append(node('span',kinds[r.kind],'tag '+r.kind));const method=node('td','');method.append(methodView(r.method));if(r.tracks?.length>1)method.append(node('small',r.track+' · 다른 전형은 상세'));const detail=node('td',''),open=button('펼치기',()=>{if(detailId===r.id&&!$('detail').hidden)closeDetail();else showDetail(r.id)});open.className='catalog-name';open.setAttribute('aria-label',r.uni+' '+r.major+' 상세 보기');open.setAttribute('aria-controls','detail');open.setAttribute('aria-expanded','false');detail.append(open);const cell=node('td',''),pick=button(selected.has(r.id)?'후보 제외':'+ 담기',()=>toggle(r.id));pick.dataset.pick=r.id;pick.setAttribute('aria-label',r.uni+' '+r.major+' 후보 담기');pick.setAttribute('aria-pressed',String(selected.has(r.id)));cell.append(pick);row.append(uni,name,kind,node('td',r.region),node('td',planQuota(r)===null?'-':planQuota(r)+'명'),method,node('td',r.minimum==='none'?'없음':'원문 확인'),historyCell(r),applicationCell(r,'recruitment'),competitionCell(r),detail,cell);body.append(row)}t.append(body);return t;
+ for(const r of rows){const row=node('tr','');row.dataset.rowId=r.id;const uni=node('td',r.uni),name=node('th',r.major);name.scope='row';if(r.status!=='plan2028')name.append(node('span','2028 미확인','tag warn'));const kind=node('td','');kind.append(node('span',kinds[r.kind],'tag '+r.kind));const method=node('td','');method.append(methodView(r.method));if(r.tracks?.length>1)method.append(node('small',r.track+' · 다른 전형은 상세'));const detail=node('td',''),open=button('펼치기',()=>{if(detailId===r.id&&!$('detail').hidden)closeDetail();else showDetail(r.id)});open.className='catalog-name';open.setAttribute('aria-label',r.uni+' '+r.major+' 상세 보기');open.setAttribute('aria-controls','detail');open.setAttribute('aria-expanded','false');detail.append(open);const cell=node('td',''),pick=button(selected.has(r.id)?'후보 제외':'+ 담기',()=>toggle(r.id));pick.dataset.pick=r.id;pick.setAttribute('aria-label',r.uni+' '+r.major+' 후보 담기');pick.setAttribute('aria-pressed',String(selected.has(r.id)));cell.append(pick);row.append(uni,name,kind,node('td',r.region),node('td',quotaLabel(r)),method,node('td',minimumLabel(r)),historyCell(r),applicationCell(r,'recruitment'),competitionCell(r),detail,cell);body.append(row)}t.append(body);return t;
 }
 function closeDetail(focus=true){
  const root=$('detail'),opener=document.querySelector('.catalog tr.is-selected .catalog-name');root.hidden=true;document.querySelector('.directory').append(root);document.querySelectorAll('.detail-row').forEach(row=>row.remove());document.querySelectorAll('[data-row-id]').forEach(row=>{row.classList.remove('is-selected');const b=row.querySelector('.catalog-name');b.textContent='펼치기';b.setAttribute('aria-expanded','false')});detailId=null;if(focus&&opener)opener.focus({preventScroll:true});
@@ -77,12 +79,13 @@ function showDetail(id,focus=true){
  const r=DB.records.find(x=>x.id===id);if(!r)return;closeDetail(false);detailId=id;const root=$('detail');root.hidden=false;root.replaceChildren();const selectedRow=[...document.querySelectorAll('[data-row-id]')].find(row=>row.dataset.rowId===id);if(selectedRow){const expanded=node('tr','','detail-row'),cell=node('td','');cell.colSpan=12;cell.append(root);expanded.append(cell);selectedRow.after(expanded);}
  const header=node('div','','detail-heading');header.append(node('h2',r.uni+' · '+r.major),node('span',kinds[r.kind],'tag '+r.kind),node('span',r.status==='plan2028'?'2028 확인':'2028 미확인','tag'));header.append(button('닫기',()=>closeDetail()));root.append(header);
  const section=(title,values)=>{const box=node('section','','detail-section'),t=node('table','','detail-table'),caption=node('caption',title),body=node('tbody','');t.append(caption);for(const [label,value] of values){const tr=node('tr',''),th=node('th',label);th.scope='row';tr.append(th,node('td',value||'-'));body.append(tr)}t.append(body);box.append(t);root.append(box);return box};
- const admission=[['지원자격',r.eligibility],['평가방법',r.method],['수능최저',r.minimum==='none'?'없음':'원문 확인'],['성실성·출결',r.attendance]];if(r.quotaNote)admission.push(['모집인원',r.quotaNote]);if(r.tracks?.length>1)admission.push(['전형별 모집',r.tracks.map(t=>t.name+' '+t.quota+'명 / '+t.method).join(' | ')]);
+ const admission=[['지원자격',r.eligibility],['평가방법',r.method],['수능최저',r.minimumText||minimumLabel(r)],['성실성·출결',r.attendance]];if(r.quotaNote)admission.push(['모집인원',r.quotaNote]);if(r.tracks?.length>1)admission.push(['전형별 모집',r.tracks.map(t=>t.name+' '+t.quota+'명 / '+t.method).join(' | ')]);
  section('지원·평가',admission);
  section('취업·장학·생활',[['참여기업',r.partners],['장학·비용',r.support],['취업·의무',r.obligations],['기숙사',r.dormitory]]);
  const stats=section('입결·모집 결과',[
  ...currentApplications(r).map(h=>['2027 '+h.track,'모집 '+h.recruitment+'명 · 지원 '+h.applicants+'명 · '+h.ratio.toFixed(h.ratioPrecision??2)+':1'+(h.aggregation?' (기업별 합산)':'')]),
  ...r.history.map(h=>[h.year+' '+h.track,historyMetric(h)+(historyPoints(h)?' · 환산 50% '+(h.cutoffCurrent.point50??'-')+'점':Number.isFinite(h.cutoffCurrent?.status==='matched'?h.cutoffCurrent.grade50:h.cut50)?' · 50% 컷 '+(h.cutoffCurrent?.status==='matched'?h.cutoffCurrent.grade50:h.cut50).toFixed(2)+'등급':'')]),
+ ...(r.resultNote ? [['2026 등록자',r.resultNote]] : []),
  ['입결 고교 유형','미공개·미확인']]);stats.classList.add('detail-results');
  document.querySelectorAll('[data-row-id]').forEach(row=>{const active=row.dataset.rowId===id;row.classList.toggle('is-selected',active);const b=row.querySelector('.catalog-name');b.setAttribute('aria-expanded',String(active));b.textContent=active?'접기':'펼치기'});root.scrollTop=0;if(focus){if(innerWidth<761)root.scrollIntoView({block:'start'});root.focus({preventScroll:true})}
 }
